@@ -397,9 +397,418 @@
   text-align: center;
 }
 
+/* ── Section dividers (chapter breaks) ─────────────────────────────────────── */
+
+.prc-divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, var(--cp-purple-deeper), var(--cp-purple));
+  border-radius: var(--cp-radius);
+  box-shadow: var(--cp-shadow);
+  margin-top: 24px;
+}
+
+.prc-divider__num {
+  font-size: 28px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.prc-divider__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prc-divider__title {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 800;
+  color: var(--cp-white);
+  letter-spacing: -0.01em;
+}
+
+.prc-divider__sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Rollout phases ────────────────────────────────────────────────────────── */
+
+.prc-phases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.prc-phase {
+  background: var(--cp-white);
+  border: 2px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prc-phase--1 {
+  border-color: var(--cp-purple);
+}
+
+.prc-phase--2 {
+  border-color: var(--cp-purple-light);
+}
+
+.prc-phase__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.prc-phase__num {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cp-white);
+  background: var(--cp-purple-deeper);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.prc-phase__when {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cp-purple-deeper);
+}
+
+.prc-phase__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--cp-text);
+}
+
+.prc-phase__desc {
+  font-size: 13.5px;
+  color: var(--cp-text-light);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.prc-phase__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prc-pillar {
+  background: var(--cp-off-white);
+  border: 1px solid var(--cp-border);
+  border-radius: var(--cp-radius-sm);
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 4px 12px;
+  align-items: center;
+}
+
+.prc-pillar__icon {
+  font-size: 18px;
+  grid-row: span 2;
+}
+
+.prc-pillar__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.prc-pillar__desc {
+  font-size: 12px;
+  color: var(--cp-text-light);
+  line-height: 1.5;
+  grid-column: 2;
+}
+
+/* ── Language toggle ───────────────────────────────────────────────────────── */
+
+.prc-lang {
+  display: inline-flex;
+  gap: 4px;
+  background: var(--cp-purple-bg);
+  border: 1.5px solid var(--cp-purple-light);
+  border-radius: 100px;
+  padding: 4px;
+  width: fit-content;
+}
+
+.prc-lang__btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-purple-deeper);
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.prc-lang__btn.is-active {
+  background: var(--cp-purple-deeper);
+  color: var(--cp-white);
+}
+
+/* ── Sales blocks (email / script / faq) ───────────────────────────────────── */
+
+.prc-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.prc-block__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--cp-text);
+}
+
+.prc-block__num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cp-purple);
+  color: var(--cp-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.prc-block__intro {
+  font-size: 13.5px;
+  color: var(--cp-text-light);
+  line-height: 1.6;
+}
+
+/* Numbered list inside the sales email */
+.prc-numbered {
+  list-style: none;
+  counter-reset: prc;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 4px 0;
+}
+
+.prc-numbered__item {
+  counter-increment: prc;
+  position: relative;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.prc-numbered__item::before {
+  content: counter(prc);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cp-purple);
+  color: var(--cp-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.prc-numbered__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.prc-numbered__desc {
+  font-size: 13px;
+  color: var(--cp-text-light);
+  line-height: 1.6;
+}
+
+.prc-mock__signoff {
+  font-size: 13px !important;
+  font-style: italic;
+  color: var(--cp-text-light) !important;
+  border-top: 1px solid var(--cp-border);
+  padding-top: 14px;
+}
+
+/* Phone script */
+.prc-script {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prc-script__line {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-left: 4px solid var(--cp-purple);
+  border-radius: var(--cp-radius-sm);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prc-script__cue {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+}
+
+.prc-script__say {
+  font-size: 14.5px;
+  color: var(--cp-text);
+  line-height: 1.6;
+}
+
+/* FAQ */
+.prc-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prc-faq__item {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius-sm);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prc-faq__q {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cp-purple-deeper);
+}
+
+.prc-faq__a {
+  font-size: 13.5px;
+  color: var(--cp-text-light);
+  line-height: 1.6;
+}
+
+/* ── Roadmap timeline groups ───────────────────────────────────────────────── */
+
+.prc-roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.prc-tl-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.prc-tl-group__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 18px;
+  background: var(--cp-purple-bg);
+  border-radius: var(--cp-radius-sm);
+  border-left: 4px solid var(--cp-purple);
+}
+
+.prc-tl-group__window {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--cp-purple-deeper);
+  letter-spacing: -0.01em;
+}
+
+.prc-tl-group__note {
+  font-size: 12.5px;
+  color: var(--cp-text-light);
+}
+
+.prc-tl-item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Emails accordion ──────────────────────────────────────────────────────── */
+
+.prc-accordion__header {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  width: 100%;
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 24px 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.prc-accordion__header:hover {
+  border-color: var(--cp-purple-light);
+  box-shadow: var(--cp-shadow);
+}
+
+.prc-accordion__header.is-open {
+  border-color: var(--cp-purple);
+}
+
+.prc-accordion__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prc-accordion__chevron {
+  font-size: 14px;
+  color: var(--cp-purple-deeper);
+  flex-shrink: 0;
+}
+
 /* ── Responsive ────────────────────────────────────────────────────────────── */
 
 @media (max-width: 700px) {
+  .prc-phases {
+    grid-template-columns: 1fr;
+  }
+
   .prc-mitigation__grid {
     grid-template-columns: 1fr;
   }
