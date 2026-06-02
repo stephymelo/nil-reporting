@@ -486,12 +486,114 @@ function Divider({ num, title, sub }: { num: string; title: string; sub: string 
   )
 }
 
+// ── Reusable: message body (used on-screen + in the printable PDF) ───────────
+
+function MessageBody() {
+  return (
+    <div className="cp-segment__body">
+      <div className="cp-segment__columns">
+        <div className="cp-segment__col">
+          <div className="cp-segment__col-title">What stays the same</div>
+          <ul className="cp-segment__col-items">
+            <li>Your pricing tier — exactly what you have now</li>
+            <li>The products you already order</li>
+            <li>The team and reps you know</li>
+            <li>50+ years of trust behind it all</li>
+          </ul>
+        </div>
+        <div className="cp-segment__col">
+          <div className="cp-segment__col-title">What gets better</div>
+          <ul className="cp-segment__col-items">
+            <li>One website instead of two — everything in one place</li>
+            <li>Easier to find products and reorder</li>
+            <li>Discounts and promotions all in one spot</li>
+            <li>More trainings and content to grow your business</li>
+          </ul>
+        </div>
+      </div>
+      <div className="cp-segment__callout">
+        <strong>Tone:</strong> Warm, confident, and reassuring — never corporate. We've been doing this for over 50 years; we're not changing who we are, we're making it easier to work with us. Frame the merge as <em>"we brought everything together for you,"</em> not <em>"we shut down a website."</em> Every message leads with reassurance before it mentions change.
+      </div>
+    </div>
+  )
+}
+
+// ── Reusable: sales blocks for one language (email + script + FAQ) ───────────
+
+function SalesBlocks({ lang }: { lang: 'en' | 'es' }) {
+  const c = salesContent[lang]
+  return (
+    <>
+      {/* 1. Mass email to sales team */}
+      <div className="prc-block">
+        <div className="prc-block__label">
+          <span className="prc-block__num">1</span>
+          {lang === 'en' ? 'Mass Email — Send to the Sales Team' : 'Correo Masivo — Enviar al Equipo de Ventas'}
+        </div>
+        <div className="prc-mock">
+          <div className="prc-mock__subjectline">
+            <div className="prc-mock__subject">{c.emailSubject}</div>
+            <div className="prc-mock__preview">
+              {lang === 'en' ? 'To: Sales Team · From: Marketing' : 'Para: Equipo de Ventas · De: Marketing'}
+            </div>
+          </div>
+          <div className="prc-mock__body">
+            <p className="prc-mock__lead">{c.emailIntro}</p>
+            <ol className="prc-numbered">
+              {c.emailPoints.map((pt) => (
+                <li key={pt.title} className="prc-numbered__item">
+                  <span className="prc-numbered__title">{pt.title}</span>
+                  <span className="prc-numbered__desc">{pt.desc}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="prc-mock__signoff">{c.emailSignoff}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Phone script */}
+      <div className="prc-block">
+        <div className="prc-block__label">
+          <span className="prc-block__num">2</span>
+          {lang === 'en' ? 'Phone Script — What to Say to Customers' : 'Guion Telefónico — Qué Decirle a los Clientes'}
+        </div>
+        <p className="prc-block__intro">{c.scriptIntro}</p>
+        <div className="prc-script">
+          {c.script.map((s) => (
+            <div key={s.cue} className="prc-script__line">
+              <div className="prc-script__cue">{s.cue}</div>
+              <div className="prc-script__say">{s.line}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 3. Client FAQ */}
+      <div className="prc-block">
+        <div className="prc-block__label">
+          <span className="prc-block__num">3</span>
+          {lang === 'en' ? 'Client FAQ — Questions They\'ll Ask' : 'Preguntas Frecuentes — Lo Que Preguntarán'}
+        </div>
+        <p className="prc-block__intro">{c.faqIntro}</p>
+        <div className="prc-faq">
+          {c.faq.map((item) => (
+            <div key={item.q} className="prc-faq__item">
+              <div className="prc-faq__q">{item.q}</div>
+              <div className="prc-faq__a">{item.a}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function PRCampaignPage() {
   const [lang, setLang] = useState<'en' | 'es'>('en')
   const [emailsOpen, setEmailsOpen] = useState(false)
-  const c = salesContent[lang]
 
   return (
     <div className="campaign-page">
@@ -570,44 +672,18 @@ export default function PRCampaignPage() {
         </section>
 
         {/* ════ THE MESSAGE ════ */}
-        <Divider num="02" title="The Message" sub="How we position the change & handle backlash" />
+        <Divider num="02" title="NIL and OR merge on Hairloss.com" sub="How we position the change & handle backlash" />
 
         <div className="cp-segment">
           <div className="cp-segment__header">
             <span className="cp-segment__badge">The Message</span>
-            <h2 className="cp-segment__title">How We Talk About This</h2>
+            <h2 className="cp-segment__title">NIL and OR merge on Hairloss.com</h2>
             <p className="cp-segment__subtitle">
               A merge can feel like a loss to loyal customers. Our job is to make it feel like an upgrade. Lead with what stays the same, then what gets better.
             </p>
           </div>
 
-          <div className="cp-segment__body">
-            <div className="cp-segment__columns">
-              <div className="cp-segment__col">
-                <div className="cp-segment__col-title">What stays the same</div>
-                <ul className="cp-segment__col-items">
-                  <li>Your pricing tier — exactly what you have now</li>
-                  <li>The products you already order</li>
-                  <li>The team and reps you know</li>
-                  <li>50+ years of trust behind it all</li>
-                </ul>
-              </div>
-
-              <div className="cp-segment__col">
-                <div className="cp-segment__col-title">What gets better</div>
-                <ul className="cp-segment__col-items">
-                  <li>One website instead of two — everything in one place</li>
-                  <li>Easier to find products and reorder</li>
-                  <li>Discounts and promotions all in one spot</li>
-                  <li>More trainings and content to grow your business</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="cp-segment__callout">
-              <strong>Tone:</strong> Warm, confident, and reassuring — never corporate. We've been doing this for over 50 years; we're not changing who we are, we're making it easier to work with us. Frame the merge as <em>"we brought everything together for you,"</em> not <em>"we shut down a website."</em> Every message leads with reassurance before it mentions change.
-            </div>
-          </div>
+          <MessageBody />
         </div>
 
         {/* ════ FOR THE SALES TEAM ════ */}
@@ -622,83 +698,28 @@ export default function PRCampaignPage() {
             </p>
           </div>
 
-          {/* Language toggle */}
-          <div className="prc-lang">
-            <button
-              className={`prc-lang__btn ${lang === 'en' ? 'is-active' : ''}`}
-              onClick={() => setLang('en')}
-            >
-              English
+          {/* Toolbar: language toggle + PDF download */}
+          <div className="prc-toolbar">
+            <div className="prc-lang">
+              <button
+                className={`prc-lang__btn ${lang === 'en' ? 'is-active' : ''}`}
+                onClick={() => setLang('en')}
+              >
+                English
+              </button>
+              <button
+                className={`prc-lang__btn ${lang === 'es' ? 'is-active' : ''}`}
+                onClick={() => setLang('es')}
+              >
+                Español
+              </button>
+            </div>
+            <button className="prc-download" onClick={() => window.print()}>
+              ⬇ Download PDF — Message + Sales (EN &amp; ES)
             </button>
-            <button
-              className={`prc-lang__btn ${lang === 'es' ? 'is-active' : ''}`}
-              onClick={() => setLang('es')}
-            >
-              Español
-            </button>
           </div>
 
-          {/* 1. Mass email to sales team */}
-          <div className="prc-block">
-            <div className="prc-block__label">
-              <span className="prc-block__num">1</span>
-              {lang === 'en' ? 'Mass Email — Send to the Sales Team' : 'Correo Masivo — Enviar al Equipo de Ventas'}
-            </div>
-            <div className="prc-mock">
-              <div className="prc-mock__subjectline">
-                <div className="prc-mock__subject">{c.emailSubject}</div>
-                <div className="prc-mock__preview">
-                  {lang === 'en' ? 'To: Sales Team · From: Marketing' : 'Para: Equipo de Ventas · De: Marketing'}
-                </div>
-              </div>
-              <div className="prc-mock__body">
-                <p className="prc-mock__lead">{c.emailIntro}</p>
-                <ol className="prc-numbered">
-                  {c.emailPoints.map((pt) => (
-                    <li key={pt.title} className="prc-numbered__item">
-                      <span className="prc-numbered__title">{pt.title}</span>
-                      <span className="prc-numbered__desc">{pt.desc}</span>
-                    </li>
-                  ))}
-                </ol>
-                <p className="prc-mock__signoff">{c.emailSignoff}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* 2. Phone script */}
-          <div className="prc-block">
-            <div className="prc-block__label">
-              <span className="prc-block__num">2</span>
-              {lang === 'en' ? 'Phone Script — What to Say to Customers' : 'Guion Telefónico — Qué Decirle a los Clientes'}
-            </div>
-            <p className="prc-block__intro">{c.scriptIntro}</p>
-            <div className="prc-script">
-              {c.script.map((s) => (
-                <div key={s.cue} className="prc-script__line">
-                  <div className="prc-script__cue">{s.cue}</div>
-                  <div className="prc-script__say">{s.line}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* 3. Client FAQ */}
-          <div className="prc-block">
-            <div className="prc-block__label">
-              <span className="prc-block__num">3</span>
-              {lang === 'en' ? 'Client FAQ — Questions They\'ll Ask' : 'Preguntas Frecuentes — Lo Que Preguntarán'}
-            </div>
-            <p className="prc-block__intro">{c.faqIntro}</p>
-            <div className="prc-faq">
-              {c.faq.map((item) => (
-                <div key={item.q} className="prc-faq__item">
-                  <div className="prc-faq__q">{item.q}</div>
-                  <div className="prc-faq__a">{item.a}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <SalesBlocks lang={lang} />
         </section>
 
         {/* ════ WEBSITE & ACCOUNTS ════ */}
@@ -886,6 +907,30 @@ export default function PRCampaignPage() {
           )}
         </section>
       </main>
+
+      {/* ── Printable PDF document — Message + Sales briefing (EN & ES) ── */}
+      <div className="prc-print">
+        <div className="prc-print__head">
+          <div className="prc-print__brand">Hairloss.com</div>
+          <div className="prc-print__title">NIL and OR merge on Hairloss.com</div>
+          <div className="prc-print__sub">
+            Sales Briefing — Positioning, Mass Email, Phone Script &amp; Client FAQ · English &amp; Español
+          </div>
+        </div>
+
+        <h2 className="prc-print__h2">The Message — How We Position This</h2>
+        <MessageBody />
+
+        <div className="prc-print__section prc-print__section--break">
+          <h2 className="prc-print__h2">For the Sales Team — English</h2>
+          <SalesBlocks lang="en" />
+        </div>
+
+        <div className="prc-print__section prc-print__section--break">
+          <h2 className="prc-print__h2">Para el Equipo de Ventas — Español</h2>
+          <SalesBlocks lang="es" />
+        </div>
+      </div>
 
       <footer className="cp-footer">
         Hairloss.com · NIL + Onrite Merge · PR Campaign · June — August 2026

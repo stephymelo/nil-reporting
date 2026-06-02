@@ -802,6 +802,120 @@
   flex-shrink: 0;
 }
 
+/* ── Toolbar + PDF download ────────────────────────────────────────────────── */
+
+.prc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.prc-download {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-white);
+  background: var(--cp-purple-deeper);
+  border: none;
+  border-radius: 100px;
+  padding: 11px 22px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.prc-download:hover {
+  background: var(--cp-purple-dark);
+  box-shadow: var(--cp-shadow-lg);
+}
+
+/* ── Printable PDF document (hidden on screen) ─────────────────────────────── */
+
+.prc-print {
+  display: none;
+}
+
+.prc-print__head {
+  text-align: center;
+  border-bottom: 3px solid var(--cp-purple);
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+}
+
+.prc-print__brand {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--cp-purple-deeper);
+  letter-spacing: -0.02em;
+}
+
+.prc-print__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--cp-text);
+  margin-top: 4px;
+}
+
+.prc-print__sub {
+  font-size: 12px;
+  color: var(--cp-text-light);
+  margin-top: 6px;
+}
+
+.prc-print__h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--cp-white);
+  background: linear-gradient(135deg, var(--cp-purple-deeper), var(--cp-purple));
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 24px 0 16px;
+}
+
+.prc-print .prc-block {
+  margin-bottom: 20px;
+}
+
+@media print {
+  .cp-back,
+  .cp-hero,
+  .cp-main,
+  .cp-footer {
+    display: none !important;
+  }
+
+  .prc-print {
+    display: block !important;
+  }
+
+  .campaign-page {
+    background: #fff;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    margin: 14mm;
+  }
+
+  .prc-print__section--break {
+    break-before: page;
+  }
+
+  .prc-block,
+  .prc-mock,
+  .prc-numbered__item,
+  .prc-script__line,
+  .prc-faq__item,
+  .cp-segment__callout {
+    break-inside: avoid;
+  }
+}
+
 /* ── Responsive ────────────────────────────────────────────────────────────── */
 
 @media (max-width: 700px) {
