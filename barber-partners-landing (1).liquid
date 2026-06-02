@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barber Partners | Hairloss.com</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --accent:      #6B7FA3;
+  --accent-dark: #4A5A7A;
+  --accent-bg:   #EEF1F7;
+  --accent-mid:  #D0D8EC;
+  --text:        #1A1A2E;
+  --muted:       #6B7280;
+  --light:       #F8F9FB;
+  --white:       #ffffff;
+  --border:      #E5E8F0;
+  --success:     #2E7D5B;
+  --error:       #B83232;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body-family, var(--body-font-family, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif));
+  background: var(--white);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bp-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── HERO ── */
+.bp-hero {
+  background: var(--light);
+  border-bottom: 1px solid var(--border);
+  padding: 56px 0 48px;
+}
+
+.bp-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Hero image / before-after placeholder */
+.bp-hero-img {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(107,127,163,0.18);
+  background: var(--accent-bg);
+}
+
+.bp-ba-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.bp-ba-img.before { left: 0; }
+.bp-ba-img.after  { right: 0; }
+
+.bp-ba-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.bp-ba-divider {
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.bp-ba-tag {
+  position: absolute;
+  bottom: 16px;
+  background: rgba(255,255,255,0.95);
+  color: var(--accent-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+.bp-ba-tag.before-tag { left: 16px; }
+.bp-ba-tag.after-tag  { right: 16px; background: var(--text); color: #fff; }
+
+/* Hero copy */
+.bp-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--white);
+  border: 1px solid var(--accent-mid);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.bp-hero h1 {
+  font-size: clamp(28px, 3.8vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 18px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.bp-hero h1 .accent { color: var(--accent); }
+
+.bp-hero-sub {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.bp-hero-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+
+.bp-hero-mini span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bp-hero-mini svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── MAIN GRID ── */
+.bp-main { padding: 44px 0 64px; }
+
+.bp-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Stats */
+.bp-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.bp-stat {
+  background: var(--accent-bg);
+  border-radius: 10px;
+  padding: 22px 22px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bp-stat::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 22px;
+  width: 40px; height: 3px;
+  background: var(--accent);
+  border-radius: 3px 3px 0 0;
+}
+
+.bp-stat-num {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.bp-stat-label {
+  font-size: 13px;
+  color: var(--accent-dark);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Info cards */
+.bp-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin-bottom: 14px;
+}
+
+.bp-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.bp-card-icon {
+  width: 36px; height: 36px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bp-card-icon svg { width: 17px; height: 17px; }
+
+.bp-card-head h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.bp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bp-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.bp-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.bp-list li strong {
+  display: block;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+/* Trust strip */
+.bp-trust {
+  background: var(--text);
+  color: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  padding: 18px 22px;
+  font-size: 13px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bp-trust strong { color: #fff; font-weight: 700; }
+
+.bp-trust-icon {
+  width: 36px; height: 36px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.bp-trust-icon svg { width: 17px; height: 17px; }
+
+/* ── FORM ── */
+.bp-form-wrap {
+  position: sticky;
+  top: 24px;
+}
+
+form.bp-form,
+.bp-form-success {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 30px;
+  box-shadow: 0 4px 28px rgba(107,127,163,0.10);
+  position: relative;
+  overflow: hidden;
+}
+
+form.bp-form::before,
+.bp-form-success::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+
+.bp-form-head {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.bp-form-head h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.bp-form-head p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.bp-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+
+.bp-field label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.bp-field input,
+.bp-field select,
+.bp-field textarea {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  appearance: none;
+  width: 100%;
+}
+
+.bp-field input::placeholder,
+.bp-field textarea::placeholder { color: #B0BAC8; }
+
+.bp-field input:focus,
+.bp-field select:focus,
+.bp-field textarea:focus {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.bp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.bp-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7FA3' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.bp-submit {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+
+.bp-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+.bp-form-note {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Success / errors */
+.bp-form-success {
+  text-align: center;
+  padding: 48px 30px;
+}
+.bp-form-success-icon {
+  width: 56px; height: 56px;
+  background: var(--accent-bg);
+  color: var(--success);
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bp-form-success-icon svg { width: 28px; height: 28px; }
+.bp-form-success h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.bp-form-success p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.bp-form-errors {
+  background: #FDECEC;
+  border: 1px solid #F4C7C7;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: var(--error);
+  line-height: 1.5;
+}
+.bp-form-errors strong { display: block; margin-bottom: 4px; color: var(--error); }
+.bp-form-errors ul { list-style: none; padding: 0; }
+.bp-form-errors ul li { padding: 2px 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 980px) {
+  .bp-hero-grid,
+  .bp-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .bp-form-wrap { position: static; }
+  .bp-hero { padding: 40px 0 36px; }
+  .bp-main { padding: 32px 0 48px; }
+  .bp-hero-img { aspect-ratio: 1 / 1; max-width: 480px; margin: 0 auto; }
+}
+
+@media (max-width: 540px) {
+  .bp-container { padding: 0 20px; }
+  .bp-stats { grid-template-columns: 1fr; }
+  .bp-form-row { grid-template-columns: 1fr; }
+  form.bp-form { padding: 26px 22px; }
+  .bp-hero h1 { font-size: 28px; }
+  .bp-hero-mini { gap: 8px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="bp-hero">
+  <div class="bp-container">
+    <div class="bp-hero-grid">
+
+      <!-- LEFT: Before/After image -->
+      <div class="bp-hero-img">
+        <div class="bp-ba-img before">
+          <img src="https://cdn.shopify.com/s/files/1/0589/7142/2831/files/before-daniel.png?v=1777510374" alt="Client before hair replacement service" loading="eager">
+        </div>
+        <div class="bp-ba-img after">
+          <img src="https://cdn.shopify.com/s/files/1/0589/7142/2831/files/after-daniel.png?v=1777510375" alt="Client after hair replacement service" loading="eager">
+        </div>
+        <div class="bp-ba-divider"></div>
+        <span class="bp-ba-tag before-tag">Before</span>
+        <span class="bp-ba-tag after-tag">After</span>
+      </div>
+
+      <!-- RIGHT: Hero copy -->
+      <div class="bp-hero-copy">
+        <div class="bp-eyebrow">Barber Partners — No Investment, No Risk</div>
+        <h1>Add a Service That Pays <span class="accent">$1,000+</span> Per Client</h1>
+        <p class="bp-hero-sub">Hair replacement units are the highest-margin service you can offer — and simpler than you think. No upfront inventory, 1-on-1 training, everything shipped to your shop.</p>
+        <div class="bp-hero-mini">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            $1,000+ per appointment
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Free U.S. shipping $150+
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            English &amp; Spanish training
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<section class="bp-main">
+  <div class="bp-container">
+    <div class="bp-grid">
+
+      <!-- LEFT: INFO -->
+      <div class="bp-info">
+
+        <div class="bp-stats">
+          <div class="bp-stat">
+            <div class="bp-stat-num">$1K+</div>
+            <div class="bp-stat-label">Per service appointment</div>
+          </div>
+          <div class="bp-stat">
+            <div class="bp-stat-num">$$$</div>
+            <div class="bp-stat-label">Extra retail revenue</div>
+          </div>
+        </div>
+
+        <div class="bp-card">
+          <div class="bp-card-head">
+            <span class="bp-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="6" r="3"/>
+                <circle cx="6" cy="18" r="3"/>
+                <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+                <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+              </svg>
+            </span>
+            <h3>Think it's too complicated?</h3>
+          </div>
+          <ul class="bp-list">
+            <li>
+              <strong>Low minimum orders</strong>
+              Start with one client. No upfront stock, no storage, no overhead.
+            </li>
+            <li>
+              <strong>Fast free shipping</strong>
+              On U.S. orders $150 and up, delivered straight to your shop.
+            </li>
+            <li>
+              <strong>1-on-1 training</strong>
+              In English or Spanish — application, removal, styling, and consultation.
+            </li>
+            <li>
+              <strong>Wholesale pricing</strong>
+              On every product so your margins stay strong every time.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bp-card">
+          <div class="bp-card-head">
+            <span class="bp-card-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.39 7.36H22l-6.19 4.5 2.36 7.36L12 16.72l-6.17 4.5 2.36-7.36L2 9.36h7.61L12 2z"/>
+              </svg>
+            </span>
+            <h3>Work less and make more</h3>
+          </div>
+          <ul class="bp-list">
+            <li>
+              <strong>Stand out from competitors</strong>
+              Most barbers don't offer hair replacement at all.
+            </li>
+            <li>
+              <strong>Service clients every 2–4 weeks</strong>
+              Recurring revenue, not one-time cuts.
+            </li>
+            <li>
+              <strong>Premium positioning</strong>
+              Become the hair replacement specialist in your market.
+            </li>
+            <li>
+              <strong>Featured collaborations</strong>
+              Get spotlighted across our social channels to grow your brand.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bp-trust">
+          <span class="bp-trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </span>
+          <div><strong>U.S.-based team.</strong> Worldwide shipping with free U.S. delivery on orders $150+.</div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: SHOPIFY CONTACT FORM -->
+      <div class="bp-form-wrap" id="partner-form">
+
+        {%- form 'contact', id: 'BarberPartnerForm', class: 'bp-form' -%}
+
+          {%- if form.posted_successfully? -%}
+            <div class="bp-form-success" role="status" aria-live="polite">
+              <div class="bp-form-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <h2>Thanks for your interest!</h2>
+              <p>Our team will reach out shortly. Keep an eye on your inbox — and check spam, just in case.</p>
+            </div>
+          {%- else -%}
+
+            <div class="bp-form-head">
+              <h2>Become a Partner</h2>
+              <p>Fill out the form and our team will be in touch. English &amp; Spanish support available.</p>
+            </div>
+
+            {%- if form.errors -%}
+              <div class="bp-form-errors" role="alert">
+                <strong>Please fix the following before submitting:</strong>
+                <ul>
+                  {%- for field in form.errors -%}
+                    <li>
+                      {%- if field == 'form' -%}
+                        {{ form.errors.messages[field] }}
+                      {%- else -%}
+                        {{ form.errors.translated_fields[field] | capitalize }} {{ form.errors.messages[field] }}
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+
+            <div class="bp-form-row">
+              <div class="bp-field">
+                <label for="BarberFirstName">First Name</label>
+                <input type="text" id="BarberFirstName" name="contact[first-name]" placeholder="Carlos" autocomplete="given-name" required>
+              </div>
+              <div class="bp-field">
+                <label for="BarberLastName">Last Name</label>
+                <input type="text" id="BarberLastName" name="contact[last-name]" placeholder="Rivera" autocomplete="family-name" required>
+              </div>
+            </div>
+
+            <div class="bp-field">
+              <label for="BarberEmail">Email</label>
+              <input type="email" id="BarberEmail" name="contact[email]" placeholder="you@yourshop.com" autocomplete="email" autocorrect="off" autocapitalize="off" spellcheck="false" required>
+            </div>
+
+            <div class="bp-field">
+              <label for="BarberPhone">Phone</label>
+              <input type="tel" id="BarberPhone" name="contact[phone]" placeholder="(305) 000-0000" autocomplete="tel" pattern="[0-9\-\(\)\s\+\.]+">
+            </div>
+
+            <div class="bp-field">
+              <label for="BarberShop">Shop / Business Name</label>
+              <input type="text" id="BarberShop" name="contact[Shop Name]" placeholder="Your Barbershop" autocomplete="organization">
+            </div>
+
+            <div class="bp-form-row">
+              <div class="bp-field">
+                <label for="BarberCity">City</label>
+                <input type="text" id="BarberCity" name="contact[City]" placeholder="Miami" autocomplete="address-level2">
+              </div>
+              <div class="bp-field">
+                <label for="BarberState">State</label>
+                <input type="text" id="BarberState" name="contact[State]" placeholder="FL" autocomplete="address-level1">
+              </div>
+            </div>
+
+            <div class="bp-field">
+              <label for="BarberLanguage">Preferred Language</label>
+              <select id="BarberLanguage" name="contact[Preferred Language]">
+                <option value="">Select one</option>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish / Español</option>
+                <option value="Both">Both / Ambos</option>
+              </select>
+            </div>
+
+            {%- comment -%} Hidden body so Shopify's notification email has clear context {%- endcomment -%}
+            <input type="hidden" name="contact[body]" value="Barber Partner application submitted from Hairloss.com landing page.">
+
+            <button type="submit" class="bp-submit">Submit My Interest</button>
+            <p class="bp-form-note">No commitment to express interest.</p>
+
+          {%- endif -%}
+
+        {%- endform -%}
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{%- comment -%}
+  Auto-scroll to form on submit (success or error) so the user sees the result.
+{%- endcomment -%}
+{%- if form.posted_successfully? or form.errors -%}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var el = document.getElementById('partner-form');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+{%- endif -%}
+
+</body>
+</html>

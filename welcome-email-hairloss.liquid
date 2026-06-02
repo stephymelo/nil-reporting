@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <title>Welcome to {{ shop.name }}</title>
+
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style>
+    table, td, div, h1, h2, p, a { font-family: Arial, Helvetica, sans-serif !important; }
+    .btn-link { padding: 0 !important; }
+  </style>
+  <![endif]-->
+
+  <style type="text/css">
+    /* CLIENT RESETS */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background: #f2f2f2; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+
+    /* LINK STYLING */
+    a { color: #2a2040; text-decoration: none; }
+
+    /* MOBILE */
+    @media screen and (max-width: 620px) {
+      .email-container { width: 100% !important; max-width: 100% !important; }
+      .mobile-px { padding-left: 24px !important; padding-right: 24px !important; }
+      .mobile-py-hero { padding-top: 40px !important; padding-bottom: 36px !important; }
+      .mobile-py-section { padding-top: 36px !important; padding-bottom: 36px !important; }
+      .hero-title { font-size: 28px !important; line-height: 1.2 !important; }
+      .section-title { font-size: 20px !important; }
+      .nav-link { padding: 10px 10px !important; font-size: 10px !important; }
+      .col-card { display: block !important; width: 100% !important; padding: 20px !important; }
+      .col-card-wrap { padding-bottom: 10px !important; }
+      .coupon-box { padding: 14px 24px !important; }
+      .coupon-code { font-size: 24px !important; }
+    }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background:#f2f2f2; -webkit-font-smoothing:antialiased;">
+
+  <!-- PREHEADER (hidden preview text shown in inbox) -->
+  <div style="display:none; font-size:1px; color:#f2f2f2; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; mso-hide:all;">
+    Welcome{% if customer.first_name != blank %}, {{ customer.first_name }}{% endif %} — here's 10% off your first order at {{ shop.name }}.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+  <!-- OUTER WRAPPER -->
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background:#f2f2f2;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <!-- EMAIL CONTAINER -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="620" class="email-container" style="width:620px; max-width:620px; background:#ffffff; border-radius:4px; overflow:hidden;">
+
+          <!-- HEADER -->
+          <tr>
+            <td align="center" class="mobile-px" style="background:#d6cfeb; padding:36px 40px 32px;">
+              <a href="{{ shop.url }}" style="text-decoration:none;">
+                {%- if shop.email_logo_url != blank -%}
+                  <img src="{{ shop.email_logo_url }}" width="{{ shop.email_logo_width | default: 180 }}" alt="{{ shop.name }}" style="display:block; max-width:220px; height:auto; margin:0 auto; border:0;">
+                {%- else -%}
+                  <span style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:28px; font-weight:700; letter-spacing:-0.5px; color:#2a2040; text-decoration:none;">Hairloss<span style="color:#7a6eb0;">.com</span></span>
+                {%- endif -%}
+              </a>
+            </td>
+          </tr>
+
+          <!-- NAV -->
+          <tr>
+            <td align="center" style="background:#ffffff; border-bottom:1px solid #ede9f8; padding:4px 12px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="{{ shop.url }}/collections/for-women" style="color:#3d3060; text-decoration:none;">For Women</a>
+                  </td>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="{{ shop.url }}/collections/for-men" style="color:#3d3060; text-decoration:none;">For Men</a>
+                  </td>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="{{ shop.url }}/collections/hair-system-application" style="color:#3d3060; text-decoration:none;">Application</a>
+                  </td>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="{{ shop.url }}/collections/accessories-hair-care" style="color:#3d3060; text-decoration:none;">Hair Care</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- HERO -->
+          <tr>
+            <td align="center" class="mobile-px mobile-py-hero" style="background:#d6cfeb; background:linear-gradient(160deg, #e3ebf7 0%, #d6cfeb 100%); padding:52px 40px 44px;">
+              <p style="margin:0 0 14px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#7a6eb0;">Welcome to the family</p>
+
+              <h1 class="hero-title" style="margin:0 0 16px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:34px; font-weight:700; color:#1e1635; line-height:1.2; letter-spacing:-0.5px;">
+                {%- if customer.first_name != blank -%}
+                  Welcome, {{ customer.first_name }}.<br>Confidence starts here.
+                {%- else -%}
+                  Confidence starts<br>with great hair.
+                {%- endif -%}
+              </h1>
+
+              <p style="margin:0 auto 28px auto; max-width:420px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; color:#4a4070; line-height:1.65;">
+                Thank you for joining {{ shop.name }}. We're here to help you find the perfect hair system solution — natural, comfortable, and made just for you.
+              </p>
+
+              <!-- BULLETPROOF BUTTON -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                <tr>
+                  <td align="center" style="border-radius:3px; background:#2a2040;">
+                    <a href="{{ shop.url }}/collections/all" style="display:inline-block; padding:14px 36px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#ffffff; text-decoration:none; border-radius:3px; mso-padding-alt:0; background:#2a2040;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Shop Now
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- FEATURED PRODUCT -->
+          <tr>
+            <td align="center" class="mobile-px mobile-py-section" style="padding:48px 40px; background:#ffffff;">
+              <p style="margin:0 0 10px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#a09ac8;">Featured Product</p>
+              <h2 class="section-title" style="margin:0 0 8px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:22px; font-weight:700; color:#1e1635; letter-spacing:-0.3px;">Natural Hair Systems</h2>
+              <p style="margin:0 0 32px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; color:#6b6490; line-height:1.6;">Premium quality, undetectable fit — crafted for everyday confidence.</p>
+
+              <!-- REPLACE THIS IMAGE URL with your Shopify CDN-hosted product image -->
+              <a href="{{ shop.url }}/collections/hair-systems" style="text-decoration:none;">
+                <img src="https://cdn.shopify.com/s/files/1/your-store-id/files/hair-system-hero.jpg" width="380" alt="Natural Hair System" style="display:block; width:100%; max-width:380px; height:auto; border-radius:4px; margin:0 auto 28px auto; border:0;">
+              </a>
+
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                <tr>
+                  <td align="center" style="border-radius:3px; background:#d6cfeb;">
+                    <a href="{{ shop.url }}/collections/hair-systems" style="display:inline-block; padding:13px 32px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#2a2040; text-decoration:none; border-radius:3px; background:#d6cfeb;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      View Product
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- DISCOUNT -->
+          <tr>
+            <td align="center" class="mobile-px mobile-py-section" style="background:#e3ebf7; padding:40px 40px;">
+              <h2 style="margin:0 0 8px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:20px; font-weight:700; color:#1e1635;">Your Welcome Gift</h2>
+              <p style="margin:0 0 24px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; color:#4a5070; line-height:1.6;">Use the code below at checkout for 10% off your first order. Valid sitewide.</p>
+
+              <!-- COUPON BOX -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto 24px auto;">
+                <tr>
+                  <td class="coupon-box" align="center" style="border:2px dashed #7a6eb0; border-radius:4px; padding:16px 40px; background:#ffffff;">
+                    <p style="margin:0 0 6px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:#9590be;">Your exclusive code</p>
+                    <p class="coupon-code" style="margin:0 0 6px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:28px; font-weight:800; letter-spacing:0.12em; color:#2a2040;">WELCOME10</p>
+                    <p style="margin:0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; color:#7a6eb0;">10% off your first order</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- APPLY CODE BUTTON (auto-applies discount via URL) -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                <tr>
+                  <td align="center" style="border-radius:3px; background:#2a2040;">
+                    <a href="{{ shop.url }}/discount/WELCOME10" style="display:inline-block; padding:13px 32px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#ffffff; text-decoration:none; border-radius:3px; background:#2a2040;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Use My Code
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- COLLECTIONS GRID -->
+          <tr>
+            <td class="mobile-px mobile-py-section" style="background:#ffffff; padding:44px 40px;">
+              <p style="margin:0 0 10px 0; text-align:center; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#a09ac8;">Browse</p>
+              <h2 class="section-title" style="margin:0 0 8px 0; text-align:center; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:22px; font-weight:700; color:#1e1635; letter-spacing:-0.3px;">Explore Our Collections</h2>
+              <p style="margin:0 0 28px 0; text-align:center; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; color:#6b6490; line-height:1.6;">Find exactly what you need — from full systems to application kits and care products.</p>
+
+              <!-- 2x2 GRID AS NESTED TABLES -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tr>
+                  <td class="col-card-wrap" width="50%" valign="top" style="padding:0 6px 12px 0;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td class="col-card" align="center" style="background:#d6cfeb; border-radius:4px; padding:24px 20px;">
+                          <a href="{{ shop.url }}/collections/for-women" style="text-decoration:none; display:block;">
+                            <p style="margin:0 0 5px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#2a2040;">For Women</p>
+                            <p style="margin:0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; color:#6b6490; line-height:1.4;">Wigs, toppers &amp; more</p>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="col-card-wrap" width="50%" valign="top" style="padding:0 0 12px 6px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td class="col-card" align="center" style="background:#e3ebf7; border-radius:4px; padding:24px 20px;">
+                          <a href="{{ shop.url }}/collections/for-men" style="text-decoration:none; display:block;">
+                            <p style="margin:0 0 5px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#2a2040;">For Men</p>
+                            <p style="margin:0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; color:#6b6490; line-height:1.4;">Toupees &amp; hair systems</p>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="col-card-wrap" width="50%" valign="top" style="padding:0 6px 0 0;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td class="col-card" align="center" style="background:#e3ebf7; border-radius:4px; padding:24px 20px;">
+                          <a href="{{ shop.url }}/collections/hair-system-application" style="text-decoration:none; display:block;">
+                            <p style="margin:0 0 5px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#2a2040;">Application</p>
+                            <p style="margin:0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; color:#6b6490; line-height:1.4;">Adhesives, tapes &amp; tools</p>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="col-card-wrap" width="50%" valign="top" style="padding:0 0 0 6px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td class="col-card" align="center" style="background:#d6cfeb; border-radius:4px; padding:24px 20px;">
+                          <a href="{{ shop.url }}/collections/accessories-hair-care" style="text-decoration:none; display:block;">
+                            <p style="margin:0 0 5px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#2a2040;">Hair Care</p>
+                            <p style="margin:0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; color:#6b6490; line-height:1.4;">Shampoos &amp; styling</p>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td align="center" class="mobile-px" style="background:#2a2040; padding:36px 40px;">
+              <p style="margin:0 0 14px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:17px; font-weight:700; color:#d6cfeb;">{{ shop.name }}</p>
+              <p style="margin:0 0 4px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; color:#8a84b0; line-height:1.7;">© {{ 'now' | date: '%Y' }} {{ shop.name }} — All rights reserved.</p>
+              <p style="margin:0 0 16px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; color:#8a84b0; line-height:1.7;">
+                You received this email because you signed up at <a href="{{ shop.url }}" style="color:#a09ac8; text-decoration:none;">{{ shop.url | remove: 'https://' | remove: 'http://' }}</a>
+              </p>
+
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                <tr>
+                  <td style="padding:0 10px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase;">
+                    <a href="{{ shop.url }}/account" style="color:#8a84b0; text-decoration:none;">Manage Preferences</a>
+                  </td>
+                  <td style="padding:0 10px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase;">
+                    <a href="{{ shop.url }}/policies/privacy-policy" style="color:#8a84b0; text-decoration:none;">Privacy</a>
+                  </td>
+                  <td style="padding:0 10px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase;">
+                    <a href="{{ shop.url }}/pages/contact" style="color:#8a84b0; text-decoration:none;">Contact</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /EMAIL CONTAINER -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

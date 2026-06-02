@@ -1,0 +1,430 @@
+/* ── PR Campaign Page — additions on top of CampaignPage.css ───────────────── */
+
+/* ── Track tags ────────────────────────────────────────────────────────────── */
+
+.prc-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.prc-tag--marketing {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.prc-tag--website {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.prc-tag--content {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+.prc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ── Roadmap item head (title + tags) ──────────────────────────────────────── */
+
+.prc-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.prc-item-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.prc-flag {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  line-height: 1.4;
+}
+
+.prc-phase-label--june { color: #1e40af; }
+.prc-phase-label--july-early { color: #9d174d; }
+.prc-phase-label--july { color: #6d28d9; }
+.prc-phase-label--august { color: #166534; }
+
+/* ── Mitigation block ──────────────────────────────────────────────────────── */
+
+.prc-mitigation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prc-mitigation__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cp-purple-deeper);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.prc-mitigation__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.prc-worry {
+  background: var(--cp-off-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius-sm);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prc-worry__q {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.prc-worry__a {
+  font-size: 13px;
+  color: var(--cp-text-light);
+  line-height: 1.6;
+}
+
+/* ── Access workflow ───────────────────────────────────────────────────────── */
+
+.prc-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.prc-flow__step {
+  flex: 1;
+  min-width: 160px;
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prc-flow__step--final {
+  border-color: var(--cp-purple);
+  background: linear-gradient(135deg, var(--cp-white), var(--cp-purple-bg));
+}
+
+.prc-flow__num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--cp-purple);
+  color: var(--cp-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.prc-flow__label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.prc-flow__desc {
+  font-size: 12.5px;
+  color: var(--cp-text-light);
+  line-height: 1.5;
+}
+
+.prc-flow__arrow {
+  display: flex;
+  align-items: center;
+  color: var(--cp-purple);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ── Account form ──────────────────────────────────────────────────────────── */
+
+.prc-form-card {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.prc-form-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prc-form-card__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--cp-text);
+}
+
+.prc-form-card__sub {
+  font-size: 13px;
+  color: var(--cp-text-light);
+}
+
+.prc-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.prc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prc-field__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.prc-field__req {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.prc-field__input {
+  font-size: 12px;
+  color: var(--cp-text-light);
+  background: var(--cp-off-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.prc-form-card__footer {
+  font-size: 12.5px;
+  color: var(--cp-text-light);
+  line-height: 1.5;
+}
+
+/* ── Email designs ─────────────────────────────────────────────────────────── */
+
+.prc-emails {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.prc-email {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.prc-email__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 20px;
+}
+
+.prc-email__meta-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prc-email__num {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cp-white);
+  background: var(--cp-purple);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.prc-email__send {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cp-purple-deeper);
+}
+
+.prc-email__audience {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cp-text);
+}
+
+.prc-email__goal {
+  font-size: 12.5px;
+  color: var(--cp-text-light);
+  line-height: 1.5;
+}
+
+.prc-email__goal-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-purple-dark);
+  margin-bottom: 2px;
+}
+
+/* Mock email */
+.prc-mock {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  overflow: hidden;
+  box-shadow: var(--cp-shadow);
+}
+
+.prc-mock__chrome {
+  display: flex;
+  gap: 6px;
+  padding: 12px 16px;
+  background: var(--cp-off-white);
+  border-bottom: 1px solid var(--cp-border);
+}
+
+.prc-mock__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cp-purple-light);
+}
+
+.prc-mock__subjectline {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--cp-border);
+}
+
+.prc-mock__subject {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cp-text);
+  margin-bottom: 3px;
+}
+
+.prc-mock__preview {
+  font-size: 13px;
+  color: var(--cp-text-light);
+}
+
+.prc-mock__brandbar {
+  background: linear-gradient(135deg, var(--cp-purple-deeper), var(--cp-purple));
+  color: var(--cp-white);
+  text-align: center;
+  padding: 22px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.prc-mock__body {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.prc-mock__body p {
+  font-size: 14px;
+  color: var(--cp-text);
+  line-height: 1.7;
+}
+
+.prc-mock__lead {
+  font-size: 16px !important;
+  font-weight: 700;
+  color: var(--cp-purple-deeper) !important;
+}
+
+.prc-mock__cta {
+  align-self: flex-start;
+  margin-top: 8px;
+  background: var(--cp-purple-deeper);
+  color: var(--cp-white);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 100px;
+}
+
+.prc-mock__foot {
+  padding: 18px 32px;
+  background: var(--cp-off-white);
+  border-top: 1px solid var(--cp-border);
+  font-size: 11px;
+  color: var(--cp-text-light);
+  text-align: center;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .prc-mitigation__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prc-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prc-flow__arrow {
+    display: none;
+  }
+
+  .prc-email {
+    grid-template-columns: 1fr;
+  }
+
+  .prc-email__meta {
+    position: static;
+  }
+
+  .prc-mock__body {
+    padding: 24px 20px;
+  }
+
+  .prc-item-head {
+    flex-direction: column;
+  }
+}

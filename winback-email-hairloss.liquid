@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <title>We've missed you at {{ shop.name }}</title>
+
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style>
+    table, td, div, h1, h2, p, a { font-family: Arial, Helvetica, sans-serif !important; }
+    .pill-btn { padding: 0 !important; }
+  </style>
+  <![endif]-->
+
+  <style type="text/css">
+    /* CLIENT RESETS */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background: #f2f2f2; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    a { color: #2a2040; text-decoration: none; }
+
+    /* MOBILE */
+    @media screen and (max-width: 620px) {
+      .email-container { width: 100% !important; max-width: 100% !important; }
+      .mobile-px { padding-left: 24px !important; padding-right: 24px !important; }
+      .mobile-py { padding-top: 36px !important; padding-bottom: 36px !important; }
+      .mobile-py-hero { padding-top: 48px !important; padding-bottom: 44px !important; }
+      .hero-title { font-size: 36px !important; line-height: 1.1 !important; }
+      .block-title { font-size: 30px !important; line-height: 1.15 !important; }
+      .nav-link { padding: 10px 8px !important; font-size: 10px !important; }
+      .hero-btn-wrap { display: block !important; width: 100% !important; padding: 0 0 10px 0 !important; }
+    }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background:#f2f2f2; -webkit-font-smoothing:antialiased;">
+
+  <!-- PREHEADER -->
+  <div style="display:none; font-size:1px; color:#f2f2f2; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; mso-hide:all;">
+    {%- if customer.first_name != blank -%}{{ customer.first_name }}, it's{%- else -%}It's{%- endif -%} been a while — see what's new at {{ shop.name }}.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+  <!-- OUTER WRAPPER -->
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background:#f2f2f2;">
+    <tr>
+      <td align="center" style="padding:0;">
+
+        <!-- EMAIL CONTAINER -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="620" class="email-container" style="width:620px; max-width:620px; background:#ffffff;">
+
+          <!-- NAV -->
+          <tr>
+            <td align="center" style="background:#ffffff; border-bottom:1px solid #ede9f8; padding:4px 12px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="https://hairloss.com/collections/wigs-and-toppers" style="color:#3d3060; text-decoration:none;">For Women</a>
+                  </td>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="https://hairloss.com/collections/hair-systems-men" style="color:#3d3060; text-decoration:none;">For Men</a>
+                  </td>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="https://hairloss.com/collections/hair-system-application" style="color:#3d3060; text-decoration:none;">Application</a>
+                  </td>
+                  <td class="nav-link" style="padding:14px 14px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10.5px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">
+                    <a href="https://hairloss.com/collections/hair-scalp-care" style="color:#3d3060; text-decoration:none;">Hair Care</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- HERO (lulu-inspired typographic header) -->
+          <tr>
+            <td align="center" class="mobile-px mobile-py-hero" style="background:#ffffff; padding:64px 40px 56px; text-align:center;">
+              <h1 class="hero-title" style="margin:0 0 18px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:42px; font-weight:700; color:#1e1635; line-height:1.1; letter-spacing:-1px;">
+                {%- if customer.first_name != blank -%}
+                  We've missed you,<br>{{ customer.first_name }}.
+                {%- else -%}
+                  We've missed you.
+                {%- endif -%}
+              </h1>
+
+              <p style="margin:0 auto 32px auto; max-width:420px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; color:#4a4070; line-height:1.55;">
+                It's been a while — and we'd love to welcome you back. Here's what's new at {{ shop.name }}.
+              </p>
+
+              <!-- STACKED PILL BUTTONS -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                <tr>
+                  <td align="center" style="border-radius:50px; background:#1e1635;">
+                    <a href="https://hairloss.com/collections/wigs-and-toppers" class="pill-btn" style="display:inline-block; padding:14px 36px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; font-weight:600; color:#ffffff; text-decoration:none; border-radius:50px; background:#1e1635; min-width:160px; text-align:center;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Shop Women
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+                <tr><td style="height:10px; line-height:10px; font-size:10px;">&nbsp;</td></tr>
+                <tr>
+                  <td align="center" style="border-radius:50px; background:#1e1635;">
+                    <a href="https://hairloss.com/collections/hair-systems-men" class="pill-btn" style="display:inline-block; padding:14px 36px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; font-weight:600; color:#ffffff; text-decoration:none; border-radius:50px; background:#1e1635; min-width:160px; text-align:center;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Shop Men
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- DIVIDER -->
+          <tr><td style="height:1px; background:#ede9f8; line-height:1px; font-size:1px;">&nbsp;</td></tr>
+
+          <!-- BLOCK 1: WOMEN -->
+          <tr>
+            <td style="background:#ffffff; padding:0;">
+              <a href="https://hairloss.com/collections/wigs-and-toppers" style="text-decoration:none;">
+                <img src="https://cdn.shopify.com/s/files/1/0589/7142/2831/files/eurochic-fashion.png?v=1776108687" width="620" alt="Wigs and toppers for women" style="display:block; width:100%; max-width:620px; height:auto; border:0;">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="mobile-px mobile-py" style="background:#ffffff; padding:40px 40px 48px;">
+              <h2 class="block-title" style="margin:0 0 14px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:34px; font-weight:700; color:#1e1635; line-height:1.15; letter-spacing:-0.8px;">
+                Effortlessly you.
+              </h2>
+              <p style="margin:0 0 26px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; color:#4a4070; line-height:1.6; max-width:440px;">
+                Discover wigs and toppers designed to look and feel like the real thing — from natural everyday styles to bold new looks.
+              </p>
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="border-radius:50px; background:#1e1635;">
+                    <a href="https://hairloss.com/collections/wigs-and-toppers" class="pill-btn" style="display:inline-block; padding:13px 32px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; font-weight:600; color:#ffffff; text-decoration:none; border-radius:50px; background:#1e1635;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Shop Wigs &amp; Toppers
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- DIVIDER -->
+          <tr><td style="height:1px; background:#ede9f8; line-height:1px; font-size:1px;">&nbsp;</td></tr>
+
+          <!-- BLOCK 2: MEN -->
+          <tr>
+            <td style="background:#ffffff; padding:0;">
+              <a href="https://hairloss.com/collections/hair-systems-men" style="text-decoration:none;">
+                <img src="https://cdn.shopify.com/s/files/1/0589/7142/2831/files/before-after-alan-2.png?v=1734635959" width="620" alt="Hair systems for men — before and after" style="display:block; width:100%; max-width:620px; height:auto; border:0;">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="mobile-px mobile-py" style="background:#ffffff; padding:40px 40px 48px;">
+              <h2 class="block-title" style="margin:0 0 14px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:34px; font-weight:700; color:#1e1635; line-height:1.15; letter-spacing:-0.8px;">
+                See yourself again.
+              </h2>
+              <p style="margin:0 0 26px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; color:#4a4070; line-height:1.6; max-width:440px;">
+                Premium hair systems crafted for natural-looking confidence — undetectable, comfortable, and made to be lived in.
+              </p>
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="border-radius:50px; background:#1e1635;">
+                    <a href="https://hairloss.com/collections/hair-systems-men" class="pill-btn" style="display:inline-block; padding:13px 32px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; font-weight:600; color:#ffffff; text-decoration:none; border-radius:50px; background:#1e1635;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Shop Hair Systems
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- DIVIDER -->
+          <tr><td style="height:1px; background:#ede9f8; line-height:1px; font-size:1px;">&nbsp;</td></tr>
+
+          <!-- BLOCK 3: APPLICATION -->
+          <tr>
+            <td style="background:#ffffff; padding:0;">
+              <a href="https://hairloss.com/collections/hair-system-application" style="text-decoration:none;">
+                <img src="https://cdn.shopify.com/s/files/1/0589/7142/2831/files/ultraderm-2.png?v=1775221276" width="620" alt="Hair system application — adhesives, tapes, and tools" style="display:block; width:100%; max-width:620px; height:auto; border:0;">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="mobile-px mobile-py" style="background:#ffffff; padding:40px 40px 48px;">
+              <h2 class="block-title" style="margin:0 0 14px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:34px; font-weight:700; color:#1e1635; line-height:1.15; letter-spacing:-0.8px;">
+                Built to hold.
+              </h2>
+              <p style="margin:0 0 26px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; color:#4a4070; line-height:1.6; max-width:440px;">
+                Adhesives, tapes, and tools trusted by professionals — everything you need for a secure, all-day-comfortable fit.
+              </p>
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="border-radius:50px; background:#1e1635;">
+                    <a href="https://hairloss.com/collections/hair-system-application" class="pill-btn" style="display:inline-block; padding:13px 32px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; font-weight:600; color:#ffffff; text-decoration:none; border-radius:50px; background:#1e1635;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Shop Application
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- DIVIDER -->
+          <tr><td style="height:1px; background:#ede9f8; line-height:1px; font-size:1px;">&nbsp;</td></tr>
+
+          <!-- BLOCK 4: HAIR CARE -->
+          <tr>
+            <td style="background:#ffffff; padding:0;">
+              <a href="https://hairloss.com/collections/hair-scalp-care" style="text-decoration:none;">
+                <img src="https://cdn.shopify.com/s/files/1/0589/7142/2831/files/travelkit_nutrifuse_women_mockup.webp?v=1744649660" width="620" alt="Hair and scalp care travel kit" style="display:block; width:100%; max-width:620px; height:auto; border:0;">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="mobile-px mobile-py" style="background:#ffffff; padding:40px 40px 56px;">
+              <h2 class="block-title" style="margin:0 0 14px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:34px; font-weight:700; color:#1e1635; line-height:1.15; letter-spacing:-0.8px;">
+                Care that lasts.
+              </h2>
+              <p style="margin:0 0 26px 0; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; color:#4a4070; line-height:1.6; max-width:440px;">
+                Shampoos, conditioners, and treatments formulated to extend the life of your hair system and keep your scalp healthy.
+              </p>
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="border-radius:50px; background:#1e1635;">
+                    <a href="https://hairloss.com/collections/hair-scalp-care" class="pill-btn" style="display:inline-block; padding:13px 32px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px; font-weight:600; color:#ffffff; text-decoration:none; border-radius:50px; background:#1e1635;">
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Shop Hair &amp; Scalp Care
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /EMAIL CONTAINER -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
