@@ -317,17 +317,16 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { cue: 'Opening', line: '"Hi [name], I\'m calling with some good news about how you\'ll order from us going forward."' },
       { cue: 'The change', line: '"We\'re bringing everything onto one website — Hairloss.com. Starting August 1, you\'ll order there instead of the New Image Labs site."' },
       { cue: 'Reassure', line: '"Your pricing tier and the products you order stay exactly the same. Nothing you rely on is going away."' },
-      { cue: 'Pricing & account', line: '"One thing that\'s new — the site doesn\'t show pricing publicly anymore, to protect our wholesale rates. You\'ll have a company account, and once you log in you\'ll see your pricing. I\'m setting that account up for you, so you don\'t have to do anything."' },
-      { cue: 'Tease what\'s new', line: '"We\'re also adding more trainings and content — a beginner series with Ricky Knowles coming right after launch."' },
+      { cue: 'Pricing & account', line: '"On the New Image site, both the pricing and the products were hidden. On Hairloss.com you can browse all the products — only the pricing sits behind your login, to protect our wholesale rates. We\'ll be migrating your account over during the month of July, so once you log in you\'ll see your pricing. You don\'t have to do anything."' },
       { cue: 'Close', line: '"I\'ll send your login before August 1 so you\'re ready. Any questions, you call me directly."' },
     ],
     faqIntro: 'The questions customers will ask — and how to answer them.',
     faq: [
-      { q: 'Why are you making this change?', a: 'We\'ve been doing this for over 50 years. We\'re bringing NIL and Onrite onto one website so it\'s easier to find products and order — everything in one place, plus easier access to discounts and promotions.' },
+      { q: 'Why are you making this change?', a: 'We\'re bringing NIL and Onrite onto one website so it\'s easier to find products and order — everything in one place, plus easier access to discounts and promotions.' },
       { q: 'Will my pricing change?', a: 'No. Your tier and pricing move with you, exactly as they are today.' },
-      { q: 'Why can\'t I see prices on the site?', a: 'Pricing is wholesale and protected. It shows once you log into your company account.' },
+      { q: 'Why can\'t I see prices on the site?', a: 'You can browse all the products — only the pricing is hidden. It\'s wholesale and protected, so it shows once you log into your company account.' },
       { q: 'Do I need to set up my account?', a: 'No — your sales rep creates it for you. You just log in.' },
-      { q: 'Will I still find the products I order?', a: 'Yes. Every unit is labeled "Formerly known as [your product name]" so nothing gets lost.' },
+      { q: 'Will I still find the products I order?', a: 'Yes. All your products are on Hairloss.com and you can browse the full catalog anytime — only the pricing is behind your login.' },
       { q: 'Can I still order on the NIL website?', a: 'Only until August 1. After that, all orders go through Hairloss.com.' },
       { q: 'What if I need help?', a: 'Your rep is one call away.' },
     ],
@@ -364,17 +363,16 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { cue: 'Apertura', line: '"Hola [nombre], le llamo con buenas noticias sobre cómo hará sus pedidos a partir de ahora."' },
       { cue: 'El cambio', line: '"Estamos reuniendo todo en un solo sitio — Hairloss.com. A partir del 1 de agosto, hará sus pedidos ahí en lugar del sitio de New Image Labs."' },
       { cue: 'Tranquilizar', line: '"Su nivel de precios y los productos que pide se mantienen exactamente igual. Nada de lo que usted depende va a desaparecer."' },
-      { cue: 'Precios y cuenta', line: '"Algo nuevo — el sitio ya no muestra los precios al público, para proteger nuestros precios mayoristas. Usted tendrá una cuenta de empresa y, al iniciar sesión, verá sus precios. Yo le configuro la cuenta, así que no tiene que hacer nada."' },
-      { cue: 'Lo nuevo', line: '"También estamos agregando más capacitaciones y contenido — una serie para principiantes con Ricky Knowles que llega justo después del lanzamiento."' },
+      { cue: 'Precios y cuenta', line: '"En el sitio de New Image, tanto los precios como los productos estaban ocultos. En Hairloss.com usted puede ver todos los productos — solo los precios quedan detrás de su inicio de sesión, para proteger nuestros precios mayoristas. Migraremos su cuenta durante el mes de julio, así que al iniciar sesión verá sus precios. Usted no tiene que hacer nada."' },
       { cue: 'Cierre', line: '"Le enviaré su acceso antes del 1 de agosto para que esté listo. Cualquier pregunta, llámeme directamente."' },
     ],
     faqIntro: 'Las preguntas que harán los clientes — y cómo responderlas.',
     faq: [
       { q: '¿Por qué hacen este cambio?', a: 'Llevamos más de 50 años en esto. Estamos reuniendo NIL y Onrite en un solo sitio para que sea más fácil encontrar productos y hacer pedidos — todo en un mismo lugar, además de un acceso más fácil a descuentos y promociones.' },
       { q: '¿Cambiará mi precio?', a: 'No. Su nivel y sus precios se mantienen tal como están hoy.' },
-      { q: '¿Por qué no puedo ver los precios en el sitio?', a: 'Los precios son mayoristas y están protegidos. Se muestran al iniciar sesión en su cuenta de empresa.' },
+      { q: '¿Por qué no puedo ver los precios en el sitio?', a: 'Puede ver todos los productos — solo los precios están ocultos. Son mayoristas y están protegidos, así que se muestran al iniciar sesión en su cuenta de empresa.' },
       { q: '¿Tengo que crear mi cuenta?', a: 'No — su representante de ventas la crea por usted. Usted solo inicia sesión.' },
-      { q: '¿Seguiré encontrando los productos que pido?', a: 'Sí. Cada unidad está etiquetada como "Antes conocido como [nombre de su producto]" para que nada se pierda.' },
+      { q: '¿Seguiré encontrando los productos que pido?', a: 'Sí. Todos sus productos están en Hairloss.com y puede ver el catálogo completo en cualquier momento — solo los precios quedan detrás de su inicio de sesión.' },
       { q: '¿Puedo seguir comprando en el sitio de NIL?', a: 'Solo hasta el 1 de agosto. Después de esa fecha, todos los pedidos se hacen por Hairloss.com.' },
       { q: '¿Y si necesito ayuda?', a: 'Su representante está a una llamada de distancia.' },
     ],
@@ -413,7 +411,7 @@ const emails: EmailDesign[] = [
       'Here\'s how things work on Hairloss.com starting August 1.',
       'Your sales rep is creating your account for you — you don\'t have to do anything to get set up. You\'ll get login details before launch.',
       'Pricing now lives behind your account. To keep our wholesale pricing protected, the site won\'t show prices publicly. Once you log in to your B2B account, you\'ll see your tier pricing — the same pricing you have today.',
-      'You\'ll recognize your products. Each unit shows "Formerly known as [your unit name]" so nothing gets lost in the move.',
+      'You\'ll recognize your products — they\'re all on the site and you can browse the full catalog. Only your pricing sits behind your login.',
       'Questions? Your rep is one call away.',
     ],
     cta: 'How to log in',
@@ -608,28 +606,6 @@ export default function PRCampaignPage() {
 
             <div className="cp-segment__callout">
               <strong>Tone:</strong> Warm, confident, and reassuring — never corporate. We've been doing this for over 50 years; we're not changing who we are, we're making it easier to work with us. Frame the merge as <em>"we brought everything together for you,"</em> not <em>"we shut down a website."</em> Every message leads with reassurance before it mentions change.
-            </div>
-
-            <div className="prc-mitigation">
-              <div className="prc-mitigation__title">Mitigating backlash — the 4 worries &amp; our answers</div>
-              <div className="prc-mitigation__grid">
-                <div className="prc-worry">
-                  <div className="prc-worry__q">"Will my price go up?"</div>
-                  <div className="prc-worry__a">No. Your tier and pricing move with you, untouched. Say this early and often.</div>
-                </div>
-                <div className="prc-worry">
-                  <div className="prc-worry__q">"Why can't I see prices anymore?"</div>
-                  <div className="prc-worry__a">Pricing is wholesale and protected — it shows once you log into your B2B account. Same pricing, just behind your login.</div>
-                </div>
-                <div className="prc-worry">
-                  <div className="prc-worry__q">"Do I have to set everything up?"</div>
-                  <div className="prc-worry__a">No. Your rep creates your account for you. You just log in.</div>
-                </div>
-                <div className="prc-worry">
-                  <div className="prc-worry__q">"Will I still find my products?"</div>
-                  <div className="prc-worry__a">Yes — every unit is labeled "Formerly known as [your name]" so nothing gets lost.</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
