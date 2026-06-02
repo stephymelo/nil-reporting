@@ -60,7 +60,7 @@ const phases: RolloutPhase[] = [
       {
         icon: '🖼️',
         title: 'Content',
-        desc: 'Product photos, descriptions, infographics, and "Formerly known as" labels on every NIL unit.',
+        desc: 'Product photos, descriptions, and infographics on every NIL unit.',
       },
       {
         icon: '💲',
@@ -129,7 +129,7 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'June 16 – 30',
-    note: 'Build the form, start adding customers',
+    note: 'Hide pricing first, then start adding customers',
     items: [
       {
         title: 'Build "Create Account" Form',
@@ -138,46 +138,40 @@ const timeline: TimelineWindow[] = [
         tracks: ['website'],
       },
       {
-        title: 'Sales Starts Adding Customers',
-        date: 'June 23',
-        desc: 'Begin creating accounts for priority/known customers on Hairloss.com.',
-        tracks: ['marketing'],
+        title: 'Hide Public / Retail Pricing',
+        date: 'June 20 – 26',
+        desc: 'Hide public/retail pricing on specific products for visitors who aren\'t logged in. Pricing only shows once you log into an approved B2B account.',
+        tracks: ['website'],
+        flag: 'Gate: must be live before adding customers and before the email campaign starts',
       },
       {
         title: 'Start Talking About the Shift',
-        date: 'June 29 – 30',
+        date: 'June 27 – 28',
         desc: 'Sales begins telling clients the change is coming — warm them up before the first email.',
+        tracks: ['marketing'],
+      },
+      {
+        title: 'Sales Starts Adding Customers',
+        date: 'June 30',
+        desc: 'With pricing hidden, begin creating accounts for priority/known customers on Hairloss.com.',
         tracks: ['marketing'],
       },
     ],
   },
   {
     window: 'July 1 – 15',
-    note: 'Lock pricing, announce, label products',
+    note: 'Kick off the email campaign, keep adding customers',
     items: [
-      {
-        title: 'Hide Pricing (Developed & Live)',
-        date: 'July 1 – 3',
-        desc: 'No public pricing anywhere — it only shows once you log into an approved B2B account.',
-        tracks: ['website'],
-        flag: 'Gate: must be done before sales adds the bulk of customers',
-      },
       {
         title: 'Send Announcement Email',
         date: 'July 1 – 3',
-        desc: 'Email 1 to clients: the merge, why we\'re doing it, and reassurance nothing they rely on goes away.',
+        desc: 'Email 1 to clients — the PR campaign starts here: the merge, why we\'re doing it, and reassurance nothing they rely on goes away.',
         tracks: ['marketing'],
       },
       {
-        title: '"Formerly Known As" Labels',
-        date: 'July 7 – 11',
-        desc: 'Under each hair unit, add "Formerly known as [old NIL/OR name]" so customers recognize products.',
-        tracks: ['website', 'content'],
-      },
-      {
         title: 'Sales Adds Certain Customers',
-        date: 'July 7 – 25',
-        desc: 'Once pricing is hidden, create the rest of the accounts so customers are ready to log in at launch.',
+        date: 'July 1 – 18',
+        desc: 'Create the rest of the accounts so customers are ready to log in at launch.',
         tracks: ['marketing'],
       },
       {
@@ -834,7 +828,7 @@ export default function PRCampaignPage() {
           </div>
 
           <div className="cp-segment__callout">
-            <strong>Sequencing watch:</strong> June is for adding customers, but pricing has to be hidden <em>before</em> we create the bulk of accounts. So we add a first wave of priority customers in June, lock in the hidden-pricing build by early July, then sales adds the rest of the certain customers. Don't open broad account creation until pricing is hidden.
+            <strong>Sequencing watch:</strong> Hiding the public/retail pricing comes <em>first</em> — it has to be live before sales adds any customers and before the email campaign starts. Build and confirm it in June, then open account creation and send the announcement email. Don't add customers or email anyone until pricing is hidden.
           </div>
         </section>
 
