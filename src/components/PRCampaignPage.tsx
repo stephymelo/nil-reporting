@@ -184,13 +184,13 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'July 16 – 31',
-    note: 'Salon locator, final reminders, tease training',
+    note: 'Salon locator, final reminders, tease educational content',
     items: [
       {
         title: 'Add Salon Locator to Website',
         date: 'July 17',
-        desc: 'Add the salon locator so consumers can find partner shops — drives traffic to pros.',
-        tracks: ['website'],
+        desc: 'Add the salon locator and give it visibility through socials and the website so consumers can find partner shops — drives traffic to pros.',
+        tracks: ['website', 'marketing'],
       },
       {
         title: 'Send Final NIL Site Reminder',
@@ -199,9 +199,9 @@ const timeline: TimelineWindow[] = [
         tracks: ['marketing'],
       },
       {
-        title: 'Tease Training Content',
+        title: 'Tease Educational Content',
         date: 'July 28',
-        desc: 'Start teasing the Ricky Knowles beginner training. Full content stays behind the paywall until after Aug 1.',
+        desc: 'Start teasing the Ricky Knowles beginner educational content. Full content stays behind the paywall until after Aug 1.',
         tracks: ['content', 'marketing'],
       },
     ],
@@ -227,18 +227,18 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'After August 1',
-    note: 'Training content + Phase 2 rollout',
+    note: 'Educational content + Phase 2 rollout',
     items: [
       {
         title: 'Ricky Knowles Beginner Content Live',
         date: 'Aug 8',
-        desc: 'Beginner training filmed with Ricky Knowles goes live behind the Hairloss.com paywall.',
+        desc: 'Beginner educational content filmed with Ricky Knowles goes live behind the Hairloss.com paywall.',
         tracks: ['content'],
       },
       {
-        title: 'Ongoing Trainings + Content',
+        title: 'Ongoing Educational Content',
         date: 'Aug onward',
-        desc: 'Keep adding trainings and content. Hairloss.com becomes the place pros come to learn, not just buy.',
+        desc: 'Keep adding educational content. Hairloss.com becomes the place pros come to learn, not just buy.',
         tracks: ['content'],
       },
       {
@@ -255,14 +255,13 @@ const timeline: TimelineWindow[] = [
 
 const formFields: { label: string; note: string; required: boolean }[] = [
   { label: 'Business / Company Name', note: 'Shown on the account', required: true },
-  { label: 'Contact Name', note: 'Primary person on the account', required: true },
-  { label: 'Email', note: 'Login + order confirmations', required: true },
+  { label: 'Business Owner (Main Contact)', note: 'Owner is contact #1 on the account', required: true },
+  { label: 'Email', note: 'Login link + order tracking', required: true },
   { label: 'Phone', note: 'For the sales rep', required: true },
   { label: 'Business Address', note: 'Shipping + billing', required: true },
   { label: 'Resale / Tax ID or License', note: 'Confirms a real business', required: true },
   { label: 'Existing NIL / Onrite Account #', note: 'So we map your current tier', required: false },
   { label: 'Account Type', note: 'Barber · Salon · Studio · Distributor', required: true },
-  { label: 'Password', note: 'Set login credentials', required: true },
 ]
 
 // ── Sales enablement — bilingual ─────────────────────────────────────────────
@@ -302,7 +301,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       },
       {
         title: 'Everything in one place',
-        desc: 'One website for all NIL products and select Onrite products — plus discounts, promotions, and training content. Easier to find, easier to buy.',
+        desc: 'One website for all NIL products and select Onrite products — plus discounts, promotions, and educational content. Easier to find, easier to buy.',
       },
     ],
     emailSignoff: 'Start these conversations now. Any questions, reach out to me directly. — Marketing',
@@ -348,7 +347,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       },
       {
         title: 'Todo en un solo lugar',
-        desc: 'Un solo sitio para todos los productos de NIL y productos selectos de Onrite — además de descuentos, promociones y contenido de capacitación. Más fácil de encontrar, más fácil de comprar.',
+        desc: 'Un solo sitio para todos los productos de NIL y productos selectos de Onrite — además de descuentos, promociones y contenido educativo. Más fácil de encontrar, más fácil de comprar.',
       },
     ],
     emailSignoff: 'Empiecen estas conversaciones desde ya. Cualquier duda, contáctenme directamente. — Marketing',
@@ -438,7 +437,7 @@ const emails: EmailDesign[] = [
       'It\'s here. New Image Labs and Onrite are now on Hairloss.com.',
       'Log in with your account to see your pricing, your products, and order in a few clicks.',
       'Everything in one place: products, your tier pricing, and the discounts and promotions we run — all easier to find than ever.',
-      'And we\'re just getting started — more trainings and content are on the way.',
+      'And we\'re just getting started — more educational content is on the way.',
     ],
     cta: 'Log in & shop',
   },
@@ -446,12 +445,12 @@ const emails: EmailDesign[] = [
     num: 5,
     send: 'Tease July 28 · Live Aug 8',
     audience: 'Pros + barbers',
-    subject: 'New: beginner training with Ricky Knowles',
+    subject: 'New: beginner educational content with Ricky Knowles',
     preview: 'Learn the basics, step by step — only on Hairloss.com.',
-    goal: 'Tease before launch, drive to paywalled training after Aug 1.',
+    goal: 'Tease before launch, drive to paywalled educational content after Aug 1.',
     tone: 'Exciting, value-first. Position HL.com as where you learn.',
     body: [
-      'We\'re putting more into training than ever — starting with a beginner series filmed with Ricky Knowles.',
+      'We\'re putting more into educational content than ever — starting with a beginner series filmed with Ricky Knowles.',
       'Step-by-step basics for application and care, built for anyone just getting started.',
       'Available exclusively on Hairloss.com. Log in to your account to watch.',
       'This is the first of much more to come.',
@@ -492,6 +491,7 @@ function MessageBody() {
             <li>Your pricing tier — exactly what you have now</li>
             <li>The products you already order</li>
             <li>The team and reps you know</li>
+            <li>An American company and an American website</li>
             <li>50+ years of trust behind it all</li>
           </ul>
         </div>
@@ -501,12 +501,34 @@ function MessageBody() {
             <li>One website instead of two — everything in one place</li>
             <li>Easier to find products and reorder</li>
             <li>Discounts and promotions all in one spot</li>
-            <li>More trainings and content to grow your business</li>
+            <li>More educational content to grow your business</li>
           </ul>
         </div>
       </div>
       <div className="cp-segment__callout">
-        <strong>Tone:</strong> Warm, confident, and reassuring — never corporate. We've been doing this for over 50 years; we're not changing who we are, we're making it easier to work with us. Frame the merge as <em>"we brought everything together for you,"</em> not <em>"we shut down a website."</em> Every message leads with reassurance before it mentions change.
+        <strong>Tone:</strong> Warm, confident, and reassuring — never corporate. We've been doing this for over 50 years; we're not changing who we are, we're making it easier to work with us. Frame the merge as <em>"we brought everything together for you,"</em> not <em>"we shut down a website."</em> Every message leads with reassurance before it mentions change. Lean into it: <strong>we're an American company and this is an American website.</strong>
+      </div>
+
+      <div className="prc-mitigation">
+        <div className="prc-mitigation__title">Overcoming the tough questions</div>
+        <div className="prc-mitigation__grid">
+          <div className="prc-worry">
+            <div className="prc-worry__q">"Didn't you tell me Hairloss.com wasn't a retailer?"</div>
+            <div className="prc-worry__a">Be honest and simple: Hairloss.com started as a collaboration. We've since taken it over — it's now our official website, run by us. Same company, same team, now all under one roof.</div>
+          </div>
+          <div className="prc-worry">
+            <div className="prc-worry__q">"So what is Hairloss.com now?"</div>
+            <div className="prc-worry__a">It's ours. We acquired the site and brought NIL and Onrite onto it. Frame it as growth — we bought it and made it the home for everything.</div>
+          </div>
+          <div className="prc-worry">
+            <div className="prc-worry__q">"Is this still an American company?"</div>
+            <div className="prc-worry__a">Yes — 100%. We're an American company and Hairloss.com is an American website. That doesn't change.</div>
+          </div>
+          <div className="prc-worry">
+            <div className="prc-worry__q">"Why the change all of a sudden?"</div>
+            <div className="prc-worry__a">It's not sudden — it's the natural next step. One site is easier for you: one login, one catalog, one place for promotions and educational content.</div>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -750,7 +772,7 @@ export default function PRCampaignPage() {
             <div className="prc-flow__step prc-flow__step--final">
               <div className="prc-flow__num">4</div>
               <div className="prc-flow__label">Pricing Unlocks</div>
-              <div className="prc-flow__desc">Customer logs in and sees B2B pricing + can order.</div>
+              <div className="prc-flow__desc">Customer logs in (no password — secure link) and sees B2B pricing + can order. Order tracking emails are automatic.</div>
             </div>
           </div>
 
@@ -772,13 +794,110 @@ export default function PRCampaignPage() {
               ))}
             </div>
             <div className="prc-form-card__footer">
-              <span className="prc-field__req">*</span> Required · Submitting sends the request to sales for review &amp; tier assignment.
+              <span className="prc-field__req">*</span> Required · Submitting sends the request to sales for review &amp; tier assignment. <strong>No passwords</strong> — customers sign in with a secure email link and get automatic order-tracking emails.
             </div>
           </div>
         </section>
 
+        {/* ════ INTERNAL SALES WORKFLOW ════ */}
+        <Divider num="05" title="Internal Sales Workflow" sub="How the team adds leads, gives access & books first orders" />
+
+        <section className="cp-section">
+          <div className="cp-section__header">
+            <span className="cp-section__badge cp-section__badge--strategy">Sales / Operations</span>
+            <h2 className="cp-section__title">How the Team Onboards a Customer</h2>
+            <p className="cp-section__desc">
+              The internal process — from a new lead in a territory to a live, ready-to-order account.
+            </p>
+          </div>
+
+          <div className="prc-flow">
+            <div className="prc-flow__step">
+              <div className="prc-flow__num">1</div>
+              <div className="prc-flow__label">New Lead Registers</div>
+              <div className="prc-flow__desc">A new business signs up or a rep spots one in their territory.</div>
+            </div>
+            <div className="prc-flow__step">
+              <div className="prc-flow__num">2</div>
+              <div className="prc-flow__label">Internal Email Fires</div>
+              <div className="prc-flow__desc">An internal email goes out for any new lead registering in that territory, so the right rep picks it up.</div>
+            </div>
+            <div className="prc-flow__step">
+              <div className="prc-flow__num">3</div>
+              <div className="prc-flow__label">Check With the Owner</div>
+              <div className="prc-flow__desc">Before adding anyone, confirm with the business owner. Stylists are only added with the owner's OK.</div>
+            </div>
+            <div className="prc-flow__step">
+              <div className="prc-flow__num">4</div>
+              <div className="prc-flow__label">2 Shopify Leads Give Access</div>
+              <div className="prc-flow__desc">Two designated people create/approve the account, assign the tier, and inform the sales team.</div>
+            </div>
+            <div className="prc-flow__step prc-flow__step--final">
+              <div className="prc-flow__num">5</div>
+              <div className="prc-flow__label">Account Live</div>
+              <div className="prc-flow__desc">No password — customer signs in with a secure link and gets automatic order-tracking emails.</div>
+            </div>
+          </div>
+
+          {/* Policies / rules */}
+          <div className="cp-email-grid">
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">👤</div>
+              <div className="cp-email-card__title">Business Owner = Main Contact</div>
+              <div className="cp-email-card__desc">
+                The business owner is contact #1 on the account. Always check with the owner before adding any stylists.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">📋</div>
+              <div className="cp-email-card__title">B2B Requirements Page</div>
+              <div className="cp-email-card__desc">
+                A page that lays out the requirements and rules for company / B2B accounts — who qualifies, what's needed, how tiers work.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">🔑</div>
+              <div className="cp-email-card__title">Two Shopify Leads</div>
+              <div className="cp-email-card__desc">
+                Two people own giving account access in Shopify and keeping the sales team informed when accounts go live.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">📧</div>
+              <div className="cp-email-card__title">New-Lead Territory Email</div>
+              <div className="cp-email-card__desc">
+                When a new lead registers, an internal email fires to the rep who owns that territory.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">🏷️</div>
+              <div className="cp-email-card__title">First-Order Offer</div>
+              <div className="cp-email-card__desc">
+                "Would you like a % off your first online order?" If yes, a salesperson creates their account and can place the order for them.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">🔓</div>
+              <div className="cp-email-card__title">No Passwords + Tracking</div>
+              <div className="cp-email-card__desc">
+                Customers never set a password. They sign in with a secure email link and get automatic order-tracking emails.
+              </div>
+            </div>
+          </div>
+
+          {/* Open questions */}
+          <div className="prc-block">
+            <div className="prc-block__label">
+              <span className="prc-block__num">!</span>
+              Open Questions — Assign an Owner
+            </div>
+            <div className="prc-flag">⚠ International ex-leads: who manages them, and how do we route their info to the right person?</div>
+            <div className="prc-flag">⚠ Are international customers online-only, or do we also contact them by phone?</div>
+          </div>
+        </section>
+
         {/* ════ ROADMAP / TIMELINE ════ */}
-        <Divider num="05" title="What Gets Done & When" sub="Two-week windows leading up to Aug 1, then after" />
+        <Divider num="06" title="What Gets Done & When" sub="Two-week windows leading up to Aug 1, then after" />
 
         <section className="cp-section">
           <div className="cp-section__header">
@@ -833,7 +952,7 @@ export default function PRCampaignPage() {
         </section>
 
         {/* ════ EMAILS PR CAMPAIGN (accordion) ════ */}
-        <Divider num="06" title="Emails PR Campaign" sub="The client email sequence — open to view designs" />
+        <Divider num="07" title="Emails PR Campaign" sub="The client email sequence — open to view designs" />
 
         <section className="cp-section">
           <button
