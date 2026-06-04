@@ -285,15 +285,14 @@ const accountWorkflows: AccountWorkflow[] = [
   {
     num: 'Workflow 1',
     title: 'Transfer an Existing Client',
-    who: 'Sales creates the account for a current NIL / Onrite customer',
+    who: 'Sales sets it up in the admin for a current NIL / Onrite customer',
     steps: [
-      { label: 'Sales Fills the Form', desc: 'Sales completes the account form on the client\'s behalf.' },
-      { label: 'Create the Company', desc: 'Create the company account and map their existing pricing tier.' },
-      { label: 'Create the User', desc: 'Create the user account — business owner is the main contact.' },
+      { label: 'Create the Company (Admin)', desc: 'Sales creates the company in the admin and maps their existing pricing tier. No form — done directly in the admin.' },
+      { label: 'Create the User (Admin)', desc: 'Sales creates the user in the admin — business owner is the main contact.' },
       { label: 'Account Live', desc: 'Client signs in (no password — secure link), sees their tier pricing, gets tracking emails.', final: true },
     ],
     emails: [],
-    note: 'Transferring a client requires creating BOTH a company and a user account.',
+    note: 'Transferring a client requires creating BOTH a company and a user account in the admin. Sales never fills out the account form.',
   },
   {
     num: 'Workflow 2',
