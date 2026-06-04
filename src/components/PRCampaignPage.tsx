@@ -297,12 +297,11 @@ const accountWorkflows: AccountWorkflow[] = [
   {
     num: 'Workflow 2',
     title: 'New Customer + B2B Form',
-    who: 'Customer signs up, then fills out the B2B form',
+    who: 'Customer registers with the B2B form in one step',
     steps: [
-      { label: 'Customer Signs Up', desc: 'The user account is created when they register.' },
-      { label: 'Fills Out B2B Form', desc: 'Business info submitted to request wholesale pricing.' },
-      { label: 'Staff Reviews + Creates Company', desc: 'We create the company and assign the tier — the user account already exists.' },
-      { label: 'Wholesale Unlocks', desc: 'Once approved, B2B pricing shows on login.', final: true },
+      { label: 'Signs Up With B2B Form', desc: 'The user account is created at registration — their business info comes in with the B2B form.' },
+      { label: 'Staff Reviews + Creates Company', desc: 'We review, create the company, and assign the tier — the user account already exists.' },
+      { label: 'Wholesale Unlocks', desc: 'Once approved, B2B pricing replaces retail on login.', final: true },
     ],
     emails: [
       'Auto-email on submit: "Our staff is reviewing your information to set up your wholesale pricing. For now, you have retail pricing."',
