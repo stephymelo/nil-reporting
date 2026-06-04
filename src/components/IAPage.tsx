@@ -759,6 +759,10 @@ export default function IAPage() {
           View NIL + Onrite Merge — PR Campaign →
         </a>
         <br />
+        <a href="#/b2b-policy" style={{ color: '#6d28d9', textDecoration: 'none', fontWeight: 600 }}>
+          View Wholesale Account Policy →
+        </a>
+        <br />
         Hairloss.com · IA &amp; User Flow Planning · {new Date().getFullYear()}
       </footer>
     </div>

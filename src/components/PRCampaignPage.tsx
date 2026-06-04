@@ -573,7 +573,7 @@ function MessageBody() {
         <div className="prc-mitigation__title">Overcoming the tough questions</div>
         <div className="prc-mitigation__grid">
           <div className="prc-worry">
-            <div className="prc-worry__q">"Didn't you tell me Hairloss.com wasn't a retailer?"</div>
+            <div className="prc-worry__q">"Didn't you tell me Hairloss.com wasn't associated with you?"</div>
             <div className="prc-worry__a">Be honest and simple: Hairloss.com started as a collaboration. We've since taken it over — it's now our official website, run by us. Same company, same team, now all under one roof.</div>
           </div>
           <div className="prc-worry">
@@ -891,7 +891,10 @@ export default function PRCampaignPage() {
               <div className="cp-email-card__icon">📋</div>
               <div className="cp-email-card__title">B2B Requirements Page</div>
               <div className="cp-email-card__desc">
-                A page that lays out the requirements and rules for company / B2B accounts — who qualifies, what's needed, how tiers work.
+                A page that lays out the requirements and rules for company / B2B accounts — who qualifies, what's needed, how tiers work.{' '}
+                <a href="#/b2b-policy" style={{ color: 'var(--cp-purple-deeper)', fontWeight: 700 }}>
+                  View the policy page →
+                </a>
               </div>
             </div>
             <div className="cp-email-card">
