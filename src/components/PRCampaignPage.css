@@ -172,6 +172,77 @@
   font-weight: 700;
 }
 
+/* ── Account workflows ─────────────────────────────────────────────────────── */
+
+.prc-workflows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prc-wf {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prc-wf__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prc-wf__num {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cp-white);
+  background: var(--cp-purple-deeper);
+  padding: 5px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.prc-wf__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prc-wf__title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--cp-text);
+}
+
+.prc-wf__who {
+  font-size: 13px;
+  color: var(--cp-text-light);
+}
+
+.prc-autoemail {
+  background: var(--cp-purple-bg);
+  border: 1.5px solid var(--cp-purple-light);
+  border-radius: var(--cp-radius-sm);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--cp-text);
+  line-height: 1.5;
+}
+
+.prc-wf__note {
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--cp-text-light);
+  line-height: 1.5;
+}
+
 /* ── Account form ──────────────────────────────────────────────────────────── */
 
 .prc-form-card {

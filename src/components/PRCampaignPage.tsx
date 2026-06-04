@@ -264,6 +264,68 @@ const formFields: { label: string; note: string; required: boolean }[] = [
   { label: 'Account Type', note: 'Barber · Salon · Studio · Distributor', required: true },
 ]
 
+// ── Account access workflows ─────────────────────────────────────────────────
+
+interface WorkflowStep {
+  label: string
+  desc: string
+  final?: boolean
+}
+
+interface AccountWorkflow {
+  num: string
+  title: string
+  who: string
+  steps: WorkflowStep[]
+  emails: string[]
+  note?: string
+}
+
+const accountWorkflows: AccountWorkflow[] = [
+  {
+    num: 'Workflow 1',
+    title: 'Transfer an Existing Client',
+    who: 'Sales creates the account for a current NIL / Onrite customer',
+    steps: [
+      { label: 'Sales Fills the Form', desc: 'Sales completes the account form on the client\'s behalf.' },
+      { label: 'Create the Company', desc: 'Create the company account and map their existing pricing tier.' },
+      { label: 'Create the User', desc: 'Create the user account — business owner is the main contact.' },
+      { label: 'Account Live', desc: 'Client signs in (no password — secure link), sees their tier pricing, gets tracking emails.', final: true },
+    ],
+    emails: [],
+    note: 'Transferring a client requires creating BOTH a company and a user account.',
+  },
+  {
+    num: 'Workflow 2',
+    title: 'New Customer + B2B Form',
+    who: 'Customer signs up, then fills out the B2B form',
+    steps: [
+      { label: 'Customer Signs Up', desc: 'The user account is created when they register.' },
+      { label: 'Fills Out B2B Form', desc: 'Business info submitted to request wholesale pricing.' },
+      { label: 'Staff Reviews + Creates Company', desc: 'We create the company and assign the tier — the user account already exists.' },
+      { label: 'Wholesale Unlocks', desc: 'Once approved, B2B pricing shows on login.', final: true },
+    ],
+    emails: [
+      'Auto-email on submit: "Our staff is reviewing your information to set up your wholesale pricing. For now, you have retail pricing."',
+    ],
+    note: 'The user account is already created — we just need to create the company.',
+  },
+  {
+    num: 'Workflow 3',
+    title: 'New Customer — Email Only',
+    who: 'Signed up with just an email, no B2B form yet',
+    steps: [
+      { label: 'Signs Up (Email Only)', desc: 'Account created with an email — no business info yet.' },
+      { label: 'Auto Welcome Email', desc: 'Prompts them to fill out the form if they\'re a business.' },
+      { label: 'Fills Out the Form', desc: 'If they\'re a business, this sends them into Workflow 2.', final: true },
+    ],
+    emails: [
+      'Auto welcome email: "Welcome! If you\'re a business, salon, stylist, or barber, fill out the form to get wholesale pricing."',
+    ],
+    note: 'If they don\'t fill out the form, they stay a retail customer.',
+  },
+]
+
 // ── Sales enablement — bilingual ─────────────────────────────────────────────
 
 interface SalesContent {
@@ -744,36 +806,40 @@ export default function PRCampaignPage() {
         <section className="cp-section">
           <div className="cp-section__header">
             <span className="cp-section__badge cp-section__badge--strategy">Website</span>
-            <h2 className="cp-section__title">Account &amp; Access Workflow</h2>
+            <h2 className="cp-section__title">Account &amp; Access — Three Workflows</h2>
             <p className="cp-section__desc">
-              How a customer goes from no account to seeing their B2B pricing. Built in June, before any accounts are created.
+              How an account gets created depends on who's doing it. Three paths: a sales-led transfer, a new customer who fills out the B2B form, and a new customer who only gives an email.
             </p>
           </div>
 
-          <div className="prc-flow">
-            <div className="prc-flow__step">
-              <div className="prc-flow__num">1</div>
-              <div className="prc-flow__label">Create Account</div>
-              <div className="prc-flow__desc">Sales (or the customer) fills out the account form.</div>
-            </div>
-            <div className="prc-flow__arrow">→</div>
-            <div className="prc-flow__step">
-              <div className="prc-flow__num">2</div>
-              <div className="prc-flow__label">Sales Reviews</div>
-              <div className="prc-flow__desc">Sales confirms the business and matches their existing tier.</div>
-            </div>
-            <div className="prc-flow__arrow">→</div>
-            <div className="prc-flow__step">
-              <div className="prc-flow__num">3</div>
-              <div className="prc-flow__label">Tier Assigned</div>
-              <div className="prc-flow__desc">Account is approved and linked to the right pricing tier.</div>
-            </div>
-            <div className="prc-flow__arrow">→</div>
-            <div className="prc-flow__step prc-flow__step--final">
-              <div className="prc-flow__num">4</div>
-              <div className="prc-flow__label">Pricing Unlocks</div>
-              <div className="prc-flow__desc">Customer logs in (no password — secure link) and sees B2B pricing + can order. Order tracking emails are automatic.</div>
-            </div>
+          <div className="prc-workflows">
+            {accountWorkflows.map((wf) => (
+              <div key={wf.num} className="prc-wf">
+                <div className="prc-wf__head">
+                  <span className="prc-wf__num">{wf.num}</span>
+                  <div className="prc-wf__heading">
+                    <div className="prc-wf__title">{wf.title}</div>
+                    <div className="prc-wf__who">{wf.who}</div>
+                  </div>
+                </div>
+                <div className="prc-flow">
+                  {wf.steps.map((s, i) => (
+                    <div
+                      key={s.label}
+                      className={`prc-flow__step ${s.final ? 'prc-flow__step--final' : ''}`}
+                    >
+                      <div className="prc-flow__num">{i + 1}</div>
+                      <div className="prc-flow__label">{s.label}</div>
+                      <div className="prc-flow__desc">{s.desc}</div>
+                    </div>
+                  ))}
+                </div>
+                {wf.emails.map((e) => (
+                  <div key={e} className="prc-autoemail">✉ {e}</div>
+                ))}
+                {wf.note && <div className="prc-wf__note">{wf.note}</div>}
+              </div>
+            ))}
           </div>
 
           {/* Account form */}
