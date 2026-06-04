@@ -805,13 +805,15 @@ export default function PRCampaignPage() {
 
         <section className="cp-section">
           <div className="cp-section__header">
-            <span className="cp-section__badge cp-section__badge--strategy">Website</span>
-            <h2 className="cp-section__title">Account &amp; Access — Three Workflows</h2>
+            <span className="cp-section__badge cp-section__badge--strategy">Website + Sales Ops</span>
+            <h2 className="cp-section__title">Account &amp; Access</h2>
             <p className="cp-section__desc">
-              How an account gets created depends on who's doing it. Three paths: a sales-led transfer, a new customer who fills out the B2B form, and a new customer who only gives an email.
+              How an account gets created depends on who's doing it — three workflows, in order. Below them: how the team routes leads and gives access.
             </p>
           </div>
 
+          {/* The three workflows */}
+          <div className="prc-subhead">The 3 ways an account gets created</div>
           <div className="prc-workflows">
             {accountWorkflows.map((wf) => (
               <div key={wf.num} className="prc-wf">
@@ -842,7 +844,69 @@ export default function PRCampaignPage() {
             ))}
           </div>
 
+          {/* Team & routing */}
+          <div className="prc-subhead">Team &amp; routing</div>
+          <div className="cp-email-grid">
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">👤</div>
+              <div className="cp-email-card__title">Business Owner = Main Contact</div>
+              <div className="cp-email-card__desc">
+                The business owner is contact #1 on the account. Always check with the owner before adding any stylists.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">🔑</div>
+              <div className="cp-email-card__title">Two Shopify Leads</div>
+              <div className="cp-email-card__desc">
+                Two people own giving account access in Shopify, and they route every new lead — even existing clients — to the salesperson for that area.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">📧</div>
+              <div className="cp-email-card__title">New-Lead Territory Email</div>
+              <div className="cp-email-card__desc">
+                When a new lead registers, an internal email fires to the rep who owns that territory.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">📒</div>
+              <div className="cp-email-card__title">Master Client List</div>
+              <div className="cp-email-card__desc">
+                Keep a list of all clients so the team can check who already has online purchasing enabled — and who to pitch.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">🏷️</div>
+              <div className="cp-email-card__title">First-Order Pitch — 15% Off</div>
+              <div className="cp-email-card__desc">
+                "Place your first online order on HL.com and get 15% off — let me set it up for you." A salesperson creates the account and can place the order.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">🌎</div>
+              <div className="cp-email-card__title">International Team</div>
+              <div className="cp-email-card__desc">
+                Handled by the international team — they take both online and over-the-phone orders. The Shopify leads redirect international leads to them.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">📋</div>
+              <div className="cp-email-card__title">B2B Requirements Page</div>
+              <div className="cp-email-card__desc">
+                A page that lays out the requirements and rules for company / B2B accounts — who qualifies, what's needed, how tiers work.
+              </div>
+            </div>
+            <div className="cp-email-card">
+              <div className="cp-email-card__icon">🔓</div>
+              <div className="cp-email-card__title">No Passwords + Tracking</div>
+              <div className="cp-email-card__desc">
+                Customers never set a password. They sign in with a secure email link and get automatic order-tracking emails.
+              </div>
+            </div>
+          </div>
+
           {/* Account form */}
+          <div className="prc-subhead">The B2B account form</div>
           <div className="prc-form-card">
             <div className="prc-form-card__header">
               <div className="prc-form-card__title">Create Account — Form Fields</div>
@@ -865,105 +929,8 @@ export default function PRCampaignPage() {
           </div>
         </section>
 
-        {/* ════ INTERNAL SALES WORKFLOW ════ */}
-        <Divider num="05" title="Internal Sales Workflow" sub="How the team adds leads, gives access & books first orders" />
-
-        <section className="cp-section">
-          <div className="cp-section__header">
-            <span className="cp-section__badge cp-section__badge--strategy">Sales / Operations</span>
-            <h2 className="cp-section__title">How the Team Onboards a Customer</h2>
-            <p className="cp-section__desc">
-              The internal process — from a new lead in a territory to a live, ready-to-order account.
-            </p>
-          </div>
-
-          <div className="prc-flow">
-            <div className="prc-flow__step">
-              <div className="prc-flow__num">1</div>
-              <div className="prc-flow__label">New Lead Registers</div>
-              <div className="prc-flow__desc">A new business signs up or a rep spots one in their territory.</div>
-            </div>
-            <div className="prc-flow__step">
-              <div className="prc-flow__num">2</div>
-              <div className="prc-flow__label">Internal Email Fires</div>
-              <div className="prc-flow__desc">An internal email goes out for any new lead registering in that territory, so the right rep picks it up.</div>
-            </div>
-            <div className="prc-flow__step">
-              <div className="prc-flow__num">3</div>
-              <div className="prc-flow__label">Check With the Owner</div>
-              <div className="prc-flow__desc">Before adding anyone, confirm with the business owner. Stylists are only added with the owner's OK.</div>
-            </div>
-            <div className="prc-flow__step">
-              <div className="prc-flow__num">4</div>
-              <div className="prc-flow__label">2 Shopify Leads Give Access</div>
-              <div className="prc-flow__desc">Two designated people create/approve the account, assign the tier, and inform the sales team.</div>
-            </div>
-            <div className="prc-flow__step prc-flow__step--final">
-              <div className="prc-flow__num">5</div>
-              <div className="prc-flow__label">Account Live</div>
-              <div className="prc-flow__desc">No password — customer signs in with a secure link and gets automatic order-tracking emails.</div>
-            </div>
-          </div>
-
-          {/* Policies / rules */}
-          <div className="cp-email-grid">
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">👤</div>
-              <div className="cp-email-card__title">Business Owner = Main Contact</div>
-              <div className="cp-email-card__desc">
-                The business owner is contact #1 on the account. Always check with the owner before adding any stylists.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">📋</div>
-              <div className="cp-email-card__title">B2B Requirements Page</div>
-              <div className="cp-email-card__desc">
-                A page that lays out the requirements and rules for company / B2B accounts — who qualifies, what's needed, how tiers work.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">🔑</div>
-              <div className="cp-email-card__title">Two Shopify Leads</div>
-              <div className="cp-email-card__desc">
-                Two people own giving account access in Shopify and keeping the sales team informed when accounts go live.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">📧</div>
-              <div className="cp-email-card__title">New-Lead Territory Email</div>
-              <div className="cp-email-card__desc">
-                When a new lead registers, an internal email fires to the rep who owns that territory.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">🏷️</div>
-              <div className="cp-email-card__title">First-Order Offer</div>
-              <div className="cp-email-card__desc">
-                "Would you like a % off your first online order?" If yes, a salesperson creates their account and can place the order for them.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">🔓</div>
-              <div className="cp-email-card__title">No Passwords + Tracking</div>
-              <div className="cp-email-card__desc">
-                Customers never set a password. They sign in with a secure email link and get automatic order-tracking emails.
-              </div>
-            </div>
-          </div>
-
-          {/* Open questions */}
-          <div className="prc-block">
-            <div className="prc-block__label">
-              <span className="prc-block__num">!</span>
-              Open Questions — Assign an Owner
-            </div>
-            <div className="prc-flag">⚠ International ex-leads: who manages them, and how do we route their info to the right person?</div>
-            <div className="prc-flag">⚠ Are international customers online-only, or do we also contact them by phone?</div>
-          </div>
-        </section>
-
         {/* ════ ROADMAP / TIMELINE ════ */}
-        <Divider num="06" title="What Gets Done & When" sub="Two-week windows leading up to Aug 1, then after" />
+        <Divider num="05" title="What Gets Done & When" sub="Two-week windows leading up to Aug 1, then after" />
 
         <section className="cp-section">
           <div className="cp-section__header">
@@ -1018,7 +985,7 @@ export default function PRCampaignPage() {
         </section>
 
         {/* ════ EMAILS PR CAMPAIGN (accordion) ════ */}
-        <Divider num="07" title="Emails PR Campaign" sub="The client email sequence — open to view designs" />
+        <Divider num="06" title="Emails PR Campaign" sub="The client email sequence — open to view designs" />
 
         <section className="cp-section">
           <button

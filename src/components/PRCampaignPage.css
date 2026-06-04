@@ -172,6 +172,19 @@
   font-weight: 700;
 }
 
+/* ── Sub-section heading inside a section ──────────────────────────────────── */
+
+.prc-subhead {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--cp-purple-light);
+  margin-top: 8px;
+}
+
 /* ── Account workflows ─────────────────────────────────────────────────────── */
 
 .prc-workflows {
