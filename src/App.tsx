@@ -13,7 +13,7 @@ function getRoute() {
 
 function renderPage(route: string) {
   if (route === '/campaign') return <CampaignPage />
-  if (route === '/pr-campaign') return <PRCampaignPage />
+  if (route === '/merge-hl') return <PRCampaignPage />
   if (route === '/b2b-policy') return <B2BPolicyPage />
   if (route === '/landing-project') return <LandingPageProject />
   return <IAPage />

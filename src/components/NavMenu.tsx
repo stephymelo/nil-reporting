@@ -10,7 +10,7 @@ const STORAGE_KEY = 'hl-nav-unlocked'
 const links: { href: string; label: string }[] = [
   { href: '#/', label: 'IA Planning' },
   { href: '#/campaign', label: '3-Month Campaign' },
-  { href: '#/pr-campaign', label: 'PR Campaign — NIL + Onrite Merge' },
+  { href: '#/merge-hl', label: 'PR Campaign — NIL + Onrite Merge' },
   { href: '#/b2b-policy', label: 'Wholesale Account Policy' },
   { href: '#/landing-project', label: 'Landing Page Project' },
 ]
