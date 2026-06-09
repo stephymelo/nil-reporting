@@ -942,9 +942,10 @@ export default function PRCampaignPage() {
                 <div className="prc-role__label">Does</div>
                 <ul>
                   <li>Answers the contact form &amp; chat messages</li>
+                  <li>Enters all Hairloss.com orders — can place orders for customers</li>
+                  <li>Pitches the 15% first-order offer</li>
                   <li>Nurtures stylist/barber leads toward a B2B account</li>
-                  <li>Pitches the 15% first-order offer and can place the order</li>
-                  <li>Hands qualified B2B leads to the B2B salesperson</li>
+                  <li>Hands qualified B2B leads to the B2B salesperson — and leans on them for help with B2B orders</li>
                 </ul>
               </div>
             </div>
@@ -972,13 +973,12 @@ export default function PRCampaignPage() {
                   <li>Reviews B2B form submissions; checks with the business owner (contact #1) before adding stylists</li>
                   <li>Creates the customer account</li>
                   <li><strong>Assigns the catalog price + territory</strong></li>
-                  <li>Redirects international leads to the international team</li>
                 </ul>
               </div>
               <div className="prc-autoemail">
                 <span className="prc-autoemail__icon">✉</span>
                 <span className="prc-autoemail__text">
-                  When tagged with their price + territory, an automatic email goes to that territory's sales head: a new online account can now purchase online at their Tier — reach out to close their first online or over-the-phone sale with 15% off the first purchase.
+                  When the B2B salesperson tags a customer with their price + territory, an automatic email goes to that territory's sales head — or to the international team if the client is tagged international. The account is live and can order online at their Tier, and B2B leads get 10% off their first online purchase.
                 </span>
               </div>
             </div>
