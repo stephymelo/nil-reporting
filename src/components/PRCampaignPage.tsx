@@ -913,65 +913,91 @@ export default function PRCampaignPage() {
           </div>
 
           {/* Team & routing */}
-          <div className="prc-subhead">Team &amp; routing</div>
+          <div className="prc-subhead">Two sales people — leads &amp; accounts</div>
+          <p className="prc-roles-intro">
+            Two salespeople manage all customer leads and accounts in Shopify — one owns retail and
+            stylist/barber leads, one owns the B2B customer base and new B2B leads. Both work the
+            contact form and the inbox chat; each routes the leads that belong to the other.
+          </p>
+
+          <div className="prc-roles">
+            {/* Retail */}
+            <div className="prc-role">
+              <div className="prc-role__head">
+                <span className="prc-role__icon">🛍️</span>
+                <div>
+                  <div className="prc-role__tag">Salesperson 1</div>
+                  <div className="prc-role__title">Retail + Stylist / Barber Leads</div>
+                </div>
+              </div>
+              <div className="prc-role__block">
+                <div className="prc-role__label">Owns</div>
+                <ul>
+                  <li>Retail customers</li>
+                  <li>Stylist &amp; barber leads</li>
+                  <li>Contact form + inbox chat from retail &amp; leads</li>
+                </ul>
+              </div>
+              <div className="prc-role__block">
+                <div className="prc-role__label">Does</div>
+                <ul>
+                  <li>Answers the contact form &amp; chat messages</li>
+                  <li>Nurtures stylist/barber leads toward a B2B account</li>
+                  <li>Pitches the 15% first-order offer and can place the order</li>
+                  <li>Hands qualified B2B leads to the B2B salesperson</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* B2B */}
+            <div className="prc-role prc-role--b2b">
+              <div className="prc-role__head">
+                <span className="prc-role__icon">💼</span>
+                <div>
+                  <div className="prc-role__tag">Salesperson 2 · more on their plate</div>
+                  <div className="prc-role__title">B2B Customer Base + New Leads</div>
+                </div>
+              </div>
+              <div className="prc-role__block">
+                <div className="prc-role__label">Owns</div>
+                <ul>
+                  <li>The whole B2B / wholesale customer base</li>
+                  <li>All new B2B leads</li>
+                  <li>Contact form + inbox chat from businesses</li>
+                </ul>
+              </div>
+              <div className="prc-role__block">
+                <div className="prc-role__label">Does</div>
+                <ul>
+                  <li>Reviews B2B form submissions; checks with the business owner (contact #1) before adding stylists</li>
+                  <li>Creates the customer account</li>
+                  <li><strong>Assigns the catalog price + territory</strong></li>
+                  <li>Redirects international leads to the international team</li>
+                </ul>
+              </div>
+              <div className="prc-autoemail">
+                <span className="prc-autoemail__icon">✉</span>
+                <span className="prc-autoemail__text">
+                  When tagged with their price + territory, an automatic email goes to that territory's sales head: a new online account can now purchase online at their Tier — reach out to close their first online or over-the-phone sale with 15% off the first purchase.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="prc-subhead">Shared tools</div>
           <div className="cp-email-grid">
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">👤</div>
-              <div className="cp-email-card__title">Business Owner = Main Contact</div>
-              <div className="cp-email-card__desc">
-                The business owner is contact #1 on the account. Always check with the owner before adding any stylists.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">🔑</div>
-              <div className="cp-email-card__title">Two Shopify Leads</div>
-              <div className="cp-email-card__desc">
-                Two people own giving account access in Shopify, and they route every new lead — even existing clients — to the salesperson for that area.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">📧</div>
-              <div className="cp-email-card__title">New-Lead Territory Email</div>
-              <div className="cp-email-card__desc">
-                When a new lead registers, an internal email fires to the rep who owns that territory.
-              </div>
-            </div>
             <div className="cp-email-card">
               <div className="cp-email-card__icon">📒</div>
               <div className="cp-email-card__title">Master Client List</div>
               <div className="cp-email-card__desc">
-                Keep a list of all clients so the team can check who already has online purchasing enabled — and who to pitch.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">🏷️</div>
-              <div className="cp-email-card__title">First-Order Pitch — 15% Off</div>
-              <div className="cp-email-card__desc">
-                "Place your first online order on HL.com and get 15% off — let me set it up for you." A salesperson creates the account and can place the order.
+                A list of all clients so both salespeople can check who already has online purchasing enabled — and who to pitch.
               </div>
             </div>
             <div className="cp-email-card">
               <div className="cp-email-card__icon">🌎</div>
               <div className="cp-email-card__title">International Team</div>
               <div className="cp-email-card__desc">
-                Handled by the international team — they take both online and over-the-phone orders. The Shopify leads redirect international leads to them.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">📋</div>
-              <div className="cp-email-card__title">B2B Requirements Page</div>
-              <div className="cp-email-card__desc">
-                A page that lays out the requirements and rules for company / B2B accounts — who qualifies, what's needed, how tiers work.{' '}
-                <a href="#/b2b-policy" style={{ color: 'var(--cp-purple-deeper)', fontWeight: 700 }}>
-                  View the policy page →
-                </a>
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">🔓</div>
-              <div className="cp-email-card__title">No Passwords + Tracking</div>
-              <div className="cp-email-card__desc">
-                Customers never set a password. They sign in with a secure email link and get automatic order-tracking emails.
+                Handled by the international team — they take both online and over-the-phone orders. International leads get redirected to them.
               </div>
             </div>
           </div>
@@ -998,6 +1024,10 @@ export default function PRCampaignPage() {
               <span className="prc-field__req">*</span> Required · Submitting sends the request to sales for review &amp; tier assignment. <strong>No passwords</strong> — customers sign in with a secure email link and get automatic order-tracking emails.
             </div>
           </div>
+          <p className="prc-formnote">
+            How B2B accounts work — requirements, access &amp; rules — lives on the{' '}
+            <a href="#/b2b-policy">Wholesale Account Policy</a> page.
+          </p>
         </section>
 
         {/* ════ ROADMAP / TIMELINE ════ */}

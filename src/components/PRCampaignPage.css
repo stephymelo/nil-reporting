@@ -270,6 +270,115 @@
   line-height: 1.5;
 }
 
+/* ── Two sales-people role panels ──────────────────────────────────────────── */
+
+.prc-roles-intro {
+  font-size: 14px;
+  color: var(--cp-text-light);
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+.prc-roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.prc-role {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.prc-role--b2b {
+  border-color: var(--cp-purple);
+  background: linear-gradient(135deg, var(--cp-white), var(--cp-purple-bg));
+}
+
+.prc-role__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.prc-role__icon {
+  font-size: 30px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.prc-role__tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+}
+
+.prc-role__title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--cp-text);
+  line-height: 1.2;
+}
+
+.prc-role__block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prc-role__label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cp-purple-dark);
+}
+
+.prc-role__block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.prc-role__block li {
+  font-size: 13.5px;
+  color: var(--cp-text);
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+}
+
+.prc-role__block li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cp-purple);
+}
+
+.prc-formnote {
+  font-size: 13px;
+  color: var(--cp-text-light);
+  line-height: 1.5;
+}
+
+.prc-formnote a {
+  color: var(--cp-purple-deeper);
+  font-weight: 700;
+}
+
 /* ── Account form ──────────────────────────────────────────────────────────── */
 
 .prc-form-card {
@@ -1132,6 +1241,10 @@
 
 @media (max-width: 700px) {
   .prc-phases {
+    grid-template-columns: 1fr;
+  }
+
+  .prc-roles {
     grid-template-columns: 1fr;
   }
 
