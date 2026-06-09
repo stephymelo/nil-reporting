@@ -4,7 +4,7 @@ import './NavMenu.css'
 // Change this to set the menu password. Note: this is light client-side
 // gating only — the value ships in the built code, so it deters casual
 // navigation but is not real security.
-const PASSWORD = 'hairloss2026'
+const PASSWORD = 'steph'
 const STORAGE_KEY = 'hl-nav-unlocked'
 
 const links: { href: string; label: string }[] = [
