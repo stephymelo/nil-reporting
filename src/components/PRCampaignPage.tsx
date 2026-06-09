@@ -984,24 +984,6 @@ export default function PRCampaignPage() {
             </div>
           </div>
 
-          <div className="prc-subhead">Shared tools</div>
-          <div className="cp-email-grid">
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">📒</div>
-              <div className="cp-email-card__title">Master Client List</div>
-              <div className="cp-email-card__desc">
-                A list of all clients so both salespeople can check who already has online purchasing enabled — and who to pitch.
-              </div>
-            </div>
-            <div className="cp-email-card">
-              <div className="cp-email-card__icon">🌎</div>
-              <div className="cp-email-card__title">International Team</div>
-              <div className="cp-email-card__desc">
-                Handled by the international team — they take both online and over-the-phone orders. International leads get redirected to them.
-              </div>
-            </div>
-          </div>
-
           {/* Account form */}
           <div className="prc-subhead">The B2B account form</div>
           <div className="prc-form-card">
