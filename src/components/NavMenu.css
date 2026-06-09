@@ -134,6 +134,72 @@
   color: #6d28d9;
 }
 
+/* Password gate */
+.nav-panel__lock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 24px;
+  align-items: stretch;
+}
+
+.nav-panel__lock-icon {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.nav-panel__lock-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d2b3a;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.nav-panel__lock-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  padding: 12px 14px;
+  border: 1.5px solid #e8e6f0;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.nav-panel__lock-input:focus {
+  border-color: #6d28d9;
+}
+
+.nav-panel__lock-input.is-error {
+  border-color: #dc2626;
+}
+
+.nav-panel__lock-error {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #dc2626;
+  text-align: center;
+}
+
+.nav-panel__lock-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #6d28d9;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nav-panel__lock-btn:hover {
+  background: #5b21b6;
+}
+
 .nav-panel__foot {
   padding: 18px 24px;
   border-top: 1.5px solid #e8e6f0;

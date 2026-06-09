@@ -1,5 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './NavMenu.css'
+
+// Change this to set the menu password. Note: this is light client-side
+// gating only — the value ships in the built code, so it deters casual
+// navigation but is not real security.
+const PASSWORD = 'hairloss2026'
+const STORAGE_KEY = 'hl-nav-unlocked'
 
 const links: { href: string; label: string }[] = [
   { href: '#/', label: 'IA Planning' },
@@ -11,6 +17,36 @@ const links: { href: string; label: string }[] = [
 
 export default function NavMenu() {
   const [open, setOpen] = useState(false)
+  const [unlocked, setUnlocked] = useState(() => {
+    try {
+      return sessionStorage.getItem(STORAGE_KEY) === '1'
+    } catch {
+      return false
+    }
+  })
+  const [pw, setPw] = useState('')
+  const [error, setError] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (open && !unlocked) inputRef.current?.focus()
+  }, [open, unlocked])
+
+  function submit(e: React.FormEvent) {
+    e.preventDefault()
+    if (pw === PASSWORD) {
+      setUnlocked(true)
+      setError(false)
+      setPw('')
+      try {
+        sessionStorage.setItem(STORAGE_KEY, '1')
+      } catch {
+        /* ignore */
+      }
+    } else {
+      setError(true)
+    }
+  }
 
   return (
     <>
@@ -41,18 +77,42 @@ export default function NavMenu() {
             ×
           </button>
         </div>
-        <nav className="nav-panel__links">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="nav-panel__link"
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </a>
-          ))}
-        </nav>
+
+        {unlocked ? (
+          <nav className="nav-panel__links">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="nav-panel__link"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        ) : (
+          <form className="nav-panel__lock" onSubmit={submit}>
+            <div className="nav-panel__lock-icon">🔒</div>
+            <p className="nav-panel__lock-label">Enter the password to access the menu</p>
+            <input
+              ref={inputRef}
+              type="password"
+              className={`nav-panel__lock-input ${error ? 'is-error' : ''}`}
+              value={pw}
+              onChange={(e) => {
+                setPw(e.target.value)
+                setError(false)
+              }}
+              placeholder="Password"
+            />
+            {error && <p className="nav-panel__lock-error">Incorrect password</p>}
+            <button type="submit" className="nav-panel__lock-btn">
+              Unlock
+            </button>
+          </form>
+        )}
+
         <div className="nav-panel__foot">Hairloss.com · Planning</div>
       </aside>
     </>
