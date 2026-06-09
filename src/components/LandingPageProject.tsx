@@ -9,7 +9,18 @@ interface CostRow {
 
 const costs: CostRow[] = [
   { tool: 'Website Builder & Security', use: 'Builder platform + security and maintenance', monthly: 80 },
-  { tool: 'Vercel', use: 'Hosting + automatic deploys for both sites', monthly: 20 },
+  { tool: 'Vercel (Pro Plan)', use: 'Hosting + automatic deploys for both sites', monthly: 20 },
+]
+
+const vercelIncluded: { icon: string; title: string; desc: string }[] = [
+  { icon: '🌐', title: 'Custom domains + SSL', desc: 'Connect each brand\'s domain with automatic HTTPS — secure out of the box.' },
+  { icon: '⚡', title: 'Global edge CDN', desc: 'Pages are served from the edge, so they load fast for visitors anywhere.' },
+  { icon: '🔁', title: 'Push-to-publish deploys', desc: 'Every change deploys automatically, with a preview link to review before it goes live.' },
+  { icon: '🗂️', title: 'Two projects, one plan', desc: 'Both the NIL and Onrite landing pages run under a single Pro team — no second bill.' },
+  { icon: '📈', title: 'Higher limits', desc: 'More bandwidth and build minutes than the free tier — room for traffic and growth.' },
+  { icon: '🔒', title: 'Secure by default', desc: 'DDoS protection and HTTPS on everything, managed for us.' },
+  { icon: '📊', title: 'Analytics + Speed Insights', desc: 'See traffic and page performance for each landing page.' },
+  { icon: '✅', title: '99.99% uptime', desc: 'Reliable, scalable hosting with no servers to maintain.' },
 ]
 
 const PAGES = 2
@@ -75,6 +86,30 @@ export default function LandingPageProject() {
           <p className="lpp-fineprint">
             Claude Max is requested separately from New Image Labs and isn't part of this breakdown.
           </p>
+        </section>
+
+        {/* Why Vercel */}
+        <section>
+          <h2 className="lpp-h2">Why Vercel — Pro Plan</h2>
+          <p className="lpp-vercel-sub">
+            One $20/month Pro plan hosts both the NIL and Onrite landing pages. Here's what it covers and why it's the right fit.
+          </p>
+          <div className="lpp-features">
+            {vercelIncluded.map((f) => (
+              <div key={f.title} className="lpp-feature">
+                <div className="lpp-feature__icon">{f.icon}</div>
+                <div className="lpp-feature__body">
+                  <div className="lpp-feature__title">{f.title}</div>
+                  <div className="lpp-feature__desc">{f.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="lpp-why">
+            <strong>Why Vercel:</strong> both landing pages live under one Pro plan, so we push to publish,
+            preview every change before it's live, and get fast, secure, auto-scaling hosting — without
+            managing any servers or paying for hosting twice.
+          </div>
         </section>
 
         {/* What we charge */}
