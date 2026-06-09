@@ -570,9 +570,9 @@ const emails: EmailDesign[] = [
       'Quick heads-up: this is your last week to order on the New Image Labs website.',
       'We\'re temporarily shutting down the NIL website on August 1 while we run the migration over the weekend — it\'ll be back up on Hairloss.com on August 3.',
       'Everything moves to Hairloss.com, where your account is ready and waiting. Same products. Same pricing tier. One place for everything.',
-      'If you haven\'t gotten your login yet, reach out to your rep this week and we\'ll get you set.',
+      'Once your account is created, you\'ll get an automatic email from Hairloss.com to sign in.',
     ],
-    cta: 'Get my login',
+    cta: '',
   },
   {
     num: 4,
@@ -1173,7 +1173,7 @@ export default function PRCampaignPage() {
                           {para}
                         </p>
                       ))}
-                      <div className="prc-mock__cta">{email.cta}</div>
+                      {email.cta && <div className="prc-mock__cta">{email.cta}</div>}
                     </div>
                     <div className="prc-mock__foot">
                       Hairloss.com · Trusted for 50+ years · You're receiving this as a valued partner
