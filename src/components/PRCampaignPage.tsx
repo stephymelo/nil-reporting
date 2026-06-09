@@ -124,23 +124,7 @@ const phases: RolloutPhase[] = [
       'Custom orders on the website',
       'Online custom-order workflow',
     ],
-    pillars: [
-      {
-        icon: '🛠️',
-        title: 'Build',
-        desc: 'Add a custom-order option on the website for eligible units.',
-      },
-      {
-        icon: '💲',
-        title: 'Pricing',
-        desc: 'Custom orders priced against each customer\'s catalog tier.',
-      },
-      {
-        icon: '📦',
-        title: 'Fulfillment',
-        desc: 'Online custom orders route to the team for production and tracking.',
-      },
-    ],
+    pillars: [],
   },
 ]
 
@@ -827,15 +811,17 @@ export default function PRCampaignPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="prc-phase__pillars">
-                  {phase.pillars.map((p) => (
-                    <div key={p.title} className="prc-pillar">
-                      <div className="prc-pillar__icon">{p.icon}</div>
-                      <div className="prc-pillar__title">{p.title}</div>
-                      <div className="prc-pillar__desc">{p.desc}</div>
-                    </div>
-                  ))}
-                </div>
+                {phase.pillars.length > 0 && (
+                  <div className="prc-phase__pillars">
+                    {phase.pillars.map((p) => (
+                      <div key={p.title} className="prc-pillar">
+                        <div className="prc-pillar__icon">{p.icon}</div>
+                        <div className="prc-pillar__title">{p.title}</div>
+                        <div className="prc-pillar__desc">{p.desc}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
