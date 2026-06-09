@@ -567,9 +567,9 @@ const emails: EmailDesign[] = [
     goal: 'Final reminder. Make sure nobody is caught off guard.',
     tone: 'Direct, friendly heads-up.',
     body: [
-      'Quick heads-up: starting August 3, the New Image Labs website will no longer take online orders.',
-      'Everything moves to Hairloss.com, where your account is ready and waiting.',
-      'Same products. Same pricing tier. One place for everything.',
+      'Quick heads-up: this is your last week to order on the New Image Labs website.',
+      'We\'re temporarily shutting down the NIL website on August 1 while we run the migration over the weekend — it\'ll be back up on Hairloss.com on August 3.',
+      'Everything moves to Hairloss.com, where your account is ready and waiting. Same products. Same pricing tier. One place for everything.',
       'If you haven\'t gotten your login yet, reach out to your rep this week and we\'ll get you set.',
     ],
     cta: 'Get my login',
