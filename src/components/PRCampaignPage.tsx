@@ -276,26 +276,33 @@ const timeline: TimelineWindow[] = [
     ],
   },
   {
-    window: 'August 3 — Launch',
-    note: 'Go live; NIL website stops taking online orders',
+    window: 'Aug 1 – 3 — Transfer & Launch',
+    note: 'Domain transfer over the weekend; live Monday',
     items: [
       {
-        title: 'Launch — NIL Website Online Orders Off',
-        date: 'Mon, August 3',
-        desc: 'The New Image Labs website stops taking online orders. Online ordering moves to Hairloss.com with B2B accounts (phone orders still go through the team).',
-        tracks: ['website', 'marketing'],
+        title: 'Shut Down NIL Website + Domain Transfer',
+        date: 'Sat, Aug 1',
+        desc: 'Take the New Image Labs website down and run the domain transfer over the weekend (Aug 1–2). By launch, Hairloss.com already has everything in order.',
+        tracks: ['website'],
+        flag: 'Domain transfer happens over the weekend',
+      },
+      {
+        title: 'Send "We\'ll Be Down" Email',
+        date: 'Sat, Aug 1',
+        desc: 'Email clients that the NIL website is down for the weekend during the domain transfer — back on Hairloss.com Monday.',
+        tracks: ['marketing'],
+      },
+      {
+        title: 'HL.com + Landing Pages Live',
+        date: 'Mon, Aug 3',
+        desc: 'Hairloss.com and the NIL/Onrite men\'s landing pages go live — accounts, pricing, products, and migrated orders all in place. Online ordering is on Hairloss.com (phone orders still go through the team).',
+        tracks: ['website'],
         flag: 'Launch day',
       },
       {
-        title: 'Landing Pages Launch',
-        date: 'Mon, August 3',
-        desc: 'The NIL and Onrite men\'s landing pages go live.',
-        tracks: ['website'],
-      },
-      {
         title: 'Send Launch Email',
-        date: 'Mon, August 3',
-        desc: 'Email 4: "We\'re live." Login link, what\'s new, everything in one place.',
+        date: 'Mon, Aug 3',
+        desc: 'Email 5: "We\'re live." Login link, what\'s new, everything in one place.',
         tracks: ['marketing'],
       },
     ],
@@ -339,7 +346,8 @@ const keyDates: { date: string; title: string; desc: string }[] = [
   { date: 'Fri, Jun 26', title: 'Hide Pricing + Restructure', desc: 'Hide hair-unit pricing, remove TressAllure, restructure HL.com.' },
   { date: 'Wed, Jul 1', title: 'PR Campaign Starts', desc: 'Emails begin + posting plan informing of the migration.' },
   { date: 'Tue, Jul 21', title: 'Migrate Customers', desc: 'Customers, companies & orders move to Hairloss.com.' },
-  { date: 'Mon, Aug 3', title: 'Launch', desc: 'NIL website stops online orders. Everything on HL.com. Landing pages launch.' },
+  { date: 'Sat, Aug 1', title: 'NIL Site Down + Transfer', desc: 'NIL website goes down for the domain transfer (over the weekend). "We\'ll be down" email goes out.' },
+  { date: 'Mon, Aug 3', title: 'Launch', desc: 'HL.com + landing pages live with everything in order. Launch email goes out.' },
 ]
 
 // ── Account form fields ──────────────────────────────────────────────────────
@@ -584,6 +592,22 @@ const emails: EmailDesign[] = [
   },
   {
     num: 4,
+    send: 'August 1',
+    audience: 'All clients',
+    subject: 'Heads-up: the New Image Labs site is down this weekend',
+    preview: 'We\'re moving everything to Hairloss.com — back Monday.',
+    goal: 'Tell customers the NIL site is offline for the domain transfer; back on HL.com Aug 3.',
+    tone: 'Short, reassuring operational notice.',
+    body: [
+      'Quick heads-up: the New Image Labs website is offline this weekend while we move everything to Hairloss.com.',
+      'We\'re transferring the domain and bringing it all together in one place.',
+      'You\'ll be back up and ordering online on Hairloss.com on Monday, August 3 — with your account, your pricing, and your order history ready.',
+      'Need to order this weekend? Give your rep a call. Thanks for your patience.',
+    ],
+    cta: 'What\'s changing',
+  },
+  {
+    num: 5,
     send: 'August 3',
     audience: 'All clients',
     subject: 'We\'re live — welcome to Hairloss.com',
@@ -1119,7 +1143,7 @@ export default function PRCampaignPage() {
               <span className="cp-section__badge cp-section__badge--strategy">Email Campaign</span>
               <h2 className="cp-section__title">Emails PR Campaign</h2>
               <p className="cp-section__desc">
-                Four sends to clients — warm them up, explain the change, drive the first login. Click to view the designs.
+                Five sends to clients — warm them up, explain the change, the weekend transfer, and the launch. Click to view the designs.
               </p>
             </div>
             <span className="prc-accordion__chevron">{emailsOpen ? '▲' : '▼'}</span>
