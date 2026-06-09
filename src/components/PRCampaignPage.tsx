@@ -424,13 +424,14 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
         desc: 'One website for all NIL products and select Onrite products — plus discounts, promotions, and educational content. Easier to find, easier to buy.',
       },
     ],
-    emailSignoff: '— Marketing',
+    emailSignoff: '',
     scriptIntro: 'Use this when you call a customer. Keep it warm and reassuring — lead with what stays the same.',
     script: [
       { cue: 'Opening', line: '"Hi [name], I\'m calling with some good news about how you\'ll order from us going forward."' },
       { cue: 'The change', line: '"We\'re bringing everything onto one website — Hairloss.com. Starting August 3, you\'ll order there instead of the New Image Labs site."' },
       { cue: 'Reassure', line: '"Your pricing tier and the products you order stay exactly the same. Nothing you rely on is going away."' },
-      { cue: 'Pricing & account', line: '"On the New Image site, both the pricing and the products were hidden. On Hairloss.com you can browse all the products — only the pricing sits behind your login, to protect our wholesale rates. We\'ll be migrating your account over during the month of July. You\'ll get an activation email for your Hairloss.com account — just sign in with the same email it was sent to, and you\'ll see your pricing."' },
+      { cue: 'Pricing & account', line: '"On the New Image site, both the pricing and the products were hidden. On Hairloss.com you can browse all the products — only the pricing sits behind your login, to protect our wholesale rates. You\'ll get an activation email for your Hairloss.com account — just sign in with the same email it was sent to, and you\'ll see your pricing."' },
+      { cue: 'Your data migrates', line: '"Because you\'re a New Image Labs customer, your customer info, your company/business details, and your order history will all be visible on Hairloss.com. Just wait until the last week of July — your account gets migrated that week. (Onrite customers: your online orders from NIL migrate over automatically.)"' },
       { cue: 'Close', line: '"I\'ll send your login before August 3 so you\'re ready. Any questions, you call me directly."' },
     ],
     faqIntro: 'The questions customers will ask — and how to answer them.',
@@ -438,7 +439,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { q: 'Why are you making this change?', a: 'We\'re bringing NIL and Onrite onto one website so it\'s easier to find products and order — everything in one place, plus easier access to discounts and promotions.' },
       { q: 'Will my pricing change?', a: 'No. Your tier and pricing move with you, exactly as they are today.' },
       { q: 'Why can\'t I see prices on the site?', a: 'You can browse all the products — only the pricing is hidden. It\'s wholesale and protected, so it shows once you log into your company account.' },
-      { q: 'Do I need to set up my account?', a: 'No — your sales rep creates it for you. You just log in.' },
+      { q: 'Do I need to set up my account?', a: 'No — your sales rep creates it for you. To log in, use the same email you received the Hairloss.com email from — we send a one-time code to that email to sign in. No more passwords.' },
       { q: 'Will I still find the products I order?', a: 'Yes. All your products are on Hairloss.com and you can browse the full catalog anytime — only the pricing is behind your login.' },
       { q: 'Can I still order on the NIL website?', a: 'Only until August 3. After that, all orders go through Hairloss.com.' },
       { q: 'What if I need help?', a: 'Your rep is one call away.' },
@@ -470,13 +471,14 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
         desc: 'Un solo sitio para todos los productos de NIL y productos selectos de Onrite — además de descuentos, promociones y contenido educativo. Más fácil de encontrar, más fácil de comprar.',
       },
     ],
-    emailSignoff: '— Marketing',
+    emailSignoff: '',
     scriptIntro: 'Usen esto al llamar a un cliente. Mantengan un tono cálido y tranquilizador — empiecen por lo que se mantiene igual.',
     script: [
       { cue: 'Apertura', line: '"Hola [nombre], le llamo con buenas noticias sobre cómo hará sus pedidos a partir de ahora."' },
       { cue: 'El cambio', line: '"Estamos reuniendo todo en un solo sitio — Hairloss.com. A partir del 3 de agosto, hará sus pedidos ahí en lugar del sitio de New Image Labs."' },
       { cue: 'Tranquilizar', line: '"Su nivel de precios y los productos que pide se mantienen exactamente igual. Nada de lo que usted depende va a desaparecer."' },
-      { cue: 'Precios y cuenta', line: '"En el sitio de New Image, tanto los precios como los productos estaban ocultos. En Hairloss.com usted puede ver todos los productos — solo los precios quedan detrás de su inicio de sesión, para proteger nuestros precios mayoristas. Migraremos su cuenta durante el mes de julio. Recibirá un correo de activación para su cuenta de Hairloss.com — solo inicie sesión con el mismo correo al que se lo enviamos y verá sus precios."' },
+      { cue: 'Precios y cuenta', line: '"En el sitio de New Image, tanto los precios como los productos estaban ocultos. En Hairloss.com usted puede ver todos los productos — solo los precios quedan detrás de su inicio de sesión, para proteger nuestros precios mayoristas. Recibirá un correo de activación para su cuenta de Hairloss.com — solo inicie sesión con el mismo correo al que se lo enviamos y verá sus precios."' },
+      { cue: 'Migración de sus datos', line: '"Como usted es cliente de New Image Labs, su información de cliente, los datos de su empresa/negocio y su historial de pedidos estarán visibles en Hairloss.com. Solo espere hasta la última semana de julio — su cuenta se migra esa semana. (Clientes de Onrite: sus pedidos en línea de NIL se migran automáticamente.)"' },
       { cue: 'Cierre', line: '"Le enviaré su acceso antes del 3 de agosto para que esté listo. Cualquier pregunta, llámeme directamente."' },
     ],
     faqIntro: 'Las preguntas que harán los clientes — y cómo responderlas.',
@@ -484,7 +486,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { q: '¿Por qué hacen este cambio?', a: 'Llevamos más de 50 años en esto. Estamos reuniendo NIL y Onrite en un solo sitio para que sea más fácil encontrar productos y hacer pedidos — todo en un mismo lugar, además de un acceso más fácil a descuentos y promociones.' },
       { q: '¿Cambiará mi precio?', a: 'No. Su nivel y sus precios se mantienen tal como están hoy.' },
       { q: '¿Por qué no puedo ver los precios en el sitio?', a: 'Puede ver todos los productos — solo los precios están ocultos. Son mayoristas y están protegidos, así que se muestran al iniciar sesión en su cuenta de empresa.' },
-      { q: '¿Tengo que crear mi cuenta?', a: 'No — su representante de ventas la crea por usted. Usted solo inicia sesión.' },
+      { q: '¿Tengo que crear mi cuenta?', a: 'No — su representante de ventas la crea por usted. Para iniciar sesión, use el mismo correo donde recibió el mensaje de Hairloss.com — le enviamos un código de un solo uso a ese correo. Sin contraseñas.' },
       { q: '¿Seguiré encontrando los productos que pido?', a: 'Sí. Todos sus productos están en Hairloss.com y puede ver el catálogo completo en cualquier momento — solo los precios quedan detrás de su inicio de sesión.' },
       { q: '¿Puedo seguir comprando en el sitio de NIL?', a: 'Solo hasta el 3 de agosto. Después de esa fecha, todos los pedidos se hacen por Hairloss.com.' },
       { q: '¿Y si necesito ayuda?', a: 'Su representante está a una llamada de distancia.' },
@@ -560,22 +562,6 @@ const emails: EmailDesign[] = [
       'And we\'re just getting started — more educational content is on the way.',
     ],
     cta: 'Log in & shop',
-  },
-  {
-    num: 5,
-    send: 'Tease July 28 · Live Aug 10',
-    audience: 'Pros + barbers',
-    subject: 'New: beginner educational content with Ricky Knowles',
-    preview: 'Learn the basics, step by step — only on Hairloss.com.',
-    goal: 'Tease before launch, drive to paywalled educational content after Aug 3.',
-    tone: 'Exciting, value-first. Position HL.com as where you learn.',
-    body: [
-      'We\'re putting more into educational content than ever — starting with a beginner series filmed with Ricky Knowles.',
-      'Step-by-step basics for application and care, built for anyone just getting started.',
-      'Available exclusively on Hairloss.com. Log in to your account to watch.',
-      'This is the first of much more to come.',
-    ],
-    cta: 'Watch the series',
   },
 ]
 
@@ -683,7 +669,7 @@ function SalesBlocks({ lang }: { lang: 'en' | 'es' }) {
                 </li>
               ))}
             </ol>
-            <p className="prc-mock__signoff">{c.emailSignoff}</p>
+            {c.emailSignoff && <p className="prc-mock__signoff">{c.emailSignoff}</p>}
           </div>
         </div>
       </div>
@@ -1097,7 +1083,7 @@ export default function PRCampaignPage() {
               <span className="cp-section__badge cp-section__badge--strategy">Email Campaign</span>
               <h2 className="cp-section__title">Emails PR Campaign</h2>
               <p className="cp-section__desc">
-                Five sends to clients — warm them up, explain the change, drive the first login. Click to view the designs.
+                Four sends to clients — warm them up, explain the change, drive the first login. Click to view the designs.
               </p>
             </div>
             <span className="prc-accordion__chevron">{emailsOpen ? '▲' : '▼'}</span>
