@@ -43,7 +43,7 @@ interface RolloutPhase {
   when: string
   title: string
   desc: string
-  variant: '1' | '2'
+  variant: '1' | '2' | '3'
   productsLabel: string
   products: string[]
   pillars: Pillar[]
@@ -110,6 +110,35 @@ const phases: RolloutPhase[] = [
         icon: '📊',
         title: 'Volume Pricing',
         desc: 'Quantity-break pricing on Progen and Onrite products, matching the Phase 1 structure.',
+      },
+    ],
+  },
+  {
+    num: 'Phase 3',
+    when: 'October',
+    title: 'Custom Orders Online',
+    desc: 'Put custom ordering on the website so customers can place their custom orders online themselves.',
+    variant: '3',
+    productsLabel: 'Coming in Phase 3',
+    products: [
+      'Custom orders on the website',
+      'Online custom-order workflow',
+    ],
+    pillars: [
+      {
+        icon: '🛠️',
+        title: 'Build',
+        desc: 'Add a custom-order option on the website for eligible units.',
+      },
+      {
+        icon: '💲',
+        title: 'Pricing',
+        desc: 'Custom orders priced against each customer\'s catalog tier.',
+      },
+      {
+        icon: '📦',
+        title: 'Fulfillment',
+        desc: 'Online custom orders route to the team for production and tracking.',
       },
     ],
   },
@@ -292,6 +321,12 @@ const timeline: TimelineWindow[] = [
         date: 'Post-launch',
         desc: 'Bring Progen wholesale pricing and the rest of the Onrite products on — content, pricing, and volume pricing.',
         tracks: ['website', 'content', 'marketing'],
+      },
+      {
+        title: 'Phase 3 — Custom Orders Online',
+        date: 'October',
+        desc: 'Put custom ordering on the website so customers can place their custom orders online.',
+        tracks: ['website'],
       },
     ],
   },
@@ -747,7 +782,7 @@ export default function PRCampaignPage() {
             <span className="cp-section__badge cp-section__badge--strategy">Rollout</span>
             <h2 className="cp-section__title">Two Phases</h2>
             <p className="cp-section__desc">
-              Phase 1 gets all New Image Labs products live for launch. Phase 2 brings Progen wholesale pricing and Onrite products on after.
+              Phase 1 gets the launch products live. Phase 2 brings Progen wholesale pricing and the rest of Onrite. Phase 3 adds custom orders online in October.
             </p>
           </div>
 
@@ -959,6 +994,7 @@ export default function PRCampaignPage() {
                   <li>Reviews B2B form submissions; checks with the business owner (contact #1) before adding stylists</li>
                   <li>Creates the customer account</li>
                   <li><strong>Assigns the catalog price + territory</strong></li>
+                  <li>Schedules onboardings so new accounts learn how to purchase — especially placing their custom orders online</li>
                 </ul>
               </div>
               <div className="prc-autoemail">

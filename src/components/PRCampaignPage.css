@@ -648,7 +648,7 @@
 
 .prc-phases {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
 
@@ -667,6 +667,11 @@
 }
 
 .prc-phase--2 {
+  border-color: var(--cp-purple-light);
+}
+
+.prc-phase--3 {
+  border-style: dashed;
   border-color: var(--cp-purple-light);
 }
 
