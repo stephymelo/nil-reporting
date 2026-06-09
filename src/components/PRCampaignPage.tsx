@@ -729,7 +729,6 @@ export default function PRCampaignPage() {
 
   return (
     <div className="campaign-page">
-      <a href="#/" className="cp-back">← IA Planning</a>
 
       {/* ── Hero ── */}
       <header className="cp-hero">

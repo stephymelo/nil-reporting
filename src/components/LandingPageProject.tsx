@@ -36,7 +36,6 @@ const marginAnnual = marginMonthly * 12
 export default function LandingPageProject() {
   return (
     <div className="lpp-page">
-      <a href="#/" className="cp-back">← IA Planning</a>
 
       {/* ── Hero ── */}
       <header className="lpp-hero">

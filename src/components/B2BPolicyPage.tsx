@@ -7,7 +7,6 @@ const FORM_URL =
 export default function B2BPolicyPage() {
   return (
     <div className="b2b-page">
-      <a href="#/pr-campaign" className="cp-back">← PR Campaign</a>
 
       {/* ── Hero ── */}
       <header className="b2b-hero">

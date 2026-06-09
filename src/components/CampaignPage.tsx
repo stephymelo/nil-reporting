@@ -3,7 +3,6 @@ import './CampaignPage.css'
 export default function CampaignPage() {
   return (
     <div className="campaign-page">
-      <a href="#/" className="cp-back">← IA Planning</a>
 
       {/* ── Hero ── */}
       <header className="cp-hero">
