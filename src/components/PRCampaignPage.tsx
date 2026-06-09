@@ -44,6 +44,8 @@ interface RolloutPhase {
   title: string
   desc: string
   variant: '1' | '2'
+  productsLabel: string
+  products: string[]
   pillars: Pillar[]
 }
 
@@ -52,10 +54,17 @@ interface RolloutPhase {
 const phases: RolloutPhase[] = [
   {
     num: 'Phase 1',
-    when: 'Now → Aug 1 Launch',
-    title: 'New Image Labs Products',
-    desc: 'Everything NIL — uploaded, priced, and ready for launch day.',
+    when: 'Live Aug 1',
+    title: 'Launch Products',
+    desc: 'The first set of products live on launch day — uploaded, priced, and ready.',
     variant: '1',
+    productsLabel: 'Going live Aug 1',
+    products: [
+      'Select men\'s units',
+      'Women\'s Onrite units',
+      'Permarite adhesives (Onrite)',
+      'Jorgen line (Onrite)',
+    ],
     pillars: [
       {
         icon: '🖼️',
@@ -77,14 +86,19 @@ const phases: RolloutPhase[] = [
   {
     num: 'Phase 2',
     when: 'After Aug 1',
-    title: 'Progen + Onrite Products',
-    desc: 'Progen wholesale pricing and select Onrite products brought onto the site.',
+    title: 'Progen + Rest of Onrite',
+    desc: 'Progen wholesale pricing and the remaining Onrite products brought onto the site.',
     variant: '2',
+    productsLabel: 'Coming in Phase 2',
+    products: [
+      'Progen wholesale pricing',
+      'The rest of the Onrite products',
+    ],
     pillars: [
       {
         icon: '🖼️',
         title: 'Content',
-        desc: 'Photos, descriptions, and infographics for select Onrite products. Progen catalog built out.',
+        desc: 'Photos, descriptions, and infographics for the remaining Onrite products. Progen catalog built out.',
       },
       {
         icon: '💲',
@@ -110,7 +124,7 @@ const timeline: TimelineWindow[] = [
       {
         title: 'Finish Product + Color Upload',
         date: 'By Fri, June 5',
-        desc: 'All NIL products and select Onrite products live on Hairloss.com. Colors finish uploading.',
+        desc: 'Phase 1 launch products live on Hairloss.com — select men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line. Colors finish uploading.',
         tracks: ['website', 'content'],
       },
       {
@@ -715,6 +729,14 @@ export default function PRCampaignPage() {
                 </div>
                 <div className="prc-phase__title">{phase.title}</div>
                 <div className="prc-phase__desc">{phase.desc}</div>
+                <div className="prc-phase__products">
+                  <div className="prc-phase__products-label">{phase.productsLabel}</div>
+                  <ul className="prc-phase__products-list">
+                    {phase.products.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="prc-phase__pillars">
                   {phase.pillars.map((p) => (
                     <div key={p.title} className="prc-pillar">
@@ -737,7 +759,7 @@ export default function PRCampaignPage() {
             <div className="cp-overview-card">
               <div className="cp-overview-card__icon">📦</div>
               <div className="cp-overview-card__label">Moving Over</div>
-              <div className="cp-overview-card__value">All NIL + Select OR</div>
+              <div className="cp-overview-card__value">NIL + Onrite (Phased)</div>
             </div>
             <div className="cp-overview-card">
               <div className="cp-overview-card__icon">🔐</div>

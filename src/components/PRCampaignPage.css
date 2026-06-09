@@ -584,6 +584,48 @@
   margin-bottom: 8px;
 }
 
+.prc-phase__products {
+  background: var(--cp-purple-bg);
+  border: 1.5px solid var(--cp-purple-light);
+  border-radius: var(--cp-radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.prc-phase__products-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+  margin-bottom: 8px;
+}
+
+.prc-phase__products-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prc-phase__products-list li {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--cp-text);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.prc-phase__products-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--cp-purple-deeper);
+  font-weight: 800;
+  font-size: 12px;
+}
+
 .prc-phase__pillars {
   display: flex;
   flex-direction: column;
