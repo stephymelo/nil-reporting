@@ -54,11 +54,11 @@ interface RolloutPhase {
 const phases: RolloutPhase[] = [
   {
     num: 'Phase 1',
-    when: 'Live Aug 1',
+    when: 'Live Aug 3',
     title: 'Launch Products',
     desc: 'The first set of products live on launch day — uploaded, priced, and ready.',
     variant: '1',
-    productsLabel: 'Going live Aug 1',
+    productsLabel: 'Going live Aug 3',
     products: [
       'All NIL men\'s units',
       'Some Onrite men\'s units',
@@ -86,7 +86,7 @@ const phases: RolloutPhase[] = [
   },
   {
     num: 'Phase 2',
-    when: 'After Aug 1',
+    when: 'After Aug 3',
     title: 'Progen + Rest of Onrite',
     desc: 'Progen wholesale pricing and the remaining Onrite products brought onto the site.',
     variant: '2',
@@ -115,7 +115,7 @@ const phases: RolloutPhase[] = [
   },
 ]
 
-// ── Roadmap — timeline in two-week windows up to Aug 1, then after ───────────
+// ── Roadmap — timeline in two-week windows up to Aug 3, then after ───────────
 
 const timeline: TimelineWindow[] = [
   {
@@ -144,30 +144,42 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'June 16 – 30',
-    note: 'Hide pricing first, then start adding customers',
+    note: 'Build accounts, train staff, hide pricing & restructure',
     items: [
       {
         title: 'Build "Create Account" Form',
-        date: 'June 16 – 20',
-        desc: 'The form sales and customers use to open a B2B account (fields below).',
+        date: 'June 16 – 19',
+        desc: 'The form customers use to open a B2B account (fields below).',
         tracks: ['website'],
       },
       {
-        title: 'Hide Public / Retail Pricing',
-        date: 'June 20 – 26',
-        desc: 'Hide public/retail pricing on specific products for visitors who aren\'t logged in. Pricing only shows once you log into an approved B2B account.',
+        title: 'Add "Create B2B Account" + "Login" Menu',
+        date: 'June 16 – 19',
+        desc: 'New nav menu items on Hairloss.com so businesses can create a B2B account and log in.',
         tracks: ['website'],
-        flag: 'Gate: must be live before adding customers and before the email campaign starts',
       },
       {
-        title: 'Start Talking About the Shift',
-        date: 'June 27 – 28',
-        desc: 'Sales begins telling clients the change is coming — warm them up before the first email.',
+        title: 'Staff Training',
+        date: 'Mon, June 22 · 9 AM',
+        desc: 'Train the sales/ops team on the migration, the new site, accounts, and the talking points.',
         tracks: ['marketing'],
       },
       {
+        title: 'Hide Hair-Unit Pricing',
+        date: 'Fri, June 26',
+        desc: 'Hide public/retail pricing for hair units when you\'re not logged in. Pricing only shows once you log into an approved B2B account.',
+        tracks: ['website'],
+        flag: 'Gate: must be live before migrating customers and before the email campaign starts',
+      },
+      {
+        title: 'Remove TressAllure + Restructure HL.com',
+        date: 'Fri, June 26',
+        desc: 'Remove TressAllure and restructure Hairloss.com for the merged catalog.',
+        tracks: ['website'],
+      },
+      {
         title: 'Sales Starts Adding Customers',
-        date: 'June 30',
+        date: 'Mon, June 29',
         desc: 'With pricing hidden, begin creating accounts for priority/known customers on Hairloss.com.',
         tracks: ['marketing'],
       },
@@ -175,78 +187,97 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'July 1 – 15',
-    note: 'Kick off the email campaign, keep adding customers',
+    note: 'Start the PR campaign + posting plan',
     items: [
       {
-        title: 'Send Announcement Email',
-        date: 'July 1 – 3',
+        title: 'Start PR Campaign + Announcement Email',
+        date: 'Wed, July 1',
         desc: 'Email 1 to clients — the PR campaign starts here: the merge, why we\'re doing it, and reassurance nothing they rely on goes away.',
         tracks: ['marketing'],
       },
       {
-        title: 'Sales Adds Certain Customers',
-        date: 'July 1 – 18',
-        desc: 'Create the rest of the accounts so customers are ready to log in at launch.',
-        tracks: ['marketing'],
+        title: 'Posting Plan — Inform of Migration',
+        date: 'Wed, July 1',
+        desc: 'Social posting plan begins, informing customers the migration to Hairloss.com is coming.',
+        tracks: ['content', 'marketing'],
+      },
+      {
+        title: 'About Page — Add NIL & OR Merge',
+        date: 'July 7 – 10',
+        desc: 'Update the About page to tell the NIL + Onrite merge story — one company, one site.',
+        tracks: ['website', 'content'],
       },
       {
         title: 'Send "How to Access" Email',
         date: 'July 14 – 16',
-        desc: 'Email 2: how to log in, rep is creating the account, and pricing now lives behind the account.',
+        desc: 'Email 2: how to log in, account migration is underway, and pricing now lives behind the account.',
         tracks: ['marketing'],
       },
     ],
   },
   {
     window: 'July 16 – 31',
-    note: 'Salon locator, final reminders, tease educational content',
+    note: 'Salon locator, migrate, final reminders',
     items: [
       {
         title: 'Add Salon Locator to Website',
-        date: 'July 17',
+        date: 'Fri, July 17',
         desc: 'Add the salon locator and give it visibility through socials and the website so consumers can find partner shops — drives traffic to pros.',
         tracks: ['website', 'marketing'],
       },
       {
+        title: 'Migrate Customers, Companies & Orders',
+        date: 'Tue, July 21',
+        desc: 'Migrate customers, company accounts, and orders over to Hairloss.com so everyone is ready for launch.',
+        tracks: ['website', 'marketing'],
+        flag: 'Big migration day',
+      },
+      {
         title: 'Send Final NIL Site Reminder',
         date: 'July 28 – 29',
-        desc: 'Email 3: last call — NIL website purchasing ends Aug 1. Make sure everyone knows where to go.',
+        desc: 'Email 3: last call — NIL website purchasing ends Aug 3. Make sure everyone knows where to go.',
         tracks: ['marketing'],
       },
       {
         title: 'Tease Educational Content',
-        date: 'July 28',
-        desc: 'Start teasing the Ricky Knowles beginner educational content. Full content stays behind the paywall until after Aug 1.',
+        date: 'Tue, July 28',
+        desc: 'Start teasing the Ricky Knowles beginner educational content. Full content stays behind the paywall until after launch.',
         tracks: ['content', 'marketing'],
       },
     ],
   },
   {
-    window: 'August 1 — Launch',
-    note: 'Go live, NIL purchasing off',
+    window: 'August 3 — Launch',
+    note: 'Go live; NIL stops taking orders',
     items: [
       {
-        title: 'NIL Website Purchasing Off',
-        date: 'August 1',
-        desc: 'Customers can no longer buy on the NIL site. All ordering moves to Hairloss.com with their B2B account.',
+        title: 'Launch — NIL Stops, Everything on HL.com',
+        date: 'Mon, August 3',
+        desc: 'NIL stops taking orders. Everything is on Hairloss.com — all ordering moves there with B2B accounts.',
         tracks: ['website', 'marketing'],
         flag: 'Launch day',
       },
       {
+        title: 'Landing Pages Launch',
+        date: 'Mon, August 3',
+        desc: 'The NIL and Onrite men\'s landing pages go live.',
+        tracks: ['website'],
+      },
+      {
         title: 'Send Launch Email',
-        date: 'August 1',
+        date: 'Mon, August 3',
         desc: 'Email 4: "We\'re live." Login link, what\'s new, everything in one place.',
         tracks: ['marketing'],
       },
     ],
   },
   {
-    window: 'After August 1',
+    window: 'After August 3',
     note: 'Educational content + Phase 2 rollout',
     items: [
       {
         title: 'Ricky Knowles Beginner Content Live',
-        date: 'Aug 8',
+        date: 'Mon, Aug 10',
         desc: 'Beginner educational content filmed with Ricky Knowles goes live behind the Hairloss.com paywall.',
         tracks: ['content'],
       },
@@ -257,13 +288,23 @@ const timeline: TimelineWindow[] = [
         tracks: ['content'],
       },
       {
-        title: 'Phase 2 — Progen + Onrite',
+        title: 'Phase 2 — Progen + Rest of Onrite',
         date: 'Post-launch',
-        desc: 'Bring Progen wholesale pricing and select Onrite products on — content, pricing, and volume pricing.',
+        desc: 'Bring Progen wholesale pricing and the rest of the Onrite products on — content, pricing, and volume pricing.',
         tracks: ['website', 'content', 'marketing'],
       },
     ],
   },
+]
+
+// ── Key dates (horizontal milestone strip) ──────────────────────────────────
+
+const keyDates: { date: string; title: string; desc: string }[] = [
+  { date: 'Mon, Jun 22 · 9 AM', title: 'Staff Training', desc: 'Train the team on the migration & new site.' },
+  { date: 'Fri, Jun 26', title: 'Hide Pricing + Restructure', desc: 'Hide hair-unit pricing, remove TressAllure, restructure HL.com.' },
+  { date: 'Wed, Jul 1', title: 'PR Campaign Starts', desc: 'Emails begin + posting plan informing of the migration.' },
+  { date: 'Tue, Jul 21', title: 'Migrate Customers', desc: 'Customers, companies & orders move to Hairloss.com.' },
+  { date: 'Mon, Aug 3', title: 'Launch', desc: 'NIL stops orders. Everything on HL.com. Landing pages launch.' },
 ]
 
 // ── Account form fields ──────────────────────────────────────────────────────
@@ -356,11 +397,11 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
   en: {
     emailSubject: 'Important: NIL → Hairloss.com — what to tell customers',
     emailIntro:
-      'Team — here\'s what\'s changing and how to talk to customers about it. This takes effect August 1. Walk every client through these five points. No gray areas.',
+      'Team — here\'s what\'s changing and how to talk to customers about it. This takes effect August 3. Walk every client through these five points. No gray areas.',
     emailPoints: [
       {
         title: 'No more buying on the NIL site',
-        desc: 'Starting Aug 1, the New Image Labs website stops taking orders. Everything moves to Hairloss.com.',
+        desc: 'Starting Aug 3, the New Image Labs website stops taking orders. Everything moves to Hairloss.com.',
       },
       {
         title: 'Same tiers, same products',
@@ -383,10 +424,10 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
     scriptIntro: 'Use this when you call a customer. Keep it warm and reassuring — lead with what stays the same.',
     script: [
       { cue: 'Opening', line: '"Hi [name], I\'m calling with some good news about how you\'ll order from us going forward."' },
-      { cue: 'The change', line: '"We\'re bringing everything onto one website — Hairloss.com. Starting August 1, you\'ll order there instead of the New Image Labs site."' },
+      { cue: 'The change', line: '"We\'re bringing everything onto one website — Hairloss.com. Starting August 3, you\'ll order there instead of the New Image Labs site."' },
       { cue: 'Reassure', line: '"Your pricing tier and the products you order stay exactly the same. Nothing you rely on is going away."' },
       { cue: 'Pricing & account', line: '"On the New Image site, both the pricing and the products were hidden. On Hairloss.com you can browse all the products — only the pricing sits behind your login, to protect our wholesale rates. We\'ll be migrating your account over during the month of July, so once you log in you\'ll see your pricing. You don\'t have to do anything."' },
-      { cue: 'Close', line: '"I\'ll send your login before August 1 so you\'re ready. Any questions, you call me directly."' },
+      { cue: 'Close', line: '"I\'ll send your login before August 3 so you\'re ready. Any questions, you call me directly."' },
     ],
     faqIntro: 'The questions customers will ask — and how to answer them.',
     faq: [
@@ -395,18 +436,18 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { q: 'Why can\'t I see prices on the site?', a: 'You can browse all the products — only the pricing is hidden. It\'s wholesale and protected, so it shows once you log into your company account.' },
       { q: 'Do I need to set up my account?', a: 'No — your sales rep creates it for you. You just log in.' },
       { q: 'Will I still find the products I order?', a: 'Yes. All your products are on Hairloss.com and you can browse the full catalog anytime — only the pricing is behind your login.' },
-      { q: 'Can I still order on the NIL website?', a: 'Only until August 1. After that, all orders go through Hairloss.com.' },
+      { q: 'Can I still order on the NIL website?', a: 'Only until August 3. After that, all orders go through Hairloss.com.' },
       { q: 'What if I need help?', a: 'Your rep is one call away.' },
     ],
   },
   es: {
     emailSubject: 'Importante: NIL → Hairloss.com — qué decirle a los clientes',
     emailIntro:
-      'Equipo — esto es lo que cambia y cómo hablarlo con los clientes. Entra en vigor el 1 de agosto. Expliquen estos cinco puntos a cada cliente. Sin ambigüedades.',
+      'Equipo — esto es lo que cambia y cómo hablarlo con los clientes. Entra en vigor el 3 de agosto. Expliquen estos cinco puntos a cada cliente. Sin ambigüedades.',
     emailPoints: [
       {
         title: 'Ya no se compra en el sitio de NIL',
-        desc: 'A partir del 1 de agosto, el sitio de New Image Labs deja de tomar pedidos. Todo se traslada a Hairloss.com.',
+        desc: 'A partir del 3 de agosto, el sitio de New Image Labs deja de tomar pedidos. Todo se traslada a Hairloss.com.',
       },
       {
         title: 'Mismos niveles, mismos productos',
@@ -429,10 +470,10 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
     scriptIntro: 'Usen esto al llamar a un cliente. Mantengan un tono cálido y tranquilizador — empiecen por lo que se mantiene igual.',
     script: [
       { cue: 'Apertura', line: '"Hola [nombre], le llamo con buenas noticias sobre cómo hará sus pedidos a partir de ahora."' },
-      { cue: 'El cambio', line: '"Estamos reuniendo todo en un solo sitio — Hairloss.com. A partir del 1 de agosto, hará sus pedidos ahí en lugar del sitio de New Image Labs."' },
+      { cue: 'El cambio', line: '"Estamos reuniendo todo en un solo sitio — Hairloss.com. A partir del 3 de agosto, hará sus pedidos ahí en lugar del sitio de New Image Labs."' },
       { cue: 'Tranquilizar', line: '"Su nivel de precios y los productos que pide se mantienen exactamente igual. Nada de lo que usted depende va a desaparecer."' },
       { cue: 'Precios y cuenta', line: '"En el sitio de New Image, tanto los precios como los productos estaban ocultos. En Hairloss.com usted puede ver todos los productos — solo los precios quedan detrás de su inicio de sesión, para proteger nuestros precios mayoristas. Migraremos su cuenta durante el mes de julio, así que al iniciar sesión verá sus precios. Usted no tiene que hacer nada."' },
-      { cue: 'Cierre', line: '"Le enviaré su acceso antes del 1 de agosto para que esté listo. Cualquier pregunta, llámeme directamente."' },
+      { cue: 'Cierre', line: '"Le enviaré su acceso antes del 3 de agosto para que esté listo. Cualquier pregunta, llámeme directamente."' },
     ],
     faqIntro: 'Las preguntas que harán los clientes — y cómo responderlas.',
     faq: [
@@ -441,7 +482,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { q: '¿Por qué no puedo ver los precios en el sitio?', a: 'Puede ver todos los productos — solo los precios están ocultos. Son mayoristas y están protegidos, así que se muestran al iniciar sesión en su cuenta de empresa.' },
       { q: '¿Tengo que crear mi cuenta?', a: 'No — su representante de ventas la crea por usted. Usted solo inicia sesión.' },
       { q: '¿Seguiré encontrando los productos que pido?', a: 'Sí. Todos sus productos están en Hairloss.com y puede ver el catálogo completo en cualquier momento — solo los precios quedan detrás de su inicio de sesión.' },
-      { q: '¿Puedo seguir comprando en el sitio de NIL?', a: 'Solo hasta el 1 de agosto. Después de esa fecha, todos los pedidos se hacen por Hairloss.com.' },
+      { q: '¿Puedo seguir comprando en el sitio de NIL?', a: 'Solo hasta el 3 de agosto. Después de esa fecha, todos los pedidos se hacen por Hairloss.com.' },
       { q: '¿Y si necesito ayuda?', a: 'Su representante está a una llamada de distancia.' },
     ],
   },
@@ -476,7 +517,7 @@ const emails: EmailDesign[] = [
     goal: 'Explain accounts + hidden pricing before launch. Remove confusion.',
     tone: 'Clear, helpful, step-by-step. No surprises.',
     body: [
-      'Here\'s how things work on Hairloss.com starting August 1.',
+      'Here\'s how things work on Hairloss.com starting August 3.',
       'Your sales rep is creating your account for you — you don\'t have to do anything to get set up. You\'ll get login details before launch.',
       'Pricing now lives behind your account. To keep our wholesale pricing protected, the site won\'t show prices publicly. Once you log in to your B2B account, you\'ll see your tier pricing — the same pricing you have today.',
       'You\'ll recognize your products — they\'re all on the site and you can browse the full catalog. Only your pricing sits behind your login.',
@@ -489,11 +530,11 @@ const emails: EmailDesign[] = [
     send: 'July 28–29',
     audience: 'All clients',
     subject: 'Last week to order on the NIL site',
-    preview: 'Starting Aug 1, ordering moves to Hairloss.com.',
+    preview: 'Starting Aug 3, ordering moves to Hairloss.com.',
     goal: 'Final reminder. Make sure nobody is caught off guard.',
     tone: 'Direct, friendly heads-up.',
     body: [
-      'Quick heads-up: starting August 1, the New Image Labs website will no longer take orders.',
+      'Quick heads-up: starting August 3, the New Image Labs website will no longer take orders.',
       'Everything moves to Hairloss.com, where your account is ready and waiting.',
       'Same products. Same pricing tier. One place for everything.',
       'If you haven\'t gotten your login yet, reach out to your rep this week and we\'ll get you set.',
@@ -502,7 +543,7 @@ const emails: EmailDesign[] = [
   },
   {
     num: 4,
-    send: 'August 1',
+    send: 'August 3',
     audience: 'All clients',
     subject: 'We\'re live — welcome to Hairloss.com',
     preview: 'Log in and see everything in one place.',
@@ -518,11 +559,11 @@ const emails: EmailDesign[] = [
   },
   {
     num: 5,
-    send: 'Tease July 28 · Live Aug 8',
+    send: 'Tease July 28 · Live Aug 10',
     audience: 'Pros + barbers',
     subject: 'New: beginner educational content with Ricky Knowles',
     preview: 'Learn the basics, step by step — only on Hairloss.com.',
-    goal: 'Tease before launch, drive to paywalled educational content after Aug 1.',
+    goal: 'Tease before launch, drive to paywalled educational content after Aug 3.',
     tone: 'Exciting, value-first. Position HL.com as where you learn.',
     body: [
       'We\'re putting more into educational content than ever — starting with a beginner series filmed with Ricky Knowles.',
@@ -703,7 +744,7 @@ export default function PRCampaignPage() {
             <span className="cp-hero__dates-dot" />
             <span>July 2026</span>
             <span className="cp-hero__dates-dot" />
-            <span>Launch Aug 1</span>
+            <span>Launch Aug 3</span>
           </div>
         </div>
       </header>
@@ -755,7 +796,7 @@ export default function PRCampaignPage() {
             <div className="cp-overview-card">
               <div className="cp-overview-card__icon">🚀</div>
               <div className="cp-overview-card__label">Launch</div>
-              <div className="cp-overview-card__value">August 1, 2026</div>
+              <div className="cp-overview-card__value">August 3, 2026</div>
             </div>
             <div className="cp-overview-card">
               <div className="cp-overview-card__icon">📦</div>
@@ -954,16 +995,33 @@ export default function PRCampaignPage() {
         </section>
 
         {/* ════ ROADMAP / TIMELINE ════ */}
-        <Divider num="05" title="What Gets Done & When" sub="Two-week windows leading up to Aug 1, then after" />
+        <Divider num="05" title="What Gets Done & When" sub="Key dates, then the two-week breakdown up to Aug 3" />
 
         <section className="cp-section">
           <div className="cp-section__header">
             <span className="cp-section__badge cp-section__badge--strategy">Roadmap</span>
             <h2 className="cp-section__title">What Gets Done &amp; When</h2>
             <p className="cp-section__desc">
-              Every task with its date and team. Grouped in two-week windows up to launch, then ongoing.
+              The key dates at a glance, then every task with its date and team in two-week windows.
             </p>
           </div>
+
+          {/* Horizontal key-dates timeline */}
+          <div className="prc-subhead">Key dates</div>
+          <div className="prc-htimeline">
+            <div className="prc-htimeline__track">
+              {keyDates.map((d) => (
+                <div key={d.title} className="prc-ht">
+                  <div className="prc-ht__dot" />
+                  <div className="prc-ht__date">{d.date}</div>
+                  <div className="prc-ht__title">{d.title}</div>
+                  <div className="prc-ht__desc">{d.desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="prc-subhead">Full breakdown</div>
 
           {/* Legend */}
           <div className="prc-legend">

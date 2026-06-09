@@ -751,22 +751,6 @@ export default function IAPage() {
       </main>
 
       <footer className="ia-footer">
-        <a href="#/campaign" style={{ color: '#6d28d9', textDecoration: 'none', fontWeight: 600 }}>
-          View 3-Month Campaign Plan →
-        </a>
-        <br />
-        <a href="#/pr-campaign" style={{ color: '#6d28d9', textDecoration: 'none', fontWeight: 600 }}>
-          View NIL + Onrite Merge — PR Campaign →
-        </a>
-        <br />
-        <a href="#/b2b-policy" style={{ color: '#6d28d9', textDecoration: 'none', fontWeight: 600 }}>
-          View Wholesale Account Policy →
-        </a>
-        <br />
-        <a href="#/landing-project" style={{ color: '#6d28d9', textDecoration: 'none', fontWeight: 600 }}>
-          View Landing Page Project — Cost Breakdown →
-        </a>
-        <br />
         Hairloss.com · IA &amp; User Flow Planning · {new Date().getFullYear()}
       </footer>
     </div>
