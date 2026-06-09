@@ -347,7 +347,9 @@ const accountWorkflows: AccountWorkflow[] = [
       { label: 'Create the User (Admin)', desc: 'Sales creates the user in the admin — business owner is the main contact.' },
       { label: 'Account Live', desc: 'Client signs in (no password — secure link), sees their tier pricing, gets tracking emails.', final: true },
     ],
-    emails: [],
+    emails: [
+      'Auto welcome email: "Hi New Image Labs / Onrite customer — we\'ve successfully transferred your account information and orders to Hairloss.com. Continue shopping here with your pricing tier."',
+    ],
     note: 'Transferring a client requires creating BOTH a company and a user account in the admin. Sales never fills out the account form.',
   },
   {
@@ -900,7 +902,10 @@ export default function PRCampaignPage() {
                   ))}
                 </div>
                 {wf.emails.map((e) => (
-                  <div key={e} className="prc-autoemail">✉ {e}</div>
+                  <div key={e} className="prc-autoemail">
+                    <span className="prc-autoemail__icon">✉</span>
+                    <span className="prc-autoemail__text">{e}</span>
+                  </div>
                 ))}
                 {wf.note && <div className="prc-wf__note">{wf.note}</div>}
               </div>

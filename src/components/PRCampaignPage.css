@@ -241,12 +241,26 @@
 
 .prc-autoemail {
   background: var(--cp-purple-bg);
-  border: 1.5px solid var(--cp-purple-light);
+  border: 1.5px solid var(--cp-purple);
+  border-left: 5px solid var(--cp-purple-deeper);
   border-radius: var(--cp-radius-sm);
-  padding: 12px 16px;
-  font-size: 13px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.prc-autoemail__icon {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.prc-autoemail__text {
+  font-size: 14px;
+  font-weight: 700;
   color: var(--cp-text);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .prc-wf__note {
