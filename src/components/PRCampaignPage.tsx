@@ -356,13 +356,14 @@ const accountWorkflows: AccountWorkflow[] = [
     who: 'Customer registers with the B2B form in one step',
     steps: [
       { label: 'Signs Up With B2B Form', desc: 'The user account is created at registration — their business info comes in with the B2B form.' },
-      { label: 'Staff Reviews + Creates Company', desc: 'We review, create the company, and assign the tier — the user account already exists.' },
-      { label: 'Wholesale Unlocks', desc: 'Once approved, B2B pricing replaces retail on login.', final: true },
+      { label: 'Auto-Tagged "Unlocked" (Shopify Flow)', desc: 'A Shopify flow automatically tags the account as unlocked, so they can see "Retail Price" right away.' },
+      { label: 'Staff Reviews + Creates Customer Account', desc: 'A salesperson revises their B2B info, creates their customer account, and assigns a catalog-pricing tier.' },
+      { label: 'Catalog Pricing Unlocks', desc: 'Once the tier is assigned, catalog pricing replaces retail on login.', final: true },
     ],
     emails: [
       'Auto-email on submit: "Our staff is reviewing your information to set up your wholesale pricing. For now, you have retail pricing."',
     ],
-    note: 'The user account is already created — we just need to create the company.',
+    note: 'The user account already exists and is auto-unlocked to retail. Staff reviews the B2B info and assigns the catalog-pricing tier.',
   },
   {
     num: 'Workflow 3',
@@ -370,13 +371,14 @@ const accountWorkflows: AccountWorkflow[] = [
     who: 'Signed up with just an email, no B2B form yet',
     steps: [
       { label: 'Signs Up (Email Only)', desc: 'Account created with an email — no business info yet.' },
-      { label: 'Auto Welcome Email', desc: 'Prompts them to fill out the form if they\'re a business.' },
-      { label: 'Fills Out the Form', desc: 'If they\'re a business, this sends them into Workflow 2.', final: true },
+      { label: 'Auto-Tagged "Unlocked" (Shopify Flow)', desc: 'A Shopify flow automatically tags the account as unlocked, so they can see "Retail Price".' },
+      { label: 'Auto Welcome Email', desc: 'Prompts them to fill out the B2B form if they\'re a business.' },
+      { label: 'Fills Out the Form', desc: 'If they\'re a business, this sends them into Workflow 2 for a catalog-pricing tier.', final: true },
     ],
     emails: [
       'Auto welcome email: "Welcome! If you\'re a business, salon, stylist, or barber, fill out the form to get wholesale pricing."',
     ],
-    note: 'If they don\'t fill out the form, they stay a retail customer.',
+    note: 'If they don\'t fill out the form, they stay a retail (unlocked) customer.',
   },
 ]
 
