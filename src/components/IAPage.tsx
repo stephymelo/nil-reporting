@@ -763,6 +763,10 @@ export default function IAPage() {
           View Wholesale Account Policy →
         </a>
         <br />
+        <a href="#/landing-project" style={{ color: '#6d28d9', textDecoration: 'none', fontWeight: 600 }}>
+          View Landing Page Project — Cost Breakdown →
+        </a>
+        <br />
         Hairloss.com · IA &amp; User Flow Planning · {new Date().getFullYear()}
       </footer>
     </div>

@@ -60,7 +60,8 @@ const phases: RolloutPhase[] = [
     variant: '1',
     productsLabel: 'Going live Aug 1',
     products: [
-      'Select men\'s units',
+      'All NIL men\'s units',
+      'Some Onrite men\'s units',
       'Women\'s Onrite units',
       'Permarite adhesives (Onrite)',
       'Jorgen line (Onrite)',
@@ -124,7 +125,7 @@ const timeline: TimelineWindow[] = [
       {
         title: 'Finish Product + Color Upload',
         date: 'By Fri, June 5',
-        desc: 'Phase 1 launch products live on Hairloss.com — select men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line. Colors finish uploading.',
+        desc: 'Phase 1 launch products live on Hairloss.com — all NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line. Colors finish uploading.',
         tracks: ['website', 'content'],
       },
       {

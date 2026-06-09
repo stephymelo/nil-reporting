@@ -1,0 +1,281 @@
+/* ── Landing Page Project — cost breakdown ─────────────────────────────────── */
+
+.lpp-page {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--cp-off-white);
+  color: var(--cp-text);
+  min-height: 100vh;
+}
+
+/* Hero */
+.lpp-hero {
+  background: var(--cp-white);
+  padding: 100px 24px 56px;
+  text-align: center;
+  border-bottom: 2px solid var(--cp-border);
+}
+
+.lpp-hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.lpp-hero__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cp-purple-dark);
+  margin-bottom: 16px;
+}
+
+.lpp-hero__title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--cp-text);
+  margin-bottom: 14px;
+}
+
+.lpp-hero__subtitle {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--cp-text-light);
+  line-height: 1.6;
+}
+
+/* Main */
+.lpp-main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 56px 24px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.lpp-h2 {
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--cp-text);
+  margin-bottom: 16px;
+}
+
+/* Scope */
+.lpp-scope {
+  background: var(--cp-purple-bg);
+  border: 1.5px solid var(--cp-purple-light);
+  border-radius: var(--cp-radius);
+  padding: 22px 26px;
+}
+
+.lpp-scope__label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+  margin-bottom: 6px;
+}
+
+.lpp-scope__text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cp-text);
+  line-height: 1.5;
+}
+
+/* Cost table */
+.lpp-table {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  overflow: hidden;
+}
+
+.lpp-table__head,
+.lpp-table__row {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 0.8fr 0.8fr;
+  gap: 12px;
+  padding: 16px 22px;
+  align-items: center;
+}
+
+.lpp-table__head {
+  background: var(--cp-off-white);
+  border-bottom: 1.5px solid var(--cp-border);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cp-text-light);
+}
+
+.lpp-table__row {
+  border-bottom: 1px solid var(--cp-border);
+}
+
+.lpp-table__row:last-child {
+  border-bottom: none;
+}
+
+.lpp-table__row--total {
+  background: var(--cp-purple-bg);
+  font-weight: 800;
+}
+
+.lpp-table__tool {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.lpp-table__use {
+  font-size: 13px;
+  color: var(--cp-text-light);
+  line-height: 1.4;
+}
+
+.lpp-table__num {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.lpp-fineprint {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--cp-text-light);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* Charge */
+.lpp-charge {
+  background: linear-gradient(135deg, var(--cp-purple-deeper), var(--cp-purple));
+  color: var(--cp-white);
+  border-radius: var(--cp-radius);
+  padding: 28px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.lpp-charge__rate {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.lpp-charge__amount {
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.lpp-charge__unit {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.lpp-charge__math {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lpp-charge__math strong {
+  color: var(--cp-white);
+}
+
+/* Totals */
+.lpp-totals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.lpp-total-card {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.lpp-total-card--alt {
+  border-color: var(--cp-purple-light);
+  background: linear-gradient(135deg, var(--cp-white), var(--cp-purple-bg));
+}
+
+.lpp-total-card--margin {
+  border-color: #86efac;
+  background: linear-gradient(135deg, var(--cp-white), #f0fdf4);
+}
+
+.lpp-total-card__num {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--cp-purple-deeper);
+  line-height: 1;
+}
+
+.lpp-total-card--margin .lpp-total-card__num {
+  color: #15803d;
+}
+
+.lpp-total-card__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-text);
+  margin-top: 8px;
+}
+
+.lpp-total-card__sub {
+  font-size: 12px;
+  color: var(--cp-text-light);
+  margin-top: 2px;
+}
+
+/* Note */
+.lpp-note {
+  background: #fef3c7;
+  border: 1.5px solid #fde68a;
+  border-radius: var(--cp-radius);
+  padding: 20px 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #78350f;
+}
+
+.lpp-note strong {
+  color: #92400e;
+}
+
+@media (max-width: 640px) {
+  .lpp-hero {
+    padding: 80px 20px 48px;
+  }
+
+  .lpp-totals {
+    grid-template-columns: 1fr;
+  }
+
+  .lpp-table__head {
+    display: none;
+  }
+
+  .lpp-table__row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lpp-table__use {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+}
