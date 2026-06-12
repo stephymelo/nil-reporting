@@ -4,6 +4,7 @@ import CampaignPage from './components/CampaignPage'
 import PRCampaignPage from './components/PRCampaignPage'
 import B2BPolicyPage from './components/B2BPolicyPage'
 import LandingPageProject from './components/LandingPageProject'
+import SalesPRCampaign from './components/SalesPRCampaign'
 import NavMenu from './components/NavMenu'
 
 function getRoute() {
@@ -16,6 +17,7 @@ function renderPage(route: string) {
   if (route === '/merge-hl') return <PRCampaignPage />
   if (route === '/b2b-policy') return <B2BPolicyPage />
   if (route === '/landing-project') return <LandingPageProject />
+  if (route === '/sales-pr-campaign') return <SalesPRCampaign />
   return <IAPage />
 }
 

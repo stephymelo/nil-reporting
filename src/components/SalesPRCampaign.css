@@ -1,0 +1,520 @@
+/* ── Sales PR Campaign — presentation deck ─────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+.spr-deck {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2d2b3a;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  background: #faf9fc;
+}
+
+/* Slides */
+.spr-slide {
+  position: relative;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 40px 64px;
+  background: #ffffff;
+  border-bottom: 1px solid #eceaf4;
+}
+
+.spr-slide--tint {
+  background: #f0eef7;
+}
+
+.spr-slide--tall {
+  min-height: 100vh;
+  align-items: flex-start;
+}
+
+.spr-slide__inner {
+  width: 100%;
+  max-width: 940px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.spr-num {
+  position: absolute;
+  top: 28px;
+  right: 36px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #a49ed0;
+}
+
+.spr-eyebrow {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6e66a8;
+}
+
+.spr-eyebrow--light {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.spr-title {
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #2d2b3a;
+}
+
+.spr-note {
+  font-size: clamp(15px, 2vw, 18px);
+  color: #6b6880;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+/* Hero slide */
+.spr-slide--hero {
+  background: linear-gradient(140deg, #6e66a8, #a49ed0);
+  color: #ffffff;
+  border-bottom: none;
+  text-align: center;
+}
+
+.spr-slide--hero .spr-slide__inner {
+  align-items: center;
+}
+
+.spr-slide--hero .spr-num {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.spr-hero-title {
+  font-size: clamp(38px, 7vw, 84px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  color: #ffffff;
+}
+
+.spr-hero-title span {
+  color: #efeaff;
+}
+
+.spr-hero-sub {
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.spr-hero-dates {
+  margin-top: 6px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  padding: 11px 26px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Point lists */
+.spr-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spr-points li {
+  font-size: clamp(16px, 2.4vw, 22px);
+  line-height: 1.5;
+  color: #2d2b3a;
+  padding-left: 34px;
+  position: relative;
+}
+
+.spr-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8b84bf;
+}
+
+.spr-points strong {
+  color: #6e66a8;
+}
+
+/* Image placeholder */
+.spr-imgph {
+  width: 100%;
+  border: 2px dashed #c9c3e4;
+  border-radius: 16px;
+  background: repeating-linear-gradient(45deg, #f6f4fc, #f6f4fc 12px, #f1eefb 12px, #f1eefb 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 120px;
+  color: #8b84bf;
+}
+
+.spr-imgph__icon {
+  font-size: 30px;
+}
+
+.spr-imgph__label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Two-column cards */
+.spr-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.spr-card {
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.spr-card__label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6e66a8;
+  margin-bottom: 14px;
+}
+
+.spr-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spr-card li {
+  font-size: 16px;
+  color: #2d2b3a;
+  padding-left: 18px;
+  position: relative;
+}
+
+.spr-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a49ed0;
+}
+
+/* Key dates */
+.spr-dates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.spr-date {
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-left: 4px solid #6e66a8;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.spr-date__when {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6e66a8;
+  margin-bottom: 6px;
+}
+
+.spr-date__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2d2b3a;
+  margin-bottom: 4px;
+}
+
+.spr-date__desc {
+  font-size: 13.5px;
+  color: #6b6880;
+  line-height: 1.5;
+}
+
+/* Phases */
+.spr-phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.spr-phase {
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.spr-phase__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.spr-phase__tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #6e66a8;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.spr-phase__when {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6e66a8;
+}
+
+.spr-phase__title {
+  font-size: 19px;
+  font-weight: 800;
+  color: #2d2b3a;
+  margin-bottom: 6px;
+}
+
+.spr-phase__desc {
+  font-size: 14px;
+  color: #6b6880;
+  line-height: 1.55;
+}
+
+/* Posts */
+.spr-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.spr-post {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spr-post__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.spr-post__platform {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d2b3a;
+}
+
+.spr-post__when {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6e66a8;
+}
+
+.spr-post__caption {
+  font-size: 13px;
+  color: #a49ed0;
+  font-style: italic;
+  border: 1px dashed #d4d0e8;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+/* Email overview */
+.spr-email-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spr-email-row {
+  display: grid;
+  grid-template-columns: 90px 120px 1fr;
+  gap: 14px;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.spr-email-row__num {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ffffff;
+  background: #8b84bf;
+  padding: 4px 10px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.spr-email-row__send {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6e66a8;
+}
+
+.spr-email-row__subject {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #2d2b3a;
+}
+
+/* Email detail cards */
+.spr-emails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spr-email {
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-radius: 16px;
+  padding: 24px 26px;
+}
+
+.spr-email__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.spr-email__num {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #6e66a8;
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+
+.spr-email__timing {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.spr-email__send {
+  font-size: 14px;
+  font-weight: 800;
+  color: #2d2b3a;
+}
+
+.spr-email__rel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8b84bf;
+}
+
+.spr-email__subject {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2d2b3a;
+  margin-bottom: 4px;
+}
+
+.spr-email__purpose {
+  font-size: 13.5px;
+  color: #6b6880;
+  margin-bottom: 16px;
+}
+
+.spr-email__contents-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6e66a8;
+  margin-bottom: 8px;
+}
+
+.spr-email__body {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spr-email__body li {
+  font-size: 14px;
+  color: #2d2b3a;
+  line-height: 1.55;
+  padding-left: 18px;
+  position: relative;
+}
+
+.spr-email__body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a49ed0;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .spr-two-col,
+  .spr-dates,
+  .spr-phases,
+  .spr-posts {
+    grid-template-columns: 1fr;
+  }
+
+  .spr-slide {
+    padding: 80px 22px 48px;
+  }
+
+  .spr-email-row {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .spr-email-row__subject {
+    grid-column: 1 / -1;
+  }
+}

@@ -20,7 +20,7 @@ interface TimelineWindow {
   items: RoadmapItem[]
 }
 
-interface EmailDesign {
+export interface EmailDesign {
   num: number
   send: string
   audience: string
@@ -525,7 +525,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
 
 // ── Email designs ────────────────────────────────────────────────────────────
 
-const emails: EmailDesign[] = [
+export const emails: EmailDesign[] = [
   {
     num: 1,
     send: 'July 1–3',
