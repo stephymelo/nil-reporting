@@ -59,6 +59,7 @@ export default function SalesPRCampaign() {
           <h2 className="spr-title">What's happening</h2>
           <ul className="spr-points">
             <li>New Image Labs and Onrite are moving onto <strong>one platform — Hairloss.com</strong>.</li>
+            <li>The <strong>landing pages stay up</strong> — it's <strong>online shopping</strong> that moves to Hairloss.com.</li>
             <li>Same pricing tiers. Same products. One place to order.</li>
             <li>The NIL website goes offline for maintenance <strong>Saturday, Aug 1</strong>.</li>
             <li>Everything is on Hairloss.com from <strong>Monday, Aug 3</strong>.</li>
@@ -86,9 +87,9 @@ export default function SalesPRCampaign() {
             <div className="spr-card">
               <div className="spr-card__label">Gets better</div>
               <ul>
-                <li>One platform to order</li>
-                <li>Easier access to the full catalog</li>
-                <li>Promotions &amp; volume pricing in one place</li>
+                <li>One website with the rest of our products + B2B pricing — easier to purchase</li>
+                <li>An established social media presence driving customers</li>
+                <li>Promotions we can run for specific pricing tiers</li>
                 <li>More educational content</li>
               </ul>
             </div>
