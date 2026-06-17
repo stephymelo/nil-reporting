@@ -978,7 +978,7 @@ export default function PRCampaignPage() {
                 <ul>
                   <li>Answers the contact form &amp; chat messages</li>
                   <li>Enters all Hairloss.com orders — can place orders for customers</li>
-                  <li>Pitches the 15% first-order offer</li>
+                  <li>Pitches the 10%-off first-order offer (any customer)</li>
                   <li>Nurtures stylist/barber leads toward a B2B account</li>
                   <li>Hands qualified B2B leads to the B2B salesperson — and leans on them for help with B2B orders</li>
                 </ul>
@@ -1014,7 +1014,7 @@ export default function PRCampaignPage() {
               <div className="prc-autoemail">
                 <span className="prc-autoemail__icon">✉</span>
                 <span className="prc-autoemail__text">
-                  When the B2B salesperson tags a customer with their price + territory, an automatic email goes to that territory's sales head — or to the international team if the client is tagged international. The account is live and can order online at their Tier, and B2B leads get 10% off their first online purchase.
+                  When the B2B salesperson tags a customer with their price + territory, an automatic email goes to that territory's sales head — or to the international team if the client is tagged international. The account is live and can order online at their Tier, and any customer gets 10% off their first order.
                 </span>
               </div>
             </div>
