@@ -316,6 +316,27 @@
   line-height: 1.55;
 }
 
+.spr-phase__import {
+  margin-top: 14px;
+  background: #f0eef7;
+  border: 1px solid #d4d0e8;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #2d2b3a;
+  line-height: 1.5;
+}
+
+.spr-phase__import-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6e66a8;
+  margin-bottom: 4px;
+}
+
 /* Posts */
 .spr-posts {
   display: grid;

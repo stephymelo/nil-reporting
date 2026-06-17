@@ -23,9 +23,9 @@ const keyDates: { date: string; title: string; desc: string }[] = [
   { date: 'Mon, Aug 3', title: 'Launch', desc: 'All ordering on Hairloss.com. Landing pages live.' },
 ]
 
-const phases: { tag: string; when: string; title: string; desc: string }[] = [
-  { tag: 'Phase 1', when: 'Live Aug 3', title: 'Launch Products', desc: 'All NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line.' },
-  { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of Onrite', desc: 'Progen wholesale pricing and the remaining Onrite products.' },
+const phases: { tag: string; when: string; title: string; desc: string; imports?: string }[] = [
+  { tag: 'Phase 1', when: 'Live Aug 3', title: 'Launch Products', desc: 'All NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line.', imports: 'Importing customers from New Image Labs.' },
+  { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of Onrite', desc: 'Progen wholesale pricing and the remaining Onrite products.', imports: 'Importing customers from Progen. Onrite customers — TBD.' },
   { tag: 'Phase 3', when: 'October', title: 'Custom Orders Online', desc: 'Customers place their custom orders online themselves.' },
 ]
 
@@ -141,6 +141,12 @@ export default function SalesPRCampaign() {
                 </div>
                 <div className="spr-phase__title">{p.title}</div>
                 <div className="spr-phase__desc">{p.desc}</div>
+                {p.imports && (
+                  <div className="spr-phase__import">
+                    <span className="spr-phase__import-label">Customer import</span>
+                    {p.imports}
+                  </div>
+                )}
               </div>
             ))}
           </div>
