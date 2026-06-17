@@ -30,9 +30,9 @@ const phases: { tag: string; when: string; title: string; desc: string; imports?
 ]
 
 const posts: { platform: string; when: string }[] = [
-  { platform: 'Instagram + Facebook', when: 'Week of July 1' },
-  { platform: 'Email + Social', when: 'Week of July 14' },
-  { platform: 'Instagram + Facebook', when: 'Launch week' },
+  { platform: 'Weekly post', when: 'Week of Jul 1' },
+  { platform: 'Weekly post', when: 'Week of Jul 8' },
+  { platform: 'Weekly post', when: 'Week of Jul 15' },
 ]
 
 const emailTiming: Record<number, string> = {
@@ -159,7 +159,7 @@ export default function SalesPRCampaign() {
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Social</p>
           <h2 className="spr-title">What we're posting</h2>
-          <p className="spr-note">The posting plan starts July 1 to inform customers of the move. Drop the final creatives and captions into the placeholders below.</p>
+          <p className="spr-note">We'll post once a week starting July 1 to inform customers of the move. We don't have the post designs yet — nothing to show at the moment, so the slots below are placeholders. We'll also publish a blog page on Hairloss.com explaining the merge.</p>
           <div className="spr-posts">
             {posts.map((post, i) => (
               <div key={i} className="spr-post">
@@ -171,6 +171,9 @@ export default function SalesPRCampaign() {
                 <div className="spr-post__caption">[ Caption goes here ]</div>
               </div>
             ))}
+          </div>
+          <div className="spr-blog">
+            <ImagePlaceholder label="Blog page on Hairloss.com — explains the merge (coming)" ratio="16 / 4" />
           </div>
         </div>
       </section>
