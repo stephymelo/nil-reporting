@@ -1,17 +1,6 @@
 import './SalesPRCampaign.css'
 import { emails } from './PRCampaignPage'
 
-// ── Image placeholder ────────────────────────────────────────────────────────
-
-function ImagePlaceholder({ label, ratio }: { label: string; ratio?: string }) {
-  return (
-    <div className="spr-imgph" style={ratio ? { aspectRatio: ratio } : undefined}>
-      <div className="spr-imgph__icon">🖼</div>
-      <div className="spr-imgph__label">{label}</div>
-    </div>
-  )
-}
-
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 const keyDates: { date: string; title: string; desc: string }[] = [
@@ -74,7 +63,7 @@ export default function SalesPRCampaign() {
             <li>The NIL website goes offline for maintenance <strong>Saturday, Aug 1</strong>.</li>
             <li>Everything is on Hairloss.com from <strong>Monday, Aug 3</strong>.</li>
           </ul>
-          <ImagePlaceholder label="Add image — site / product visual" ratio="16 / 6" />
+          <img className="spr-img" src="/hl-homepage.png" alt="Hairloss.com homepage" />
         </div>
       </section>
 
