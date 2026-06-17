@@ -29,10 +29,10 @@ const phases: { tag: string; when: string; title: string; desc: string; imports?
   { tag: 'Phase 3', when: 'October', title: 'Custom Orders Online', desc: 'Customers place their custom orders online themselves.' },
 ]
 
-const posts: { platform: string; when: string }[] = [
-  { platform: 'Weekly post', when: 'Week of Jul 1' },
-  { platform: 'Weekly post', when: 'Week of Jul 8' },
-  { platform: 'Weekly post', when: 'Week of Jul 15' },
+const socialItems: { type: string; desc: string }[] = [
+  { type: 'Weekly carousel post', desc: 'Once a week, a full carousel post dedicated to the move to Hairloss.com.' },
+  { type: 'Stories → blog', desc: 'Stories linked to the blog about the move to Hairloss.com for online purchasing — and that your sales consultant stays the same.' },
+  { type: 'Blog page', desc: 'A blog page on Hairloss.com explaining the merge.' },
 ]
 
 const emailTiming: Record<number, string> = {
@@ -159,21 +159,14 @@ export default function SalesPRCampaign() {
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Social</p>
           <h2 className="spr-title">What we're posting</h2>
-          <p className="spr-note">We'll post once a week starting July 1 to inform customers of the move. We don't have the post designs yet — nothing to show at the moment, so the slots below are placeholders. We'll also publish a blog page on Hairloss.com explaining the merge.</p>
-          <div className="spr-posts">
-            {posts.map((post, i) => (
-              <div key={i} className="spr-post">
-                <ImagePlaceholder label="Add post image" ratio="4 / 5" />
-                <div className="spr-post__meta">
-                  <span className="spr-post__platform">{post.platform}</span>
-                  <span className="spr-post__when">{post.when}</span>
-                </div>
-                <div className="spr-post__caption">[ Caption goes here ]</div>
+          <p className="spr-note">Starting July 2nd, we'll run posts dedicated to the merge. Designs aren't ready yet — here's the plan.</p>
+          <div className="spr-social">
+            {socialItems.map((s) => (
+              <div key={s.type} className="spr-social__item">
+                <div className="spr-social__type">{s.type}</div>
+                <div className="spr-social__desc">{s.desc}</div>
               </div>
             ))}
-          </div>
-          <div className="spr-blog">
-            <ImagePlaceholder label="Blog page on Hairloss.com — explains the merge (coming)" ratio="16 / 4" />
           </div>
         </div>
       </section>
