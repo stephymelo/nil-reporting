@@ -1,6 +1,8 @@
-/* ── Social post mockup (NIL brand: Montserrat, ink + sky on ivory) ────────── */
+/* ── Social post mockups — NIL guidelines ──────────────────────────────────── */
+/* Minimalist, light-weight Montserrat, letter-spacing, off-black (#151515) on  */
+/* light gradients, outlined elements. No bold lettering, no solid black blocks. */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
 .pm {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -22,34 +24,36 @@
 
 .pm__kind {
   font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 4px 11px;
+  border: 1px solid #afc9d8;
   border-radius: 100px;
-  color: #151515;
-  background: #dceaf1;
+  color: #44494c;
+  background: transparent;
 }
 
 .pm__kind--reel {
-  background: #151515;
-  color: #ffffff;
+  border-color: #151515;
+  color: #151515;
 }
 
 .pm__when {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: #8b969d;
 }
 
 .pm__label {
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: #151515;
-  letter-spacing: -0.01em;
 }
 
-/* Carousel / post frames */
+/* Square frames (Instagram 1:1) */
 .pm__frames {
   display: flex;
   gap: 12px;
@@ -58,93 +62,132 @@
 
 .pm__frame {
   position: relative;
-  flex: 0 0 168px;
-  width: 168px;
+  flex: 0 0 200px;
+  width: 200px;
   aspect-ratio: 1 / 1;
-  background: #fefcfc;
-  border: 1.5px solid #e6e9eb;
+  background: linear-gradient(150deg, #fefcfc 0%, #eef2f4 55%, #e3e6e8 100%);
   border-radius: 12px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  gap: 14px;
+  padding: 22px 18px;
   text-align: center;
+  overflow: hidden;
+}
+
+/* outlined element (architectural inset frame) */
+.pm__frame::before {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgba(21, 21, 21, 0.14);
+  border-radius: 7px;
+  pointer-events: none;
 }
 
 .pm__frame.is-cover {
-  background: linear-gradient(160deg, #151515, #2b2f31);
-  border-color: #151515;
+  background: linear-gradient(150deg, #f4f7f9 0%, #dceaf1 60%, #afc9d8 140%);
 }
 
 .pm__frame-text {
   font-size: 14px;
-  font-weight: 800;
-  line-height: 1.35;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
   color: #151515;
   white-space: pre-line;
-  letter-spacing: -0.01em;
+  z-index: 1;
 }
 
 .pm__frame.is-cover .pm__frame-text {
-  color: #fefcfc;
+  font-size: 15px;
+  letter-spacing: 0.08em;
 }
 
 .pm__frame-num {
   position: absolute;
-  top: 8px;
-  right: 10px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #afb9c0;
-}
-
-.pm__frame.is-cover .pm__frame-num {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Reel */
-.pm__reel {
-  background: linear-gradient(160deg, #151515, #2b2f31);
-  border-radius: 12px;
-  padding: 22px 22px 20px;
-  color: #fefcfc;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.pm__reel-badge {
-  align-self: flex-start;
-  font-size: 11px;
-  font-weight: 800;
+  top: 12px;
+  right: 14px;
+  font-size: 9px;
+  font-weight: 500;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #151515;
+  color: #8b969d;
+  z-index: 1;
+}
+
+/* thin sky accent rule (symmetry / outlined) */
+.pm__rule {
+  width: 26px;
+  height: 1.5px;
   background: #afc9d8;
-  padding: 4px 11px;
-  border-radius: 100px;
+  z-index: 1;
+}
+
+.pm__tag {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8b969d;
+  z-index: 1;
+}
+
+/* Reel frame */
+.pm__frame--reel {
+  flex-basis: 200px;
+  width: 200px;
+  background: linear-gradient(150deg, #fefcfc 0%, #e9eef1 60%, #cdd9df 130%);
+}
+
+.pm__play {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #151515;
+  position: relative;
+  z-index: 1;
+}
+
+.pm__play::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 8px 0 8px 13px;
+  border-color: transparent transparent transparent #151515;
 }
 
 .pm__reel-title {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #151515;
+  z-index: 1;
 }
 
+/* Concept (reel) */
 .pm__concept {
   font-size: 13px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.82);
+  color: #44494c;
 }
 
 .pm__concept-label {
   display: block;
   font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #afc9d8;
+  color: #8b969d;
   margin-bottom: 4px;
 }
 
@@ -160,8 +203,8 @@
 .pm__caption-label {
   display: block;
   font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #8b969d;
   margin-bottom: 5px;
