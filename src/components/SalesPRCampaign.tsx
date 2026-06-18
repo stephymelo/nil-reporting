@@ -1,5 +1,6 @@
 import './SalesPRCampaign.css'
 import { emails } from './PRCampaignPage'
+import EmailMock from './EmailMock'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -214,14 +215,7 @@ export default function SalesPRCampaign() {
                     <span className="spr-email__rel">{emailTiming[e.num]}</span>
                   </div>
                 </div>
-                <div className="spr-email__subject">{e.subject}</div>
-                <div className="spr-email__purpose">{e.goal}</div>
-                <div className="spr-email__contents-label">What it says</div>
-                <ul className="spr-email__body">
-                  {e.body.map((line, i) => (
-                    <li key={i}>{line}</li>
-                  ))}
-                </ul>
+                <EmailMock email={e} />
               </div>
             ))}
           </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './CampaignPage.css'
 import './PRCampaignPage.css'
+import EmailMock from './EmailMock'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -1160,37 +1161,8 @@ export default function PRCampaignPage() {
                     </div>
                   </div>
 
-                  {/* Email design mockup — formal letter */}
-                  <div className="prc-mock">
-                    <div className="prc-mock__chrome">
-                      <span className="prc-mock__dot" />
-                      <span className="prc-mock__dot" />
-                      <span className="prc-mock__dot" />
-                    </div>
-                    <div className="prc-mock__subjectline">
-                      <div className="prc-mock__subject">{email.subject}</div>
-                      <div className="prc-mock__preview">{email.preview}</div>
-                    </div>
-                    <div className="prc-mock__logos">
-                      <img src="/nil-logo.svg" alt="New Image Labs" className="prc-mock__logo" />
-                      <span className="prc-mock__logo-divider" />
-                      <img src="/onrite-logo.svg" alt="Onrite" className="prc-mock__logo prc-mock__logo--or" />
-                    </div>
-                    <div className="prc-mock__body">
-                      <p className="prc-mock__greeting">Dear Valued Customer,</p>
-                      {email.body.map((para, i) => (
-                        <p key={i}>{para}</p>
-                      ))}
-                      {email.cta && <div className="prc-mock__cta">{email.cta}</div>}
-                      <div className="prc-mock__sign">
-                        <span>Sincerely,</span>
-                        <span className="prc-mock__sign-team">The New Image Labs &amp; Onrite Team</span>
-                      </div>
-                    </div>
-                    <div className="prc-mock__foot">
-                      New Image Labs &amp; Onrite · now on Hairloss.com · You're receiving this as a valued partner
-                    </div>
-                  </div>
+                  {/* Email design — formal letter */}
+                  <EmailMock email={email} />
                 </div>
               ))}
             </div>

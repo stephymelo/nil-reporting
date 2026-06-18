@@ -1,0 +1,129 @@
+/* ── Shared formal-letter email design ─────────────────────────────────────── */
+
+.em {
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(164, 158, 208, 0.12), 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.em__chrome {
+  display: flex;
+  gap: 6px;
+  padding: 12px 16px;
+  background: #faf9fc;
+  border-bottom: 1px solid #e8e6f0;
+}
+
+.em__chrome span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d4d0e8;
+}
+
+.em__subjectline {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e8e6f0;
+}
+
+.em__subject {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2d2b3a;
+  margin-bottom: 3px;
+}
+
+.em__preview {
+  font-size: 13px;
+  color: #6b6880;
+}
+
+.em__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 26px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e6f0;
+}
+
+.em__logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.em__logo--or {
+  height: 22px;
+}
+
+.em__logo-divider {
+  width: 1px;
+  height: 28px;
+  background: #e8e6f0;
+}
+
+.em__body {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.em__body p {
+  font-size: 14px;
+  color: #2d2b3a;
+  line-height: 1.7;
+}
+
+.em__greeting {
+  font-weight: 700;
+}
+
+.em__cta {
+  align-self: flex-start;
+  margin-top: 8px;
+  background: #6e66a8;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 100px;
+}
+
+.em__sign {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.em__sign span {
+  font-size: 14px;
+  color: #2d2b3a;
+  line-height: 1.6;
+}
+
+.em__sign-team {
+  font-weight: 700;
+  color: #6e66a8;
+}
+
+.em__foot {
+  padding: 18px 32px;
+  background: #faf9fc;
+  border-top: 1px solid #e8e6f0;
+  font-size: 11px;
+  color: #6b6880;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .em__body {
+    padding: 24px 20px;
+  }
+}
