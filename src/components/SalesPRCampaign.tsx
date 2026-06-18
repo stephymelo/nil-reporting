@@ -62,15 +62,42 @@ export default function SalesPRCampaign() {
             <li>The <strong>landing pages stay up</strong> — it's <strong>online shopping</strong> that moves to Hairloss.com.</li>
             <li>Same pricing tiers. Same products. One place to order.</li>
             <li>The NIL website goes offline for maintenance <strong>Saturday, Aug 1</strong>.</li>
-            <li>Everything is on Hairloss.com from <strong>Monday, Aug 3</strong>.</li>
+            <li>New Image Labs' full catalog is on Hairloss.com starting <strong>Monday, Aug 3</strong>.</li>
           </ul>
           <img className="spr-img" src="/hl-homepage.png" alt="Hairloss.com homepage" />
         </div>
       </section>
 
-      {/* 3 — The message */}
+      {/* 3 — Phases */}
       <section className="spr-slide spr-slide--tint">
         <div className="spr-num">03 / 09</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Rollout</p>
+          <h2 className="spr-title">Three phases</h2>
+          <div className="spr-phases">
+            {phases.map((p) => (
+              <div key={p.tag} className="spr-phase">
+                <div className="spr-phase__top">
+                  <span className="spr-phase__tag">{p.tag}</span>
+                  <span className="spr-phase__when">{p.when}</span>
+                </div>
+                <div className="spr-phase__title">{p.title}</div>
+                <div className="spr-phase__desc">{p.desc}</div>
+                {p.imports && (
+                  <div className="spr-phase__import">
+                    <span className="spr-phase__import-label">Customer import</span>
+                    {p.imports}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4 — The message */}
+      <section className="spr-slide">
+        <div className="spr-num">04 / 09</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Message</p>
           <h2 className="spr-title">How we talk about it</h2>
@@ -98,9 +125,9 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 4 — Key dates */}
-      <section className="spr-slide">
-        <div className="spr-num">04 / 09</div>
+      {/* 5 — Key dates */}
+      <section className="spr-slide spr-slide--tint">
+        <div className="spr-num">05 / 09</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Timeline</p>
           <h2 className="spr-title">Key dates</h2>
@@ -110,33 +137,6 @@ export default function SalesPRCampaign() {
                 <div className="spr-date__when">{d.date}</div>
                 <div className="spr-date__title">{d.title}</div>
                 <div className="spr-date__desc">{d.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5 — Phases */}
-      <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">05 / 09</div>
-        <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Rollout</p>
-          <h2 className="spr-title">Three phases</h2>
-          <div className="spr-phases">
-            {phases.map((p) => (
-              <div key={p.tag} className="spr-phase">
-                <div className="spr-phase__top">
-                  <span className="spr-phase__tag">{p.tag}</span>
-                  <span className="spr-phase__when">{p.when}</span>
-                </div>
-                <div className="spr-phase__title">{p.title}</div>
-                <div className="spr-phase__desc">{p.desc}</div>
-                {p.imports && (
-                  <div className="spr-phase__import">
-                    <span className="spr-phase__import-label">Customer import</span>
-                    {p.imports}
-                  </div>
-                )}
               </div>
             ))}
           </div>
