@@ -565,11 +565,61 @@
   letter-spacing: -0.02em;
 }
 
+/* Logos header (formal letter) */
+.prc-mock__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 26px 24px;
+  background: var(--cp-white);
+  border-bottom: 1px solid var(--cp-border);
+}
+
+.prc-mock__logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.prc-mock__logo--or {
+  height: 22px;
+}
+
+.prc-mock__logo-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--cp-border);
+}
+
 .prc-mock__body {
   padding: 28px 32px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.prc-mock__greeting {
+  font-weight: 700;
+  color: var(--cp-text) !important;
+}
+
+.prc-mock__sign {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prc-mock__sign span {
+  font-size: 14px;
+  color: var(--cp-text);
+  line-height: 1.6;
+}
+
+.prc-mock__sign-team {
+  font-weight: 700;
+  color: var(--cp-purple-deeper);
 }
 
 .prc-mock__body p {

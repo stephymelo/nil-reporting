@@ -535,12 +535,13 @@ export const emails: EmailDesign[] = [
     goal: 'Announce the move. Lead with continuity and reassurance.',
     tone: 'Professional and reassuring. Business to business.',
     body: [
-      'For more than 50 years, your business has trusted us for professional hair systems. We are bringing that experience onto a single platform.',
-      'New Image Labs and Onrite are moving to one website — Hairloss.com. Instead of working across two sites, your account, products, and orders will live in one place.',
-      'What stays the same: your pricing tier, the products your business orders, and the team you work with.',
-      'What improves: a single platform for ordering, easier access to your full catalog, and one place for promotions and volume pricing.',
-      'Over the coming weeks we will share exactly what to expect. Nothing changes for your account today.',
-      'For more information, please contact your sales representative.',
+      'For more than 50 years, you have trusted us as your professional provider in the hair replacement industry. As part of our continued commitment to serving your business, we are bringing that experience together on a single platform.',
+      'New Image Labs and Onrite are coming together under one website: Hairloss.com.',
+      'Instead of managing orders across two separate sites, your account, products, and ordering experience will be consolidated into one convenient location. While the website experience will change, the things that matter most to your business will remain the same. Your pricing tier, the products you order, and the sales and support team you work with will not change.',
+      'What will improve is the simplicity and convenience of having everything in one place. Hairloss.com will provide a single platform for ordering, easier access to your full product catalog, and one destination for promotions, special offers, and quantity pricing.',
+      'There is no action required at this time, and nothing changes for your account today. Over the coming weeks, we will share additional details about the transition and what you can expect as we move to the new platform.',
+      'If you have any questions, please contact your sales representative.',
+      'Thank you for your continued partnership. We look forward to serving your business through this next chapter.',
     ],
     cta: '',
   },
@@ -1159,7 +1160,7 @@ export default function PRCampaignPage() {
                     </div>
                   </div>
 
-                  {/* Email design mockup */}
+                  {/* Email design mockup — formal letter */}
                   <div className="prc-mock">
                     <div className="prc-mock__chrome">
                       <span className="prc-mock__dot" />
@@ -1170,17 +1171,24 @@ export default function PRCampaignPage() {
                       <div className="prc-mock__subject">{email.subject}</div>
                       <div className="prc-mock__preview">{email.preview}</div>
                     </div>
-                    <div className="prc-mock__brandbar">Hairloss.com</div>
+                    <div className="prc-mock__logos">
+                      <img src="/nil-logo.svg" alt="New Image Labs" className="prc-mock__logo" />
+                      <span className="prc-mock__logo-divider" />
+                      <img src="/onrite-logo.svg" alt="Onrite" className="prc-mock__logo prc-mock__logo--or" />
+                    </div>
                     <div className="prc-mock__body">
+                      <p className="prc-mock__greeting">Dear Valued Customer,</p>
                       {email.body.map((para, i) => (
-                        <p key={i} className={i === 0 ? 'prc-mock__lead' : ''}>
-                          {para}
-                        </p>
+                        <p key={i}>{para}</p>
                       ))}
                       {email.cta && <div className="prc-mock__cta">{email.cta}</div>}
+                      <div className="prc-mock__sign">
+                        <span>Sincerely,</span>
+                        <span className="prc-mock__sign-team">The New Image Labs &amp; Onrite Team</span>
+                      </div>
                     </div>
                     <div className="prc-mock__foot">
-                      Hairloss.com · Trusted for 50+ years · You're receiving this as a valued partner
+                      New Image Labs &amp; Onrite · now on Hairloss.com · You're receiving this as a valued partner
                     </div>
                   </div>
                 </div>
