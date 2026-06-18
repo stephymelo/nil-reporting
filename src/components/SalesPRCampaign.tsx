@@ -205,12 +205,12 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">Your role</h2>
           <ul className="spr-points">
-            <li>Two salespeople own the leads — <strong>one retail</strong> (+ stylist/barber leads), <strong>one B2B</strong>.</li>
-            <li>Open with reassurance: pricing and products stay the same.</li>
-            <li>Explain accounts: created for them, passwordless sign-in by email code.</li>
+            <li>Two reps own the leads — <strong>one for retail</strong> + stylist/barber leads, <strong>one for the B2B base</strong> + new B2B leads.</li>
+            <li>Open with reassurance: <strong>same pricing tier, same products, same sales consultant</strong> — nothing they rely on changes.</li>
+            <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code (no password to set).</li>
             <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The NIL website is then unavailable until it's back on <strong>August 3</strong> — the launch of NIL &amp; Onrite on Hairloss.com for purchasing.</li>
-            <li>Incentive: <strong>any customer gets 10% off their first order</strong>.</li>
-            <li>A <strong>script + FAQ PDF</strong> will be sent to the team to help you respond to questions.</li>
+            <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
+            <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
             <li>Mention the move when you're <strong>on the phone</strong> with a customer — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>
           </ul>
         </div>
@@ -229,7 +229,7 @@ export default function SalesPRCampaign() {
                 <li>Owns retail customers + stylist/barber leads</li>
                 <li>Works the contact form &amp; inbox chat</li>
                 <li>Enters all Hairloss.com orders</li>
-                <li>Pitches the 10% first-order offer</li>
+                <li>Pitches 10% off the first online order on Hairloss.com</li>
                 <li>Hands qualified B2B leads to the B2B rep</li>
               </ul>
             </div>
@@ -244,7 +244,7 @@ export default function SalesPRCampaign() {
               </ul>
             </div>
           </div>
-          <p className="spr-note">When the B2B rep tags a customer with their price + territory, the territory's sales head is emailed automatically — reach out to close the first order (10% off).</p>
+          <p className="spr-note">When the B2B rep tags a customer with their price + territory, the territory's sales head is emailed automatically — reach out to close their first online order on Hairloss.com (10% off).</p>
         </div>
       </section>
 
