@@ -415,6 +415,67 @@
   line-height: 1.55;
 }
 
+/* Account workflows */
+.spr-wf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.spr-wf {
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-top: 4px solid #6e66a8;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.spr-wf__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #6e66a8;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.spr-wf__title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #2d2b3a;
+  margin-bottom: 4px;
+}
+
+.spr-wf__who {
+  font-size: 12.5px;
+  color: #6b6880;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.spr-wf__steps {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.spr-wf__steps li {
+  font-size: 13px;
+  color: #6b6880;
+  line-height: 1.5;
+}
+
+.spr-wf__steps li strong {
+  color: #2d2b3a;
+}
+
 /* Email carousel (slide 9) */
 .spr-carousel {
   max-width: 640px;
@@ -630,7 +691,8 @@
   .spr-dates,
   .spr-phases,
   .spr-posts,
-  .spr-social {
+  .spr-social,
+  .spr-wf-grid {
     grid-template-columns: 1fr;
   }
 

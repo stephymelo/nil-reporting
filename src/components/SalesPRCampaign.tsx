@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './SalesPRCampaign.css'
-import { emails } from './PRCampaignPage'
+import { emails, accountWorkflows } from './PRCampaignPage'
 import EmailMock from './EmailMock'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -46,7 +46,7 @@ export default function SalesPRCampaign() {
     <div className="spr-deck">
       {/* 1 — Title */}
       <section className="spr-slide spr-slide--hero">
-        <div className="spr-num">01 / 09</div>
+        <div className="spr-num">01 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow spr-eyebrow--light">Sales Team Briefing</p>
           <h1 className="spr-hero-title">
@@ -60,7 +60,7 @@ export default function SalesPRCampaign() {
 
       {/* 2 — What's happening */}
       <section className="spr-slide">
-        <div className="spr-num">02 / 09</div>
+        <div className="spr-num">02 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Move</p>
           <h2 className="spr-title">What's happening</h2>
@@ -77,7 +77,7 @@ export default function SalesPRCampaign() {
 
       {/* 3 — Phases */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">03 / 09</div>
+        <div className="spr-num">03 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Rollout</p>
           <h2 className="spr-title">Three phases</h2>
@@ -104,7 +104,7 @@ export default function SalesPRCampaign() {
 
       {/* 4 — The message */}
       <section className="spr-slide">
-        <div className="spr-num">04 / 09</div>
+        <div className="spr-num">04 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Message</p>
           <h2 className="spr-title">How we talk about it</h2>
@@ -134,7 +134,7 @@ export default function SalesPRCampaign() {
 
       {/* 5 — Key dates */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">05 / 09</div>
+        <div className="spr-num">05 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Timeline</p>
           <h2 className="spr-title">Key dates</h2>
@@ -152,7 +152,7 @@ export default function SalesPRCampaign() {
 
       {/* 6 — What we're posting */}
       <section className="spr-slide">
-        <div className="spr-num">06 / 09</div>
+        <div className="spr-num">06 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Social</p>
           <h2 className="spr-title">What we're posting</h2>
@@ -170,7 +170,7 @@ export default function SalesPRCampaign() {
 
       {/* 7 — Your role */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">07 / 09</div>
+        <div className="spr-num">07 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">Your role</h2>
@@ -186,9 +186,67 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 8 — Email campaign intro */}
+      {/* 8 — Two sales reps */}
       <section className="spr-slide">
-        <div className="spr-num">08 / 09</div>
+        <div className="spr-num">08 / 11</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Sales Team</p>
+          <h2 className="spr-title">The two sales reps</h2>
+          <div className="spr-two-col">
+            <div className="spr-card">
+              <div className="spr-card__label">Retail rep</div>
+              <ul>
+                <li>Owns retail customers + stylist/barber leads</li>
+                <li>Works the contact form &amp; inbox chat</li>
+                <li>Enters all Hairloss.com orders</li>
+                <li>Pitches the 10% first-order offer</li>
+                <li>Hands qualified B2B leads to the B2B rep</li>
+              </ul>
+            </div>
+            <div className="spr-card">
+              <div className="spr-card__label">B2B rep</div>
+              <ul>
+                <li>Owns the B2B customer base + all new B2B leads</li>
+                <li>Reviews B2B forms; checks with the owner before adding stylists</li>
+                <li>Creates the account; assigns catalog price + territory</li>
+                <li>Schedules onboardings — including custom orders online</li>
+                <li>Routes international leads to the international team</li>
+              </ul>
+            </div>
+          </div>
+          <p className="spr-note">When the B2B rep tags a customer with their price + territory, the territory's sales head is emailed automatically — reach out to close the first order (10% off).</p>
+        </div>
+      </section>
+
+      {/* 9 — Account workflows */}
+      <section className="spr-slide spr-slide--tint">
+        <div className="spr-num">09 / 11</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Accounts</p>
+          <h2 className="spr-title">How accounts get created</h2>
+          <p className="spr-note">Every new account sees retail pricing automatically. There are three ways an account is created:</p>
+          <div className="spr-wf-grid">
+            {accountWorkflows.map((wf) => (
+              <div key={wf.num} className="spr-wf">
+                <span className="spr-wf__tag">{wf.num}</span>
+                <div className="spr-wf__title">{wf.title}</div>
+                <div className="spr-wf__who">{wf.who}</div>
+                <ol className="spr-wf__steps">
+                  {wf.steps.map((s) => (
+                    <li key={s.label}>
+                      <strong>{s.label}</strong> — {s.desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10 — Email campaign intro */}
+      <section className="spr-slide">
+        <div className="spr-num">10 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
           <h2 className="spr-title">Five emails to clients</h2>
@@ -205,9 +263,9 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 9 — Email details (carousel) */}
+      {/* 11 — Email details (carousel) */}
       <section className="spr-slide spr-slide--tall spr-slide--tint">
-        <div className="spr-num">09 / 09</div>
+        <div className="spr-num">11 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
           <h2 className="spr-title">When each email sends &amp; what it says</h2>
