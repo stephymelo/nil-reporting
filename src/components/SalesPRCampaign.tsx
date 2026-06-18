@@ -29,7 +29,7 @@ const socialItems: { type: string; desc: string }[] = [
 const emailTiming: Record<number, string> = {
   1: '~5 weeks before launch',
   2: '~3 weeks before launch',
-  3: 'Final week before launch',
+  3: 'Order cutoff July 24',
   4: 'Launch weekend',
   5: 'Launch day',
 }
