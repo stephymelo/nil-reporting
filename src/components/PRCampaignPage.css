@@ -1178,6 +1178,67 @@
   flex-shrink: 0;
 }
 
+/* ── Posting plan ──────────────────────────────────────────────────────────── */
+
+.prc-schedule {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.prc-sched {
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-top: 4px solid var(--cp-purple);
+  border-radius: var(--cp-radius-sm);
+  padding: 16px 18px;
+}
+
+.prc-sched__week {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--cp-purple-deeper);
+  margin-bottom: 10px;
+}
+
+.prc-sched__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.prc-sched__items li {
+  font-size: 12.5px;
+  color: var(--cp-text);
+  line-height: 1.45;
+  padding-left: 14px;
+  position: relative;
+}
+
+.prc-sched__items li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cp-purple-light);
+}
+
+.prc-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 760px) {
+  .prc-posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Toolbar + PDF download ────────────────────────────────────────────────── */
 
 .prc-toolbar {

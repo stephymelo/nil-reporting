@@ -415,6 +415,54 @@
   line-height: 1.55;
 }
 
+/* Posting schedule (compact, deck) */
+.spr-sched-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.spr-sched {
+  background: #ffffff;
+  border: 1.5px solid #e8e6f0;
+  border-top: 4px solid #6e66a8;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.spr-sched__week {
+  font-size: 12px;
+  font-weight: 800;
+  color: #6e66a8;
+  margin-bottom: 8px;
+}
+
+.spr-sched ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.spr-sched li {
+  font-size: 12px;
+  color: #2d2b3a;
+  line-height: 1.4;
+  padding-left: 12px;
+  position: relative;
+}
+
+.spr-sched li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a49ed0;
+}
+
 /* Account workflows */
 .spr-wf-grid {
   display: grid;

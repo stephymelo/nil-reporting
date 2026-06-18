@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './CampaignPage.css'
 import './PRCampaignPage.css'
 import EmailMock from './EmailMock'
+import PostMock from './PostMock'
+import { socialPosts, postingSchedule } from './socialPlan'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -1118,8 +1120,42 @@ export default function PRCampaignPage() {
           </div>
         </section>
 
+        {/* ════ POSTING PLAN ════ */}
+        <Divider num="06" title="Posting Plan" sub="Weekly social schedule + sample posts (copy only, no images yet)" />
+
+        <section className="cp-section">
+          <div className="cp-section__header">
+            <span className="cp-section__badge cp-section__badge--strategy">Social</span>
+            <h2 className="cp-section__title">Posting Plan</h2>
+            <p className="cp-section__desc">
+              One post a week from July 1 to launch. Copy is drafted below; final designs (Montserrat, on-brand) come later. We also collab-post across Hairloss.com, New Image Labs &amp; Onrite, and link stories to the blog.
+            </p>
+          </div>
+
+          <div className="prc-subhead">Weekly schedule</div>
+          <div className="prc-schedule">
+            {postingSchedule.map((w) => (
+              <div key={w.week} className="prc-sched">
+                <div className="prc-sched__week">{w.week}</div>
+                <ul className="prc-sched__items">
+                  {w.items.map((it) => (
+                    <li key={it}>{it}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="prc-subhead">Sample posts</div>
+          <div className="prc-posts-grid">
+            {socialPosts.map((p) => (
+              <PostMock key={p.id} post={p} />
+            ))}
+          </div>
+        </section>
+
         {/* ════ EMAILS PR CAMPAIGN (accordion) ════ */}
-        <Divider num="06" title="Emails PR Campaign" sub="The client email sequence — open to view designs" />
+        <Divider num="07" title="Emails PR Campaign" sub="The client email sequence — open to view designs" />
 
         <section className="cp-section">
           <button

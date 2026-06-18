@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './SalesPRCampaign.css'
 import { emails, accountWorkflows } from './PRCampaignPage'
 import EmailMock from './EmailMock'
+import PostMock from './PostMock'
+import { socialPosts, postingSchedule } from './socialPlan'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -20,13 +22,6 @@ const phases: { tag: string; when: string; title: string; desc: string; imports?
   { tag: 'Phase 3', when: 'October', title: 'Custom Orders Online', desc: 'Customers place their custom orders online themselves.' },
 ]
 
-const socialItems: { type: string; desc: string }[] = [
-  { type: 'Weekly carousel post', desc: 'Once a week, a full carousel post dedicated to the move to Hairloss.com.' },
-  { type: 'Collab posts', desc: 'Collaboration posts across the Hairloss.com, New Image Labs, and Onrite accounts to reach all audiences.' },
-  { type: 'Stories → blog', desc: 'Stories linked to the blog about the move to Hairloss.com for online purchasing — and that your sales consultant stays the same.' },
-  { type: 'Blog page', desc: 'A blog page on Hairloss.com explaining the merge.' },
-]
-
 const emailTiming: Record<number, string> = {
   1: '~5 weeks before launch',
   2: '~3 weeks before launch',
@@ -42,6 +37,11 @@ export default function SalesPRCampaign() {
   const e = emails[emailIdx]
   const prevEmail = () => setEmailIdx((i) => (i - 1 + emails.length) % emails.length)
   const nextEmail = () => setEmailIdx((i) => (i + 1) % emails.length)
+
+  const [postIdx, setPostIdx] = useState(0)
+  const post = socialPosts[postIdx]
+  const prevPost = () => setPostIdx((i) => (i - 1 + socialPosts.length) % socialPosts.length)
+  const nextPost = () => setPostIdx((i) => (i + 1) % socialPosts.length)
 
   return (
     <div className="spr-deck">
@@ -152,19 +152,48 @@ export default function SalesPRCampaign() {
       </section>
 
       {/* 6 — What we're posting */}
-      <section className="spr-slide">
+      <section className="spr-slide spr-slide--tall">
         <div className="spr-num">06 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Social</p>
           <h2 className="spr-title">What we're posting</h2>
-          <p className="spr-note">Starting July 2nd, we'll run posts dedicated to the merge. Designs aren't ready yet — here's the plan.</p>
-          <div className="spr-social">
-            {socialItems.map((s) => (
-              <div key={s.type} className="spr-social__item">
-                <div className="spr-social__type">{s.type}</div>
-                <div className="spr-social__desc">{s.desc}</div>
+          <p className="spr-note">One post a week from July 1 to launch — copy only, designs come later. Click through the sample posts below.</p>
+
+          <div className="spr-sched-row">
+            {postingSchedule.map((w) => (
+              <div key={w.week} className="spr-sched">
+                <div className="spr-sched__week">{w.week}</div>
+                <ul>
+                  {w.items.map((it) => (
+                    <li key={it}>{it}</li>
+                  ))}
+                </ul>
               </div>
             ))}
+          </div>
+
+          <div className="spr-carousel">
+            <div className="spr-carousel__bar">
+              <button className="spr-cbtn" onClick={prevPost} aria-label="Previous post">←</button>
+              <div className="spr-carousel__meta">
+                <span className="spr-email__num">{post.label}</span>
+                <span className="spr-email__send">{post.when}</span>
+              </div>
+              <button className="spr-cbtn" onClick={nextPost} aria-label="Next post">→</button>
+            </div>
+
+            <PostMock post={post} />
+
+            <div className="spr-dots">
+              {socialPosts.map((p, i) => (
+                <button
+                  key={p.id}
+                  className={`spr-dot ${i === postIdx ? 'is-active' : ''}`}
+                  onClick={() => setPostIdx(i)}
+                  aria-label={`Go to post ${i + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
