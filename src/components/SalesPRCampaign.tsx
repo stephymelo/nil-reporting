@@ -208,7 +208,7 @@ export default function SalesPRCampaign() {
             <li>Two salespeople own the leads — <strong>one retail</strong> (+ stylist/barber leads), <strong>one B2B</strong>.</li>
             <li>Open with reassurance: pricing and products stay the same.</li>
             <li>Explain accounts: created for them, passwordless sign-in by email code.</li>
-            <li>Be clear on the dates: maintenance Aug 1, everything on Hairloss.com Aug 3.</li>
+            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The NIL website is then unavailable until it's back on <strong>August 3</strong> — the launch of NIL &amp; Onrite on Hairloss.com for purchasing.</li>
             <li>Incentive: <strong>any customer gets 10% off their first order</strong>.</li>
             <li>A <strong>script + FAQ PDF</strong> will be sent to the team to help you respond to questions.</li>
             <li>Mention the move when you're <strong>on the phone</strong> with a customer — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>
