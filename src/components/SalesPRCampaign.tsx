@@ -22,6 +22,7 @@ const phases: { tag: string; when: string; title: string; desc: string; imports?
 
 const socialItems: { type: string; desc: string }[] = [
   { type: 'Weekly carousel post', desc: 'Once a week, a full carousel post dedicated to the move to Hairloss.com.' },
+  { type: 'Collab posts', desc: 'Collaboration posts across the Hairloss.com, New Image Labs, and Onrite accounts to reach all audiences.' },
   { type: 'Stories → blog', desc: 'Stories linked to the blog about the move to Hairloss.com for online purchasing — and that your sales consultant stays the same.' },
   { type: 'Blog page', desc: 'A blog page on Hairloss.com explaining the merge.' },
 ]
