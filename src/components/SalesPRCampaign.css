@@ -415,6 +415,75 @@
   line-height: 1.55;
 }
 
+/* Email carousel (slide 9) */
+.spr-carousel {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spr-carousel__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.spr-carousel__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+.spr-cbtn {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid #d4d0e8;
+  background: #ffffff;
+  color: #6e66a8;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.spr-cbtn:hover {
+  background: #6e66a8;
+  color: #ffffff;
+  border-color: #6e66a8;
+}
+
+.spr-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.spr-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #d4d0e8;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.15s;
+}
+
+.spr-dot.is-active {
+  background: #6e66a8;
+  transform: scale(1.25);
+}
+
 /* Email overview */
 .spr-email-overview {
   display: flex;

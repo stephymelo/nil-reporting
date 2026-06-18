@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './SalesPRCampaign.css'
 import { emails } from './PRCampaignPage'
 import EmailMock from './EmailMock'
@@ -36,6 +37,11 @@ const emailTiming: Record<number, string> = {
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function SalesPRCampaign() {
+  const [emailIdx, setEmailIdx] = useState(0)
+  const e = emails[emailIdx]
+  const prevEmail = () => setEmailIdx((i) => (i - 1 + emails.length) % emails.length)
+  const nextEmail = () => setEmailIdx((i) => (i + 1) % emails.length)
+
   return (
     <div className="spr-deck">
       {/* 1 — Title */}
@@ -199,25 +205,36 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 9 — Email details (scrolls) */}
+      {/* 9 — Email details (carousel) */}
       <section className="spr-slide spr-slide--tall spr-slide--tint">
         <div className="spr-num">09 / 09</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
           <h2 className="spr-title">When each email sends &amp; what it says</h2>
-          <div className="spr-emails">
-            {emails.map((e) => (
-              <div key={e.num} className="spr-email">
-                <div className="spr-email__head">
-                  <span className="spr-email__num">Email {e.num}</span>
-                  <div className="spr-email__timing">
-                    <span className="spr-email__send">Sends {e.send}</span>
-                    <span className="spr-email__rel">{emailTiming[e.num]}</span>
-                  </div>
-                </div>
-                <EmailMock email={e} />
+
+          <div className="spr-carousel">
+            <div className="spr-carousel__bar">
+              <button className="spr-cbtn" onClick={prevEmail} aria-label="Previous email">←</button>
+              <div className="spr-carousel__meta">
+                <span className="spr-email__num">Email {e.num}</span>
+                <span className="spr-email__send">Sends {e.send}</span>
+                <span className="spr-email__rel">{emailTiming[e.num]}</span>
               </div>
-            ))}
+              <button className="spr-cbtn" onClick={nextEmail} aria-label="Next email">→</button>
+            </div>
+
+            <EmailMock email={e} />
+
+            <div className="spr-dots">
+              {emails.map((em, i) => (
+                <button
+                  key={em.num}
+                  className={`spr-dot ${i === emailIdx ? 'is-active' : ''}`}
+                  onClick={() => setEmailIdx(i)}
+                  aria-label={`Go to email ${em.num}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
