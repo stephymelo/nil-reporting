@@ -88,9 +88,9 @@ export const socialPosts: SocialPost[] = [
     kind: 'post',
     label: '"Last week to order" reminder',
     when: 'Week of Jul 21',
-    frames: ['Last week to order\non New Image Labs\n\nthrough July 24'],
+    frames: ['Last week to order\non New Image Labs\n\nthrough July 26'],
     caption:
-      'This is the final week to order on the New Image Labs site — through July 24. After that, everything moves to Hairloss.com (August 3). Questions? Contact your sales representative.',
+      'This is the final week to order on the New Image Labs site — through July 26. After that, everything moves to Hairloss.com (August 3). Questions? Contact your sales representative.',
   },
   {
     id: 'launch',
@@ -104,6 +104,20 @@ export const socialPosts: SocialPost[] = [
     ],
     caption:
       'It is here. Hairloss.com is live — New Image Labs and Onrite, together. Sign in and shop everything in one place.',
+  },
+  {
+    id: 'add-on-value',
+    kind: 'carousel',
+    label: 'Add-on value carousel',
+    when: 'Launch · Aug 3',
+    frames: [
+      'More than\na store',
+      'One platform for the\nbrands you trust',
+      'Giving the hair\nreplacement industry\nmore visibility',
+      'Bringing new clients\nto your salon',
+    ],
+    caption:
+      'Hairloss.com is more than a place to order. We are giving the hair replacement industry more visibility — and bringing new clients to the professionals who serve them. There is much more to come.',
   },
   {
     id: 'reel-meet',

@@ -31,7 +31,7 @@ export default function EmailMock({ email }: { email: EmailDesign }) {
         </div>
       </div>
       <div className="em__foot">
-        New Image Labs &amp; Onrite · now on Hairloss.com · You're receiving this as a valued partner
+        Hairloss.com · Powered by New Image Labs &amp; Onrite · You're receiving this as a valued partner
       </div>
     </div>
   )

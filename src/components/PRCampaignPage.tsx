@@ -135,8 +135,8 @@ const phases: RolloutPhase[] = [
 
 const timeline: TimelineWindow[] = [
   {
-    window: 'June 2 – 15',
-    note: 'Get products and pricing into the site',
+    window: 'June — Build',
+    note: 'Get products, accounts & the site ready',
     items: [
       {
         title: 'Finish Product + Color Upload',
@@ -145,159 +145,147 @@ const timeline: TimelineWindow[] = [
         tracks: ['website', 'content'],
       },
       {
-        title: 'Upload Pricing Tiers',
-        date: 'June 9 – 13',
-        desc: 'Load every customer tier so accounts map to the right B2B pricing. Has to be in before accounts.',
-        tracks: ['website'],
-      },
-      {
-        title: 'Build Account Creation Workflow',
-        date: 'June 9 – 15',
-        desc: 'Create account → request to sales → sales approves & assigns tier → B2B pricing unlocks.',
-        tracks: ['website'],
-      },
-    ],
-  },
-  {
-    window: 'June 16 – 30',
-    note: 'Build accounts, train staff, hide pricing & restructure',
-    items: [
-      {
-        title: 'Build "Create Account" Form',
-        date: 'June 16 – 19',
-        desc: 'The form customers use to open a B2B account (fields below).',
+        title: 'Build Account Workflow + "Create Account" Form',
+        date: 'June',
+        desc: 'Create account → review by the rep → assign tier → pricing unlocks. Build the B2B account form (fields below).',
         tracks: ['website'],
       },
       {
         title: 'Add "Create B2B Account" + "Login" Menu',
-        date: 'June 16 – 19',
+        date: 'June',
         desc: 'New nav menu items on Hairloss.com so businesses can create a B2B account and log in.',
         tracks: ['website'],
       },
       {
-        title: 'Staff Training',
-        date: 'Mon, June 22 · 9 AM',
-        desc: 'Train the sales/ops team on the migration, the new site, accounts, and the talking points.',
-        tracks: ['marketing'],
-      },
-      {
-        title: 'Hide Hair-Unit Pricing',
-        date: 'Fri, June 26',
-        desc: 'Hide public/retail pricing for hair units when you\'re not logged in. Pricing only shows once you log into an approved B2B account.',
-        tracks: ['website'],
-        flag: 'Gate: must be live before migrating customers and before the email campaign starts',
-      },
-      {
-        title: 'Remove TressAllure + Restructure HL.com',
-        date: 'Fri, June 26',
-        desc: 'Remove TressAllure and restructure Hairloss.com for the merged catalog.',
-        tracks: ['website'],
-      },
-      {
-        title: 'Sales Starts Adding Customers',
-        date: 'Mon, June 29',
-        desc: 'With pricing hidden, begin creating accounts for priority/known customers on Hairloss.com.',
-        tracks: ['marketing'],
+        title: 'About Page — Add NIL & OR Merge',
+        date: 'June',
+        desc: 'Update the About page to tell the NIL + Onrite merge story — one company, one site.',
+        tracks: ['website', 'content'],
       },
     ],
   },
   {
-    window: 'July 1 – 15',
-    note: 'Start the PR campaign + posting plan',
+    window: 'July 1 – 15 — Announce & price',
+    note: 'Kick off comms; load pricing; add barbers',
     items: [
       {
-        title: 'Start PR Campaign + Announcement Email',
-        date: 'Wed, July 1',
-        desc: 'Email 1 to clients — the PR campaign starts here: the merge, why we\'re doing it, and reassurance nothing they rely on goes away.',
+        title: 'Send Announcement + Login-Notice Email',
+        date: 'Tue, July 1',
+        desc: 'Email 1 to all HL customers: NIL + Onrite are coming to Hairloss.com, and going forward you will need to sign in to see pricing on certain products.',
         tracks: ['marketing'],
       },
       {
-        title: 'Posting Plan — Inform of Migration',
-        date: 'Wed, July 1',
-        desc: 'Social posting plan begins, informing customers the migration to Hairloss.com is coming.',
+        title: 'Posting Plan Begins',
+        date: 'From July 2',
+        desc: 'Weekly social posts begin — one a week, plus collab posts (HL × NIL × Onrite) and stories to the blog.',
         tracks: ['content', 'marketing'],
       },
       {
-        title: 'About Page — Add NIL & OR Merge',
-        date: 'July 7 – 10',
-        desc: 'Update the About page to tell the NIL + Onrite merge story — one company, one site.',
-        tracks: ['website', 'content'],
+        title: 'Upload Pricing Tiers',
+        date: 'July',
+        desc: 'Load every customer tier (including the Signature tier) so accounts map to the right pricing.',
+        tracks: ['website'],
+      },
+      {
+        title: 'Add Current Barbers to Signature Pricing',
+        date: 'July',
+        desc: 'Place our current barbers/customers on the Signature pricing tier.',
+        tracks: ['marketing', 'website'],
       },
       {
         title: 'Send "How to Access" Email',
         date: 'July 14 – 16',
-        desc: 'Email 2: how to log in, account migration is underway, and pricing now lives behind the account.',
+        desc: 'Email 2: how the account works — rep creates it, passwordless sign-in by email code, pricing behind login.',
         tracks: ['marketing'],
       },
     ],
   },
   {
-    window: 'July 16 – 31',
-    note: 'Salon locator, migrate, final reminders',
+    window: 'July 16 – 31 — Migrate & cut over',
+    note: 'Last orders, migration, hide pricing',
     items: [
       {
         title: 'Add Salon Locator to Website',
-        date: 'Fri, July 17',
-        desc: 'Add the salon locator and give it visibility through socials and the website so consumers can find partner shops — drives traffic to pros.',
+        date: 'Thu, July 17',
+        desc: 'Add the salon locator with visibility through socials and the website so consumers can find partner shops.',
         tracks: ['website', 'marketing'],
       },
       {
-        title: 'Migrate Customers, Companies & Orders',
-        date: 'Tue, July 21',
-        desc: 'Migrate customers, company accounts, and orders over to Hairloss.com so everyone is ready for launch.',
-        tracks: ['website', 'marketing'],
-        flag: 'Big migration day',
-      },
-      {
-        title: 'Send Final NIL Site Reminder',
-        date: 'July 28 – 29',
-        desc: 'Email 3: last call — NIL website purchasing ends Aug 3. Make sure everyone knows where to go.',
+        title: 'Send Final-Week + Onrite Email',
+        date: 'July 21 – 23',
+        desc: 'Email 3: last week to order on NIL (through July 26), plus a teaser — a new easier platform with selective Onrite products, more to come.',
         tracks: ['marketing'],
       },
       {
-        title: 'Tease Educational Content',
-        date: 'Tue, July 28',
-        desc: 'Start teasing the Ricky Knowles beginner educational content. Full content stays behind the paywall until after launch.',
-        tracks: ['content', 'marketing'],
+        title: 'NIL Last Order Date',
+        date: 'Sat, July 26',
+        desc: 'Final day to place orders on the New Image Labs website.',
+        tracks: ['marketing', 'website'],
+        flag: 'July 26 — max order date on NIL',
+      },
+      {
+        title: 'Migration + Welcome Email',
+        date: 'Sun, July 27',
+        desc: 'Migrate customers, companies & orders to Hairloss.com. The welcome email goes out with the 10%-off-first-online-order offer.',
+        tracks: ['website', 'marketing'],
+        flag: 'Migration day',
+      },
+      {
+        title: 'Send "Soon You Can Purchase" Email',
+        date: 'July 28 – 30',
+        desc: 'Email 4: one place to purchase, 10% off the first online order, and Onrite customers create their professional account. Live Aug 3.',
+        tracks: ['marketing'],
+      },
+      {
+        title: 'Whole Sales Team Briefing + Posting Plan',
+        date: 'Tue, July 29',
+        desc: 'Brief the whole sales team and lock the full posting plan.',
+        tracks: ['marketing'],
+      },
+      {
+        title: 'Hide Pricing + Remove TressAllure',
+        date: 'Wed, July 30',
+        desc: 'Hide hair-unit pricing for logged-out visitors, remove TressAllure, and restructure Hairloss.com for the merged catalog.',
+        tracks: ['website'],
+        flag: 'July 30 — before launch',
       },
     ],
   },
   {
-    window: 'Aug 1 – 3 — Transfer & Launch',
-    note: 'Domain transfer over the weekend; live Monday',
+    window: 'August 3 — Launch',
+    note: 'NIL returns as Hairloss.com',
     items: [
       {
-        title: 'Down for Maintenance + Domain Transfer',
-        date: 'Sat, Aug 1',
-        desc: 'The New Image Labs website goes down for maintenance while the domain transfers to the new NIL & Onrite landing page and the migration runs over the weekend.',
-        tracks: ['website'],
-        flag: 'Aug 1 — maintenance + domain transfer over the weekend',
-      },
-      {
-        title: 'Send "We\'ll Be Down" Email',
-        date: 'Sat, Aug 1',
-        desc: 'Email clients that the NIL website is down for the weekend during the domain transfer — back on Hairloss.com Monday.',
-        tracks: ['marketing'],
-      },
-      {
-        title: 'HL.com Live — No More Orders on NIL',
+        title: 'Launch — NIL Back as Hairloss.com',
         date: 'Mon, Aug 3',
-        desc: 'No more orders on the New Image Labs website — everything is on Hairloss.com. HL.com and the NIL/Onrite men\'s landing pages go live with accounts, pricing, products, and migrated orders all in place (phone orders still go through the team).',
-        tracks: ['website'],
+        desc: 'The New Image Labs site returns as Hairloss.com. NIL & Onrite are live for purchasing online — one platform, one login (phone orders still go through the team).',
+        tracks: ['website', 'marketing'],
         flag: 'Launch day',
       },
       {
         title: 'Send Launch Email',
         date: 'Mon, Aug 3',
-        desc: 'Email 5: "We\'re live." Login link, what\'s new, everything in one place.',
+        desc: 'Email 5: "We\'re live." Sign in, see your pricing, order in one place.',
         tracks: ['marketing'],
       },
     ],
   },
   {
     window: 'After August 3',
-    note: 'Educational content + Phase 2 rollout',
+    note: 'Value, content & Phase 2',
     items: [
+      {
+        title: 'Add-On Value Page + "Create Professional Account" Banner',
+        date: 'Around launch',
+        desc: 'Publish an add-on value page (why Hairloss.com, benefits, attracting new clients to your salon) and a site banner to create a professional account.',
+        tracks: ['website', 'content'],
+      },
+      {
+        title: 'Send Add-On Value Email + Post',
+        date: 'Post-launch',
+        desc: 'Email 6 + a social post: why we are doing this, the benefits, and giving the hair replacement industry more visibility.',
+        tracks: ['marketing', 'content'],
+      },
       {
         title: 'Ricky Knowles Beginner Content Live',
         date: 'Mon, Aug 10',
@@ -329,12 +317,12 @@ const timeline: TimelineWindow[] = [
 // ── Key dates (horizontal milestone strip) ──────────────────────────────────
 
 const keyDates: { date: string; title: string; desc: string }[] = [
-  { date: 'Mon, Jun 22 · 9 AM', title: 'Staff Training', desc: 'Train the team on the migration & new site.' },
-  { date: 'Fri, Jun 26', title: 'Hide Pricing + Restructure', desc: 'Hide hair-unit pricing, remove TressAllure, restructure HL.com.' },
-  { date: 'Wed, Jul 1', title: 'PR Campaign Starts', desc: 'Emails begin + posting plan informing of the migration.' },
-  { date: 'Tue, Jul 21', title: 'Migrate Customers', desc: 'Customers, companies & orders move to Hairloss.com.' },
-  { date: 'Sat, Aug 1', title: 'Maintenance + Domain Transfer', desc: 'The NIL website goes down for maintenance; the domain transfers to the new NIL & Onrite landing page. Migration runs over the weekend.' },
-  { date: 'Mon, Aug 3', title: 'Launch — All on HL.com', desc: 'No more orders on the NIL website — everything is on HL.com. Landing pages live; launch email goes out.' },
+  { date: 'Tue, Jul 1', title: 'Announcement + Login Email', desc: 'Campaign starts; customers told they will sign in to see certain product pricing. Posting plan begins.' },
+  { date: 'Sat, Jul 26', title: 'NIL Last Order Date', desc: 'Final day to place orders on the New Image Labs website.' },
+  { date: 'Sun, Jul 27', title: 'Migration + Welcome Email', desc: 'Customers, companies & orders migrate to Hairloss.com. Welcome email with 10% off the first online order.' },
+  { date: 'Tue, Jul 29', title: 'Sales Team Briefing', desc: 'Whole sales team briefed; full posting plan locked.' },
+  { date: 'Wed, Jul 30', title: 'Hide Pricing + Remove TressAllure', desc: 'Hide hair-unit pricing for logged-out visitors; remove TressAllure; restructure HL.com.' },
+  { date: 'Mon, Aug 3', title: 'Launch — All on HL.com', desc: 'NIL returns as Hairloss.com. NIL & Onrite live for purchasing; launch email goes out.' },
 ]
 
 // ── Account form fields ──────────────────────────────────────────────────────
@@ -529,16 +517,17 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
 export const emails: EmailDesign[] = [
   {
     num: 1,
-    send: 'July 1–3',
-    audience: 'All NIL + Onrite clients',
+    send: 'July 1',
+    audience: 'All clients — NIL, Onrite & HL.com',
     subject: 'New Image Labs & Onrite are moving to Hairloss.com',
     preview: 'One platform for your wholesale orders — same products, same pricing.',
-    goal: 'Announce the move. Lead with continuity and reassurance.',
+    goal: 'Announce the move + the sign-in-for-pricing change. Lead with continuity.',
     tone: 'Professional and reassuring. Business to business.',
     body: [
       'For more than 50 years, you have trusted us as your professional provider in the hair replacement industry. As part of our continued commitment to serving your business, we are bringing that experience together on a single platform.',
       'New Image Labs and Onrite are coming together under one website: Hairloss.com.',
       'Instead of managing orders across two separate sites, your account, products, and ordering experience will be consolidated into one convenient location. While the website experience will change, the things that matter most to your business will remain the same. Your pricing tier, the products you order, and the sales and support team you work with will not change.',
+      'One change to note: going forward, you will sign in to your account to view pricing on certain products. Your pricing tier stays exactly the same — it simply lives behind your login.',
       'What will improve is the simplicity and convenience of having everything in one place. Hairloss.com will provide a single platform for ordering, easier access to your full product catalog, and one destination for promotions, special offers, and quantity pricing.',
       'There is no action required at this time, and nothing changes for your account today. Over the coming weeks, we will share additional details about the transition and what you can expect as we move to the new platform.',
       'If you have any questions, please contact your sales representative.',
@@ -566,33 +555,36 @@ export const emails: EmailDesign[] = [
   {
     num: 3,
     send: 'July 21–23',
-    audience: 'All clients',
+    audience: 'New Image Labs clients',
     subject: 'Final week for orders on the New Image Labs website',
-    preview: 'Order on New Image Labs through July 24.',
-    goal: 'Final reminder ahead of the order cutoff.',
+    preview: 'Order on New Image Labs through July 26.',
+    goal: 'Final reminder ahead of the July 26 cutoff + tease Onrite/new platform.',
     tone: 'Direct and professional. Business to business.',
     body: [
-      'As we approach the move to Hairloss.com, we want to let you know that we will be taking orders on the New Image Labs website up until July 24.',
-      'After July 24, orders will no longer be accepted on the New Image Labs website. The site will go offline for maintenance over the weekend of August 1, and beginning Monday, August 3, all online ordering will take place on Hairloss.com.',
-      'There is nothing you need to do to prepare. Your account, your pricing tier, and the products you order will all move with you. Once your account has been created, you will receive an email from Hairloss.com with instructions to sign in.',
+      'This is the final week to place orders on the New Image Labs website — orders are accepted through July 26.',
+      'After July 26, the New Image Labs site will be unavailable while we migrate everything to Hairloss.com, and it returns on August 3.',
+      'There is more to come: Hairloss.com gives you a new, easier platform to purchase, with selective Onrite products now on board — and more on the way.',
+      'There is nothing you need to do to prepare. Your account, your pricing tier, and the products you order all move with you. Once your account has been migrated, you will receive an email from Hairloss.com with instructions to sign in.',
       'If you have any questions, please contact your sales representative.',
     ],
     cta: '',
   },
   {
     num: 4,
-    send: 'August 1',
-    audience: 'All clients',
-    subject: 'The New Image Labs website is offline this weekend',
-    preview: 'Offline for maintenance — on Hairloss.com from Monday, August 3.',
-    goal: 'Operational notice: site offline for maintenance; live on HL.com Aug 3.',
-    tone: 'Brief, professional operational notice. Business to business.',
+    send: 'July 28–30',
+    audience: 'All clients · Onrite pro accounts',
+    subject: 'Soon you can purchase — all in one place on Hairloss.com',
+    preview: 'One platform, one login. 10% off your first online order.',
+    goal: 'Pre-launch: build anticipation; get Onrite customers to create a pro account.',
+    tone: 'Warm, professional, building anticipation. Business to business.',
     body: [
-      'We are writing to let you know that the New Image Labs website is offline this weekend for scheduled maintenance as we complete the move to Hairloss.com.',
-      'Beginning Monday, August 3, all online ordering will take place on Hairloss.com, where your account, pricing, and order history will be ready and waiting. Orders will no longer be placed on the New Image Labs website after this weekend.',
-      'If you need to place an order before then, please contact your sales representative, who will be happy to assist you. We appreciate your patience during this brief transition.',
+      'Soon you will be able to purchase everything in one place. Hairloss.com goes live on August 3 — one platform and one login for New Image Labs and Onrite.',
+      'As a welcome, you will receive 10% off your first online order on Hairloss.com.',
+      'Onrite customers: create your professional account so your pricing is ready at launch. Your sales representative can set this up with you.',
+      'Your account is being migrated now. You will receive an activation email from Hairloss.com — sign in with the same email address it was sent to.',
+      'If you have any questions, please contact your sales representative.',
     ],
-    cta: '',
+    cta: 'Create your professional account',
   },
   {
     num: 5,
@@ -605,10 +597,28 @@ export const emails: EmailDesign[] = [
     body: [
       'We are pleased to share that Hairloss.com is now live. New Image Labs and Onrite are officially together on a single platform built to make ordering easier for your business.',
       'To get started, simply sign in to your account, where you can view your pricing, browse your full catalog, and place orders in one convenient location.',
+      'Remember, you will receive 10% off your first online order on Hairloss.com.',
       'Everything you rely on is now in one place — your products, your tier pricing, and the promotions, special offers, and quantity pricing available to your business.',
       'If you have not yet received your activation email, or you do not see your pricing when you log in, please contact your sales representative or message us on the website chat, and we will ensure you are set up right away.',
     ],
     cta: 'Sign in to Hairloss.com',
+  },
+  {
+    num: 6,
+    send: 'Post-launch',
+    audience: 'All clients',
+    subject: 'More than a store — growing the industry with you',
+    preview: 'Why we built Hairloss.com, and what it means for your business.',
+    goal: 'Share the vision/value; drive new clients to partner salons.',
+    tone: 'Warm, vision-led, professional. Business to business.',
+    body: [
+      'Hairloss.com is more than a place to order. It is a platform built to give the hair replacement industry the visibility it deserves — and to bring new clients to professionals like you.',
+      'Everything is in one place: the brands and products you trust, your B2B pricing, promotions, and educational content.',
+      'We are investing in content and reach so more people discover hair replacement solutions and find a trusted professional in their area.',
+      'There is much more to come. Thank you for growing this industry with us.',
+      'If you have any questions, please contact your sales representative.',
+    ],
+    cta: '',
   },
 ]
 
@@ -948,75 +958,43 @@ export default function PRCampaignPage() {
           </div>
 
           {/* Team & routing */}
-          <div className="prc-subhead">Two sales people — leads &amp; accounts</div>
+          <div className="prc-subhead">The Hairloss.com sales rep</div>
           <p className="prc-roles-intro">
-            Two salespeople manage all customer leads and accounts in Shopify — one owns retail and
-            stylist/barber leads, one owns the B2B customer base and new B2B leads. Both work the
-            contact form and the inbox chat; each routes the leads that belong to the other.
+            One full-time rep owns everything Hairloss.com — managing leads, onboarding customers, and
+            explaining how to purchase online. The rest of the sales team can redirect their clients to
+            this rep to better understand how to buy on Hairloss.com.
           </p>
 
-          <div className="prc-roles">
-            {/* Retail */}
-            <div className="prc-role">
-              <div className="prc-role__head">
-                <span className="prc-role__icon">🛍️</span>
-                <div>
-                  <div className="prc-role__tag">Salesperson 1</div>
-                  <div className="prc-role__title">Retail + Stylist / Barber Leads</div>
-                </div>
-              </div>
-              <div className="prc-role__block">
-                <div className="prc-role__label">Owns</div>
-                <ul>
-                  <li>Retail customers</li>
-                  <li>Stylist &amp; barber leads</li>
-                  <li>Contact form + inbox chat from retail &amp; leads</li>
-                </ul>
-              </div>
-              <div className="prc-role__block">
-                <div className="prc-role__label">Does</div>
-                <ul>
-                  <li>Answers the contact form &amp; chat messages</li>
-                  <li>Enters all Hairloss.com orders — can place orders for customers</li>
-                  <li>Pitches 10% off the first online order on Hairloss.com (any customer)</li>
-                  <li>Nurtures stylist/barber leads toward a B2B account</li>
-                  <li>Hands qualified B2B leads to the B2B salesperson — and leans on them for help with B2B orders</li>
-                </ul>
+          <div className="prc-role prc-role--b2b">
+            <div className="prc-role__head">
+              <span className="prc-role__icon">💼</span>
+              <div>
+                <div className="prc-role__tag">Hairloss.com Sales Rep · full-time</div>
+                <div className="prc-role__title">Owns everything Hairloss.com</div>
               </div>
             </div>
-
-            {/* B2B */}
-            <div className="prc-role prc-role--b2b">
-              <div className="prc-role__head">
-                <span className="prc-role__icon">💼</span>
-                <div>
-                  <div className="prc-role__tag">Salesperson 2 · more on their plate</div>
-                  <div className="prc-role__title">B2B Customer Base + New Leads</div>
-                </div>
-              </div>
-              <div className="prc-role__block">
-                <div className="prc-role__label">Owns</div>
-                <ul>
-                  <li>The whole B2B / wholesale customer base</li>
-                  <li>All new B2B leads</li>
-                  <li>Contact form + inbox chat from businesses</li>
-                </ul>
-              </div>
-              <div className="prc-role__block">
-                <div className="prc-role__label">Does</div>
-                <ul>
-                  <li>Reviews B2B form submissions; checks with the business owner (contact #1) before adding stylists</li>
-                  <li>Creates the customer account</li>
-                  <li><strong>Assigns the catalog price + territory</strong></li>
-                  <li>Schedules onboardings so new accounts learn how to purchase — especially placing their custom orders online</li>
-                </ul>
-              </div>
-              <div className="prc-autoemail">
-                <span className="prc-autoemail__icon">✉</span>
-                <span className="prc-autoemail__text">
-                  When the B2B salesperson tags a customer with their price + territory, an automatic email goes to that territory's sales head — or to the international team if the client is tagged international. The account is live and can order online at their Tier, and every customer gets 10% off their first online order on Hairloss.com.
-                </span>
-              </div>
+            <div className="prc-role__block">
+              <div className="prc-role__label">Does</div>
+              <ul>
+                <li>Manages all Hairloss.com leads (retail + B2B) and the contact form &amp; inbox chat</li>
+                <li>Onboards customers — including the first-purchase offer: 10% off the first online order on Hairloss.com</li>
+                <li>Reviews B2B forms, creates accounts, and assigns catalog price + territory</li>
+                <li>Manages retail, online orders, and any other Hairloss.com customer issue</li>
+                <li>The wider sales team redirects clients here to learn how to purchase online</li>
+              </ul>
+            </div>
+            <div className="prc-role__block">
+              <div className="prc-role__label">Backups</div>
+              <ul>
+                <li><strong>Bautista</strong> — backup, focused on the West</li>
+                <li><strong>Juan</strong> — backup for entering Hairloss.com orders</li>
+              </ul>
+            </div>
+            <div className="prc-autoemail">
+              <span className="prc-autoemail__icon">🎓</span>
+              <span className="prc-autoemail__text">
+                Trains Saturdays with Debbie to be ready on leads and product info. Website + admin training covers onboardings, entering orders, emails, and messaging.
+              </span>
             </div>
           </div>
 
@@ -1167,7 +1145,7 @@ export default function PRCampaignPage() {
               <span className="cp-section__badge cp-section__badge--strategy">Email Campaign</span>
               <h2 className="cp-section__title">Emails PR Campaign</h2>
               <p className="cp-section__desc">
-                Five sends to clients — warm them up, explain the change, the weekend transfer, and the launch. Click to view the designs.
+                Six sends to clients — announce, explain the change, the order cutoff, pre-launch, launch, and the add-on value. Click to view the designs.
               </p>
             </div>
             <span className="prc-accordion__chevron">{emailsOpen ? '▲' : '▼'}</span>

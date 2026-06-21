@@ -8,12 +8,12 @@ import { socialPosts, postingSchedule } from './socialPlan'
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 const keyDates: { date: string; title: string; desc: string }[] = [
-  { date: 'Mon, Jun 22 · 9 AM', title: 'Staff Training', desc: 'Team trained on the move, accounts, and talking points.' },
-  { date: 'Fri, Jun 26', title: 'Hide Pricing + Restructure', desc: 'Hair-unit pricing hidden; Hairloss.com restructured.' },
-  { date: 'Wed, Jul 1', title: 'PR Campaign Starts', desc: 'First email goes out + social posting plan begins.' },
-  { date: 'Tue, Jul 21', title: 'Migrate Customers', desc: 'Customers, companies & orders moved to Hairloss.com.' },
-  { date: 'Sat, Aug 1', title: 'NIL Site Maintenance', desc: 'New Image Labs website offline for the weekend.' },
-  { date: 'Mon, Aug 3', title: 'Launch', desc: 'All ordering on Hairloss.com. Landing pages live.' },
+  { date: 'Tue, Jul 1', title: 'Announcement + Login Email', desc: 'Campaign starts; sign-in needed for certain pricing. Posting plan begins.' },
+  { date: 'Sat, Jul 26', title: 'NIL Last Order Date', desc: 'Final day to order on the New Image Labs website.' },
+  { date: 'Sun, Jul 27', title: 'Migration + Welcome Email', desc: 'Customers, companies & orders migrate. 10% off first online order.' },
+  { date: 'Tue, Jul 29', title: 'Sales Team Briefing', desc: 'Whole sales team briefed; posting plan locked.' },
+  { date: 'Wed, Jul 30', title: 'Hide Pricing + Remove TressAllure', desc: 'Hair-unit pricing hidden; TressAllure removed; HL.com restructured.' },
+  { date: 'Mon, Aug 3', title: 'Launch', desc: 'NIL returns as Hairloss.com. NIL & Onrite live for purchasing.' },
 ]
 
 const phases: { tag: string; when: string; title: string; desc: string; imports?: string }[] = [
@@ -25,7 +25,8 @@ const phases: { tag: string; when: string; title: string; desc: string; imports?
 const emailTiming: Record<number, string> = {
   1: '~5 weeks before launch',
   2: '~3 weeks before launch',
-  3: 'Order cutoff July 24',
+  3: 'Order cutoff July 26',
+  6: 'Add-on value (post-launch)',
   4: 'Launch weekend',
   5: 'Launch day',
 }
@@ -205,7 +206,7 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">Your role</h2>
           <ul className="spr-points">
-            <li>Two reps own the leads — <strong>one for retail</strong> + stylist/barber leads, <strong>one for the B2B base</strong> + new B2B leads.</li>
+            <li><strong>One full-time rep</strong> owns everything Hairloss.com — all leads (retail + B2B), onboardings, and orders. The team redirects clients to this rep.</li>
             <li>Open with reassurance: <strong>same pricing tier, same products, same sales consultant</strong> — nothing they rely on changes.</li>
             <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code (no password to set).</li>
             <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The NIL website is then unavailable until it's back on <strong>August 3</strong> — the launch of NIL &amp; Onrite on Hairloss.com for purchasing.</li>
@@ -216,35 +217,33 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 8 — Two sales reps */}
+      {/* 8 — The Hairloss.com sales rep */}
       <section className="spr-slide">
         <div className="spr-num">08 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
-          <h2 className="spr-title">The two sales reps</h2>
+          <h2 className="spr-title">The Hairloss.com sales rep</h2>
+          <p className="spr-note">One full-time rep owns everything Hairloss.com. Redirect your clients to this rep to learn how to purchase online.</p>
           <div className="spr-two-col">
             <div className="spr-card">
-              <div className="spr-card__label">Retail rep</div>
+              <div className="spr-card__label">Owns everything HL.com</div>
               <ul>
-                <li>Owns retail customers + stylist/barber leads</li>
-                <li>Works the contact form &amp; inbox chat</li>
-                <li>Enters all Hairloss.com orders</li>
-                <li>Pitches 10% off the first online order on Hairloss.com</li>
-                <li>Hands qualified B2B leads to the B2B rep</li>
+                <li>Manages all leads (retail + B2B), the contact form &amp; inbox chat</li>
+                <li>Onboards customers — 10% off the first online order on Hairloss.com</li>
+                <li>Reviews B2B forms, creates accounts, assigns catalog price + territory</li>
+                <li>Manages retail, online orders &amp; any other HL.com customer issue</li>
               </ul>
             </div>
             <div className="spr-card">
-              <div className="spr-card__label">B2B rep</div>
+              <div className="spr-card__label">Backups &amp; training</div>
               <ul>
-                <li>Owns the B2B customer base + all new B2B leads</li>
-                <li>Reviews B2B forms; checks with the owner before adding stylists</li>
-                <li>Creates the account; assigns catalog price + territory</li>
-                <li>Schedules onboardings — including custom orders online</li>
-                <li>Routes international leads to the international team</li>
+                <li><strong>Bautista</strong> — backup, focused on the West</li>
+                <li><strong>Juan</strong> — backup for entering HL.com orders</li>
+                <li>Trains Saturdays with Debbie — ready on leads &amp; product info</li>
+                <li>Admin training: onboardings, entering orders, emails, messaging</li>
               </ul>
             </div>
           </div>
-          <p className="spr-note">When the B2B rep tags a customer with their price + territory, the territory's sales head is emailed automatically — reach out to close their first online order on Hairloss.com (10% off).</p>
         </div>
       </section>
 
@@ -279,7 +278,7 @@ export default function SalesPRCampaign() {
         <div className="spr-num">10 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
-          <h2 className="spr-title">Five emails to clients</h2>
+          <h2 className="spr-title">Six emails to clients</h2>
           <p className="spr-note">Spaced to warm clients up, explain the change, and drive the first sign-in. Full schedule and contents below.</p>
           <div className="spr-email-overview">
             {emails.map((e) => (
