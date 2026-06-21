@@ -14,7 +14,7 @@ const flowSteps: { kind: 'date' | 'action'; date?: string; label: string; detail
   { kind: 'date', date: 'Jul 26', label: 'Last day to order on New Image Labs', detail: 'NIL online ordering closes.' },
   { kind: 'date', date: 'Jul 27', label: 'Migration + welcome email', detail: 'Customer accounts & companies migrate (orders do not). 10% off the first online order.' },
   { kind: 'date', date: 'Jul 31', label: 'NIL site goes offline', detail: 'End of day Friday — the site is unavailable through the weekend.' },
-  { kind: 'date', date: 'Aug 3', label: 'Launch — everything on Hairloss.com', detail: 'NIL returns as Hairloss.com. Order online, all in one place.' },
+  { kind: 'date', date: 'Aug 3', label: 'Launch — everything on Hairloss.com', detail: 'NIL & Onrite each return as their own landing page that redirects to Hairloss.com. Order online, all in one place.' },
 ]
 
 const phases: { tag: string; when: string; title: string; desc: string; imports?: string }[] = [
@@ -169,7 +169,7 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">What to tell clients</h2>
           <ul className="spr-points">
-            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The site goes offline at the end of the day <strong>Friday, July 31</strong> and is unavailable through the weekend, returning as Hairloss.com on <strong>Monday, August 3</strong>, when NIL &amp; Onrite launch for purchasing.</li>
+            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The site goes offline at the end of the day <strong>Friday, July 31</strong> and is unavailable through the weekend. On <strong>Monday, August 3</strong>, NIL &amp; Onrite each come back as their own landing page that redirects to Hairloss.com for purchasing.</li>
             <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
             <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
             <li>Mention the move when you're <strong>on the phone</strong> — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>

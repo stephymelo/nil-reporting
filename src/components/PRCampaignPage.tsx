@@ -261,7 +261,7 @@ const timeline: TimelineWindow[] = [
       {
         title: 'NIL Site Goes Offline',
         date: 'Fri, July 31',
-        desc: 'At the end of the day, the New Image Labs site goes offline and is unavailable through the weekend — back as Hairloss.com on Monday, Aug 3.',
+        desc: 'At the end of the day, the New Image Labs site goes offline and is unavailable through the weekend — back on Monday, Aug 3 as a landing page that redirects to Hairloss.com.',
         tracks: ['website'],
         flag: 'Offline end of day Jul 31 → back Aug 3',
       },
@@ -269,12 +269,12 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'August 3 — Launch',
-    note: 'NIL returns as Hairloss.com',
+    note: 'NIL & Onrite landing pages → Hairloss.com',
     items: [
       {
-        title: 'Launch — NIL Back as Hairloss.com',
+        title: 'Launch — Landing Pages Redirect to HL.com',
         date: 'Mon, Aug 3',
-        desc: 'The New Image Labs site returns as Hairloss.com. NIL & Onrite are live for purchasing online — one platform, one login (phone orders still go through the team).',
+        desc: 'New Image Labs and Onrite each come back as their own landing page that redirects to Hairloss.com. NIL & Onrite are live for purchasing online — one platform, one login (phone orders still go through the team).',
         tracks: ['website', 'marketing'],
         flag: 'Launch day',
       },
@@ -339,7 +339,7 @@ const keyDates: { date: string; title: string; desc: string }[] = [
   { date: 'Sat, Jul 26', title: 'NIL Last Order Date', desc: 'Final day to place orders on the New Image Labs website.' },
   { date: 'Sun, Jul 27', title: 'Migration + Welcome Email', desc: 'Customer accounts & companies migrate (orders do not). Welcome email with 10% off the first online order.' },
   { date: 'Fri, Jul 31', title: 'NIL Site Offline', desc: 'Site goes offline end of day Friday, unavailable through the weekend.' },
-  { date: 'Mon, Aug 3', title: 'Launch — All on HL.com', desc: 'NIL returns as Hairloss.com. NIL & Onrite live for purchasing; launch email goes out.' },
+  { date: 'Mon, Aug 3', title: 'Launch — All on HL.com', desc: 'NIL & Onrite each return as their own landing page that redirects to Hairloss.com. Live for purchasing; launch email goes out.' },
 ]
 
 // ── Account form fields ──────────────────────────────────────────────────────
@@ -580,7 +580,7 @@ export const emails: EmailDesign[] = [
     tone: 'Direct and professional. Business to business.',
     body: [
       'This is the final week to place orders on the New Image Labs website — orders are accepted through July 26.',
-      'The New Image Labs site then goes offline at the end of the day Friday, July 31, and is unavailable through the weekend — returning as Hairloss.com on Monday, August 3.',
+      'The New Image Labs site then goes offline at the end of the day Friday, July 31, and is unavailable through the weekend. On Monday, August 3, it returns as a landing page that takes you to Hairloss.com to order.',
       'There is nothing you need to do to prepare. Your account, your pricing tier, and the products you order all move with you. Once your account has been migrated, you will receive an email from Hairloss.com with instructions to sign in.',
       'If you have any questions, please contact your sales representative.',
     ],
