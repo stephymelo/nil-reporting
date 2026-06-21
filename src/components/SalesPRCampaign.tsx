@@ -128,7 +128,7 @@ export default function SalesPRCampaign() {
       </section>
 
       {/* 5 — Flow & key dates (diagram) */}
-      <section className="spr-slide spr-slide--tall spr-slide--tint">
+      <section className="spr-slide spr-slide--tint">
         <div className="spr-num">05 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Flow &amp; Dates</p>
@@ -145,7 +145,7 @@ export default function SalesPRCampaign() {
                   <span className="spr-fc-label">{s.label}</span>
                   <span className="spr-fc-detail">{s.detail}</span>
                 </div>
-                {i < flowSteps.length - 1 && <div className="spr-fc-arrow" aria-hidden="true">↓</div>}
+                {i < flowSteps.length - 1 && <div className="spr-fc-arrow" aria-hidden="true">→</div>}
               </div>
             ))}
           </div>

@@ -448,24 +448,32 @@
 
 .spr-flowchart {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 620px;
-  margin: 0 auto;
+  flex-direction: row;
+  align-items: stretch;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 4px 2px 16px;
 }
 
 .spr-fc {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  width: 100%;
 }
 
 .spr-fc-node {
-  width: 100%;
+  width: 248px;
+  flex: 0 0 248px;
+  min-height: 168px;
   border-radius: 14px;
-  padding: 16px 20px;
+  padding: 18px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  scroll-snap-align: center;
 }
 
 .spr-fc-node--date {
@@ -515,9 +523,10 @@
 
 .spr-fc-arrow {
   color: #a49ed0;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1;
-  padding: 7px 0;
+  padding: 0 12px;
+  flex: 0 0 auto;
 }
 
 /* Posting schedule (compact, deck) */
