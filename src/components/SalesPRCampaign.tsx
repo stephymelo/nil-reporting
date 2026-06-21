@@ -2,8 +2,6 @@ import { useState } from 'react'
 import './SalesPRCampaign.css'
 import { emails, accountWorkflows, emailTrackMeta, type EmailTrack } from './PRCampaignPage'
 import EmailMock from './EmailMock'
-import PostMock from './PostMock'
-import { socialPosts, postingSchedule } from './socialPlan'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -38,16 +36,11 @@ export default function SalesPRCampaign() {
     setEmailIdx(0)
   }
 
-  const [postIdx, setPostIdx] = useState(0)
-  const post = socialPosts[postIdx]
-  const prevPost = () => setPostIdx((i) => (i - 1 + socialPosts.length) % socialPosts.length)
-  const nextPost = () => setPostIdx((i) => (i + 1) % socialPosts.length)
-
   return (
     <div className="spr-deck">
       {/* 1 — Title */}
       <section className="spr-slide spr-slide--hero">
-        <div className="spr-num">01 / 12</div>
+        <div className="spr-num">01 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow spr-eyebrow--light">Sales Team Briefing</p>
           <h1 className="spr-hero-title">
@@ -61,7 +54,7 @@ export default function SalesPRCampaign() {
 
       {/* 2 — What's happening */}
       <section className="spr-slide">
-        <div className="spr-num">02 / 12</div>
+        <div className="spr-num">02 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Move</p>
           <h2 className="spr-title">What's happening</h2>
@@ -78,7 +71,7 @@ export default function SalesPRCampaign() {
 
       {/* 3 — Phases */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">03 / 12</div>
+        <div className="spr-num">03 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Rollout</p>
           <h2 className="spr-title">Three phases</h2>
@@ -99,7 +92,7 @@ export default function SalesPRCampaign() {
 
       {/* 4 — The message */}
       <section className="spr-slide">
-        <div className="spr-num">04 / 12</div>
+        <div className="spr-num">04 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Message</p>
           <h2 className="spr-title">How we talk about it</h2>
@@ -129,7 +122,7 @@ export default function SalesPRCampaign() {
 
       {/* 5 — Flow & key dates (diagram) */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">05 / 12</div>
+        <div className="spr-num">05 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Flow &amp; Dates</p>
           <h2 className="spr-title">How it flows</h2>
@@ -152,56 +145,11 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 6 — What we're posting */}
-      <section className="spr-slide spr-slide--tall">
-        <div className="spr-num">06 / 12</div>
-        <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Social</p>
-          <h2 className="spr-title">What we're posting</h2>
-          <p className="spr-note">One post a week from July 1 to launch — copy only, designs come later. Click through the sample posts below.</p>
-
-          <div className="spr-sched-row">
-            {postingSchedule.map((w) => (
-              <div key={w.week} className="spr-sched">
-                <div className="spr-sched__week">{w.week}</div>
-                <ul>
-                  {w.items.map((it) => (
-                    <li key={it}>{it}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="spr-carousel">
-            <div className="spr-carousel__bar">
-              <button className="spr-cbtn" onClick={prevPost} aria-label="Previous post">←</button>
-              <div className="spr-carousel__meta">
-                <span className="spr-email__num">{post.label}</span>
-                <span className="spr-email__send">{post.when}</span>
-              </div>
-              <button className="spr-cbtn" onClick={nextPost} aria-label="Next post">→</button>
-            </div>
-
-            <PostMock post={post} />
-
-            <div className="spr-dots">
-              {socialPosts.map((p, i) => (
-                <button
-                  key={p.id}
-                  className={`spr-dot ${i === postIdx ? 'is-active' : ''}`}
-                  onClick={() => setPostIdx(i)}
-                  aria-label={`Go to post ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Social slide hidden for now — posting plan not finalized */}
 
       {/* 7 — Your role (part 1) */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">07 / 12</div>
+        <div className="spr-num">06 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">Your role</h2>
@@ -215,7 +163,7 @@ export default function SalesPRCampaign() {
 
       {/* 8 — Your role (part 2) */}
       <section className="spr-slide">
-        <div className="spr-num">08 / 12</div>
+        <div className="spr-num">07 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">What to tell clients</h2>
@@ -230,7 +178,7 @@ export default function SalesPRCampaign() {
 
       {/* 9 — The Hairloss.com sales rep */}
       <section className="spr-slide">
-        <div className="spr-num">09 / 12</div>
+        <div className="spr-num">08 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">The Hairloss.com sales rep</h2>
@@ -249,7 +197,7 @@ export default function SalesPRCampaign() {
 
       {/* 10 — Account workflows */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">10 / 12</div>
+        <div className="spr-num">09 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Accounts</p>
           <h2 className="spr-title">How accounts get created</h2>
@@ -275,7 +223,7 @@ export default function SalesPRCampaign() {
 
       {/* 11 — Email campaign intro */}
       <section className="spr-slide">
-        <div className="spr-num">11 / 12</div>
+        <div className="spr-num">10 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
           <h2 className="spr-title">Emails by audience</h2>
@@ -301,7 +249,7 @@ export default function SalesPRCampaign() {
 
       {/* 12 — Email details (carousel) */}
       <section className="spr-slide spr-slide--tall spr-slide--tint">
-        <div className="spr-num">12 / 12</div>
+        <div className="spr-num">11 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
           <h2 className="spr-title">When each email sends &amp; what it says</h2>
