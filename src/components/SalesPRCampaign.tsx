@@ -7,13 +7,15 @@ import { socialPosts, postingSchedule } from './socialPlan'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
-const keyDates: { date: string; title: string; desc: string }[] = [
-  { date: 'Tue, Jul 1', title: 'Announcement + Login Email', desc: 'Campaign starts; sign-in needed for certain pricing. Posting plan begins.' },
-  { date: 'Sat, Jul 26', title: 'NIL Last Order Date', desc: 'Final day to order on the New Image Labs website.' },
-  { date: 'Sun, Jul 27', title: 'Migration + Welcome Email', desc: 'Customers, companies & orders migrate. 10% off first online order.' },
-  { date: 'Tue, Jul 29', title: 'Sales Team Briefing', desc: 'Whole sales team briefed; posting plan locked.' },
-  { date: 'Wed, Jul 30', title: 'Hide Pricing + Remove TressAllure', desc: 'Hair-unit pricing hidden; TressAllure removed; HL.com restructured.' },
-  { date: 'Mon, Aug 3', title: 'Launch', desc: 'NIL returns as Hairloss.com. NIL & Onrite live for purchasing.' },
+const flowSteps: { kind: 'date' | 'action'; date?: string; label: string; detail: string }[] = [
+  { kind: 'date', date: 'Jul 1', label: 'PR campaign emails go out', detail: 'Separate sequences to New Image Labs, Onrite & Hairloss.com clients. Posting plan begins.' },
+  { kind: 'action', label: 'Keep your regular calls', detail: 'Mention the move to Hairloss.com during your normal conversations — no need to mass-call.' },
+  { kind: 'action', label: 'Redirect to the Hairloss.com rep', detail: 'Send clients with online-ordering / Hairloss.com questions to the dedicated rep.' },
+  { kind: 'date', date: 'Jul 26', label: 'Last day to order on New Image Labs', detail: 'NIL online ordering closes.' },
+  { kind: 'date', date: 'Jul 27', label: 'Migration + welcome email', detail: 'Accounts & orders migrate. 10% off the first online order.' },
+  { kind: 'date', date: 'Jul 29', label: 'Whole sales team briefing', detail: 'Team briefed; full posting plan locked.' },
+  { kind: 'date', date: 'Jul 30', label: 'Pricing hidden + TressAllure removed', detail: 'Hair-unit pricing moves behind login.' },
+  { kind: 'date', date: 'Aug 3', label: 'Launch — everything on Hairloss.com', detail: 'NIL returns as Hairloss.com. Order online, all in one place.' },
 ]
 
 const phases: { tag: string; when: string; title: string; desc: string; imports?: string }[] = [
@@ -67,8 +69,8 @@ export default function SalesPRCampaign() {
             <li>New Image Labs and Onrite are moving onto <strong>one platform — Hairloss.com</strong>.</li>
             <li>The <strong>landing pages stay up</strong> — it's <strong>online shopping</strong> that moves to Hairloss.com.</li>
             <li>Same pricing tiers. Same products. One place to order.</li>
-            <li>The NIL website goes offline for maintenance <strong>Saturday, Aug 1</strong>.</li>
-            <li>New Image Labs' full catalog is on Hairloss.com starting <strong>Monday, Aug 3</strong>.</li>
+            <li>The NIL website goes offline for maintenance at the <strong>end of the day Friday, July 31</strong>.</li>
+            <li>New Image Labs' full catalog — plus <strong>select Onrite products, with more to come</strong> — is on Hairloss.com starting <strong>Monday, Aug 3</strong>.</li>
           </ul>
           <img className="spr-img" src="/hl-homepage.png" alt="Hairloss.com homepage" />
         </div>
@@ -89,12 +91,6 @@ export default function SalesPRCampaign() {
                 </div>
                 <div className="spr-phase__title">{p.title}</div>
                 <div className="spr-phase__desc">{p.desc}</div>
-                {p.imports && (
-                  <div className="spr-phase__import">
-                    <span className="spr-phase__import-label">Customer import</span>
-                    {p.imports}
-                  </div>
-                )}
               </div>
             ))}
           </div>
@@ -131,18 +127,25 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 5 — Key dates */}
-      <section className="spr-slide spr-slide--tint">
+      {/* 5 — Flow & key dates (diagram) */}
+      <section className="spr-slide spr-slide--tall spr-slide--tint">
         <div className="spr-num">05 / 11</div>
         <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Timeline</p>
-          <h2 className="spr-title">Key dates</h2>
-          <div className="spr-dates">
-            {keyDates.map((d) => (
-              <div key={d.title} className="spr-date">
-                <div className="spr-date__when">{d.date}</div>
-                <div className="spr-date__title">{d.title}</div>
-                <div className="spr-date__desc">{d.desc}</div>
+          <p className="spr-eyebrow">Flow &amp; Dates</p>
+          <h2 className="spr-title">How it flows</h2>
+          <div className="spr-flow-legend">
+            <span><span className="spr-flow-dot spr-flow-dot--date" /> Key date</span>
+            <span><span className="spr-flow-dot spr-flow-dot--action" /> What you do</span>
+          </div>
+          <div className="spr-flowchart">
+            {flowSteps.map((s, i) => (
+              <div key={s.label} className="spr-fc">
+                <div className={`spr-fc-node spr-fc-node--${s.kind}`}>
+                  {s.date && <span className="spr-fc-date">{s.date}</span>}
+                  <span className="spr-fc-label">{s.label}</span>
+                  <span className="spr-fc-detail">{s.detail}</span>
+                </div>
+                {i < flowSteps.length - 1 && <div className="spr-fc-arrow" aria-hidden="true">↓</div>}
               </div>
             ))}
           </div>
