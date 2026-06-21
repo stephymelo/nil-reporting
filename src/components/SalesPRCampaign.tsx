@@ -6,13 +6,14 @@ import EmailMock from './EmailMock'
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 const flowSteps: { kind: 'date' | 'action'; date?: string; label: string; detail: string }[] = [
-  { kind: 'date', date: 'Jul 1', label: 'PR campaign emails go out', detail: 'Separate sequences to New Image Labs, Onrite & Hairloss.com clients. Posting plan begins.' },
+  { kind: 'date', date: 'Jun 29', label: 'Whole sales team briefing', detail: 'Brief the whole team and walk through the full posting plan before it goes live.' },
+  { kind: 'date', date: 'Jun 30', label: 'Pricing hidden + TressAllure removed', detail: 'Hair-unit pricing moves behind login; TressAllure removed. Before the campaign starts.' },
+  { kind: 'date', date: 'Jul 1', label: 'Emails + posting plan go live', detail: 'Separate email sequences to New Image Labs, Onrite & Hairloss.com clients. Posting plan starts.' },
   { kind: 'action', label: 'Keep your regular calls', detail: 'Mention the move to Hairloss.com during your normal conversations — no need to mass-call.' },
   { kind: 'action', label: 'Redirect to the Hairloss.com rep', detail: 'Send clients with online-ordering / Hairloss.com questions to the dedicated rep.' },
   { kind: 'date', date: 'Jul 26', label: 'Last day to order on New Image Labs', detail: 'NIL online ordering closes.' },
-  { kind: 'date', date: 'Jul 27', label: 'Migration + welcome email', detail: 'Accounts & orders migrate. 10% off the first online order.' },
-  { kind: 'date', date: 'Jul 29', label: 'Whole sales team briefing', detail: 'Team briefed; full posting plan locked.' },
-  { kind: 'date', date: 'Jul 30', label: 'Pricing hidden + TressAllure removed', detail: 'Hair-unit pricing moves behind login.' },
+  { kind: 'date', date: 'Jul 27', label: 'Migration + welcome email', detail: 'Customer accounts & companies migrate (orders do not). 10% off the first online order.' },
+  { kind: 'date', date: 'Jul 31', label: 'NIL site goes offline', detail: 'End of day Friday — the site is unavailable through the weekend.' },
   { kind: 'date', date: 'Aug 3', label: 'Launch — everything on Hairloss.com', detail: 'NIL returns as Hairloss.com. Order online, all in one place.' },
 ]
 
@@ -168,7 +169,7 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">What to tell clients</h2>
           <ul className="spr-points">
-            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>; the site is then unavailable until <strong>August 3</strong>, when NIL &amp; Onrite launch on Hairloss.com for purchasing.</li>
+            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The site goes offline at the end of the day <strong>Friday, July 31</strong> and is unavailable through the weekend, returning as Hairloss.com on <strong>Monday, August 3</strong>, when NIL &amp; Onrite launch for purchasing.</li>
             <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
             <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
             <li>Mention the move when you're <strong>on the phone</strong> — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>

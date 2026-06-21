@@ -171,6 +171,19 @@ const timeline: TimelineWindow[] = [
         desc: 'Update the About page to tell the NIL + Onrite merge story — one company, one site.',
         tracks: ['website', 'content'],
       },
+      {
+        title: 'Whole Sales Team Briefing',
+        date: 'Mon, June 29',
+        desc: 'Brief the whole sales team and walk through the full posting plan before it goes live.',
+        tracks: ['marketing'],
+      },
+      {
+        title: 'Hide Pricing + Remove TressAllure',
+        date: 'Tue, June 30',
+        desc: 'Hide hair-unit pricing for logged-out visitors, remove TressAllure, and restructure Hairloss.com for the merged catalog.',
+        tracks: ['website'],
+        flag: 'Before the campaign starts',
+      },
     ],
   },
   {
@@ -179,13 +192,13 @@ const timeline: TimelineWindow[] = [
     items: [
       {
         title: 'Send Announcement + Login-Notice Email',
-        date: 'Tue, July 1',
-        desc: 'Email 1 to all HL customers: NIL + Onrite are coming to Hairloss.com, and going forward you will need to sign in to see pricing on certain products.',
+        date: 'Wed, July 1',
+        desc: 'Separate sequences to NIL, Onrite & Hairloss.com clients: the move to Hairloss.com, and that going forward you sign in to see pricing on certain products.',
         tracks: ['marketing'],
       },
       {
-        title: 'Posting Plan Begins',
-        date: 'From July 2',
+        title: 'Posting Plan Goes Live',
+        date: 'From July 1',
         desc: 'Weekly social posts begin — one a week, plus collab posts (HL × NIL × Onrite) and stories to the blog.',
         tracks: ['content', 'marketing'],
       },
@@ -211,7 +224,7 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'July 16 – 31 — Migrate & cut over',
-    note: 'Last orders, migration, hide pricing',
+    note: 'Last orders, migration, site offline',
     items: [
       {
         title: 'Add Salon Locator to Website',
@@ -235,28 +248,22 @@ const timeline: TimelineWindow[] = [
       {
         title: 'Migration + Welcome Email',
         date: 'Sun, July 27',
-        desc: 'Migrate customers, companies & orders to Hairloss.com. The welcome email goes out with the 10%-off-first-online-order offer.',
+        desc: 'Migrate customer accounts & companies to Hairloss.com — orders do not migrate. The welcome email goes out with the 10%-off-first-online-order offer.',
         tracks: ['website', 'marketing'],
-        flag: 'Migration day',
+        flag: 'Migration day · orders do not migrate',
       },
       {
         title: 'Send "Soon You Can Purchase" Email',
         date: 'July 28 – 30',
-        desc: 'Email 4: one place to purchase, 10% off the first online order, and Onrite customers create their professional account. Live Aug 3.',
+        desc: 'Onrite email: one place to purchase, 10% off the first online order, and create your professional account. Live Aug 3.',
         tracks: ['marketing'],
       },
       {
-        title: 'Whole Sales Team Briefing + Posting Plan',
-        date: 'Tue, July 29',
-        desc: 'Brief the whole sales team and lock the full posting plan.',
-        tracks: ['marketing'],
-      },
-      {
-        title: 'Hide Pricing + Remove TressAllure',
-        date: 'Wed, July 30',
-        desc: 'Hide hair-unit pricing for logged-out visitors, remove TressAllure, and restructure Hairloss.com for the merged catalog.',
+        title: 'NIL Site Goes Offline',
+        date: 'Fri, July 31',
+        desc: 'At the end of the day, the New Image Labs site goes offline and is unavailable through the weekend — back as Hairloss.com on Monday, Aug 3.',
         tracks: ['website'],
-        flag: 'July 30 — before launch',
+        flag: 'Offline end of day Jul 31 → back Aug 3',
       },
     ],
   },
@@ -290,9 +297,9 @@ const timeline: TimelineWindow[] = [
         tracks: ['website', 'content'],
       },
       {
-        title: 'Send Add-On Value Email + Post',
+        title: 'Publish Add-On Value Post',
         date: 'Post-launch',
-        desc: 'Email 6 + a social post: why we are doing this, the benefits, and giving the hair replacement industry more visibility.',
+        desc: 'A social post: why we are doing this, the benefits, and giving the hair replacement industry more visibility.',
         tracks: ['marketing', 'content'],
       },
       {
@@ -326,11 +333,12 @@ const timeline: TimelineWindow[] = [
 // ── Key dates (horizontal milestone strip) ──────────────────────────────────
 
 const keyDates: { date: string; title: string; desc: string }[] = [
-  { date: 'Tue, Jul 1', title: 'Announcement + Login Email', desc: 'Campaign starts; customers told they will sign in to see certain product pricing. Posting plan begins.' },
+  { date: 'Mon, Jun 29', title: 'Sales Team Briefing', desc: 'Whole sales team briefed; full posting plan walked through before it goes live.' },
+  { date: 'Tue, Jun 30', title: 'Hide Pricing + Remove TressAllure', desc: 'Hide hair-unit pricing for logged-out visitors; remove TressAllure; restructure HL.com.' },
+  { date: 'Wed, Jul 1', title: 'Announcement + Login Email', desc: 'Emails to all clients (sign in to see certain pricing). Posting plan goes live.' },
   { date: 'Sat, Jul 26', title: 'NIL Last Order Date', desc: 'Final day to place orders on the New Image Labs website.' },
-  { date: 'Sun, Jul 27', title: 'Migration + Welcome Email', desc: 'Customers, companies & orders migrate to Hairloss.com. Welcome email with 10% off the first online order.' },
-  { date: 'Tue, Jul 29', title: 'Sales Team Briefing', desc: 'Whole sales team briefed; full posting plan locked.' },
-  { date: 'Wed, Jul 30', title: 'Hide Pricing + Remove TressAllure', desc: 'Hide hair-unit pricing for logged-out visitors; remove TressAllure; restructure HL.com.' },
+  { date: 'Sun, Jul 27', title: 'Migration + Welcome Email', desc: 'Customer accounts & companies migrate (orders do not). Welcome email with 10% off the first online order.' },
+  { date: 'Fri, Jul 31', title: 'NIL Site Offline', desc: 'Site goes offline end of day Friday, unavailable through the weekend.' },
   { date: 'Mon, Aug 3', title: 'Launch — All on HL.com', desc: 'NIL returns as Hairloss.com. NIL & Onrite live for purchasing; launch email goes out.' },
 ]
 
@@ -375,7 +383,7 @@ export const accountWorkflows: AccountWorkflow[] = [
       { label: 'Account Live', desc: 'Client signs in (no password — secure link), sees their tier pricing, gets tracking emails.', final: true },
     ],
     emails: [
-      'Auto welcome email: "Hi New Image Labs / Onrite customer — we\'ve successfully transferred your account information and orders to Hairloss.com. Continue shopping here with your pricing tier."',
+      'Auto welcome email: "Hi New Image Labs / Onrite customer — we\'ve successfully transferred your account information to Hairloss.com. Continue shopping here with your pricing tier."',
     ],
     note: 'Transferring a client requires creating BOTH a company and a user account in the admin. Sales never fills out the account form.',
   },
@@ -456,7 +464,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { cue: 'The change', line: '"We\'re bringing everything onto one website — Hairloss.com. Starting August 3, you\'ll order there instead of the New Image Labs site."' },
       { cue: 'Reassure', line: '"Your pricing tier and the products you order stay exactly the same. Nothing you rely on is going away."' },
       { cue: 'Pricing & account', line: '"On the New Image site, both the pricing and the products were hidden. On Hairloss.com you can browse all the products — only the pricing sits behind your login, to protect our wholesale rates. You\'ll get an activation email for your Hairloss.com account — just sign in with the same email it was sent to, and you\'ll see your pricing."' },
-      { cue: 'Your data migrates', line: '"Because you\'re a New Image Labs customer, your customer info, your company/business details, and your order history will all be visible on Hairloss.com. Just wait until the last week of July — your account gets migrated that week. (Onrite customers: your online orders from NIL migrate over automatically.)"' },
+      { cue: 'Your data migrates', line: '"Because you\'re a New Image Labs customer, your customer info and your company/business details will be visible on Hairloss.com. Just wait until the last week of July — your account gets migrated that week. (Note: past orders do not carry over.)"' },
       { cue: 'Aug 1 → 3', line: '"On August 1, the New Image Labs website goes offline for maintenance over the weekend. From August 3 there are no more orders on the New Image Labs website — everything is on Hairloss.com."' },
       { cue: 'Close', line: '"I\'ll send your login before August 3 so you\'re ready. Any questions, you call me directly."' },
     ],
@@ -504,7 +512,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { cue: 'El cambio', line: '"Estamos reuniendo todo en un solo sitio — Hairloss.com. A partir del 3 de agosto, hará sus pedidos ahí en lugar del sitio de New Image Labs."' },
       { cue: 'Tranquilizar', line: '"Su nivel de precios y los productos que pide se mantienen exactamente igual. Nada de lo que usted depende va a desaparecer."' },
       { cue: 'Precios y cuenta', line: '"En el sitio de New Image, tanto los precios como los productos estaban ocultos. En Hairloss.com usted puede ver todos los productos — solo los precios quedan detrás de su inicio de sesión, para proteger nuestros precios mayoristas. Recibirá un correo de activación para su cuenta de Hairloss.com — solo inicie sesión con el mismo correo al que se lo enviamos y verá sus precios."' },
-      { cue: 'Migración de sus datos', line: '"Como usted es cliente de New Image Labs, su información de cliente, los datos de su empresa/negocio y su historial de pedidos estarán visibles en Hairloss.com. Solo espere hasta la última semana de julio — su cuenta se migra esa semana. (Clientes de Onrite: sus pedidos en línea de NIL se migran automáticamente.)"' },
+      { cue: 'Migración de sus datos', line: '"Como usted es cliente de New Image Labs, su información de cliente y los datos de su empresa/negocio estarán visibles en Hairloss.com. Solo espere hasta la última semana de julio — su cuenta se migra esa semana. (Nota: los pedidos anteriores no se transfieren.)"' },
       { cue: 'Del 1 al 3 de agosto', line: '"El 1 de agosto, el sitio web de New Image Labs entra en mantenimiento durante el fin de semana. A partir del 3 de agosto ya no se hacen pedidos en el sitio de New Image Labs — todo está en Hairloss.com."' },
       { cue: 'Cierre', line: '"Le enviaré su acceso antes del 3 de agosto para que esté listo. Cualquier pregunta, llámeme directamente."' },
     ],
@@ -572,7 +580,7 @@ export const emails: EmailDesign[] = [
     tone: 'Direct and professional. Business to business.',
     body: [
       'This is the final week to place orders on the New Image Labs website — orders are accepted through July 26.',
-      'After July 26, the New Image Labs site will be unavailable while we migrate everything to Hairloss.com, and it returns on August 3.',
+      'The New Image Labs site then goes offline at the end of the day Friday, July 31, and is unavailable through the weekend — returning as Hairloss.com on Monday, August 3.',
       'There is nothing you need to do to prepare. Your account, your pricing tier, and the products you order all move with you. Once your account has been migrated, you will receive an email from Hairloss.com with instructions to sign in.',
       'If you have any questions, please contact your sales representative.',
     ],
@@ -584,11 +592,11 @@ export const emails: EmailDesign[] = [
     send: 'July 27',
     timing: 'Migration day',
     subject: 'Your account has moved to Hairloss.com',
-    preview: 'Your account, information, and orders are now on Hairloss.com.',
+    preview: 'Your account and information are now on Hairloss.com.',
     goal: 'Welcome / migration confirmation; drive first sign-in with the 10% offer.',
     tone: 'Warm, professional, reassuring. Business to business.',
     body: [
-      'We have successfully transferred your account information and order history to Hairloss.com. You can continue ordering here with the same pricing tier you have always had.',
+      'We have successfully transferred your account information to Hairloss.com. You can continue ordering here with the same pricing tier you have always had.',
       'You will receive an activation email from Hairloss.com — sign in with the same email address it was sent to. Sign-in is passwordless, with a one-time code.',
       'As a welcome, you will receive 10% off your first online order on Hairloss.com.',
       'If you do not see your pricing when you sign in, please contact your sales representative or message us on the website chat.',
