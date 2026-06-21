@@ -23,10 +23,19 @@ interface TimelineWindow {
   items: RoadmapItem[]
 }
 
+export type EmailTrack = 'nil' | 'onrite' | 'hairloss'
+
+export const emailTrackMeta: Record<EmailTrack, { label: string; short: string }> = {
+  nil: { label: 'New Image Labs clients', short: 'NIL' },
+  onrite: { label: 'Onrite clients', short: 'Onrite' },
+  hairloss: { label: 'Hairloss.com customers', short: 'HL.com' },
+}
+
 export interface EmailDesign {
+  track: EmailTrack
   num: number
   send: string
-  audience: string
+  timing: string
   subject: string
   preview: string
   goal: string
@@ -515,110 +524,180 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
 // ── Email designs ────────────────────────────────────────────────────────────
 
 export const emails: EmailDesign[] = [
+  // ── New Image Labs clients (the core B2B migration) ──
   {
+    track: 'nil',
     num: 1,
     send: 'July 1',
-    audience: 'All clients — NIL, Onrite & HL.com',
-    subject: 'New Image Labs & Onrite are moving to Hairloss.com',
-    preview: 'One platform for your wholesale orders — same products, same pricing.',
+    timing: '~5 weeks before launch',
+    subject: 'New Image Labs is moving to Hairloss.com',
+    preview: 'Same products, same pricing — one platform for your wholesale orders.',
     goal: 'Announce the move + the sign-in-for-pricing change. Lead with continuity.',
     tone: 'Professional and reassuring. Business to business.',
     body: [
-      'For more than 50 years, you have trusted us as your professional provider in the hair replacement industry. As part of our continued commitment to serving your business, we are bringing that experience together on a single platform.',
-      'New Image Labs and Onrite are coming together under one website: Hairloss.com.',
-      'Instead of managing orders across two separate sites, your account, products, and ordering experience will be consolidated into one convenient location. While the website experience will change, the things that matter most to your business will remain the same. Your pricing tier, the products you order, and the sales and support team you work with will not change.',
+      'For more than 50 years, you have trusted New Image Labs as your professional provider in the hair replacement industry. As part of our continued commitment to serving your business, we are bringing that experience onto a single platform: Hairloss.com.',
+      'Instead of working across separate sites, your account, products, and ordering will be in one place. The things that matter most stay the same — your pricing tier, the products you order, and the sales and support team you work with.',
       'One change to note: going forward, you will sign in to your account to view pricing on certain products. Your pricing tier stays exactly the same — it simply lives behind your login.',
-      'What will improve is the simplicity and convenience of having everything in one place. Hairloss.com will provide a single platform for ordering, easier access to your full product catalog, and one destination for promotions, special offers, and quantity pricing.',
-      'There is no action required at this time, and nothing changes for your account today. Over the coming weeks, we will share additional details about the transition and what you can expect as we move to the new platform.',
+      'There is no action required today. Over the coming weeks we will share what to expect as we move to the new platform.',
       'If you have any questions, please contact your sales representative.',
-      'Thank you for your continued partnership. We look forward to serving your business through this next chapter.',
     ],
     cta: '',
   },
   {
+    track: 'nil',
     num: 2,
     send: 'July 14–16',
-    audience: 'All clients',
+    timing: '~3 weeks before launch',
     subject: 'How your Hairloss.com account will work',
-    preview: 'Your account, sign-in, and the key migration dates.',
-    goal: 'Explain accounts, passwordless sign-in, and hidden pricing before launch.',
+    preview: 'Your account, passwordless sign-in, and your pricing.',
+    goal: 'Explain accounts, passwordless sign-in, and pricing behind login.',
     tone: 'Clear and professional. Business to business.',
     body: [
       'As part of the move to Hairloss.com, your account is being migrated for you. Your sales representative will create your account, and you will receive an activation email from Hairloss.com.',
-      'To sign in, simply use the same email address the activation message was sent to. Sign-in on Hairloss.com is passwordless — you will enter your email and receive a one-time code to access your account.',
+      'To sign in, simply use the same email address the activation message was sent to. Sign-in is passwordless — you will enter your email and receive a one-time code to access your account.',
       'Your pricing will remain securely tied to your account. To protect our wholesale pricing, prices are not displayed publicly; once you sign in, you will see your tier pricing — the same pricing you have today.',
-      'One more note: on Saturday, August 1, the New Image Labs website will go offline for maintenance over the weekend, and all online ordering will move to Hairloss.com beginning Monday, August 3.',
+      'A note on dates: orders on the New Image Labs site run through July 26. From August 3, everything is on Hairloss.com.',
       'If you have any questions, please contact your sales representative.',
     ],
     cta: '',
   },
   {
+    track: 'nil',
     num: 3,
     send: 'July 21–23',
-    audience: 'New Image Labs clients',
+    timing: 'Order cutoff July 26',
     subject: 'Final week for orders on the New Image Labs website',
     preview: 'Order on New Image Labs through July 26.',
-    goal: 'Final reminder ahead of the July 26 cutoff + tease Onrite/new platform.',
+    goal: 'Final reminder ahead of the July 26 cutoff.',
     tone: 'Direct and professional. Business to business.',
     body: [
       'This is the final week to place orders on the New Image Labs website — orders are accepted through July 26.',
       'After July 26, the New Image Labs site will be unavailable while we migrate everything to Hairloss.com, and it returns on August 3.',
-      'There is more to come: Hairloss.com gives you a new, easier platform to purchase, with selective Onrite products now on board — and more on the way.',
       'There is nothing you need to do to prepare. Your account, your pricing tier, and the products you order all move with you. Once your account has been migrated, you will receive an email from Hairloss.com with instructions to sign in.',
       'If you have any questions, please contact your sales representative.',
     ],
     cta: '',
   },
   {
+    track: 'nil',
     num: 4,
-    send: 'July 28–30',
-    audience: 'All clients · Onrite pro accounts',
-    subject: 'Soon you can purchase — all in one place on Hairloss.com',
-    preview: 'One platform, one login. 10% off your first online order.',
-    goal: 'Pre-launch: build anticipation; get Onrite customers to create a pro account.',
-    tone: 'Warm, professional, building anticipation. Business to business.',
+    send: 'July 27',
+    timing: 'Migration day',
+    subject: 'Your account has moved to Hairloss.com',
+    preview: 'Your account, information, and orders are now on Hairloss.com.',
+    goal: 'Welcome / migration confirmation; drive first sign-in with the 10% offer.',
+    tone: 'Warm, professional, reassuring. Business to business.',
     body: [
-      'Soon you will be able to purchase everything in one place. Hairloss.com goes live on August 3 — one platform and one login for New Image Labs and Onrite.',
+      'We have successfully transferred your account information and order history to Hairloss.com. You can continue ordering here with the same pricing tier you have always had.',
+      'You will receive an activation email from Hairloss.com — sign in with the same email address it was sent to. Sign-in is passwordless, with a one-time code.',
       'As a welcome, you will receive 10% off your first online order on Hairloss.com.',
-      'Onrite customers: create your professional account so your pricing is ready at launch. Your sales representative can set this up with you.',
-      'Your account is being migrated now. You will receive an activation email from Hairloss.com — sign in with the same email address it was sent to.',
+      'If you do not see your pricing when you sign in, please contact your sales representative or message us on the website chat.',
+    ],
+    cta: '',
+  },
+  {
+    track: 'nil',
+    num: 5,
+    send: 'August 3',
+    timing: 'Launch day',
+    subject: 'Hairloss.com is now live',
+    preview: 'Sign in to order — all in one place.',
+    goal: 'Launch. Drive first sign-in and first order.',
+    tone: 'Professional and welcoming. Business to business.',
+    body: [
+      'Hairloss.com is now live. Sign in to your account to view your pricing, browse your full catalog, and place orders in one convenient location.',
+      'Remember, you will receive 10% off your first online order on Hairloss.com.',
+      'If you have not yet received your activation email, please contact your sales representative or message us on the website chat.',
+    ],
+    cta: 'Sign in to Hairloss.com',
+  },
+
+  // ── Onrite clients (selective products + professional accounts) ──
+  {
+    track: 'onrite',
+    num: 1,
+    send: 'July 1',
+    timing: '~5 weeks before launch',
+    subject: 'Onrite is joining Hairloss.com',
+    preview: 'Selective Onrite products, now easier to purchase online.',
+    goal: 'Announce Onrite joining HL.com; set expectations.',
+    tone: 'Professional and welcoming. Business to business.',
+    body: [
+      'We are bringing Onrite onto Hairloss.com — one platform that makes it easier to find and purchase the products you rely on.',
+      'To start, selective Onrite products will be available on Hairloss.com, with more on the way.',
+      'Your pricing and the team you work with stay the same. Over the coming weeks we will share how to set up your account and order online.',
+      'If you have any questions, please contact your sales representative.',
+    ],
+    cta: '',
+  },
+  {
+    track: 'onrite',
+    num: 2,
+    send: 'July 28–30',
+    timing: 'Pre-launch',
+    subject: 'Create your professional account on Hairloss.com',
+    preview: 'Get set up before launch — 10% off your first online order.',
+    goal: 'Get Onrite customers to create a professional account before launch.',
+    tone: 'Warm, professional, action-oriented. Business to business.',
+    body: [
+      'We are giving you a new platform to purchase online — easier, and all in one place. Hairloss.com goes live on August 3.',
+      'Create your professional account so your pricing is ready at launch. Your sales representative can set this up with you, and sign-in is passwordless — just a one-time code to your email.',
+      'As a welcome, you will receive 10% off your first online order on Hairloss.com.',
       'If you have any questions, please contact your sales representative.',
     ],
     cta: 'Create your professional account',
   },
   {
-    num: 5,
+    track: 'onrite',
+    num: 3,
     send: 'August 3',
-    audience: 'All clients',
+    timing: 'Launch day',
     subject: 'Hairloss.com is now live',
-    preview: 'Sign in to access your account, pricing, and orders.',
-    goal: 'Launch. Drive first sign-in and first order.',
+    preview: 'Sign in to your professional account and order.',
+    goal: 'Launch. Drive first sign-in and first order for Onrite customers.',
     tone: 'Professional and welcoming. Business to business.',
     body: [
-      'We are pleased to share that Hairloss.com is now live. New Image Labs and Onrite are officially together on a single platform built to make ordering easier for your business.',
-      'To get started, simply sign in to your account, where you can view your pricing, browse your full catalog, and place orders in one convenient location.',
+      'Hairloss.com is now live. Sign in to your professional account to see your pricing and order Onrite products — and more — in one place.',
       'Remember, you will receive 10% off your first online order on Hairloss.com.',
-      'Everything you rely on is now in one place — your products, your tier pricing, and the promotions, special offers, and quantity pricing available to your business.',
-      'If you have not yet received your activation email, or you do not see your pricing when you log in, please contact your sales representative or message us on the website chat, and we will ensure you are set up right away.',
+      'If you have not yet created your account or do not see your pricing, please contact your sales representative or message us on the website chat.',
     ],
     cta: 'Sign in to Hairloss.com',
   },
+
+  // ── Hairloss.com customers (retail / consumer) ──
   {
-    num: 6,
-    send: 'Post-launch',
-    audience: 'All clients',
-    subject: 'More than a store — growing the industry with you',
-    preview: 'Why we built Hairloss.com, and what it means for your business.',
-    goal: 'Share the vision/value; drive new clients to partner salons.',
-    tone: 'Warm, vision-led, professional. Business to business.',
+    track: 'hairloss',
+    num: 1,
+    send: 'July 1',
+    timing: '~5 weeks before launch',
+    subject: 'Updates to Hairloss.com — log in to see your pricing',
+    preview: 'New product names, and log in to see pricing on your favorites.',
+    goal: 'Tell retail customers about renamed products + log in to see pricing.',
+    tone: 'Friendly, clear, consumer-facing.',
     body: [
-      'Hairloss.com is more than a place to order. It is a platform built to give the hair replacement industry the visibility it deserves — and to bring new clients to professionals like you.',
-      'Everything is in one place: the brands and products you trust, your B2B pricing, promotions, and educational content.',
-      'We are investing in content and reach so more people discover hair replacement solutions and find a trusted professional in their area.',
-      'There is much more to come. Thank you for growing this industry with us.',
-      'If you have any questions, please contact your sales representative.',
+      'We are making a few updates to Hairloss.com to bring more of the brands and products you love together in one place.',
+      'Some products are getting new names, so you may notice a few familiar favorites under updated titles.',
+      'A number of products are also moving into our professional range. To keep seeing pricing on all your favorite products, simply log in to your account.',
+      'Creating a free account takes a moment — sign-in is passwordless, with a one-time code sent to your email.',
+      'Questions? Reach us anytime on the website chat.',
     ],
     cta: '',
+  },
+  {
+    track: 'hairloss',
+    num: 2,
+    send: 'August 3',
+    timing: 'Launch day',
+    subject: 'New on Hairloss.com',
+    preview: 'More of the brands and products you trust — in one place.',
+    goal: 'Launch: invite retail customers to explore the expanded catalog.',
+    tone: 'Friendly, upbeat, consumer-facing.',
+    body: [
+      'Hairloss.com just got bigger. We have brought more of the brands and products you trust together in one place, making it easier to find the right solution for you.',
+      'Explore the new catalog and discover what is now available.',
+      'Questions? We are here on the website chat.',
+    ],
+    cta: 'Shop Hairloss.com',
   },
 ]
 
@@ -1132,34 +1211,43 @@ export default function PRCampaignPage() {
               <span className="cp-section__badge cp-section__badge--strategy">Email Campaign</span>
               <h2 className="cp-section__title">Emails PR Campaign</h2>
               <p className="cp-section__desc">
-                Six sends to clients — announce, explain the change, the order cutoff, pre-launch, launch, and the add-on value. Click to view the designs.
+                Three separate sequences — one for New Image Labs clients, one for Onrite clients, and one for Hairloss.com customers. Click to view the designs.
               </p>
             </div>
             <span className="prc-accordion__chevron">{emailsOpen ? '▲' : '▼'}</span>
           </button>
 
           {emailsOpen && (
-            <div className="prc-emails">
-              {emails.map((email) => (
-                <div key={email.num} className="prc-email">
-                  <div className="prc-email__meta">
-                    <div className="prc-email__meta-top">
-                      <span className="prc-email__num">Email {email.num}</span>
-                      <span className="prc-email__send">{email.send}</span>
-                    </div>
-                    <div className="prc-email__audience">→ {email.audience}</div>
-                    <div className="prc-email__goal">
-                      <span className="prc-email__goal-label">Goal</span>
-                      {email.goal}
-                    </div>
-                    <div className="prc-email__goal">
-                      <span className="prc-email__goal-label">Tone</span>
-                      {email.tone}
-                    </div>
-                  </div>
+            <div className="prc-email-tracks">
+              {(['nil', 'onrite', 'hairloss'] as const).map((track) => (
+                <div key={track} className="prc-email-track">
+                  <div className="prc-subhead">{emailTrackMeta[track].label}</div>
+                  <div className="prc-emails">
+                    {emails.filter((em) => em.track === track).map((email) => (
+                      <div key={`${email.track}-${email.num}`} className="prc-email">
+                        <div className="prc-email__meta">
+                          <div className="prc-email__meta-top">
+                            <span className="prc-email__num">
+                              {emailTrackMeta[email.track].short} · {email.num}
+                            </span>
+                            <span className="prc-email__send">{email.send}</span>
+                          </div>
+                          <div className="prc-email__audience">→ {email.timing}</div>
+                          <div className="prc-email__goal">
+                            <span className="prc-email__goal-label">Goal</span>
+                            {email.goal}
+                          </div>
+                          <div className="prc-email__goal">
+                            <span className="prc-email__goal-label">Tone</span>
+                            {email.tone}
+                          </div>
+                        </div>
 
-                  {/* Email design — formal letter */}
-                  <EmailMock email={email} />
+                        {/* Email design — formal letter */}
+                        <EmailMock email={email} />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

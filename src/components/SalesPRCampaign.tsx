@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './SalesPRCampaign.css'
-import { emails, accountWorkflows } from './PRCampaignPage'
+import { emails, accountWorkflows, emailTrackMeta } from './PRCampaignPage'
 import EmailMock from './EmailMock'
 import PostMock from './PostMock'
 import { socialPosts, postingSchedule } from './socialPlan'
@@ -21,15 +21,6 @@ const phases: { tag: string; when: string; title: string; desc: string; imports?
   { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of Onrite', desc: 'Progen wholesale pricing and the remaining Onrite products.', imports: 'Importing customers from Progen. Onrite customers — TBD.' },
   { tag: 'Phase 3', when: 'October', title: 'Custom Orders Online', desc: 'Customers place their custom orders online themselves.' },
 ]
-
-const emailTiming: Record<number, string> = {
-  1: '~5 weeks before launch',
-  2: '~3 weeks before launch',
-  3: 'Order cutoff July 26',
-  6: 'Add-on value (post-launch)',
-  4: 'Launch weekend',
-  5: 'Launch day',
-}
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -267,14 +258,21 @@ export default function SalesPRCampaign() {
         <div className="spr-num">10 / 11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
-          <h2 className="spr-title">Six emails to clients</h2>
-          <p className="spr-note">Spaced to warm clients up, explain the change, and drive the first sign-in. Full schedule and contents below.</p>
-          <div className="spr-email-overview">
-            {emails.map((e) => (
-              <div key={e.num} className="spr-email-row">
-                <span className="spr-email-row__num">Email {e.num}</span>
-                <span className="spr-email-row__send">{e.send}</span>
-                <span className="spr-email-row__subject">{e.subject}</span>
+          <h2 className="spr-title">Emails by audience</h2>
+          <p className="spr-note">Three separate sequences — New Image Labs clients, Onrite clients, and Hairloss.com customers. Each gets its own message.</p>
+          <div className="spr-email-tracks">
+            {(['nil', 'onrite', 'hairloss'] as const).map((track) => (
+              <div key={track} className="spr-email-trackgroup">
+                <div className="spr-email-trackgroup__label">{emailTrackMeta[track].label}</div>
+                <div className="spr-email-overview">
+                  {emails.filter((em) => em.track === track).map((e) => (
+                    <div key={`${e.track}-${e.num}`} className="spr-email-row">
+                      <span className="spr-email-row__num">{emailTrackMeta[e.track].short} · {e.num}</span>
+                      <span className="spr-email-row__send">{e.send}</span>
+                      <span className="spr-email-row__subject">{e.subject}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -292,9 +290,9 @@ export default function SalesPRCampaign() {
             <div className="spr-carousel__bar">
               <button className="spr-cbtn" onClick={prevEmail} aria-label="Previous email">←</button>
               <div className="spr-carousel__meta">
-                <span className="spr-email__num">Email {e.num}</span>
+                <span className="spr-email__num">{emailTrackMeta[e.track].label}</span>
                 <span className="spr-email__send">Sends {e.send}</span>
-                <span className="spr-email__rel">{emailTiming[e.num]}</span>
+                <span className="spr-email__rel">{e.timing}</span>
               </div>
               <button className="spr-cbtn" onClick={nextEmail} aria-label="Next email">→</button>
             </div>
@@ -304,10 +302,10 @@ export default function SalesPRCampaign() {
             <div className="spr-dots">
               {emails.map((em, i) => (
                 <button
-                  key={em.num}
+                  key={`${em.track}-${em.num}`}
                   className={`spr-dot ${i === emailIdx ? 'is-active' : ''}`}
                   onClick={() => setEmailIdx(i)}
-                  aria-label={`Go to email ${em.num}`}
+                  aria-label={`Go to ${emailTrackMeta[em.track].short} email ${em.num}`}
                 />
               ))}
             </div>

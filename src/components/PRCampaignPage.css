@@ -448,6 +448,18 @@
 
 /* ── Email designs ─────────────────────────────────────────────────────────── */
 
+.prc-email-tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.prc-email-track {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .prc-emails {
   display: flex;
   flex-direction: column;

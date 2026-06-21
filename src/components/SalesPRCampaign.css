@@ -593,6 +593,24 @@
   transform: scale(1.25);
 }
 
+/* Email tracks (by audience) */
+.spr-email-tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.spr-email-trackgroup__label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6e66a8;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #d4d0e8;
+}
+
 /* Email overview */
 .spr-email-overview {
   display: flex;
