@@ -983,19 +983,6 @@ export default function PRCampaignPage() {
                 <li>The wider sales team redirects clients here to learn how to purchase online</li>
               </ul>
             </div>
-            <div className="prc-role__block">
-              <div className="prc-role__label">Backups</div>
-              <ul>
-                <li><strong>Bautista</strong> — backup, focused on the West</li>
-                <li><strong>Juan</strong> — backup for entering Hairloss.com orders</li>
-              </ul>
-            </div>
-            <div className="prc-autoemail">
-              <span className="prc-autoemail__icon">🎓</span>
-              <span className="prc-autoemail__text">
-                Trains Saturdays with Debbie to be ready on leads and product info. Website + admin training covers onboardings, entering orders, emails, and messaging.
-              </span>
-            </div>
           </div>
 
           {/* Account form */}

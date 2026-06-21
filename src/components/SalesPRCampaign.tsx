@@ -224,25 +224,14 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">The Hairloss.com sales rep</h2>
           <p className="spr-note">One full-time rep owns everything Hairloss.com. Redirect your clients to this rep to learn how to purchase online.</p>
-          <div className="spr-two-col">
-            <div className="spr-card">
-              <div className="spr-card__label">Owns everything HL.com</div>
-              <ul>
-                <li>Manages all leads (retail + B2B), the contact form &amp; inbox chat</li>
-                <li>Onboards customers — 10% off the first online order on Hairloss.com</li>
-                <li>Reviews B2B forms, creates accounts, assigns catalog price + territory</li>
-                <li>Manages retail, online orders &amp; any other HL.com customer issue</li>
-              </ul>
-            </div>
-            <div className="spr-card">
-              <div className="spr-card__label">Backups &amp; training</div>
-              <ul>
-                <li><strong>Bautista</strong> — backup, focused on the West</li>
-                <li><strong>Juan</strong> — backup for entering HL.com orders</li>
-                <li>Trains Saturdays with Debbie — ready on leads &amp; product info</li>
-                <li>Admin training: onboardings, entering orders, emails, messaging</li>
-              </ul>
-            </div>
+          <div className="spr-card">
+            <div className="spr-card__label">Owns everything HL.com</div>
+            <ul>
+              <li>Manages all leads (retail + B2B), the contact form &amp; inbox chat</li>
+              <li>Onboards customers — 10% off the first online order on Hairloss.com</li>
+              <li>Reviews B2B forms, creates accounts, assigns catalog price + territory</li>
+              <li>Manages retail, online orders &amp; any other HL.com customer issue</li>
+            </ul>
           </div>
         </div>
       </section>
