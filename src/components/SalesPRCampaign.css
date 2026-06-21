@@ -524,6 +524,38 @@
   color: #2d2b3a;
 }
 
+/* Email brand tabs */
+.spr-email-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.spr-tab {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #6e66a8;
+  background: #ffffff;
+  border: 1.5px solid #d4d0e8;
+  border-radius: 100px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.spr-tab:hover {
+  border-color: #6e66a8;
+}
+
+.spr-tab.is-active {
+  background: #6e66a8;
+  color: #ffffff;
+  border-color: #6e66a8;
+}
+
 /* Email carousel (slide 9) */
 .spr-carousel {
   max-width: 640px;

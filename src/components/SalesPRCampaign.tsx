@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './SalesPRCampaign.css'
-import { emails, accountWorkflows, emailTrackMeta } from './PRCampaignPage'
+import { emails, accountWorkflows, emailTrackMeta, type EmailTrack } from './PRCampaignPage'
 import EmailMock from './EmailMock'
 import PostMock from './PostMock'
 import { socialPosts, postingSchedule } from './socialPlan'
@@ -25,10 +25,16 @@ const phases: { tag: string; when: string; title: string; desc: string; imports?
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function SalesPRCampaign() {
+  const [emailTrack, setEmailTrack] = useState<EmailTrack>('nil')
   const [emailIdx, setEmailIdx] = useState(0)
-  const e = emails[emailIdx]
-  const prevEmail = () => setEmailIdx((i) => (i - 1 + emails.length) % emails.length)
-  const nextEmail = () => setEmailIdx((i) => (i + 1) % emails.length)
+  const trackEmails = emails.filter((em) => em.track === emailTrack)
+  const e = trackEmails[Math.min(emailIdx, trackEmails.length - 1)]
+  const prevEmail = () => setEmailIdx((i) => (i - 1 + trackEmails.length) % trackEmails.length)
+  const nextEmail = () => setEmailIdx((i) => (i + 1) % trackEmails.length)
+  const pickEmailTrack = (t: EmailTrack) => {
+    setEmailTrack(t)
+    setEmailIdx(0)
+  }
 
   const [postIdx, setPostIdx] = useState(0)
   const post = socialPosts[postIdx]
@@ -287,10 +293,22 @@ export default function SalesPRCampaign() {
           <h2 className="spr-title">When each email sends &amp; what it says</h2>
 
           <div className="spr-carousel">
+            <div className="spr-email-tabs">
+              {(['nil', 'onrite', 'hairloss'] as const).map((t) => (
+                <button
+                  key={t}
+                  className={`spr-tab ${emailTrack === t ? 'is-active' : ''}`}
+                  onClick={() => pickEmailTrack(t)}
+                >
+                  {emailTrackMeta[t].label}
+                </button>
+              ))}
+            </div>
+
             <div className="spr-carousel__bar">
               <button className="spr-cbtn" onClick={prevEmail} aria-label="Previous email">←</button>
               <div className="spr-carousel__meta">
-                <span className="spr-email__num">{emailTrackMeta[e.track].label}</span>
+                <span className="spr-email__num">Email {e.num} of {trackEmails.length}</span>
                 <span className="spr-email__send">Sends {e.send}</span>
                 <span className="spr-email__rel">{e.timing}</span>
               </div>
@@ -300,12 +318,12 @@ export default function SalesPRCampaign() {
             <EmailMock email={e} />
 
             <div className="spr-dots">
-              {emails.map((em, i) => (
+              {trackEmails.map((em, i) => (
                 <button
                   key={`${em.track}-${em.num}`}
                   className={`spr-dot ${i === emailIdx ? 'is-active' : ''}`}
                   onClick={() => setEmailIdx(i)}
-                  aria-label={`Go to ${emailTrackMeta[em.track].short} email ${em.num}`}
+                  aria-label={`Email ${i + 1}`}
                 />
               ))}
             </div>
