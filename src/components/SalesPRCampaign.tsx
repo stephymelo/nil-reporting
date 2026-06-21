@@ -47,7 +47,7 @@ export default function SalesPRCampaign() {
     <div className="spr-deck">
       {/* 1 — Title */}
       <section className="spr-slide spr-slide--hero">
-        <div className="spr-num">01 / 11</div>
+        <div className="spr-num">01 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow spr-eyebrow--light">Sales Team Briefing</p>
           <h1 className="spr-hero-title">
@@ -61,7 +61,7 @@ export default function SalesPRCampaign() {
 
       {/* 2 — What's happening */}
       <section className="spr-slide">
-        <div className="spr-num">02 / 11</div>
+        <div className="spr-num">02 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Move</p>
           <h2 className="spr-title">What's happening</h2>
@@ -78,7 +78,7 @@ export default function SalesPRCampaign() {
 
       {/* 3 — Phases */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">03 / 11</div>
+        <div className="spr-num">03 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Rollout</p>
           <h2 className="spr-title">Three phases</h2>
@@ -99,7 +99,7 @@ export default function SalesPRCampaign() {
 
       {/* 4 — The message */}
       <section className="spr-slide">
-        <div className="spr-num">04 / 11</div>
+        <div className="spr-num">04 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Message</p>
           <h2 className="spr-title">How we talk about it</h2>
@@ -129,7 +129,7 @@ export default function SalesPRCampaign() {
 
       {/* 5 — Flow & key dates (diagram) */}
       <section className="spr-slide spr-slide--tall spr-slide--tint">
-        <div className="spr-num">05 / 11</div>
+        <div className="spr-num">05 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Flow &amp; Dates</p>
           <h2 className="spr-title">How it flows</h2>
@@ -154,7 +154,7 @@ export default function SalesPRCampaign() {
 
       {/* 6 — What we're posting */}
       <section className="spr-slide spr-slide--tall">
-        <div className="spr-num">06 / 11</div>
+        <div className="spr-num">06 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Social</p>
           <h2 className="spr-title">What we're posting</h2>
@@ -199,27 +199,38 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 7 — Your role */}
+      {/* 7 — Your role (part 1) */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">07 / 11</div>
+        <div className="spr-num">07 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales</p>
           <h2 className="spr-title">Your role</h2>
           <ul className="spr-points">
             <li><strong>One full-time rep</strong> owns everything Hairloss.com — all leads (retail + B2B), onboardings, and orders. The team redirects clients to this rep.</li>
             <li>Open with reassurance: <strong>same pricing tier, same products, same sales consultant</strong> — nothing they rely on changes.</li>
-            <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code (no password to set).</li>
-            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The NIL website is then unavailable until it's back on <strong>August 3</strong> — the launch of NIL &amp; Onrite on Hairloss.com for purchasing.</li>
-            <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
-            <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
-            <li>Mention the move when you're <strong>on the phone</strong> with a customer — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>
+            <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code.</li>
           </ul>
         </div>
       </section>
 
-      {/* 8 — The Hairloss.com sales rep */}
+      {/* 8 — Your role (part 2) */}
       <section className="spr-slide">
-        <div className="spr-num">08 / 11</div>
+        <div className="spr-num">08 / 12</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Sales</p>
+          <h2 className="spr-title">What to tell clients</h2>
+          <ul className="spr-points">
+            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>; the site is then unavailable until <strong>August 3</strong>, when NIL &amp; Onrite launch on Hairloss.com for purchasing.</li>
+            <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
+            <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
+            <li>Mention the move when you're <strong>on the phone</strong> — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 9 — The Hairloss.com sales rep */}
+      <section className="spr-slide">
+        <div className="spr-num">09 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">The Hairloss.com sales rep</h2>
@@ -236,9 +247,9 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 9 — Account workflows */}
+      {/* 10 — Account workflows */}
       <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">09 / 11</div>
+        <div className="spr-num">10 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Accounts</p>
           <h2 className="spr-title">How accounts get created</h2>
@@ -262,9 +273,9 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 10 — Email campaign intro */}
+      {/* 11 — Email campaign intro */}
       <section className="spr-slide">
-        <div className="spr-num">10 / 11</div>
+        <div className="spr-num">11 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
           <h2 className="spr-title">Emails by audience</h2>
@@ -288,9 +299,9 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 11 — Email details (carousel) */}
+      {/* 12 — Email details (carousel) */}
       <section className="spr-slide spr-slide--tall spr-slide--tint">
-        <div className="spr-num">11 / 11</div>
+        <div className="spr-num">12 / 12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Email Campaign</p>
           <h2 className="spr-title">When each email sends &amp; what it says</h2>
