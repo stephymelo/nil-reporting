@@ -526,6 +526,217 @@
   margin-bottom: 2px;
 }
 
+/* ── Email overview (scoped titles) ───────────────────────────────────────── */
+.prc-email-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.prc-email-overcol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prc-email-overcol__label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--cp-border);
+  margin-bottom: 2px;
+}
+
+.prc-email-orow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: var(--cp-radius-sm);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.prc-email-orow:hover {
+  border-color: var(--cp-purple);
+  box-shadow: var(--cp-shadow);
+  transform: translateY(-1px);
+}
+
+.prc-email-orow__num {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+}
+
+.prc-email-orow__send {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cp-purple-dark);
+}
+
+.prc-email-orow__subject {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cp-text);
+  line-height: 1.4;
+}
+
+/* ── Email carousel (click-through) ───────────────────────────────────────── */
+.prc-carousel {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.prc-email-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prc-tab {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-text-light);
+  background: var(--cp-white);
+  border: 1.5px solid var(--cp-border);
+  border-radius: 100px;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.prc-tab:hover {
+  border-color: var(--cp-purple);
+  color: var(--cp-purple-deeper);
+}
+
+.prc-tab.is-active {
+  background: var(--cp-purple);
+  border-color: var(--cp-purple);
+  color: var(--cp-white);
+}
+
+.prc-carousel__bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 620px;
+  justify-content: space-between;
+}
+
+.prc-cbtn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cp-border);
+  background: var(--cp-white);
+  color: var(--cp-purple-deeper);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.prc-cbtn:hover {
+  background: var(--cp-purple);
+  border-color: var(--cp-purple);
+  color: var(--cp-white);
+}
+
+.prc-carousel__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-align: center;
+}
+
+.prc-carousel__num {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cp-purple-deeper);
+}
+
+.prc-carousel__send {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-text);
+}
+
+.prc-carousel__rel {
+  font-size: 12px;
+  color: var(--cp-text-light);
+}
+
+.prc-carousel__goal {
+  max-width: 620px;
+  font-size: 12.5px;
+  color: var(--cp-text-light);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.prc-carousel__goal-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-purple-dark);
+  margin-right: 6px;
+}
+
+.prc-carousel__goal-label:not(:first-child) {
+  margin-left: 16px;
+}
+
+.prc-carousel .em {
+  width: 100%;
+  max-width: 620px;
+}
+
+.prc-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.prc-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: var(--cp-purple-light);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.prc-dot.is-active {
+  background: var(--cp-purple-deeper);
+  transform: scale(1.2);
+}
+
+@media (max-width: 760px) {
+  .prc-email-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Mock email */
 .prc-mock {
   background: var(--cp-white);

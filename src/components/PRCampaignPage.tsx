@@ -883,7 +883,16 @@ function SalesBlocks({ lang }: { lang: 'en' | 'es' }) {
 
 export default function PRCampaignPage() {
   const [lang, setLang] = useState<'en' | 'es'>('en')
-  const [emailsOpen, setEmailsOpen] = useState(false)
+  const [emailTrack, setEmailTrack] = useState<EmailTrack>('nil')
+  const [emailIdx, setEmailIdx] = useState(0)
+  const trackEmails = emails.filter((em) => em.track === emailTrack)
+  const e = trackEmails[Math.min(emailIdx, trackEmails.length - 1)]
+  const prevEmail = () => setEmailIdx((i) => (i - 1 + trackEmails.length) % trackEmails.length)
+  const nextEmail = () => setEmailIdx((i) => (i + 1) % trackEmails.length)
+  const pickEmailTrack = (t: EmailTrack) => {
+    setEmailTrack(t)
+    setEmailIdx(0)
+  }
 
   return (
     <div className="campaign-page">
@@ -1230,60 +1239,81 @@ export default function PRCampaignPage() {
           </div>
         </section>
 
-        {/* ════ EMAILS PR CAMPAIGN (accordion) ════ */}
-        <Divider num="07" title="Emails PR Campaign" sub="The client email sequence — open to view designs" />
+        {/* ════ EMAILS PR CAMPAIGN ════ */}
+        <Divider num="07" title="Emails PR Campaign" sub="Three sequences — click through to view each email" />
 
         <section className="cp-section">
-          <button
-            className={`prc-accordion__header ${emailsOpen ? 'is-open' : ''}`}
-            onClick={() => setEmailsOpen((v) => !v)}
-            aria-expanded={emailsOpen}
-          >
-            <div className="prc-accordion__text">
-              <span className="cp-section__badge cp-section__badge--strategy">Email Campaign</span>
-              <h2 className="cp-section__title">Emails PR Campaign</h2>
-              <p className="cp-section__desc">
-                Three separate sequences — one for New Image Labs clients, one for Onrite clients, and one for Hairloss.com customers. Click to view the designs.
-              </p>
-            </div>
-            <span className="prc-accordion__chevron">{emailsOpen ? '▲' : '▼'}</span>
-          </button>
+          <span className="cp-section__badge cp-section__badge--strategy">Email Campaign</span>
+          <h2 className="cp-section__title">Emails PR Campaign</h2>
+          <p className="cp-section__desc">
+            Three separate sequences — one for New Image Labs clients, one for Onrite clients, and one for Hairloss.com customers. Each gets its own message.
+          </p>
 
-          {emailsOpen && (
-            <div className="prc-email-tracks">
-              {(['nil', 'onrite', 'hairloss'] as const).map((track) => (
-                <div key={track} className="prc-email-track">
-                  <div className="prc-subhead">{emailTrackMeta[track].label}</div>
-                  <div className="prc-emails">
-                    {emails.filter((em) => em.track === track).map((email) => (
-                      <div key={`${email.track}-${email.num}`} className="prc-email">
-                        <div className="prc-email__meta">
-                          <div className="prc-email__meta-top">
-                            <span className="prc-email__num">
-                              {emailTrackMeta[email.track].short} · {email.num}
-                            </span>
-                            <span className="prc-email__send">{email.send}</span>
-                          </div>
-                          <div className="prc-email__audience">→ {email.timing}</div>
-                          <div className="prc-email__goal">
-                            <span className="prc-email__goal-label">Goal</span>
-                            {email.goal}
-                          </div>
-                          <div className="prc-email__goal">
-                            <span className="prc-email__goal-label">Tone</span>
-                            {email.tone}
-                          </div>
-                        </div>
+          {/* Overview — scoped email titles per track */}
+          <div className="prc-email-overview-grid">
+            {(['nil', 'onrite', 'hairloss'] as const).map((track) => (
+              <div key={track} className="prc-email-overcol">
+                <div className="prc-email-overcol__label">{emailTrackMeta[track].label}</div>
+                {emails.filter((em) => em.track === track).map((em) => (
+                  <button
+                    key={`${em.track}-${em.num}`}
+                    className="prc-email-orow"
+                    onClick={() => {
+                      setEmailTrack(em.track)
+                      setEmailIdx(emails.filter((x) => x.track === em.track).findIndex((x) => x.num === em.num))
+                    }}
+                  >
+                    <span className="prc-email-orow__num">{emailTrackMeta[em.track].short} · {em.num}</span>
+                    <span className="prc-email-orow__send">{em.send}</span>
+                    <span className="prc-email-orow__subject">{em.subject}</span>
+                  </button>
+                ))}
+              </div>
+            ))}
+          </div>
 
-                        {/* Email design — formal letter */}
-                        <EmailMock email={email} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+          {/* Click-through carousel */}
+          <div className="prc-carousel">
+            <div className="prc-email-tabs">
+              {(['nil', 'onrite', 'hairloss'] as const).map((t) => (
+                <button
+                  key={t}
+                  className={`prc-tab ${emailTrack === t ? 'is-active' : ''}`}
+                  onClick={() => pickEmailTrack(t)}
+                >
+                  {emailTrackMeta[t].label}
+                </button>
               ))}
             </div>
-          )}
+
+            <div className="prc-carousel__bar">
+              <button className="prc-cbtn" onClick={prevEmail} aria-label="Previous email">←</button>
+              <div className="prc-carousel__meta">
+                <span className="prc-carousel__num">Email {e.num} of {trackEmails.length}</span>
+                <span className="prc-carousel__send">Sends {e.send}</span>
+                <span className="prc-carousel__rel">{e.timing}</span>
+              </div>
+              <button className="prc-cbtn" onClick={nextEmail} aria-label="Next email">→</button>
+            </div>
+
+            <div className="prc-carousel__goal">
+              <span className="prc-carousel__goal-label">Goal</span> {e.goal}
+              <span className="prc-carousel__goal-label">Tone</span> {e.tone}
+            </div>
+
+            <EmailMock email={e} />
+
+            <div className="prc-dots">
+              {trackEmails.map((em, i) => (
+                <button
+                  key={`${em.track}-${em.num}`}
+                  className={`prc-dot ${i === emailIdx ? 'is-active' : ''}`}
+                  onClick={() => setEmailIdx(i)}
+                  aria-label={`Email ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </section>
       </main>
 
