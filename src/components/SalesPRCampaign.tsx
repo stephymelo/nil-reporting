@@ -20,7 +20,7 @@ const flowSteps: { kind: 'date' | 'action'; date?: string; label: string; detail
 const phases: { tag: string; when: string; title: string; desc: string; imports?: string }[] = [
   { tag: 'Phase 1', when: 'Live Aug 3', title: 'Launch Products', desc: 'All NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line.', imports: 'Importing customers from New Image Labs.' },
   { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of Onrite', desc: 'Progen wholesale pricing and the remaining Onrite products.', imports: 'Importing customers from Progen. Onrite customers — TBD.' },
-  { tag: 'Phase 3', when: 'October', title: 'Custom Orders Online', desc: 'Customers place their custom orders online themselves.' },
+  { tag: 'Phase 3', when: 'End of year', title: 'Custom Orders Online', desc: 'Customers place their custom orders online themselves.' },
 ]
 
 // ── Component ─────────────────────────────────────────────────────────────────

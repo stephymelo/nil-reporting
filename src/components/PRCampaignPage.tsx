@@ -127,7 +127,7 @@ const phases: RolloutPhase[] = [
   },
   {
     num: 'Phase 3',
-    when: 'October',
+    when: 'End of year',
     title: 'Custom Orders Online',
     desc: 'Put custom ordering on the website so customers can place their custom orders online themselves.',
     variant: '3',
@@ -322,7 +322,7 @@ const timeline: TimelineWindow[] = [
       },
       {
         title: 'Phase 3 — Custom Orders Online',
-        date: 'October',
+        date: 'End of year',
         desc: 'Put custom ordering on the website so customers can place their custom orders online.',
         tracks: ['website'],
       },
@@ -924,7 +924,7 @@ export default function PRCampaignPage() {
             <span className="cp-section__badge cp-section__badge--strategy">Rollout</span>
             <h2 className="cp-section__title">Two Phases</h2>
             <p className="cp-section__desc">
-              Phase 1 gets the launch products live. Phase 2 brings Progen wholesale pricing and the rest of Onrite. Phase 3 adds custom orders online in October.
+              Phase 1 gets the launch products live. Phase 2 brings Progen wholesale pricing and the rest of Onrite. Phase 3 adds custom orders online by the end of the year.
             </p>
           </div>
 
