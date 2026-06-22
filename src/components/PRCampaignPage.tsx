@@ -568,7 +568,7 @@ export const emails: EmailDesign[] = [
     tone: 'Professional and reassuring. Business to business.',
     body: [
       'For more than 50 years, you have trusted New Image Labs as your professional provider in the hair replacement industry. As part of our continued commitment to serving your business, we are bringing that experience onto a single platform: Hairloss.com.',
-      'Instead of working across separate sites, your account, products, and ordering will be in one place. The things that matter most stay the same — your pricing tier, the products you order, and the sales and support team you work with.',
+      'Instead of working across separate sites, your account, products, and ordering will be in one place. At launch on August 3 you will also find select Onrite products on Hairloss.com, with more added over time. The things that matter most stay the same — your pricing tier, the products you order, and the sales and support team you work with.',
       'One change to note: going forward, you will sign in to your account to view pricing on certain products. Your pricing tier stays exactly the same — it simply lives behind your login.',
       'There is no action required today. Over the coming weeks we will share what to expect as we move to the new platform.',
       'If you have any questions, please contact your sales representative.',
@@ -638,6 +638,7 @@ export const emails: EmailDesign[] = [
     tone: 'Professional and welcoming. Business to business.',
     body: [
       'Hairloss.com is now live. Sign in to your account to view your pricing, browse your full catalog, and place orders in one convenient location.',
+      'You will also find select Onrite products available at launch, with more being added over time.',
       'Remember, you will receive 10% off your first online order on Hairloss.com.',
       'If you have not yet received your activation email, please contact your sales representative or message us on the website chat.',
     ],
@@ -725,7 +726,7 @@ export const emails: EmailDesign[] = [
     goal: 'Launch: invite retail customers to explore the expanded catalog.',
     tone: 'Friendly, upbeat, consumer-facing.',
     body: [
-      'Hairloss.com just got bigger. We have brought more of the brands and products you trust together in one place, making it easier to find the right solution for you.',
+      'Hairloss.com just got bigger. We have brought more of the brands and products you trust together in one place, including select Onrite products at launch, making it easier to find the right solution for you.',
       'Explore the new catalog and discover what is now available.',
       'Questions? We are here on the website chat.',
     ],
