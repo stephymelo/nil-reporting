@@ -17,11 +17,32 @@ const flowSteps: { kind: 'date' | 'action'; date?: string; label: string; detail
   { kind: 'date', date: 'Aug 3', label: 'Launch — everything on Hairloss.com', detail: 'NIL & Onrite each return as their own landing page that redirects to Hairloss.com. Order online, all in one place.' },
 ]
 
-const phases: { tag: string; when: string; title: string; desc: string; imports?: string }[] = [
-  { tag: 'Phase 1', when: 'Live Aug 3', title: 'Launch Products', desc: 'All NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line.', imports: 'Importing customers from New Image Labs.' },
-  { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of Onrite', desc: 'Progen wholesale pricing and the remaining Onrite products.', imports: 'Importing customers from Progen. Onrite customers — TBD.' },
-  { tag: 'Phase 3', when: 'End of year', title: 'Custom Orders Online', desc: 'Customers place their custom orders online themselves.' },
+const phases: { tag: string; when: string; title: string; desc: string }[] = [
+  { tag: 'Phase 1', when: 'Live Aug 3', title: 'Launch Products', desc: 'All NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line.' },
+  { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of Onrite', desc: 'Progen wholesale pricing and the remaining Onrite products.' },
+  { tag: 'Phase 3', when: 'End of year', title: 'Custom Orders Online', desc: 'For now, custom orders are duplicated from the NIL system and transferred over manually — until customers can place them online themselves.' },
 ]
+
+// How a lead becomes a live account — the visible path
+const leadFlow: { step: string; label: string; detail: string }[] = [
+  { step: '01', label: 'Lead comes in', detail: 'A B2B form, a sales call, or a retail sign-up on Hairloss.com.' },
+  { step: '02', label: 'Account created in SAP', detail: 'The customer and company are set up in SAP — our single source of truth.' },
+  { step: '03', label: 'Live on Hairloss.com', detail: 'The account syncs to Hairloss.com. The customer signs in passwordless and sees their pricing.' },
+]
+
+// ── Section cover ─────────────────────────────────────────────────────────────
+
+function Cover({ part, title, sub }: { part: string; title: string; sub: string }) {
+  return (
+    <section className="spr-slide spr-cover">
+      <div className="spr-slide__inner">
+        <div className="spr-cover__part">{part}</div>
+        <h2 className="spr-cover__title">{title}</h2>
+        <p className="spr-cover__sub">{sub}</p>
+      </div>
+    </section>
+  )
+}
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -39,23 +60,23 @@ export default function SalesPRCampaign() {
 
   return (
     <div className="spr-deck">
-      {/* 1 — Title */}
+      {/* Title */}
       <section className="spr-slide spr-slide--hero">
-        <div className="spr-num">01 / 11</div>
         <div className="spr-slide__inner">
-          <p className="spr-eyebrow spr-eyebrow--light">Sales Team Briefing</p>
+          <p className="spr-hero-eyebrow">Sales Team Briefing</p>
           <h1 className="spr-hero-title">
-            New Image Labs + Onrite<br />
-            <span>→ Hairloss.com</span>
+            New Image Labs + Onrite
+            <br />
+            <span>are moving to Hairloss.com</span>
           </h1>
           <p className="spr-hero-sub">PR Campaign &amp; Posting Plan</p>
           <div className="spr-hero-dates">June – August 2026 · Launch Aug 3</div>
         </div>
       </section>
 
-      {/* 2 — What's happening */}
+      {/* What's happening */}
       <section className="spr-slide">
-        <div className="spr-num">02 / 11</div>
+        <div className="spr-num">01</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">The Move</p>
           <h2 className="spr-title">What's happening</h2>
@@ -70,9 +91,9 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 3 — Phases */}
-      <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">03 / 11</div>
+      {/* Three phases */}
+      <section className="spr-slide spr-slide--alt">
+        <div className="spr-num">02</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Rollout</p>
           <h2 className="spr-title">Three phases</h2>
@@ -91,11 +112,14 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 4 — The message */}
+      {/* ════ PART 01 — SALES TEAM ════ */}
+      <Cover part="Part 01" title="For the Sales Team" sub="Your role, what to tell clients, and how the next two months flow." />
+
+      {/* How we talk about it */}
       <section className="spr-slide">
-        <div className="spr-num">04 / 11</div>
+        <div className="spr-num">03</div>
         <div className="spr-slide__inner">
-          <p className="spr-eyebrow">The Message</p>
+          <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">How we talk about it</h2>
           <div className="spr-two-col">
             <div className="spr-card">
@@ -121,11 +145,87 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 5 — Flow & key dates (diagram) */}
-      <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">05 / 11</div>
+      {/* The Hairloss.com sales rep (BEFORE your role) */}
+      <section className="spr-slide spr-slide--alt">
+        <div className="spr-num">04</div>
         <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Flow &amp; Dates</p>
+          <p className="spr-eyebrow">Sales Team</p>
+          <h2 className="spr-title">The Hairloss.com sales rep</h2>
+          <p className="spr-note">One full-time rep owns everything Hairloss.com. Redirect your clients to this rep to learn how to purchase online.</p>
+          <div className="spr-card">
+            <div className="spr-card__label">Owns everything HL.com</div>
+            <ul>
+              <li>Manages all leads (retail + B2B), the contact form &amp; inbox chat</li>
+              <li>Onboards customers — 10% off the first online order on Hairloss.com</li>
+              <li>Reviews B2B forms, creates accounts, assigns catalog price + territory</li>
+              <li>Manages retail, online orders &amp; any other HL.com customer issue</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Your role */}
+      <section className="spr-slide">
+        <div className="spr-num">05</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Sales Team</p>
+          <h2 className="spr-title">Your role</h2>
+          <ul className="spr-points">
+            <li><strong>One full-time rep</strong> owns everything Hairloss.com — all leads (retail + B2B), onboardings, and orders. The team redirects clients to this rep.</li>
+            <li>Open with reassurance: <strong>same pricing tier, same products, same sales consultant</strong> — nothing they rely on changes.</li>
+            <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* What to tell clients */}
+      <section className="spr-slide spr-slide--alt">
+        <div className="spr-num">06</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Sales Team</p>
+          <h2 className="spr-title">What to tell clients</h2>
+          <ul className="spr-points">
+            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The site goes offline at the end of the day <strong>Friday, July 31</strong> and is unavailable through the weekend. On <strong>Monday, August 3</strong>, NIL &amp; Onrite each come back as their own landing page that redirects to Hairloss.com for purchasing.</li>
+            <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
+            <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
+            <li>Mention the move when you're <strong>on the phone</strong> — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* It still counts as your sale (reassurance) */}
+      <section className="spr-slide">
+        <div className="spr-num">07</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Sales Team</p>
+          <h2 className="spr-title">It still counts as your sale</h2>
+          <p className="spr-statement">This works <strong>with you</strong>, not against you. Promote Hairloss.com with confidence — nothing is being taken away.</p>
+          <div className="spr-two-col">
+            <div className="spr-card">
+              <div className="spr-card__label">Still your numbers</div>
+              <ul>
+                <li>Online orders still count toward your sales budget</li>
+                <li>Nothing is taken away from you — you keep the credit</li>
+                <li>We're working with you, so you can promote it comfortably</li>
+              </ul>
+            </div>
+            <div className="spr-card">
+              <div className="spr-card__label">More ways to sell</div>
+              <ul>
+                <li>It's <strong>both retail and wholesale</strong> — not one or the other</li>
+                <li>An easier place to point clients, with promotions to offer</li>
+                <li>More reach driving customers your way</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Flow & dates — AFTER the sales team slides */}
+      <section className="spr-slide spr-slide--alt">
+        <div className="spr-num">08</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">How it flows</h2>
           <div className="spr-flow-legend">
             <span><span className="spr-flow-dot spr-flow-dot--date" /> Key date</span>
@@ -146,62 +246,37 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* Social slide hidden for now — posting plan not finalized */}
+      {/* ════ PART 02 — ACCOUNTS ════ */}
+      <Cover part="Part 02" title="Accounts" sub="How a lead becomes a live account on Hairloss.com." />
 
-      {/* 7 — Your role (part 1) */}
-      <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">06 / 11</div>
-        <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Sales</p>
-          <h2 className="spr-title">Your role</h2>
-          <ul className="spr-points">
-            <li><strong>One full-time rep</strong> owns everything Hairloss.com — all leads (retail + B2B), onboardings, and orders. The team redirects clients to this rep.</li>
-            <li>Open with reassurance: <strong>same pricing tier, same products, same sales consultant</strong> — nothing they rely on changes.</li>
-            <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* 8 — Your role (part 2) */}
+      {/* From lead to live account — the visible path */}
       <section className="spr-slide">
-        <div className="spr-num">07 / 11</div>
+        <div className="spr-num">09</div>
         <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Sales</p>
-          <h2 className="spr-title">What to tell clients</h2>
-          <ul className="spr-points">
-            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The site goes offline at the end of the day <strong>Friday, July 31</strong> and is unavailable through the weekend. On <strong>Monday, August 3</strong>, NIL &amp; Onrite each come back as their own landing page that redirects to Hairloss.com for purchasing.</li>
-            <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
-            <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
-            <li>Mention the move when you're <strong>on the phone</strong> — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* 9 — The Hairloss.com sales rep */}
-      <section className="spr-slide">
-        <div className="spr-num">08 / 11</div>
-        <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Sales Team</p>
-          <h2 className="spr-title">The Hairloss.com sales rep</h2>
-          <p className="spr-note">One full-time rep owns everything Hairloss.com. Redirect your clients to this rep to learn how to purchase online.</p>
-          <div className="spr-card">
-            <div className="spr-card__label">Owns everything HL.com</div>
-            <ul>
-              <li>Manages all leads (retail + B2B), the contact form &amp; inbox chat</li>
-              <li>Onboards customers — 10% off the first online order on Hairloss.com</li>
-              <li>Reviews B2B forms, creates accounts, assigns catalog price + territory</li>
-              <li>Manages retail, online orders &amp; any other HL.com customer issue</li>
-            </ul>
+          <p className="spr-eyebrow">Accounts</p>
+          <h2 className="spr-title">From lead to live account</h2>
+          <p className="spr-note">Every account follows the same path. Leads come in, the account is created in SAP, then it goes live on Hairloss.com.</p>
+          <div className="spr-leadflow">
+            {leadFlow.map((s, i) => (
+              <div key={s.step} className="spr-lf-wrap">
+                <div className="spr-lf">
+                  <span className="spr-lf__step">{s.step}</span>
+                  <span className="spr-lf__label">{s.label}</span>
+                  <span className="spr-lf__detail">{s.detail}</span>
+                </div>
+                {i < leadFlow.length - 1 && <div className="spr-lf-arrow" aria-hidden="true">→</div>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10 — Account workflows */}
-      <section className="spr-slide spr-slide--tint">
-        <div className="spr-num">09 / 11</div>
+      {/* Three ways an account is created */}
+      <section className="spr-slide spr-slide--alt spr-slide--tall">
+        <div className="spr-num">10</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Accounts</p>
-          <h2 className="spr-title">How accounts get created</h2>
+          <h2 className="spr-title">Three ways an account is created</h2>
           <p className="spr-note">Every new account sees retail pricing automatically. There are three ways an account is created:</p>
           <div className="spr-wf-grid">
             {accountWorkflows.map((wf) => (
@@ -222,11 +297,14 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 11 — Email campaign intro */}
+      {/* ════ PART 03 — PR CAMPAIGN ════ */}
+      <Cover part="Part 03" title="PR Campaign" sub="The client email sequences — by audience." />
+
+      {/* Emails by audience */}
       <section className="spr-slide">
-        <div className="spr-num">10 / 11</div>
+        <div className="spr-num">11</div>
         <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Email Campaign</p>
+          <p className="spr-eyebrow">PR Campaign</p>
           <h2 className="spr-title">Emails by audience</h2>
           <p className="spr-note">Three separate sequences — New Image Labs clients, Onrite clients, and Hairloss.com customers. Each gets its own message.</p>
           <div className="spr-email-tracks">
@@ -234,11 +312,11 @@ export default function SalesPRCampaign() {
               <div key={track} className="spr-email-trackgroup">
                 <div className="spr-email-trackgroup__label">{emailTrackMeta[track].label}</div>
                 <div className="spr-email-overview">
-                  {emails.filter((em) => em.track === track).map((e) => (
-                    <div key={`${e.track}-${e.num}`} className="spr-email-row">
-                      <span className="spr-email-row__num">{emailTrackMeta[e.track].short} · {e.num}</span>
-                      <span className="spr-email-row__send">{e.send}</span>
-                      <span className="spr-email-row__subject">{e.subject}</span>
+                  {emails.filter((em) => em.track === track).map((em) => (
+                    <div key={`${em.track}-${em.num}`} className="spr-email-row">
+                      <span className="spr-email-row__num">{emailTrackMeta[em.track].short} · {em.num}</span>
+                      <span className="spr-email-row__send">{em.send}</span>
+                      <span className="spr-email-row__subject">{em.subject}</span>
                     </div>
                   ))}
                 </div>
@@ -248,11 +326,11 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* 12 — Email details (carousel) */}
-      <section className="spr-slide spr-slide--tall spr-slide--tint">
-        <div className="spr-num">11 / 11</div>
+      {/* Email details (carousel) */}
+      <section className="spr-slide spr-slide--alt spr-slide--tall">
+        <div className="spr-num">12</div>
         <div className="spr-slide__inner">
-          <p className="spr-eyebrow">Email Campaign</p>
+          <p className="spr-eyebrow">PR Campaign</p>
           <h2 className="spr-title">When each email sends &amp; what it says</h2>
 
           <div className="spr-carousel">
