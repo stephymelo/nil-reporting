@@ -392,13 +392,13 @@ export const accountWorkflows: AccountWorkflow[] = [
     who: 'Customer registers with the B2B form',
     steps: [
       { label: 'Fills out the B2B form', desc: 'Account is created at sign-up and they see retail pricing right away.' },
-      { label: 'Assigned a territory', desc: 'The lead is sent to the territory leader for that area to review.' },
-      { label: 'Catalog pricing unlocks', desc: 'The territory leader assigns their tier, and catalog pricing replaces retail on login.', final: true },
+      { label: 'Hairloss rep creates their B2B account', desc: 'If the info is correct, the rep creates their B2B account with a pricing tier assigned. If not, they reach out.' },
+      { label: 'Assigned a territory', desc: 'Once the account is created, they\'re assigned a territory and sent to that territory leader to follow up and keep track.', final: true },
     ],
     emails: [
       'Auto-email on submit: "We\'re reviewing your info to set up your wholesale pricing. For now, you have retail pricing."',
     ],
-    note: 'Leads are routed by territory — the territory leader reviews and assigns the catalog-pricing tier.',
+    note: 'The rep creates the B2B account and assigns the pricing tier; the customer is then routed to a territory leader for follow-up.',
   },
   {
     num: 'Workflow 3',
