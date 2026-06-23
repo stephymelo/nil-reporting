@@ -625,7 +625,7 @@ export const emails: EmailDesign[] = [
       'We have successfully transferred your account information to Hairloss.com. You can continue ordering here with the same pricing tier you have always had.',
       'You will receive an activation email from Hairloss.com — sign in with the same email address it was sent to. Sign-in is passwordless, with a one-time code.',
       'As a welcome, you will receive 10% off your first online order on Hairloss.com.',
-      'If you do not see your pricing when you sign in, please contact your sales representative or message us on the website chat.',
+      'If you do not see your pricing when you sign in, please contact your sales representative.',
     ],
     cta: '',
   },
@@ -642,7 +642,7 @@ export const emails: EmailDesign[] = [
       'Hairloss.com is now live. Sign in to your account to view your pricing, browse your full catalog, and place orders in one convenient location.',
       'You will also find select OnRite products available at launch, with more being added over time.',
       'Remember, you will receive 10% off your first online order on Hairloss.com.',
-      'If you have not yet received your activation email, please contact your sales representative or message us on the website chat.',
+      'If you have not yet received your activation email, please contact your sales representative.',
     ],
     cta: 'Sign in to Hairloss.com',
   },
@@ -694,7 +694,7 @@ export const emails: EmailDesign[] = [
     body: [
       'Hairloss.com is now live. Sign in to your professional account to see your pricing and order OnRite products — and more — in one place.',
       'Remember, you will receive 10% off your first online order on Hairloss.com.',
-      'If you have not yet created your account or do not see your pricing, please contact your sales representative or message us on the website chat.',
+      'If you have not yet created your account or do not see your pricing, please contact your sales representative.',
     ],
     cta: 'Sign in to Hairloss.com',
   },
@@ -726,11 +726,10 @@ export const emails: EmailDesign[] = [
     goal: 'Launch: invite retail customers to explore the expanded catalog.',
     tone: 'Friendly, upbeat, consumer-facing.',
     body: [
-      'Hairloss.com just got bigger. We have brought more of the brands and products you trust together in one place, including select OnRite products at launch, making it easier to find the right solution for you.',
-      'Explore the new catalog and discover what is now available.',
-      'Questions? We are here on the website chat.',
+      'Hairloss.com just got bigger — we now have New Image Labs and select OnRite products in one place.',
+      'Explore now the new products added to Hairloss.com.',
     ],
-    cta: 'Shop Hairloss.com',
+    cta: 'Explore Now',
   },
 ]
 
