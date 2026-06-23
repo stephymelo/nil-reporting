@@ -90,9 +90,24 @@ export default function SalesPRCampaign() {
         </div>
       </section>
 
-      {/* Three phases */}
+      {/* The landing pages stay up */}
       <section className="spr-slide spr-slide--alt">
         <div className="spr-num">02</div>
+        <div className="spr-slide__inner">
+          <p className="spr-eyebrow">The Move</p>
+          <h2 className="spr-title">The landing pages stay up</h2>
+          <ul className="spr-points">
+            <li>New Image Labs and OnRite each <strong>keep their own website landing page</strong>.</li>
+            <li>Each landing page still <strong>shows the catalog</strong>, so clients can browse what we offer.</li>
+            <li>To buy, the landing pages <strong>redirect to Hairloss.com</strong> for online purchasing.</li>
+            <li>Clients can also still <strong>contact us right from the landing pages</strong> — nothing changes there.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Three phases */}
+      <section className="spr-slide spr-slide--alt">
+        <div className="spr-num">03</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Rollout</p>
           <h2 className="spr-title">Three phases</h2>
@@ -116,7 +131,7 @@ export default function SalesPRCampaign() {
 
       {/* How we talk about it */}
       <section className="spr-slide">
-        <div className="spr-num">03</div>
+        <div className="spr-num">04</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">How we talk about it</h2>
@@ -146,7 +161,7 @@ export default function SalesPRCampaign() {
 
       {/* The Hairloss.com sales rep (BEFORE your role) */}
       <section className="spr-slide spr-slide--alt">
-        <div className="spr-num">04</div>
+        <div className="spr-num">05</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">The Hairloss.com sales rep</h2>
@@ -165,21 +180,21 @@ export default function SalesPRCampaign() {
 
       {/* Your role */}
       <section className="spr-slide">
-        <div className="spr-num">05</div>
+        <div className="spr-num">06</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">Your role</h2>
           <ul className="spr-points">
-            <li><strong>One full-time rep</strong> owns everything Hairloss.com — all leads (retail + B2B), onboardings, and orders. The team redirects clients to this rep for troubleshooting website orders and anything else related to the website.</li>
             <li>Open with reassurance: <strong>same pricing tier, same products, same sales consultant</strong> — nothing they rely on changes.</li>
             <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code.</li>
+            <li>Use the <strong>script &amp; FAQs</strong> (English &amp; Español) to answer client questions — so everyone gives the same answers.</li>
           </ul>
         </div>
       </section>
 
       {/* What to tell clients */}
       <section className="spr-slide spr-slide--alt">
-        <div className="spr-num">06</div>
+        <div className="spr-num">07</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">What to tell clients</h2>
@@ -194,7 +209,7 @@ export default function SalesPRCampaign() {
 
       {/* It still counts as your sale (reassurance) */}
       <section className="spr-slide">
-        <div className="spr-num">07</div>
+        <div className="spr-num">08</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">It still counts as your sale</h2>
@@ -222,7 +237,7 @@ export default function SalesPRCampaign() {
 
       {/* Flow & dates — AFTER the sales team slides */}
       <section className="spr-slide spr-slide--alt">
-        <div className="spr-num">08</div>
+        <div className="spr-num">09</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">How it flows</h2>
@@ -250,7 +265,7 @@ export default function SalesPRCampaign() {
 
       {/* From lead to live account — the visible path */}
       <section className="spr-slide">
-        <div className="spr-num">09</div>
+        <div className="spr-num">10</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Accounts</p>
           <h2 className="spr-title">From lead to live account</h2>
@@ -272,7 +287,7 @@ export default function SalesPRCampaign() {
 
       {/* Three ways an account is created */}
       <section className="spr-slide spr-slide--alt spr-slide--tall">
-        <div className="spr-num">10</div>
+        <div className="spr-num">11</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Accounts</p>
           <h2 className="spr-title">Three ways an account is created</h2>
@@ -301,7 +316,7 @@ export default function SalesPRCampaign() {
 
       {/* Emails by audience */}
       <section className="spr-slide">
-        <div className="spr-num">11</div>
+        <div className="spr-num">12</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">PR Campaign</p>
           <h2 className="spr-title">Emails by audience</h2>
@@ -327,7 +342,7 @@ export default function SalesPRCampaign() {
 
       {/* Email details (carousel) */}
       <section className="spr-slide spr-slide--alt spr-slide--tall">
-        <div className="spr-num">12</div>
+        <div className="spr-num">13</div>
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">PR Campaign</p>
           <h2 className="spr-title">When each email sends &amp; what it says</h2>
