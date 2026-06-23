@@ -26,8 +26,8 @@ const phases: { tag: string; when: string; title: string; desc: string }[] = [
 // How a lead becomes a live account — the visible path
 const leadFlow: { step: string; label: string; detail: string }[] = [
   { step: '01', label: 'Lead comes in', detail: 'A B2B form on Hairloss.com, or a sales call.' },
-  { step: '02', label: 'Account created in SAP', detail: 'The customer and company are set up in SAP.' },
-  { step: '03', label: 'Live on Hairloss.com', detail: 'The account syncs to Hairloss.com. The customer signs in passwordless and sees their pricing.' },
+  { step: '02', label: 'B2B account created in SAP & Shopify', detail: 'The customer and company are set up in SAP and Shopify.' },
+  { step: '03', label: 'Live on Hairloss.com', detail: 'The customer signs in passwordless and sees their pricing.' },
 ]
 
 // ── Section cover ─────────────────────────────────────────────────────────────
@@ -269,7 +269,7 @@ export default function SalesPRCampaign() {
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Accounts</p>
           <h2 className="spr-title">From lead to live account</h2>
-          <p className="spr-note">Every account follows the same path. Leads come in, the account is created in SAP, then it goes live on Hairloss.com.</p>
+          <p className="spr-note">Every account follows the same path. Leads come in, the B2B account is created in SAP and Shopify, then it goes live on Hairloss.com.</p>
           <div className="spr-leadflow">
             {leadFlow.map((s, i) => (
               <div key={s.step} className="spr-lf-wrap">
