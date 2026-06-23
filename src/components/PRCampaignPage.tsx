@@ -1087,7 +1087,8 @@ export default function PRCampaignPage() {
           <p className="prc-roles-intro">
             One full-time rep owns everything Hairloss.com — managing leads, onboarding customers, and
             explaining how to purchase online. The rest of the sales team can redirect their clients to
-            this rep to better understand how to buy on Hairloss.com.
+            this rep to learn how to buy on Hairloss.com, to troubleshoot website orders, and for anything
+            else related to the website.
           </p>
 
           <div className="prc-role prc-role--b2b">
@@ -1105,7 +1106,7 @@ export default function PRCampaignPage() {
                 <li>Onboards customers — including the first-purchase offer: 10% off the first online order on Hairloss.com</li>
                 <li>Reviews B2B forms, creates accounts, and assigns catalog price + territory</li>
                 <li>Manages retail, online orders, and any other Hairloss.com customer issue</li>
-                <li>The wider sales team redirects clients here to learn how to purchase online</li>
+                <li>The wider sales team redirects clients here to learn how to purchase online, to troubleshoot website orders, and for anything else related to the website</li>
               </ul>
             </div>
           </div>

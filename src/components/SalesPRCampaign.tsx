@@ -151,7 +151,7 @@ export default function SalesPRCampaign() {
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">The Hairloss.com sales rep</h2>
-          <p className="spr-note">One full-time rep owns everything Hairloss.com. Redirect your clients to this rep to learn how to purchase online.</p>
+          <p className="spr-note">One full-time rep owns everything Hairloss.com. Redirect your clients to this rep to learn how to purchase online, to troubleshoot website orders, and for anything else related to the website.</p>
           <div className="spr-card">
             <div className="spr-card__label">Owns everything HL.com</div>
             <ul>
@@ -171,7 +171,7 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">Your role</h2>
           <ul className="spr-points">
-            <li><strong>One full-time rep</strong> owns everything Hairloss.com — all leads (retail + B2B), onboardings, and orders. The team redirects clients to this rep.</li>
+            <li><strong>One full-time rep</strong> owns everything Hairloss.com — all leads (retail + B2B), onboardings, and orders. The team redirects clients to this rep for troubleshooting website orders and anything else related to the website.</li>
             <li>Open with reassurance: <strong>same pricing tier, same products, same sales consultant</strong> — nothing they rely on changes.</li>
             <li>Explain accounts: their rep creates the account; they get an <strong>activation email from Hairloss.com</strong> and sign in with that same email — <strong>passwordless</strong>, via a one-time code.</li>
           </ul>
