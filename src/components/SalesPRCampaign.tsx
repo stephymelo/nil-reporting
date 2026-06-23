@@ -25,8 +25,8 @@ const phases: { tag: string; when: string; title: string; desc: string }[] = [
 
 // How a lead becomes a live account — the visible path
 const leadFlow: { step: string; label: string; detail: string }[] = [
-  { step: '01', label: 'Lead comes in', detail: 'A B2B form, a sales call, or a retail sign-up on Hairloss.com.' },
-  { step: '02', label: 'Account created in SAP', detail: 'The customer and company are set up in SAP — our single source of truth.' },
+  { step: '01', label: 'Lead comes in', detail: 'A B2B form on Hairloss.com, or a sales call.' },
+  { step: '02', label: 'Account created in SAP', detail: 'The customer and company are set up in SAP.' },
   { step: '03', label: 'Live on Hairloss.com', detail: 'The account syncs to Hairloss.com. The customer signs in passwordless and sees their pricing.' },
 ]
 
