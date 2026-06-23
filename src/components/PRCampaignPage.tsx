@@ -713,8 +713,6 @@ export const emails: EmailDesign[] = [
       'We are making a few updates to Hairloss.com to bring more of the brands and products you love together in one place.',
       'Some products are getting new names, so you may notice a few familiar favorites under updated titles.',
       'A number of products are also moving into our professional range. To keep seeing pricing on all your favorite products, simply log in to your account.',
-      'Creating a free account takes a moment — sign-in is passwordless, with a one-time code sent to your email.',
-      'Questions? Reach us anytime on the website chat.',
     ],
     cta: '',
   },
