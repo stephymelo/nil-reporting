@@ -16,7 +16,7 @@ const vercelIncluded: { icon: string; title: string; desc: string }[] = [
   { icon: '🌐', title: 'Custom domains + SSL', desc: 'Connect each brand\'s domain with automatic HTTPS — secure out of the box.' },
   { icon: '⚡', title: 'Global edge CDN', desc: 'Pages are served from the edge, so they load fast for visitors anywhere.' },
   { icon: '🔁', title: 'Push-to-publish deploys', desc: 'Every change deploys automatically, with a preview link to review before it goes live.' },
-  { icon: '🗂️', title: 'Two projects, one plan', desc: 'Both the NIL and Onrite landing pages run under a single Pro team — no second bill.' },
+  { icon: '🗂️', title: 'Two projects, one plan', desc: 'Both the NIL and OnRite landing pages run under a single Pro team — no second bill.' },
   { icon: '📈', title: 'Higher limits', desc: 'More bandwidth and build minutes than the free tier — room for traffic and growth.' },
   { icon: '🔒', title: 'Secure by default', desc: 'DDoS protection and HTTPS on everything, managed for us.' },
   { icon: '📊', title: 'Analytics + Speed Insights', desc: 'See traffic and page performance for each landing page.' },
@@ -53,7 +53,7 @@ export default function LandingPageProject() {
         <section className="lpp-scope">
           <div className="lpp-scope__label">Scope</div>
           <div className="lpp-scope__text">
-            All NIL men's units and some Onrite men's units — two landing pages.
+            All NIL men's units and some OnRite men's units — two landing pages.
           </div>
         </section>
 
@@ -91,7 +91,7 @@ export default function LandingPageProject() {
         <section>
           <h2 className="lpp-h2">Why Vercel — Pro Plan</h2>
           <p className="lpp-vercel-sub">
-            One $20/month Pro plan hosts both the NIL and Onrite landing pages. Here's what it covers and why it's the right fit.
+            One $20/month Pro plan hosts both the NIL and OnRite landing pages. Here's what it covers and why it's the right fit.
           </p>
           <div className="lpp-features">
             {vercelIncluded.map((f) => (

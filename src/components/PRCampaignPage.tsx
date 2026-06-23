@@ -27,7 +27,7 @@ export type EmailTrack = 'nil' | 'onrite' | 'hairloss'
 
 export const emailTrackMeta: Record<EmailTrack, { label: string; short: string }> = {
   nil: { label: 'New Image Labs clients', short: 'NIL' },
-  onrite: { label: 'Onrite clients', short: 'Onrite' },
+  onrite: { label: 'OnRite clients', short: 'OnRite' },
   hairloss: { label: 'Hairloss.com customers', short: 'HL.com' },
 }
 
@@ -73,10 +73,10 @@ const phases: RolloutPhase[] = [
     productsLabel: 'Going live Aug 3',
     products: [
       'All NIL men\'s units',
-      'Some Onrite men\'s units',
-      'Women\'s Onrite units',
-      'Permarite adhesives (Onrite)',
-      'Jorgen line (Onrite)',
+      'Some OnRite men\'s units',
+      'Women\'s OnRite units',
+      'Permarite adhesives (OnRite)',
+      'Jorgen line (OnRite)',
     ],
     pillars: [
       {
@@ -99,29 +99,29 @@ const phases: RolloutPhase[] = [
   {
     num: 'Phase 2',
     when: 'After Aug 3',
-    title: 'Progen + Rest of Onrite',
-    desc: 'Progen wholesale pricing and the remaining Onrite products brought onto the site.',
+    title: 'Progen + Rest of OnRite',
+    desc: 'Progen wholesale pricing and the remaining OnRite products brought onto the site.',
     variant: '2',
     productsLabel: 'Coming in Phase 2',
     products: [
       'Progen wholesale pricing',
-      'The rest of the Onrite products',
+      'The rest of the OnRite products',
     ],
     pillars: [
       {
         icon: '🖼️',
         title: 'Content',
-        desc: 'Photos, descriptions, and infographics for the remaining Onrite products. Progen catalog built out.',
+        desc: 'Photos, descriptions, and infographics for the remaining OnRite products. Progen catalog built out.',
       },
       {
         icon: '💲',
         title: 'Pricing',
-        desc: 'Progen wholesale pricing + Onrite tier pricing loaded behind company accounts.',
+        desc: 'Progen wholesale pricing + OnRite tier pricing loaded behind company accounts.',
       },
       {
         icon: '📊',
         title: 'Volume Pricing',
-        desc: 'Quantity-break pricing on Progen and Onrite products, matching the Phase 1 structure.',
+        desc: 'Quantity-break pricing on Progen and OnRite products, matching the Phase 1 structure.',
       },
     ],
   },
@@ -150,7 +150,7 @@ const timeline: TimelineWindow[] = [
       {
         title: 'Finish Product + Color Upload',
         date: 'By Fri, June 5',
-        desc: 'Phase 1 launch products live on Hairloss.com — all NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line. Colors finish uploading.',
+        desc: 'Phase 1 launch products live on Hairloss.com — all NIL men\'s units, some OnRite men\'s units, women\'s OnRite units, Permarite adhesives, and the Jorgen line. Colors finish uploading.',
         tracks: ['website', 'content'],
       },
       {
@@ -168,7 +168,7 @@ const timeline: TimelineWindow[] = [
       {
         title: 'About Page — Add NIL & OR Merge',
         date: 'June',
-        desc: 'Update the About page to tell the NIL + Onrite merge story — one company, one site.',
+        desc: 'Update the About page to tell the NIL + OnRite merge story — one company, one site.',
         tracks: ['website', 'content'],
       },
       {
@@ -193,13 +193,13 @@ const timeline: TimelineWindow[] = [
       {
         title: 'Send Announcement + Login-Notice Email',
         date: 'Wed, July 1',
-        desc: 'Separate sequences to NIL, Onrite & Hairloss.com clients: the move to Hairloss.com, and that going forward you sign in to see pricing on certain products.',
+        desc: 'Separate sequences to NIL, OnRite & Hairloss.com clients: the move to Hairloss.com, and that going forward you sign in to see pricing on certain products.',
         tracks: ['marketing'],
       },
       {
         title: 'Posting Plan Goes Live',
         date: 'From July 1',
-        desc: 'Weekly social posts begin — one a week, plus collab posts (HL × NIL × Onrite) and stories to the blog.',
+        desc: 'Weekly social posts begin — one a week, plus collab posts (HL × NIL × OnRite) and stories to the blog.',
         tracks: ['content', 'marketing'],
       },
       {
@@ -233,9 +233,9 @@ const timeline: TimelineWindow[] = [
         tracks: ['website', 'marketing'],
       },
       {
-        title: 'Send Final-Week + Onrite Email',
+        title: 'Send Final-Week + OnRite Email',
         date: 'July 21 – 23',
-        desc: 'Email 3: last week to order on NIL (through July 26), plus a teaser — a new easier platform with selective Onrite products, more to come.',
+        desc: 'Email 3: last week to order on NIL (through July 26), plus a teaser — a new easier platform with selective OnRite products, more to come.',
         tracks: ['marketing'],
       },
       {
@@ -255,7 +255,7 @@ const timeline: TimelineWindow[] = [
       {
         title: 'Send "Soon You Can Purchase" Email',
         date: 'July 28 – 30',
-        desc: 'Onrite email: one place to purchase, 10% off the first online order, and create your professional account. Live Aug 3.',
+        desc: 'OnRite email: one place to purchase, 10% off the first online order, and create your professional account. Live Aug 3.',
         tracks: ['marketing'],
       },
       {
@@ -269,12 +269,12 @@ const timeline: TimelineWindow[] = [
   },
   {
     window: 'August 3 — Launch',
-    note: 'NIL & Onrite landing pages → Hairloss.com',
+    note: 'NIL & OnRite landing pages → Hairloss.com',
     items: [
       {
         title: 'Launch — Landing Pages Redirect to HL.com',
         date: 'Mon, Aug 3',
-        desc: 'New Image Labs and Onrite each come back as their own landing page that redirects to Hairloss.com. NIL & Onrite are live for purchasing online — one platform, one login (phone orders still go through the team).',
+        desc: 'New Image Labs and OnRite each come back as their own landing page that redirects to Hairloss.com. NIL & OnRite are live for purchasing online — one platform, one login (phone orders still go through the team).',
         tracks: ['website', 'marketing'],
         flag: 'Launch day',
       },
@@ -315,9 +315,9 @@ const timeline: TimelineWindow[] = [
         tracks: ['content'],
       },
       {
-        title: 'Phase 2 — Progen + Rest of Onrite',
+        title: 'Phase 2 — Progen + Rest of OnRite',
         date: 'Post-launch',
-        desc: 'Bring Progen wholesale pricing and the rest of the Onrite products on — content, pricing, and volume pricing.',
+        desc: 'Bring Progen wholesale pricing and the rest of the OnRite products on — content, pricing, and volume pricing.',
         tracks: ['website', 'content', 'marketing'],
       },
       {
@@ -339,7 +339,7 @@ const keyDates: { date: string; title: string; desc: string }[] = [
   { date: 'Sat, Jul 26', title: 'NIL Last Order Date', desc: 'Final day to place orders on the New Image Labs website.' },
   { date: 'Sun, Jul 27', title: 'Migration + Welcome Email', desc: 'Customer accounts & companies migrate (orders do not). Welcome email with 10% off the first online order.' },
   { date: 'Fri, Jul 31', title: 'NIL Site Offline', desc: 'Site goes offline end of day Friday, unavailable through the weekend.' },
-  { date: 'Mon, Aug 3', title: 'Launch — All on HL.com', desc: 'NIL & Onrite each return as their own landing page that redirects to Hairloss.com. Live for purchasing; launch email goes out.' },
+  { date: 'Mon, Aug 3', title: 'Launch — All on HL.com', desc: 'NIL & OnRite each return as their own landing page that redirects to Hairloss.com. Live for purchasing; launch email goes out.' },
 ]
 
 // ── Account form fields ──────────────────────────────────────────────────────
@@ -351,7 +351,7 @@ const formFields: { label: string; note: string; required: boolean }[] = [
   { label: 'Phone', note: 'For the sales rep', required: true },
   { label: 'Business Address', note: 'Shipping + billing', required: true },
   { label: 'Resale / Tax ID or License', note: 'Confirms a real business', required: true },
-  { label: 'Existing NIL / Onrite Account #', note: 'So we map your current tier', required: false },
+  { label: 'Existing NIL / OnRite Account #', note: 'So we map your current tier', required: false },
   { label: 'Account Type', note: 'Barber · Salon · Studio · Distributor', required: true },
 ]
 
@@ -376,14 +376,14 @@ export const accountWorkflows: AccountWorkflow[] = [
   {
     num: 'Workflow 1',
     title: 'Transfer an Existing Client',
-    who: 'Sales sets it up in the admin for a current NIL / Onrite customer',
+    who: 'Sales sets it up in the admin for a current NIL / OnRite customer',
     steps: [
       { label: 'Create the Company (Admin)', desc: 'Sales creates the company in the admin and maps their existing pricing tier. No form — done directly in the admin.' },
       { label: 'Create the User (Admin)', desc: 'Sales creates the user in the admin — business owner is the main contact.' },
       { label: 'Account Live', desc: 'Client signs in (no password — secure link), sees their tier pricing, gets tracking emails.', final: true },
     ],
     emails: [
-      'Auto welcome email: "Hi New Image Labs / Onrite customer — we\'ve successfully transferred your account information to Hairloss.com. Continue shopping here with your pricing tier."',
+      'Auto welcome email: "Hi New Image Labs / OnRite customer — we\'ve successfully transferred your account information to Hairloss.com. Continue shopping here with your pricing tier."',
     ],
     note: 'Transferring a client requires creating BOTH a company and a user account in the admin. Sales never fills out the account form.',
   },
@@ -454,7 +454,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       },
       {
         title: 'Everything in one place',
-        desc: 'One website for all NIL products and select Onrite products — plus discounts, promotions, and educational content. Easier to find, easier to buy.',
+        desc: 'One website for all NIL products and select OnRite products — plus discounts, promotions, and educational content. Easier to find, easier to buy.',
       },
     ],
     emailSignoff: '',
@@ -472,7 +472,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
     ],
     faqIntro: 'The questions customers will ask — and how to answer them.',
     faq: [
-      { q: 'Why are you making this change?', a: 'We\'re bringing NIL and Onrite onto one website so it\'s easier to find products and order — everything in one place, plus easier access to discounts and promotions.' },
+      { q: 'Why are you making this change?', a: 'We\'re bringing NIL and OnRite onto one website so it\'s easier to find products and order — everything in one place, plus easier access to discounts and promotions.' },
       { q: 'Will my pricing change?', a: 'No. Your tier and pricing move with you, exactly as they are today.' },
       { q: 'Why can\'t I see prices on the site?', a: 'You can browse all the products — only the pricing is hidden. It\'s wholesale and protected, so it shows once you log into your company account.' },
       { q: 'Do I need to set up my account?', a: 'No — your sales rep creates it for you. To log in, use the same email you received the Hairloss.com email from — we send a one-time code to that email to sign in. No more passwords.' },
@@ -481,7 +481,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { q: 'What happens to my order history?', a: 'Your past NIL orders don\'t carry over as live, reorderable orders, but your order history will be viewable in your new Hairloss.com account — so you always have a record of what you\'ve purchased.' },
       { q: 'Will my saved addresses and payment methods transfer?', a: 'Your account and your company/business details migrate with you, so your information is already there when you sign in. For security, payment details need to be re-entered and saved by you.' },
       { q: 'Will I still find the products I order?', a: 'Yes. All your products are on Hairloss.com and you can browse the full catalog anytime — only the pricing is behind your login.' },
-      { q: 'Will there be new products on the new site?', a: 'Yes. Bringing NIL and Onrite together means more in one place — you\'ll have access to select Onrite products too, with more added over time.' },
+      { q: 'Will there be new products on the new site?', a: 'Yes. Bringing NIL and OnRite together means more in one place — you\'ll have access to select OnRite products too, with more added over time.' },
       { q: 'Will product names or packaging change?', a: 'Some product names are being updated as part of the move, but the products themselves are exactly the same. If something looks renamed, it\'s the same item you already order.' },
       { q: 'What if I can\'t find a product I previously purchased?', a: 'Just call your rep — they\'ll point you right to it (or to its new name). Everything you order is on Hairloss.com.' },
       { q: 'Can I still place orders on the current website?', a: 'Yes — you can keep ordering on the New Image Labs site through Saturday, July 26. That\'s the last day for online orders there.' },
@@ -516,7 +516,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       },
       {
         title: 'Todo en un solo lugar',
-        desc: 'Un solo sitio para todos los productos de NIL y productos selectos de Onrite — además de descuentos, promociones y contenido educativo. Más fácil de encontrar, más fácil de comprar.',
+        desc: 'Un solo sitio para todos los productos de NIL y productos selectos de OnRite — además de descuentos, promociones y contenido educativo. Más fácil de encontrar, más fácil de comprar.',
       },
     ],
     emailSignoff: '',
@@ -534,7 +534,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
     ],
     faqIntro: 'Las preguntas que harán los clientes — y cómo responderlas.',
     faq: [
-      { q: '¿Por qué hacen este cambio?', a: 'Llevamos más de 50 años en esto. Estamos reuniendo NIL y Onrite en un solo sitio para que sea más fácil encontrar productos y hacer pedidos — todo en un mismo lugar, además de un acceso más fácil a descuentos y promociones.' },
+      { q: '¿Por qué hacen este cambio?', a: 'Llevamos más de 50 años en esto. Estamos reuniendo NIL y OnRite en un solo sitio para que sea más fácil encontrar productos y hacer pedidos — todo en un mismo lugar, además de un acceso más fácil a descuentos y promociones.' },
       { q: '¿Cambiará mi precio?', a: 'No. Su nivel y sus precios se mantienen tal como están hoy.' },
       { q: '¿Por qué no puedo ver los precios en el sitio?', a: 'Puede ver todos los productos — solo los precios están ocultos. Son mayoristas y están protegidos, así que se muestran al iniciar sesión en su cuenta de empresa.' },
       { q: '¿Tengo que crear mi cuenta?', a: 'No — su representante de ventas la crea por usted. Para iniciar sesión, use el mismo correo donde recibió el mensaje de Hairloss.com — le enviamos un código de un solo uso a ese correo. Sin contraseñas.' },
@@ -543,7 +543,7 @@ const salesContent: Record<'en' | 'es', SalesContent> = {
       { q: '¿Qué pasa con mi historial de pedidos?', a: 'Sus pedidos anteriores de NIL no se trasladan como pedidos activos para volver a comprar, pero su historial de pedidos será visible en su nueva cuenta de Hairloss.com — así siempre tiene un registro de lo que ha comprado.' },
       { q: '¿Se transferirán mis direcciones y métodos de pago guardados?', a: 'Su cuenta y los datos de su empresa/negocio se migran con usted, así que su información ya está ahí cuando inicia sesión. Por seguridad, los datos de pago debe volver a ingresarlos y guardarlos usted.' },
       { q: '¿Seguiré encontrando los productos que pido?', a: 'Sí. Todos sus productos están en Hairloss.com y puede ver el catálogo completo en cualquier momento — solo los precios quedan detrás de su inicio de sesión.' },
-      { q: '¿Habrá productos nuevos en el sitio nuevo?', a: 'Sí. Reunir NIL y Onrite significa más en un solo lugar — también tendrá acceso a productos selectos de Onrite, y se irán agregando más con el tiempo.' },
+      { q: '¿Habrá productos nuevos en el sitio nuevo?', a: 'Sí. Reunir NIL y OnRite significa más en un solo lugar — también tendrá acceso a productos selectos de OnRite, y se irán agregando más con el tiempo.' },
       { q: '¿Cambiarán los nombres o el empaque de los productos?', a: 'Algunos nombres de productos se están actualizando como parte del cambio, pero los productos en sí son exactamente los mismos. Si algo parece tener otro nombre, es el mismo artículo que ya pide.' },
       { q: '¿Y si no encuentro un producto que compré antes?', a: 'Solo llame a su representante — le indicará exactamente dónde está (o su nuevo nombre). Todo lo que usted pide está en Hairloss.com.' },
       { q: '¿Puedo seguir haciendo pedidos en el sitio actual?', a: 'Sí — puede seguir comprando en el sitio de New Image Labs hasta el sábado 26 de julio. Ese es el último día para pedidos en línea ahí.' },
@@ -572,7 +572,7 @@ export const emails: EmailDesign[] = [
     tone: 'Professional and reassuring. Business to business.',
     body: [
       'For more than 50 years, you have trusted New Image Labs as your professional provider in the hair replacement industry. As part of our continued commitment to serving your business, we are bringing that experience onto a single platform: Hairloss.com.',
-      'Instead of working across separate sites, your account, products, and ordering will be in one place. At launch on August 3 you will also find select Onrite products on Hairloss.com, with more added over time. The things that matter most stay the same — your pricing tier, the products you order, and the sales and support team you work with.',
+      'Instead of working across separate sites, your account, products, and ordering will be in one place. At launch on August 3 you will also find select OnRite products on Hairloss.com, with more added over time. The things that matter most stay the same — your pricing tier, the products you order, and the sales and support team you work with.',
       'One change to note: going forward, you will sign in to your account to view pricing on certain products. Your pricing tier stays exactly the same — it simply lives behind your login.',
       'There is no action required today. Over the coming weeks we will share what to expect as we move to the new platform.',
       'If you have any questions, please contact your sales representative.',
@@ -642,26 +642,26 @@ export const emails: EmailDesign[] = [
     tone: 'Professional and welcoming. Business to business.',
     body: [
       'Hairloss.com is now live. Sign in to your account to view your pricing, browse your full catalog, and place orders in one convenient location.',
-      'You will also find select Onrite products available at launch, with more being added over time.',
+      'You will also find select OnRite products available at launch, with more being added over time.',
       'Remember, you will receive 10% off your first online order on Hairloss.com.',
       'If you have not yet received your activation email, please contact your sales representative or message us on the website chat.',
     ],
     cta: 'Sign in to Hairloss.com',
   },
 
-  // ── Onrite clients (selective products + professional accounts) ──
+  // ── OnRite clients (selective products + professional accounts) ──
   {
     track: 'onrite',
     num: 1,
     send: 'July 1',
     timing: '~5 weeks before launch',
-    subject: 'Onrite is joining Hairloss.com',
-    preview: 'Selective Onrite products, now easier to purchase online.',
-    goal: 'Announce Onrite joining HL.com; set expectations.',
+    subject: 'OnRite is joining Hairloss.com',
+    preview: 'Selective OnRite products, now easier to purchase online.',
+    goal: 'Announce OnRite joining HL.com; set expectations.',
     tone: 'Professional and welcoming. Business to business.',
     body: [
-      'We are bringing Onrite onto Hairloss.com — one platform that makes it easier to find and purchase the products you rely on.',
-      'To start, selective Onrite products will be available on Hairloss.com, with more on the way.',
+      'We are bringing OnRite onto Hairloss.com — one platform that makes it easier to find and purchase the products you rely on.',
+      'To start, selective OnRite products will be available on Hairloss.com, with more on the way.',
       'Your pricing and the team you work with stay the same. Over the coming weeks we will share how to set up your account and order online.',
       'If you have any questions, please contact your sales representative.',
     ],
@@ -674,7 +674,7 @@ export const emails: EmailDesign[] = [
     timing: 'Pre-launch',
     subject: 'Create your professional account on Hairloss.com',
     preview: 'Get set up before launch — 10% off your first online order.',
-    goal: 'Get Onrite customers to create a professional account before launch.',
+    goal: 'Get OnRite customers to create a professional account before launch.',
     tone: 'Warm, professional, action-oriented. Business to business.',
     body: [
       'We are giving you a new platform to purchase online — easier, and all in one place. Hairloss.com goes live on August 3.',
@@ -691,10 +691,10 @@ export const emails: EmailDesign[] = [
     timing: 'Launch day',
     subject: 'Hairloss.com is now live',
     preview: 'Sign in to your professional account and order.',
-    goal: 'Launch. Drive first sign-in and first order for Onrite customers.',
+    goal: 'Launch. Drive first sign-in and first order for OnRite customers.',
     tone: 'Professional and welcoming. Business to business.',
     body: [
-      'Hairloss.com is now live. Sign in to your professional account to see your pricing and order Onrite products — and more — in one place.',
+      'Hairloss.com is now live. Sign in to your professional account to see your pricing and order OnRite products — and more — in one place.',
       'Remember, you will receive 10% off your first online order on Hairloss.com.',
       'If you have not yet created your account or do not see your pricing, please contact your sales representative or message us on the website chat.',
     ],
@@ -730,7 +730,7 @@ export const emails: EmailDesign[] = [
     goal: 'Launch: invite retail customers to explore the expanded catalog.',
     tone: 'Friendly, upbeat, consumer-facing.',
     body: [
-      'Hairloss.com just got bigger. We have brought more of the brands and products you trust together in one place, including select Onrite products at launch, making it easier to find the right solution for you.',
+      'Hairloss.com just got bigger. We have brought more of the brands and products you trust together in one place, including select OnRite products at launch, making it easier to find the right solution for you.',
       'Explore the new catalog and discover what is now available.',
       'Questions? We are here on the website chat.',
     ],
@@ -797,7 +797,7 @@ function MessageBody() {
           </div>
           <div className="prc-worry">
             <div className="prc-worry__q">"So what is Hairloss.com now?"</div>
-            <div className="prc-worry__a">It's ours. We acquired the site and brought NIL and Onrite onto it. Frame it as growth — we bought it and made it the home for everything.</div>
+            <div className="prc-worry__a">It's ours. We acquired the site and brought NIL and OnRite onto it. Frame it as growth — we bought it and made it the home for everything.</div>
           </div>
           <div className="prc-worry">
             <div className="prc-worry__q">"Is this still an American company?"</div>
@@ -907,7 +907,7 @@ export default function PRCampaignPage() {
         <div className="cp-hero__inner">
           <p className="cp-hero__eyebrow">PR &amp; Merge Campaign</p>
           <h1 className="cp-hero__title">
-            New Image Labs + Onrite<br />
+            New Image Labs + OnRite<br />
             <span>→ Hairloss.com</span>
           </h1>
           <div className="cp-hero__dates">
@@ -929,7 +929,7 @@ export default function PRCampaignPage() {
             <span className="cp-section__badge cp-section__badge--strategy">Rollout</span>
             <h2 className="cp-section__title">Two Phases</h2>
             <p className="cp-section__desc">
-              Phase 1 gets the launch products live. Phase 2 brings Progen wholesale pricing and the rest of Onrite. Phase 3 adds custom orders online by the end of the year.
+              Phase 1 gets the launch products live. Phase 2 brings Progen wholesale pricing and the rest of OnRite. Phase 3 adds custom orders online by the end of the year.
             </p>
           </div>
 
@@ -974,7 +974,7 @@ export default function PRCampaignPage() {
             <div className="cp-overview-card">
               <div className="cp-overview-card__icon">📦</div>
               <div className="cp-overview-card__label">Moving Over</div>
-              <div className="cp-overview-card__value">NIL + Onrite (Phased)</div>
+              <div className="cp-overview-card__value">NIL + OnRite (Phased)</div>
             </div>
             <div className="cp-overview-card">
               <div className="cp-overview-card__icon">🔐</div>
@@ -1219,7 +1219,7 @@ export default function PRCampaignPage() {
             <span className="cp-section__badge cp-section__badge--strategy">Social</span>
             <h2 className="cp-section__title">Posting Plan</h2>
             <p className="cp-section__desc">
-              One post a week from July 1 to launch. Copy is drafted below; final designs (Montserrat, on-brand) come later. We also collab-post across Hairloss.com, New Image Labs &amp; Onrite, and link stories to the blog.
+              One post a week from July 1 to launch. Copy is drafted below; final designs (Montserrat, on-brand) come later. We also collab-post across Hairloss.com, New Image Labs &amp; OnRite, and link stories to the blog.
             </p>
           </div>
 
@@ -1252,7 +1252,7 @@ export default function PRCampaignPage() {
           <span className="cp-section__badge cp-section__badge--strategy">Email Campaign</span>
           <h2 className="cp-section__title">Emails PR Campaign</h2>
           <p className="cp-section__desc">
-            Three separate sequences — one for New Image Labs clients, one for Onrite clients, and one for Hairloss.com customers. Each gets its own message.
+            Three separate sequences — one for New Image Labs clients, one for OnRite clients, and one for Hairloss.com customers. Each gets its own message.
           </p>
 
           {/* Overview — scoped email titles per track */}
@@ -1348,7 +1348,7 @@ export default function PRCampaignPage() {
       </div>
 
       <footer className="cp-footer">
-        Hairloss.com · NIL + Onrite Merge · PR Campaign · June — August 2026
+        Hairloss.com · NIL + OnRite Merge · PR Campaign · June — August 2026
       </footer>
     </div>
   )

@@ -8,18 +8,18 @@ import EmailMock from './EmailMock'
 const flowSteps: { kind: 'date' | 'action'; date?: string; label: string; detail: string }[] = [
   { kind: 'date', date: 'Jun 29', label: 'Whole sales team briefing', detail: 'Brief the whole team and walk through the full posting plan before it goes live.' },
   { kind: 'date', date: 'Jun 30', label: 'Pricing hidden + TressAllure removed', detail: 'Hair-unit pricing moves behind login; TressAllure removed. Before the campaign starts.' },
-  { kind: 'date', date: 'Jul 1', label: 'Emails + posting plan go live', detail: 'Separate email sequences to New Image Labs, Onrite & Hairloss.com clients. Posting plan starts.' },
+  { kind: 'date', date: 'Jul 1', label: 'Emails + posting plan go live', detail: 'Separate email sequences to New Image Labs, OnRite & Hairloss.com clients. Posting plan starts.' },
   { kind: 'action', label: 'Keep your regular calls', detail: 'Mention the move to Hairloss.com during your normal conversations — no need to mass-call.' },
   { kind: 'action', label: 'Redirect to the Hairloss.com rep', detail: 'Send clients with online-ordering / Hairloss.com questions to the dedicated rep.' },
   { kind: 'date', date: 'Jul 26', label: 'Last day to order on New Image Labs', detail: 'NIL online ordering closes.' },
   { kind: 'date', date: 'Jul 27', label: 'Migration + welcome email', detail: 'Customer accounts & companies migrate (orders do not). 10% off the first online order.' },
   { kind: 'date', date: 'Jul 31', label: 'NIL site goes offline', detail: 'End of day Friday — the site is unavailable through the weekend.' },
-  { kind: 'date', date: 'Aug 3', label: 'Launch — everything on Hairloss.com', detail: 'NIL & Onrite each return as their own landing page that redirects to Hairloss.com. Order online, all in one place.' },
+  { kind: 'date', date: 'Aug 3', label: 'Launch — everything on Hairloss.com', detail: 'NIL & OnRite each return as their own landing page that redirects to Hairloss.com. Order online, all in one place.' },
 ]
 
 const phases: { tag: string; when: string; title: string; desc: string }[] = [
-  { tag: 'Phase 1', when: 'Live Aug 3', title: 'Launch Products', desc: 'All NIL men\'s units, some Onrite men\'s units, women\'s Onrite units, Permarite adhesives, and the Jorgen line.' },
-  { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of Onrite', desc: 'Progen wholesale pricing and the remaining Onrite products.' },
+  { tag: 'Phase 1', when: 'Live Aug 3', title: 'Launch Products', desc: 'All NIL men\'s units, some OnRite men\'s units, women\'s OnRite units, Permarite adhesives, and the Jorgen line.' },
+  { tag: 'Phase 2', when: 'After Aug 3', title: 'Progen + Rest of OnRite', desc: 'Progen wholesale pricing and the remaining OnRite products.' },
   { tag: 'Phase 3', when: 'End of year', title: 'Custom Orders Online', desc: 'For now, custom orders are duplicated from the NIL system and transferred over manually — until customers can place them online themselves.' },
 ]
 
@@ -65,11 +65,10 @@ export default function SalesPRCampaign() {
         <div className="spr-slide__inner">
           <p className="spr-hero-eyebrow">Sales Team Briefing</p>
           <h1 className="spr-hero-title">
-            New Image Labs + Onrite
+            New Image Labs + OnRite
             <br />
             <span>are moving to Hairloss.com</span>
           </h1>
-          <p className="spr-hero-sub">PR Campaign &amp; Posting Plan</p>
           <div className="spr-hero-dates">June – August 2026 · Launch Aug 3</div>
         </div>
       </section>
@@ -81,11 +80,11 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">The Move</p>
           <h2 className="spr-title">What's happening</h2>
           <ul className="spr-points">
-            <li>New Image Labs and Onrite are moving onto <strong>one platform — Hairloss.com</strong>.</li>
+            <li>New Image Labs and OnRite are moving onto <strong>one platform — Hairloss.com</strong>.</li>
             <li>The <strong>landing pages stay up</strong> — it's <strong>online shopping</strong> that moves to Hairloss.com.</li>
             <li>Same pricing tiers. Same products. One place to order.</li>
             <li>The NIL website goes offline for maintenance at the <strong>end of the day Friday, July 31</strong>.</li>
-            <li>New Image Labs' full catalog — plus <strong>select Onrite products, with more to come</strong> — is on Hairloss.com starting <strong>Monday, Aug 3</strong>.</li>
+            <li>New Image Labs' full catalog — plus <strong>select OnRite products, with more to come</strong> — is on Hairloss.com starting <strong>Monday, Aug 3</strong>.</li>
           </ul>
           <img className="spr-img" src="/hl-homepage.png" alt="Hairloss.com homepage" />
         </div>
@@ -185,7 +184,7 @@ export default function SalesPRCampaign() {
           <p className="spr-eyebrow">Sales Team</p>
           <h2 className="spr-title">What to tell clients</h2>
           <ul className="spr-points">
-            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The site goes offline at the end of the day <strong>Friday, July 31</strong> and is unavailable through the weekend. On <strong>Monday, August 3</strong>, NIL &amp; Onrite each come back as their own landing page that redirects to Hairloss.com for purchasing.</li>
+            <li>Be clear on the dates: online ordering on the New Image Labs site runs <strong>through July 26</strong>. The site goes offline at the end of the day <strong>Friday, July 31</strong> and is unavailable through the weekend. On <strong>Monday, August 3</strong>, NIL &amp; OnRite each come back as their own landing page that redirects to Hairloss.com for purchasing.</li>
             <li>Incentive: <strong>every customer gets 10% off their first online order on Hairloss.com</strong>.</li>
             <li>A <strong>script + FAQ PDF</strong> (English &amp; Español) goes to the team so everyone answers questions the same way.</li>
             <li>Mention the move when you're <strong>on the phone</strong> — no need to mass-call. We're sending a mass email; just bring it up during your normal calls.</li>
@@ -306,7 +305,7 @@ export default function SalesPRCampaign() {
         <div className="spr-slide__inner">
           <p className="spr-eyebrow">PR Campaign</p>
           <h2 className="spr-title">Emails by audience</h2>
-          <p className="spr-note">Three separate sequences — New Image Labs clients, Onrite clients, and Hairloss.com customers. Each gets its own message.</p>
+          <p className="spr-note">Three separate sequences — New Image Labs clients, OnRite clients, and Hairloss.com customers. Each gets its own message.</p>
           <div className="spr-email-tracks">
             {(['nil', 'onrite', 'hairloss'] as const).map((track) => (
               <div key={track} className="spr-email-trackgroup">

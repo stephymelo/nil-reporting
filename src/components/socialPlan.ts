@@ -1,4 +1,4 @@
-// Shared social posting plan for the NIL + Onrite → Hairloss.com merge.
+// Shared social posting plan for the NIL + OnRite → Hairloss.com merge.
 // Copy-only mockups (no imagery yet). Brand: Montserrat, near-black ink (#151515),
 // soft "sky" blue accent (#afc9d8), ivory backgrounds — per NIL guidelines.
 
@@ -22,22 +22,22 @@ export const socialPosts: SocialPost[] = [
     label: 'Announcement carousel',
     when: 'Week of Jul 1',
     frames: [
-      'New Image Labs\n+ Onrite are coming\nto Hairloss.com',
+      'New Image Labs\n+ OnRite are coming\nto Hairloss.com',
       'Two trusted names.\nOne destination.',
       'The same premium products —\nnow in one place.',
       'Online ordering opens\nAugust 3\nHairloss.com',
     ],
     caption:
-      'Something new is on the way. New Image Labs and Onrite are coming together on Hairloss.com — one home for the brands and products you trust. Online ordering opens August 3. #Hairloss #HairReplacement #NewImageLabs #Onrite',
+      'Something new is on the way. New Image Labs and OnRite are coming together on Hairloss.com — one home for the brands and products you trust. Online ordering opens August 3. #Hairloss #HairReplacement #NewImageLabs #OnRite',
   },
   {
     id: 'collab',
     kind: 'post',
-    label: 'Collab post — HL × NIL × Onrite',
+    label: 'Collab post — HL × NIL × OnRite',
     when: 'Week of Jul 1',
-    frames: ['Better together.\n\nHairloss.com\n× New Image Labs\n× Onrite'],
+    frames: ['Better together.\n\nHairloss.com\n× New Image Labs\n× OnRite'],
     caption:
-      'Posted as a collaboration across Hairloss.com, New Image Labs, and Onrite. Three names you know, now under one roof. Coming August 3.',
+      'Posted as a collaboration across Hairloss.com, New Image Labs, and OnRite. Three names you know, now under one roof. Coming August 3.',
   },
   {
     id: 'whats-changing',
@@ -61,8 +61,8 @@ export const socialPosts: SocialPost[] = [
     when: 'Week of Jul 8',
     reelTitle: 'Two brands, one home',
     concept:
-      'Short teaser: the New Image Labs and Onrite marks animating together into Hairloss.com. Text overlay: "Something new is coming — Aug 3." Clean, on-brand, trending audio.',
-    caption: 'Something new is coming. August 3. #Hairloss #NewImageLabs #Onrite',
+      'Short teaser: the New Image Labs and OnRite marks animating together into Hairloss.com. Text overlay: "Something new is coming — Aug 3." Clean, on-brand, trending audio.',
+    caption: 'Something new is coming. August 3. #Hairloss #NewImageLabs #OnRite',
   },
   {
     id: 'reel-howto',
@@ -99,11 +99,11 @@ export const socialPosts: SocialPost[] = [
     when: 'Launch · Aug 3',
     frames: [
       "We're live.",
-      'Hairloss.com is now home to\nNew Image Labs + Onrite.',
+      'Hairloss.com is now home to\nNew Image Labs + OnRite.',
       'Sign in. See your pricing.\nOrder in one place.',
     ],
     caption:
-      'It is here. Hairloss.com is live — New Image Labs and Onrite, together. Sign in and shop everything in one place.',
+      'It is here. Hairloss.com is live — New Image Labs and OnRite, together. Sign in and shop everything in one place.',
   },
   {
     id: 'add-on-value',
@@ -132,7 +132,7 @@ export const socialPosts: SocialPost[] = [
 ]
 
 export const postingSchedule: { week: string; items: string[] }[] = [
-  { week: 'Week of Jul 1', items: ['Announcement carousel', 'Collab post — HL × NIL × Onrite', 'Stories linked to the blog'] },
+  { week: 'Week of Jul 1', items: ['Announcement carousel', 'Collab post — HL × NIL × OnRite', 'Stories linked to the blog'] },
   { week: 'Week of Jul 8', items: ['"What stays / what changes" carousel', 'Reel tease — "Two brands, one home"'] },
   { week: 'Week of Jul 14', items: ['Reel — "How to order on Hairloss.com"', '"Save the date · Aug 3" post'] },
   { week: 'Week of Jul 21', items: ['"Last week to order — through Jul 24" post', 'Countdown stories'] },

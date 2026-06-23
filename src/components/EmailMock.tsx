@@ -20,18 +20,18 @@ const brand: Record<
   onrite: {
     header: (
       <>
-        <img src="/onrite-logo.svg" alt="Onrite" className="em__logo em__logo--or" />
+        <img src="/onrite-logo.svg" alt="OnRite" className="em__logo em__logo--or" />
         <span className="em__logo-divider" />
         <span className="em__wordmark">Hairloss.com</span>
       </>
     ),
-    sign: 'The Onrite Team',
-    foot: "Onrite — now on Hairloss.com · You're receiving this as a valued partner",
+    sign: 'The OnRite Team',
+    foot: "OnRite — now on Hairloss.com · You're receiving this as a valued partner",
   },
   hairloss: {
     header: <span className="em__wordmark em__wordmark--lg">Hairloss.com</span>,
     sign: 'The Hairloss.com Team',
-    foot: 'Hairloss.com · Powered by New Image Labs & Onrite',
+    foot: 'Hairloss.com · Powered by New Image Labs & OnRite',
   },
 }
 
