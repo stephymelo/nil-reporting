@@ -8,7 +8,8 @@ import EmailMock from './EmailMock'
 const flowSteps: { kind: 'date' | 'action'; date?: string; label: string; detail: string }[] = [
   { kind: 'date', date: 'Jun 29', label: 'Whole sales team briefing', detail: 'Brief the whole team and walk through the full posting plan before it goes live.' },
   { kind: 'date', date: 'Jun 30', label: 'Pricing hidden + TressAllure removed', detail: 'Hair-unit pricing moves behind login; TressAllure removed. Before the campaign starts.' },
-  { kind: 'date', date: 'Jul 1', label: 'Emails + posting plan go live', detail: 'Separate email sequences to New Image Labs, OnRite & Hairloss.com clients. Posting plan starts.' },
+  { kind: 'date', date: 'Jul 1', label: 'Posting plan goes live', detail: 'Weekly social posts begin — plus collab posts (HL × NIL × OnRite) and stories to the blog.' },
+  { kind: 'date', date: 'Jul 6', label: 'Outreach emails go out', detail: 'Separate email sequences to New Image Labs, OnRite & Hairloss.com clients about the move.' },
   { kind: 'action', label: 'Keep your regular calls', detail: 'Mention the move to Hairloss.com during your normal conversations — no need to mass-call.' },
   { kind: 'action', label: 'Redirect to the Hairloss.com rep', detail: 'Send clients with online-ordering / Hairloss.com questions to the dedicated rep.' },
   { kind: 'date', date: 'Jul 26', label: 'Last day to order on New Image Labs', detail: 'NIL online ordering closes.' },
