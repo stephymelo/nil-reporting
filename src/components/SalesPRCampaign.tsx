@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import './SalesPRCampaign.css'
 import { emails, accountWorkflows, emailTrackMeta, type EmailTrack } from './PRCampaignPage'
 import EmailMock from './EmailMock'
@@ -59,8 +59,43 @@ export default function SalesPRCampaign() {
     setEmailIdx(0)
   }
 
+  // Slide navigation (arrow keys + on-screen arrows)
+  const deckRef = useRef<HTMLDivElement>(null)
+  const goSlide = useCallback((dir: number) => {
+    const deck = deckRef.current
+    if (!deck) return
+    const slides = Array.from(deck.querySelectorAll<HTMLElement>('.spr-slide'))
+    if (!slides.length) return
+    const deckTop = deck.getBoundingClientRect().top
+    let current = 0
+    let min = Infinity
+    slides.forEach((s, i) => {
+      const d = Math.abs(s.getBoundingClientRect().top - deckTop)
+      if (d < min) {
+        min = d
+        current = i
+      }
+    })
+    const target = Math.max(0, Math.min(slides.length - 1, current + dir))
+    slides[target].scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown') {
+        e.preventDefault()
+        goSlide(1)
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault()
+        goSlide(-1)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [goSlide])
+
   return (
-    <div className="spr-deck">
+    <div className="spr-deck" ref={deckRef}>
       {/* Title */}
       <section className="spr-slide spr-slide--hero">
         <div className="spr-slide__inner">
@@ -386,6 +421,12 @@ export default function SalesPRCampaign() {
           </div>
         </div>
       </section>
+
+      {/* Slide navigation arrows */}
+      <div className="spr-nav" aria-hidden="false">
+        <button className="spr-nav__btn" onClick={() => goSlide(-1)} aria-label="Previous slide">↑</button>
+        <button className="spr-nav__btn" onClick={() => goSlide(1)} aria-label="Next slide">↓</button>
+      </div>
     </div>
   )
 }
