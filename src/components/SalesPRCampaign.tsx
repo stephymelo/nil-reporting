@@ -262,7 +262,6 @@ export default function SalesPRCampaign() {
             <div className="spr-card">
               <div className="spr-card__label">More ways to sell</div>
               <ul>
-                <li>It's <strong>both retail and wholesale</strong> — not one or the other</li>
                 <li>An easier place to point clients, with promotions to offer</li>
                 <li>More reach driving customers your way</li>
               </ul>
