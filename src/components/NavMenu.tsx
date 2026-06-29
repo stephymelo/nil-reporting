@@ -1,11 +1,20 @@
 import { useState, useEffect, useRef } from 'react'
 import './NavMenu.css'
 
-// Change this to set the menu password. Note: this is light client-side
-// gating only — the value ships in the built code, so it deters casual
-// navigation but is not real security.
-const PASSWORD = 'steph'
+// Light client-side gating. The plaintext password is NOT stored — only its
+// SHA-256 hash — so it can't be read out of the source or the built bundle.
+// (This still isn't real security: a determined user can bypass any client-side
+// gate. To change the password, replace the hash with the SHA-256 of the new one.)
+const PASSWORD_HASH = 'cc069c2e5935632b69f408ddfa0c0bfb1c50452c24d241d138d0a693110f06da'
 const STORAGE_KEY = 'hl-nav-unlocked'
+
+async function sha256Hex(text: string): Promise<string> {
+  const data = new TextEncoder().encode(text)
+  const digest = await crypto.subtle.digest('SHA-256', data)
+  return Array.from(new Uint8Array(digest))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('')
+}
 
 const links: { href: string; label: string }[] = [
   { href: '#/', label: 'IA Planning' },
@@ -33,9 +42,15 @@ export default function NavMenu() {
     if (open && !unlocked) inputRef.current?.focus()
   }, [open, unlocked])
 
-  function submit(e: React.FormEvent) {
+  async function submit(e: React.FormEvent) {
     e.preventDefault()
-    if (pw === PASSWORD) {
+    let ok = false
+    try {
+      ok = (await sha256Hex(pw)) === PASSWORD_HASH
+    } catch {
+      ok = false
+    }
+    if (ok) {
       setUnlocked(true)
       setError(false)
       setPw('')
